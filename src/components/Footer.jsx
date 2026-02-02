@@ -158,7 +158,7 @@ const Footer = () => {
           <div style={columnStyle}>
             <h4 style={headingStyle}>Company</h4>
             <ul style={linkListStyle}>
-              {['About Us', 'Expert Team', 'Service Areas', 'Pricing Guide', 'Contact Port'].map((item) => (
+              {['About Us', 'Contact Us', 'Service Areas', 'Pricing Guide', 'Expert Team'].map((item) => (
                 <li key={item}>
                   <Link
                     to={item === 'About Us' ? '/about' : item === 'Service Areas' ? '/service-areas' : '/contact'}

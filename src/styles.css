@@ -49,3 +49,34 @@ body {
 .animate-fade-in {
   animation: fadeIn 0.8s ease-out forwards;
 }
+
+/* Remove the boxes and shadows */
+.service-card,
+.card {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  text-align: left;
+  padding: 40px 0;
+  border-bottom: 1px solid #e0e0e0;
+  /* Clean divider line instead of a box */
+}
+
+/* Make the icons stand out without a box */
+.service-card i,
+.service-card .icon {
+  font-size: 2rem;
+  color: #0044cc;
+  /* Use the client's brand color */
+  flex-shrink: 0;
+}
+
+/* Modern typography */
+.service-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+  letter-spacing: -0.5px;
+}

@@ -11,10 +11,10 @@ export const servicesData = {
         id: "refrigerator-repair",
         title: "Refrigerator Repair",
         icon: Refrigerator,
-        image: "/Refrigerater reapair.webp",
+        image: "/Refrigerator repair.jpg",
         features: ["Same Day Service", "OEM Parts Included", "1-Year Warranty"],
         problems: ["Not cooling", "Leaking water", "Excessive noise", "Ice maker not working", "Constant running"],
-        description: "Our master technicians specialize in high-end refrigeration systems, ensuring your perishables stay fresh and your kitchen remains efficient. We diagnose and resolve complex issues ranging from compressor failures and sealed system leaks to digital control board malfunctions. Whether you have a built-in luxury unit or a standard freestanding model, we restore precise temperature control and ice production."
+        description: "Our master technicians specialize in high-end refrigeration systems, ensuring your perishables stay fresh and your kitchen remains efficient. We diagnose and resolve complex issues ranging from compressor failures and sealed system leaks to digital control board malfunctions. Whether you have a built-in luxury unit or a standard freestanding model, we restore precise temperature control and ice."
     },
     "cooktop-repair": {
         id: "cooktop-repair",
@@ -23,7 +23,7 @@ export const servicesData = {
         image: "/Cooktop Repair.jpg",
         features: ["Certified Techs", "Gas & Electric", "Quick Diagnosis"],
         problems: ["Burner not igniting", "Heating element failure", "Control knob issues", "Glass cooktop cracks", "Inconsistent heating"],
-        description: "Precision repairs for both gas and electric cooktops. We restore your cooking surface to factory performance with genuine parts. Our experts handle ignition problems, heating element failures, and glass top replacements with care. We ensure your cooktop operates safely and evenly, allowing you to cook with confidence."
+        description: "Accurate repairs for gas and electric cooktops. We will restore your cooking surface to its original working condition using authentic parts. Our technicians will carefully address issues with the ignition system, heating elements, and glass surfaces. We will make sure that your cooktop is working properly and evenly, so you can cook with confidence.."
     },
     "oven-stove-repair": {
         id: "oven-stove-repair",
@@ -32,7 +32,7 @@ export const servicesData = {
         image: "/Oven & Stove Repair.avif",
         features: ["Precision Calibration", "Advanced Diagnostics", "Eco-Friendly Parts"],
         problems: ["Oven not heating", "Uneven baking", "Door hinge problems", "Self-clean cycle failure", "Temperature sensor issues"],
-        description: "From calibration to complex electronic repairs, we ensure your oven or stove provides reliable results for every meal. We address temperature inconsistencies, broken heating elements, and door mechanism failures. Our technicians are trained on the latest convection and induction technologies to keep your kitchen running smoothly."
+        description: "Whether it is calibration or complex electronic repairs, we can ensure that your oven or stove is giving you the best possible results for every meal. We work on temperature problems, faulty heating elements, and door mechanism issues. Our professionals are updated on the latest convection and induction technology to keep your kitchen up and running."
     },
     "washer-repair": {
         id: "washer-repair",
@@ -41,7 +41,7 @@ export const servicesData = {
         image: "/Washer Repair.jpg",
         features: ["Leak Prevention", "Electronic Repair", "Noise Reduction"],
         problems: ["Not draining", "Vibrating excessively", "Will not spin", "Water leakage", "Error codes appearing"],
-        description: "Protect your home from leaks and restore your laundry routine with our fast, expert washing machine diagnostic and repair services. We fix spin cycle issues, drainage failures, and loud operation noises. Using advanced diagnostic tools, we identify the root cause to prevent future breakdowns and extend the life of your appliance."
+        description: "Shield your home against leaks and revive your laundry routine with our quick and professional washing machine diagnosis and repair. We can repair problems with the spin cycle, drainage, and loud operation sounds. With our advanced diagnostic equipment, we will diagnose the problem to ensure that it doesn’t happen again in the future."
     },
     "dryer-repair": {
         id: "dryer-repair",
@@ -50,7 +50,7 @@ export const servicesData = {
         image: "/Dryer Repair.webp",
         features: ["Safety Inspection", "Fast Restoration", "Vent Cleaning"],
         problems: ["Not drying clothes", "Overheating", "Drum not turning", "Strange noises", "Long dry times"],
-        description: "Prevent fire hazards and improve efficiency. Our technicians expertly handle heating elements, belts, and advanced electronic controls. We resolve issues with clothes not drying, overheating, or drum rotation failures. Regular maintenance and timely repairs ensure your dryer runs safely and energy-efficiently."
+        description: "Prevent fire risks and enhance efficiency. Our technicians are skilled at working with heating elements, belts, and sophisticated electronic controls. We fix problems related to clothes not drying, overheating, or drum rotation problems. Regular maintenance and prompt repairs will ensure your dryer operates in a safe and efficient manner."
     }
 };
 

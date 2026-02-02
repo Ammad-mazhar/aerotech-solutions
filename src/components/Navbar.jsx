@@ -224,40 +224,74 @@ const Navbar = () => {
         </div>
 
         <ul className="list-none p-0 space-y-4 flex-grow overflow-y-auto">
-          {['Home', 'About', 'Services', 'Contact'].map((item) => (
-            <li key={item}>
-              {item === 'Services' ? (
-                <>
-                  <Link
-                    to="/#services"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-xl font-bold no-underline text-white block hover:text-blue-400 transition-colors"
-                  >
-                    {item}
-                  </Link>
-                  <div className="pl-4 mt-2 space-y-3 border-l border-white/10 ml-1">
-                    {serviceItems.map((service) => (
-                      <div
-                        key={service.name}
-                        onClick={() => handleResultClick(service.path)}
-                        className="text-base text-slate-400 block cursor-pointer hover:text-blue-400 py-1"
-                      >
-                        {service.name}
-                      </div>
-                    ))}
-                  </div>
-                </>
-              ) : (
-                <Link
-                  to={`/${item.toLowerCase() === 'home' ? '' : item.toLowerCase()}`}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-xl font-bold no-underline text-white block hover:text-blue-400 transition-colors"
+          {/* Main Navigation */}
+          <li>
+            <Link
+              to="/"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-xl font-bold no-underline text-white block hover:text-blue-400 transition-colors"
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/about"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-xl font-bold no-underline text-white block hover:text-blue-400 transition-colors"
+            >
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/#services"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-xl font-bold no-underline text-white block hover:text-blue-400 transition-colors"
+            >
+              Services
+            </Link>
+            <div className="pl-4 mt-2 space-y-3 border-l border-white/10 ml-1">
+              {serviceItems.map((service) => (
+                <div
+                  key={service.name}
+                  onClick={() => handleResultClick(service.path)}
+                  className="text-base text-slate-400 block cursor-pointer hover:text-blue-400 py-1"
                 >
-                  {item}
-                </Link>
-              )}
-            </li>
-          ))}
+                  {service.name}
+                </div>
+              ))}
+            </div>
+          </li>
+          <li>
+            <Link
+              to="/contact"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-xl font-bold no-underline text-white block hover:text-blue-400 transition-colors"
+            >
+              Contact
+            </Link>
+          </li>
+
+          {/* Divider */}
+          <li className="border-t border-white/10 pt-4 mt-2">
+            <Link
+              to="/service-areas"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-lg font-semibold no-underline text-slate-300 block hover:text-blue-400 transition-colors"
+            >
+              Service Areas
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/faq"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-lg font-semibold no-underline text-slate-300 block hover:text-blue-400 transition-colors"
+            >
+              FAQ
+            </Link>
+          </li>
         </ul>
 
         <div className="mt-auto pt-6 border-t border-white/10">
