@@ -10,11 +10,11 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const serviceItems = [
-    { name: 'Refrigerator Repair', icon: '🧊', path: '/services/refrigerator-repair', desc: 'Cooling systems & Ice makers' },
-    { name: 'Washer Repair', icon: '💧', path: '/services/washer-repair', desc: 'Washing & Spin cycles' },
-    { name: 'Oven Repair', icon: '🔥', path: '/services/oven-repair', desc: 'Heating & Baking' },
-    { name: 'Cooktop Repair', icon: '🍳', path: '/services/cooktop-repair', desc: 'Surface cooking' },
-    { name: 'Dryer Repair', icon: '💨', path: '/services/dryer-repair', desc: 'Drying systems' },
+    { name: 'Refrigerator Repair', path: '/services/refrigerator-repair' },
+    { name: 'Washer Repair', path: '/services/washer-repair' },
+    { name: 'Oven Repair', path: '/services/oven-repair' },
+    { name: 'Cooktop Repair', path: '/services/cooktop-repair' },
+    { name: 'Dryer Repair', path: '/services/dryer-repair' },
   ];
 
   const searchableItems = [
@@ -126,23 +126,15 @@ const Navbar = () => {
             </a>
 
             {isDropdownOpen && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-[320px] z-[100] animate-[dropdownSlideUp_0.3s_cubic-bezier(0.16, 1, 0.3, 1)_forwards]">
-                <div className="bg-[#0f172a]/95 backdrop-blur-xl rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-white/10 p-2 overflow-hidden">
-                  <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-4 h-4 rotate-45 bg-[#0f172a] border-l border-t border-white/10"></div>
-
-                  {serviceItems.map((item) => (
+              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-[220px] z-[100] animate-[dropdownSlideUp_0.2s_ease-out_forwards]">
+                <div className="bg-white rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.12)] border border-slate-100 py-2 overflow-hidden">
+                  {serviceItems.map((item, index) => (
                     <div
                       key={item.name}
                       onClick={() => handleResultClick(item.path)}
-                      className="flex items-center gap-4 px-4 py-3.5 text-slate-200 no-underline rounded-xl transition-all hover:bg-white/5 hover:text-blue-400 group/item cursor-pointer"
+                      className={`px-5 py-2.5 text-slate-700 text-sm font-medium cursor-pointer transition-all hover:bg-slate-50 hover:text-blue-600 ${index !== serviceItems.length - 1 ? 'border-b border-slate-100' : ''}`}
                     >
-                      <div className="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-xl group-hover/item:scale-110 transition-transform">
-                        {item.icon}
-                      </div>
-                      <div className="flex flex-col">
-                        <span className="font-bold text-[15px] text-white group-hover/item:text-blue-400">{item.name}</span>
-                        <span className="text-[11px] text-slate-500 font-medium">{item.desc}</span>
-                      </div>
+                      {item.name}
                     </div>
                   ))}
                 </div>
