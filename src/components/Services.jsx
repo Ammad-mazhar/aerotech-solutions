@@ -107,7 +107,7 @@ const Services = () => {
         color: 'white'
       }}>
         <h1 style={{ fontSize: '1rem', letterSpacing: '8px', textTransform: 'uppercase', color: '#3b82f6' }}>
-          Aerotech Service
+          Aerotech Solution
         </h1>
         <p style={{ fontSize: '3rem', fontWeight: '900', marginTop: '20px' }}>
           Engineering Excellence.

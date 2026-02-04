@@ -10,11 +10,15 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const serviceItems = [
-    { name: 'Refrigerator Repair', path: '/services/refrigerator-repair' },
-    { name: 'Washer Repair', path: '/services/washer-repair' },
-    { name: 'Oven Repair', path: '/services/oven-repair' },
-    { name: 'Cooktop Repair', path: '/services/cooktop-repair' },
-    { name: 'Dryer Repair', path: '/services/dryer-repair' },
+    { name: 'Refrigerator', path: '/services/refrigerator-repair' },
+    { name: 'Washer', path: '/services/washer-repair' },
+    { name: 'Oven', path: '/services/oven-repair' },
+    { name: 'Cooktop', path: '/services/cooktop-repair' },
+    { name: 'Microwave', path: '/services/microwave-repair' },
+    { name: 'Dryer', path: '/services/dryer-repair' },
+    { name: 'Garbage Disposal', path: '/services/garbage-disposal' },
+    { name: 'HVAC', path: '/services/hvac-repair' },
+    { name: 'Furnace & Water Heater', path: '/services/furnace-water-heater' },
   ];
 
   const searchableItems = [
@@ -22,11 +26,15 @@ const Navbar = () => {
     { name: 'About Us', path: '/about' },
     { name: 'Contact', path: '/contact' },
     { name: 'Services', path: '/#services' },
-    { name: 'Refrigerator Repair', path: '/services/refrigerator-repair' },
-    { name: 'Washer Repair', path: '/services/washer-repair' },
-    { name: 'Oven Repair', path: '/services/oven-repair' },
-    { name: 'Cooktop Repair', path: '/services/cooktop-repair' },
-    { name: 'Dryer Repair', path: '/services/dryer-repair' },
+    { name: 'Refrigerator', path: '/services/refrigerator-repair' },
+    { name: 'Washer', path: '/services/washer-repair' },
+    { name: 'Oven', path: '/services/oven-repair' },
+    { name: 'Cooktop', path: '/services/cooktop-repair' },
+    { name: 'Microwave', path: '/services/microwave-repair' },
+    { name: 'Dryer', path: '/services/dryer-repair' },
+    { name: 'Garbage Disposal', path: '/services/garbage-disposal' },
+    { name: 'HVAC', path: '/services/hvac-repair' },
+    { name: 'Furnace & Water Heater', path: '/services/furnace-water-heater' },
     { name: 'Service Areas', path: '/service-areas' },
     { name: 'FAQ', path: '/faq' },
   ];
@@ -39,7 +47,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const brandMarquee = "Aerotech Service • ".repeat(10);
+  const brandMarquee = "Aerotech Solution • ".repeat(10);
 
   const handleSearch = (e) => {
     const query = e.target.value;
@@ -93,7 +101,7 @@ const Navbar = () => {
             <path d="M32 24L29.5 34H34.5L32 24Z" fill="#0ea5e9" />
             <path d="M48 12C52.4183 12 56 15.5817 56 20C56 24.4183 52.4183 28 48 28C43.5817 28 40 24.4183 40 20C40 15.5817 43.5817 12 48 12Z" fill="white" />
           </svg>
-          <h1 className="text-lg md:text-2xl font-extrabold text-white m-0 tracking-tight">Aerotech Service</h1>
+          <h1 className="text-lg md:text-2xl font-extrabold text-white m-0 tracking-tight">Aerotech Solution</h1>
         </Link>
 
         {/* Hamburger */}

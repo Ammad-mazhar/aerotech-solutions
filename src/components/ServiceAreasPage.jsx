@@ -158,7 +158,7 @@ const ServiceAreasPage = () => {
           <h1>Service Areas</h1>
           <p>
             We are proud to extend our professional appliance repair services across the entire United States.
-            Wherever you call home, Aerotech Service is ready to serve you.
+            Wherever you call home, Aerotech Solution is ready to serve you.
           </p>
         </div>
 

@@ -116,7 +116,7 @@ const Footer = () => {
                   <path d="M48 12C52.4183 12 56 15.5817 56 20C56 24.4183 52.4183 28 48 28C43.5817 28 40 24.4183 40 20C40 15.5817 43.5817 12 48 12Z" fill="white" />
                 </svg>
               </div>
-              <span style={{ fontSize: '1.5rem', fontWeight: '900', color: '#ffffff', letterSpacing: '-1px' }}>AEROTECH SERVICE</span>
+              <span style={{ fontSize: '1.5rem', fontWeight: '900', color: '#ffffff', letterSpacing: '-1px' }}>AEROTECH SOLUTION</span>
             </Link>
             <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.8', margin: 0 }}>
               Restoring comfort to your home through elite appliance craftsmanship. Factory-trained master technicians available 24/7 for essential and luxury brands.
@@ -158,10 +158,10 @@ const Footer = () => {
           <div style={columnStyle}>
             <h4 style={headingStyle}>Company</h4>
             <ul style={linkListStyle}>
-              {['About Us', 'Contact Us', 'Service Areas', 'Pricing Guide', 'Expert Team'].map((item) => (
+              {['About Us', 'Contact Us', 'Service Areas', 'FAQ', 'Expert Team'].map((item) => (
                 <li key={item}>
                   <Link
-                    to={item === 'About Us' ? '/about' : item === 'Service Areas' ? '/service-areas' : '/contact'}
+                    to={item === 'About Us' ? '/about' : item === 'Service Areas' ? '/service-areas' : item === 'FAQ' ? '/faq' : '/contact'}
                     style={linkStyle}
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
@@ -205,7 +205,7 @@ const Footer = () => {
         {/* Footer Bottom */}
         <div style={bottomBarStyle}>
           <p style={{ color: '#64748b', fontSize: '0.875rem', margin: 0 }}>
-            &copy; {new Date().getFullYear()} Aerotech Service Inc. Engineering Excellence in Home Service.
+            &copy; {new Date().getFullYear()} Aerotech Solution Inc. Engineering Excellence in Home Service.
           </p>
           <div style={{ display: 'flex', gap: '32px' }}>
             <Link to="/privacy-policy" style={{ ...linkStyle, gap: '0' }} onMouseEnter={(e) => e.currentTarget.style.color = '#ffffff'} onMouseLeave={(e) => e.currentTarget.style.color = '#94a3b8'}>Privacy</Link>

@@ -35,6 +35,10 @@ export default function Contact() {
     { value: 'refrigerator', label: 'Refrigerator Repair' },
     { value: 'washer', label: 'Washer/Dryer Repair' },
     { value: 'oven', label: 'Oven & Stove Repair' },
+    { value: 'microwave', label: 'Microwave Repair' },
+    { value: 'disposal', label: 'Garbage Disposal' },
+    { value: 'hvac', label: 'HVAC Repair' },
+    { value: 'furnace', label: 'Furnace & Water Heater Repair' },
     { value: 'emergency', label: 'Emergency Request' },
     { value: 'other', label: 'Other Inquiry' }
   ];

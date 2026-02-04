@@ -55,7 +55,7 @@ const TermsOfServicePage = () => {
 
         <div className="terms-content">
           <p>
-            Please read these Terms of Service ("Terms", "Terms of Service") carefully before using the Aerotech Service website and services operated by Aerotech Service Inc ("us", "we", or "our").
+            Please read these Terms of Service ("Terms", "Terms of Service") carefully before using the Aerotech Solution website and services operated by Aerotech Solution Inc ("us", "we", or "our").
           </p>
 
           <h2>1. Acceptance of Terms</h2>
@@ -65,7 +65,7 @@ const TermsOfServicePage = () => {
 
           <h2>2. Service Description</h2>
           <p>
-            Aerotech Service provides home appliance repair services. We reserve the right to refuse service to anyone for any reason at any time. We may also modify or discontinue our services without notice at any time.
+            Aerotech Solution provides home appliance repair services. We reserve the right to refuse service to anyone for any reason at any time. We may also modify or discontinue our services without notice at any time.
           </p>
 
           <h2>3. Appointments and Cancellations</h2>
@@ -85,7 +85,7 @@ const TermsOfServicePage = () => {
 
           <h2>6. Limitation of Liability</h2>
           <p>
-            In no event shall Aerotech Service, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the Service.
+            In no event shall Aerotech Solution, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the Service.
           </p>
 
           <h2>7. Governing Law</h2>

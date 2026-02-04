@@ -63,7 +63,7 @@ const PrivacyPolicyPage = () => {
 
         <div className="policy-content">
           <p>
-            At Aerotech Service, we value your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard your data when you use our website and services.
+            At Aerotech Solution, we value your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard your data when you use our website and services.
           </p>
 
           <h2>1. Information We Collect</h2>

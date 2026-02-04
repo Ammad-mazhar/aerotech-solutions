@@ -43,9 +43,11 @@ const applianceOptions = [
   { value: 'Washer', label: 'Washer' },
   { value: 'Dryer', label: 'Dryer' },
   { value: 'Oven & Stove', label: 'Oven & Stove' },
-  { value: 'Dishwasher', label: 'Dishwasher' },
   { value: 'Microwave', label: 'Microwave' },
   { value: 'Cooktop', label: 'Cooktop' },
+  { value: 'Garbage Disposal', label: 'Garbage Disposal' },
+  { value: 'HVAC Repair', label: 'HVAC Repair' },
+  { value: 'Furnace & Water Heater', label: 'Furnace & Water Heater' },
   { value: 'Other', label: 'Other' }
 ];
 
@@ -179,8 +181,8 @@ export default function BookingForm() {
         .form-group label {
           display: block;
           font-size: 0.875rem;
-          font-weight: 500;
-          color: #475569;
+          font-weight: 600;
+          color: #0f172a;
           margin-bottom: 0.5rem;
         }
         .form-group input, .form-group select, .form-group textarea, .date-picker {
@@ -190,6 +192,8 @@ export default function BookingForm() {
           border-radius: 0.375rem;
           font-size: 1rem;
           transition: all 0.2s;
+          color: #0f172a;
+          background-color: #ffffff;
         }
         .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
           outline: none;
@@ -291,7 +295,7 @@ export default function BookingForm() {
           <div className="success-state">
             <div className="success-icon">✓</div>
             <h2>Booking Confirmed!</h2>
-            <p>Thank you for choosing Aerotech Service. Your service has been scheduled.</p>
+            <p>Thank you for choosing Aerotech Solution. Your service has been scheduled.</p>
             <div className="booking-reference">
               <strong>Booking Reference:</strong> {bookingReference}
             </div>

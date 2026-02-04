@@ -111,7 +111,7 @@ const AboutPage = () => {
                 The Gold Standard in <span style={{ color: colors.blue }}>Appliance Restoration.</span>
               </h1>
               <p style={sublineStyle}>
-                Since 2008, Aerotech Service has set the benchmark for elite appliance care. We combine factory-certified technical expertise with white-glove service to restore not just your appliances, but the rhythm of your home. Trusted by over 50,000 homeowners, we are the region's premier choice for protecting your valuable home investments. We understand that a broken appliance disrupts your life, which is why we offer flexible scheduling and rapid response times to get you back on track. Our technicians are not only skilled in the latest technologies but are also trained to provide a courteous and clean service experience. From the initial diagnostic to the final quality check, we ensure every step of the process meets our rigorous standards of excellence.
+                Since 2008, Aerotech Solution has set the benchmark for elite appliance care. We combine factory-certified technical expertise with white-glove service to restore not just your appliances, but the rhythm of your home. Trusted by over 50,000 homeowners, we are the region's premier choice for protecting your valuable home investments. We understand that a broken appliance disrupts your life, which is why we offer flexible scheduling and rapid response times to get you back on track. Our technicians are not only skilled in the latest technologies but are also trained to provide a courteous and clean service experience. From the initial diagnostic to the final quality check, we ensure every step of the process meets our rigorous standards of excellence.
               </p>
               <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'center' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px', fontWeight: '600', color: colors.navy }}>
@@ -191,7 +191,7 @@ const AboutPage = () => {
             <div style={{ flex: '1', minWidth: '320px' }}>
               <h2 style={{ fontSize: '2.5rem', fontWeight: '800', color: colors.navy, marginBottom: '24px' }}>Uncompromising <span style={{ color: colors.blue }}>Technical Standards.</span></h2>
               <p style={{ ...pStyle, color: colors.slate, marginBottom: '32px' }}>
-                At Aerotech Service, we believe that appliance repair is a science, not a guessing game. Our technicians arrive in fully-stocked "mobile workshops" equipped with over 200 of the most common high-failure components.
+                At Aerotech Solution, we believe that appliance repair is a science, not a guessing game. Our technicians arrive in fully-stocked "mobile workshops" equipped with over 200 of the most common high-failure components.
               </p>
               <ul style={{ listStyle: 'none', padding: 0 }}>
                 {[
@@ -270,7 +270,7 @@ const AboutPage = () => {
             <div style={{ position: 'absolute', bottom: '-10%', right: '-10%', width: '300px', height: '300px', background: 'rgba(0,0,0,0.1)', borderRadius: '50%', filter: 'blur(50px)' }}></div>
 
             <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: '900', marginBottom: '24px', position: 'relative', color: 'white' }}>
-              Experience the Aerotech Service Difference.
+              Experience the Aerotech Solution Difference.
             </h2>
             <p style={{ fontSize: '1.25rem', color: 'rgba(255,255,255,0.8)', maxWidth: '700px', margin: '0 auto 40px', position: 'relative' }}>
               Join over 50,000 satisfied homeowners who trust us with their most valuable home investments.

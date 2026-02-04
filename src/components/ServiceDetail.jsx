@@ -57,18 +57,27 @@ const ServiceDetail = () => {
         margin: '0 auto'
     };
 
+    // Use specific banner if available, otherwise default to home page banner
+    const bannerImage = service.bannerImage || "/banner-image.jpeg";
+
+    // Always use banner layout styles
     const heroSectionStyle = {
-        padding: 'clamp(60px, 8vw, 100px) 20px',
-        background: 'linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%)',
-        borderRadius: '48px',
-        marginTop: '20px',
+        padding: 'clamp(80px, 12vw, 150px) 20px',
+        minHeight: '100vh',
+        background: `linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 100%), url('${bannerImage}') center/cover no-repeat`,
+        borderRadius: '0',
+        marginTop: '0',
+        marginLeft: '-20px',
+        marginRight: '-20px',
+        width: 'calc(100% + 40px)',
         textAlign: 'center',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        justifyContent: 'center',
         gap: '32px',
-        border: '1px solid rgba(15, 23, 42, 0.05)',
-        boxShadow: '0 20px 40px -15px rgba(0,0,0,0.05)',
+        border: 'none',
+        boxShadow: 'none',
         position: 'relative',
         overflow: 'hidden'
     };
@@ -153,36 +162,73 @@ const ServiceDetail = () => {
 
     return (
         <div style={{ backgroundColor: '#ffffff', paddingBottom: '100px' }}>
-            <div style={containerStyle}>
-                {/* Hero Section */}
-                <section style={heroSectionStyle}>
-                    {/* Background Decorative Element */}
-                    <div style={{ position: 'absolute', top: '-50px', right: '-50px', width: '200px', height: '200px', borderRadius: '50%', border: '40px solid rgba(59, 130, 246, 0.03)' }}></div>
+            {/* Hero Section */}
+            <section style={{
+                ...heroSectionStyle,
+                // If strictly fully width like home page
+                width: '100%',
+                maxWidth: '100%',
+                margin: 0,
+                // Adjust for fixed navbar if sticking to top
+                paddingTop: '80px',
+                paddingLeft: '20px',
+                paddingRight: '20px',
+                // Full viewport height for banner
+                minHeight: '100vh',
+                borderRadius: 0,
+            }}>
+                <div style={{
+                    maxWidth: '1200px',
+                    margin: '0 auto',
+                    width: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    gap: '32px',
+                    position: 'relative',
+                    zIndex: 1
+                }}>
 
-                    <div style={{
-                        background: '#ffffff',
-                        padding: '24px',
-                        borderRadius: '24px',
-                        color: '#3b82f6',
-                        boxShadow: '0 12px 24px -6px rgba(15, 23, 42, 0.12)',
-                        border: '1px solid rgba(15, 23, 42, 0.05)'
-                    }}>
-                        <Icon size={56} strokeWidth={1.5} />
-                    </div>
                     <div>
-                        <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: '900', color: '#0f172a', letterSpacing: '-0.04em', margin: '0 0 16px 0', lineHeight: 1 }}>
+                        <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: '900', color: '#ffffff', letterSpacing: '-0.04em', margin: '0 0 16px 0', lineHeight: 1 }}>
                             {service.title}
                         </h1>
-                        <p style={{ fontSize: '1.25rem', color: '#475569', maxWidth: '800px', lineHeight: '1.6', margin: '0 0 24px 0', fontWeight: '500' }}>
+                        <p style={{ fontSize: '1.25rem', color: 'rgba(255, 255, 255, 0.9)', maxWidth: '800px', lineHeight: '1.6', margin: '0 auto 24px auto', fontWeight: '500' }}>
                             {service.description}
                         </p>
                         <div style={{ display: 'flex', gap: '12px', justifyContent: 'center' }}>
-                            <span style={{ padding: '6px 16px', background: '#dcfce7', color: '#166534', borderRadius: '100px', fontSize: '14px', fontWeight: '700' }}>Factory Certified</span>
-                            <span style={{ padding: '6px 16px', background: '#dcfce7', color: '#166534', borderRadius: '100px', fontSize: '14px', fontWeight: '700' }}>90-Day Warranty</span>
+                            <span style={{ padding: '6px 16px', background: 'rgba(255, 255, 255, 0.2)', color: '#ffffff', borderRadius: '100px', fontSize: '14px', fontWeight: '700', backdropFilter: 'blur(10px)' }}>Factory Certified</span>
+                            <span style={{ padding: '6px 16px', background: 'rgba(255, 255, 255, 0.2)', color: '#ffffff', borderRadius: '100px', fontSize: '14px', fontWeight: '700', backdropFilter: 'blur(10px)' }}>90-Day Warranty</span>
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
 
+            {/* Brands Marquee */}
+            <div style={{ background: '#f8fafc', padding: '24px 0', borderBottom: '1px solid #e2e8f0', overflow: 'hidden', display: 'flex' }}>
+                <div style={{ display: 'flex', whiteSpace: 'nowrap', animation: 'marquee 60s linear infinite', gap: '48px', paddingLeft: '24px' }}>
+                    {[...brands, ...brands, ...brands].map((brand, i) => (
+                        <span key={i} style={{
+                            fontSize: '1.1rem',
+                            fontWeight: '600',
+                            color: '#64748b',
+                            display: 'flex',
+                            alignItems: 'center',
+                            opacity: 0.8
+                        }}>
+                            {brand}
+                        </span>
+                    ))}
+                </div>
+                <style>{`
+                    @keyframes marquee {
+                        0% { transform: translateX(0); }
+                        100% { transform: translateX(-100%); }
+                    }
+                `}</style>
+            </div>
+
+            <div style={containerStyle}>
                 {/* Technical Details Grid */}
                 <div style={gridStyle}>
                     {/* Common Issues */}
@@ -229,37 +275,25 @@ const ServiceDetail = () => {
                             </div>
                         </div>
                     </div>
+
+                    {/* Why Choose Us */}
+                    <div style={cardStyle} onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
+                        <h3 style={{ fontSize: '1.75rem', fontWeight: '900', color: '#0f172a', marginBottom: '32px', display: 'flex', alignItems: 'center', gap: '16px' }}>
+                            <div style={{ background: '#ecfdf5', padding: '12px', borderRadius: '14px' }}>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999" stroke="#10b981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    <path d="M22 4L12 14.01L9 11.01" stroke="#10b981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </div>
+                            Why Choose Us
+                        </h3>
+                        <p style={{ color: '#475569', fontSize: '1.1rem', lineHeight: '1.7', fontWeight: '500' }}>
+                            {service.whyChooseUs || "Experience the Aerotech difference with our factory-certified technicians and commitment to excellence."}
+                        </p>
+                    </div>
                 </div>
 
-                {/* Brands Section */}
-                <section style={brandsSectionStyle}>
-                    <h3 style={{ fontSize: '2rem', fontWeight: '900', color: '#0f172a', marginBottom: '16px' }}>
-                        We Service All Major Brands
-                    </h3>
-                    <p style={{ fontSize: '1.125rem', lineHeight: '1.8', color: '#475569', maxWidth: '800px', margin: '0 auto' }}>
-                        Our certified technicians are experts in repairing every major manufacturer, ensuring your {service.title} is back to factory standards regardless of the brand. We stay updated with the latest manufacturer training and service bulletins to provide authorized-quality repairs for both legacy models and the newest smart appliances.
-                    </p>
-                    <div style={brandsGridStyle}>
-                        {brands.map((brand, index) => (
-                            <div
-                                key={index}
-                                style={brandChipStyle}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.backgroundColor = '#eff6ff';
-                                    e.currentTarget.style.borderColor = '#bfdbfe';
-                                    e.currentTarget.style.color = '#3b82f6';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.backgroundColor = '#f8fafc';
-                                    e.currentTarget.style.borderColor = '#e2e8f0';
-                                    e.currentTarget.style.color = '#475569';
-                                }}
-                            >
-                                {brand}
-                            </div>
-                        ))}
-                    </div>
-                </section>
+
 
                 {/* Pricing & CTA Section */}
                 <div style={{ padding: '80px 0', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>

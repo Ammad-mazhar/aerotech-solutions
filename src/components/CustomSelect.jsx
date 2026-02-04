@@ -58,7 +58,7 @@ const CustomSelect = ({ options, value, onChange, placeholder, label, error }) =
     const optionStyle = (isHovered, isSelected) => ({
         padding: '12px 18px',
         backgroundColor: isSelected ? '#eff6ff' : isHovered ? '#f8fafc' : 'transparent',
-        color: isSelected ? '#2563eb' : '#475569',
+        color: isSelected ? '#2563eb' : '#0f172a',
         fontWeight: isSelected ? '600' : '500',
         fontSize: '0.95rem',
         cursor: 'pointer',

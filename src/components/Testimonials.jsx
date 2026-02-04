@@ -6,7 +6,7 @@ const Testimonials = () => {
       id: 1,
       name: "Sarah Johnson",
       role: "Homeowner",
-      content: "Aerotech Service saved the day! My refrigerator stopped working right before a big family dinner. They came out the same day and fixed it quickly. Highly recommended!",
+      content: "Aerotech Solution saved the day! My refrigerator stopped working right before a big family dinner. They came out the same day and fixed it quickly. Highly recommended!",
       rating: 5
     },
     {
