@@ -12,7 +12,7 @@ const Navbar = () => {
   const serviceItems = [
     { name: 'Refrigerator', path: '/services/refrigerator-repair' },
     { name: 'Washer', path: '/services/washer-repair' },
-    { name: 'Oven', path: '/services/oven-repair' },
+    { name: 'Oven & Stove', path: '/services/oven-stove-repair' },
     { name: 'Cooktop', path: '/services/cooktop-repair' },
     { name: 'Microwave', path: '/services/microwave-repair' },
     { name: 'Dryer', path: '/services/dryer-repair' },
@@ -28,7 +28,7 @@ const Navbar = () => {
     { name: 'Services', path: '/#services' },
     { name: 'Refrigerator', path: '/services/refrigerator-repair' },
     { name: 'Washer', path: '/services/washer-repair' },
-    { name: 'Oven', path: '/services/oven-repair' },
+    { name: 'Oven & Stove', path: '/services/oven-stove-repair' },
     { name: 'Cooktop', path: '/services/cooktop-repair' },
     { name: 'Microwave', path: '/services/microwave-repair' },
     { name: 'Dryer', path: '/services/dryer-repair' },
