@@ -18,7 +18,8 @@ const Navbar = () => {
     { name: 'Dryer', path: '/services/dryer-repair' },
     { name: 'Garbage Disposal', path: '/services/garbage-disposal' },
     { name: 'HVAC', path: '/services/hvac-repair' },
-    { name: 'Furnace & Water Heater', path: '/services/furnace-water-heater' },
+    { name: 'Furnace', path: '/services/furnace-repair' },
+    { name: 'Water Heater', path: '/services/water-heater-repair' },
   ];
 
   const searchableItems = [
@@ -26,15 +27,7 @@ const Navbar = () => {
     { name: 'About Us', path: '/about' },
     { name: 'Contact', path: '/contact' },
     { name: 'Services', path: '/#services' },
-    { name: 'Refrigerator', path: '/services/refrigerator-repair' },
-    { name: 'Washer', path: '/services/washer-repair' },
-    { name: 'Oven & Stove', path: '/services/oven-stove-repair' },
-    { name: 'Cooktop', path: '/services/cooktop-repair' },
-    { name: 'Microwave', path: '/services/microwave-repair' },
-    { name: 'Dryer', path: '/services/dryer-repair' },
-    { name: 'Garbage Disposal', path: '/services/garbage-disposal' },
-    { name: 'HVAC', path: '/services/hvac-repair' },
-    { name: 'Furnace & Water Heater', path: '/services/furnace-water-heater' },
+    ...serviceItems,
     { name: 'Service Areas', path: '/service-areas' },
     { name: 'FAQ', path: '/faq' },
   ];

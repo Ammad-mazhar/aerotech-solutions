@@ -38,7 +38,8 @@ export default function Contact() {
     { value: 'microwave', label: 'Microwave Repair' },
     { value: 'disposal', label: 'Garbage Disposal' },
     { value: 'hvac', label: 'HVAC Repair' },
-    { value: 'furnace', label: 'Furnace & Water Heater Repair' },
+    { value: 'furnace', label: 'Furnace Repair' },
+    { value: 'water-heater', label: 'Water Heater Repair' },
     { value: 'emergency', label: 'Emergency Request' },
     { value: 'other', label: 'Other Inquiry' }
   ];
@@ -49,6 +50,8 @@ export default function Contact() {
       if (type.includes('refrigerator')) setValue('subject', 'refrigerator', { shouldValidate: true });
       else if (type.includes('washer') || type.includes('dryer')) setValue('subject', 'washer', { shouldValidate: true });
       else if (type.includes('oven') || type.includes('stove') || type.includes('cooktop')) setValue('subject', 'oven', { shouldValidate: true });
+      else if (type.includes('furnace')) setValue('subject', 'furnace', { shouldValidate: true });
+      else if (type.includes('water heater')) setValue('subject', 'water-heater', { shouldValidate: true });
     }
   }, [location.state, setValue]);
 
@@ -179,9 +182,9 @@ export default function Contact() {
           <h2 style={{ fontSize: '1.5rem', fontWeight: '800', color: '#0f172a', marginBottom: '40px' }}>Office Information</h2>
 
           {[
-            { icon: 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z', title: 'Email', detail: 'aerotechservice.com' },
+            { icon: 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z', title: 'Email', detail: 'aerotechsolutions@gmail.com' },
             { icon: 'M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z', title: 'Phone', detail: '630 943 5120' },
-            { icon: 'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z', title: 'Address', detail: '206 Far Hills Dr, Bolingbrook IL 60440' },
+            { icon: 'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z', title: 'Address', detail: '206 Far Hills Dr, Bolingbrook, IL 60440' },
             { icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z', title: 'Hours', detail: 'Mon - Fri: 9:00 AM - 6:00 PM' }
           ].map((item, idx) => (
             <div key={idx} style={{ display: 'flex', gap: '20px', marginBottom: '32px' }}>
@@ -311,14 +314,14 @@ export default function Contact() {
           loading="lazy"
           allowFullScreen
           referrerPolicy="no-referrer-when-downgrade"
-          src="https://maps.google.com/maps?q=206%20Far%20Hills%20Dr%2C%20Bolingbrook%20IL%2060440&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          src="https://maps.google.com/maps?q=206%20Far%20Hills%20Dr%2C%20Bolingbrook%2C%20IL%2060440&t=&z=15&ie=UTF8&iwloc=&output=embed"
           title="Office Location"
         ></iframe>
       </div>
 
       <div style={{ textAlign: 'center', marginTop: '30px' }}>
         <a
-          href="https://www.google.com/maps/dir/?api=1&destination=206+Far+Hills+Dr,+Bolingbrook+IL+60440"
+          href="https://www.google.com/maps/dir/?api=1&destination=206+Far+Hills+Dr,+Bolingbrook,+IL+60440"
           target="_blank"
           rel="noopener noreferrer"
           style={{

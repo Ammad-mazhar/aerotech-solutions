@@ -5,6 +5,7 @@ import * as yup from 'yup';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import CustomSelect from './CustomSelect';
+import { brands } from '../data/servicesData';
 
 // Input sanitization helper to prevent XSS
 const sanitizeInput = (value) => (value ? value.replace(/<[^>]*>?/gm, '') : '');
@@ -47,21 +48,13 @@ const applianceOptions = [
   { value: 'Cooktop', label: 'Cooktop' },
   { value: 'Garbage Disposal', label: 'Garbage Disposal' },
   { value: 'HVAC Repair', label: 'HVAC Repair' },
-  { value: 'Furnace & Water Heater', label: 'Furnace & Water Heater' },
+  { value: 'Furnace Repair', label: 'Furnace Repair' },
+  { value: 'Water Heater Repair', label: 'Water Heater Repair' },
   { value: 'Other', label: 'Other' }
 ];
 
-const brandOptions = [
-  { value: 'Whirlpool', label: 'Whirlpool' },
-  { value: 'GE', label: 'GE' },
-  { value: 'Samsung', label: 'Samsung' },
-  { value: 'LG', label: 'LG' },
-  { value: 'Kenmore', label: 'Kenmore' },
-  { value: 'Maytag', label: 'Maytag' },
-  { value: 'Frigidaire', label: 'Frigidaire' },
-  { value: 'Bosch', label: 'Bosch' },
-  { value: 'Other', label: 'Other' }
-];
+const brandOptions = brands.map(brand => ({ value: brand, label: brand }));
+brandOptions.push({ value: 'Other', label: 'Other' });
 
 export default function BookingForm() {
   const [showSuccess, setShowSuccess] = useState(false);

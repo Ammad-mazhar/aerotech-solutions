@@ -6,7 +6,7 @@ import {
     ChevronRight,
     AlertCircle
 } from 'lucide-react';
-import { servicesData } from '../data/servicesData';
+import { servicesData, brands as defaultBrands } from '../data/servicesData';
 
 const ServiceDetail = () => {
     const { id } = useParams();
@@ -39,12 +39,19 @@ const ServiceDetail = () => {
 
     const Icon = service.icon || AlertCircle;
 
-    const brands = [
-        "Whirlpool", "Maytag", "GE", "Samsung", "LG", "Kenmore",
-        "Frigidaire", "Bosch", "KitchenAid", "JennAir", "Electrolux",
-        "Amana", "Hotpoint", "Admiral", "Roper", "Viking",
-        "Sub-Zero", "Wolf", "Thermador", "Miele"
+    const waterHeaterBrands = [
+        "A. O. Smith", "Bradford White", "Rheem", "Rinnai", "Bosch", "American Standard"
     ];
+
+    const hvacFurnaceBrands = [
+        "Carrier", "Trane", "Rheem", "Goodman", "Lennox", "York"
+    ];
+
+    const garbageDisposalBrands = [
+        "Amana", "InSinkErator", "KitchenAid", "Moen", "Whirlpool", "Waste King", "GE", "Frigidaire", "Everbilt", "American Standard", "Waste Maid"
+    ];
+
+    const brands = id === 'water-heater-repair' ? waterHeaterBrands : (id === 'hvac-repair' || id === 'furnace-repair' ? hvacFurnaceBrands : (id === 'garbage-disposal' ? garbageDisposalBrands : defaultBrands));
 
     const sectionStyle = {
         padding: '80px 20px',
@@ -204,28 +211,20 @@ const ServiceDetail = () => {
                 </div>
             </section>
 
-            {/* Brands Marquee */}
-            <div style={{ background: '#f8fafc', padding: '24px 0', borderBottom: '1px solid #e2e8f0', overflow: 'hidden', display: 'flex' }}>
-                <div style={{ display: 'flex', whiteSpace: 'nowrap', animation: 'marquee 60s linear infinite', gap: '48px', paddingLeft: '24px' }}>
-                    {[...brands, ...brands, ...brands].map((brand, i) => (
-                        <span key={i} style={{
-                            fontSize: '1.1rem',
-                            fontWeight: '600',
-                            color: '#64748b',
-                            display: 'flex',
-                            alignItems: 'center',
-                            opacity: 0.8
-                        }}>
-                            {brand}
-                        </span>
-                    ))}
+            {/* Brands Section */}
+            <div style={{ background: '#f8fafc', padding: '60px 20px', borderBottom: '1px solid #e2e8f0' }}>
+                <div style={{ maxWidth: '1000px', margin: '0 auto', textAlign: 'center' }}>
+                    <h3 style={{ fontSize: '0.875rem', fontWeight: '800', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '32px' }}>
+                        Supported Brands
+                    </h3>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '16px 40px' }}>
+                        {brands.map((brand, i) => (
+                            <span key={i} style={{ fontSize: '1.125rem', fontWeight: '600', color: '#475569' }}>
+                                {brand}
+                            </span>
+                        ))}
+                    </div>
                 </div>
-                <style>{`
-                    @keyframes marquee {
-                        0% { transform: translateX(0); }
-                        100% { transform: translateX(-100%); }
-                    }
-                `}</style>
             </div>
 
             <div style={containerStyle}>
@@ -256,8 +255,8 @@ const ServiceDetail = () => {
                         <div style={stepStyle}>
                             <div style={stepNumberStyle}>01</div>
                             <div>
-                                <h4 style={{ margin: '0 0 4px 0', fontWeight: '800', fontSize: '1.1rem', color: '#0f172a' }}>Multi-Point Diagnostic</h4>
-                                <p style={{ margin: 0, color: '#64748b', lineHeight: '1.5' }}>Pinpointing secondary failures before they cause future issues.</p>
+                                <h4 style={{ margin: '0 0 4px 0', fontWeight: '800', fontSize: '1.1rem', color: '#0f172a' }}>Multi-point Inspection</h4>
+                                <p style={{ margin: 0, color: '#64748b', lineHeight: '1.5' }}>Our Factory-certified Technicians perform comprehensive Electrical Diagnostics to pinpoint secondary failures.</p>
                             </div>
                         </div>
                         <div style={stepStyle}>
@@ -271,7 +270,7 @@ const ServiceDetail = () => {
                             <div style={stepNumberStyle}>03</div>
                             <div>
                                 <h4 style={{ margin: '0 0 4px 0', fontWeight: '800', fontSize: '1.1rem', color: '#0f172a' }}>Precision Repair</h4>
-                                <p style={{ margin: 0, color: '#64748b', lineHeight: '1.5' }}>Using only OEM components to restore factory performance.</p>
+                                <p style={{ margin: 0, color: '#64748b', lineHeight: '1.5' }}>Using only OEM Parts (Original Equipment Manufacturer) to restore factory performance.</p>
                             </div>
                         </div>
                     </div>

@@ -159,9 +159,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 For support or questions, please contact:
-- Email: aerotechsolitions@gmail.com
+- Email: aerotechsolutions@gmail.com
 - Phone: 630 943 5120
-- Address: 206 Far Hills Dr, Bolingbrook IL 60440
+- Address: 206 Far Hills Dr, Bolingbrook, IL 60440
 
 ## 🙏 Acknowledgments
 

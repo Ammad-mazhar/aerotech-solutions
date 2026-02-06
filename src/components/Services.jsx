@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { servicesList } from '../data/servicesData';
+import { servicesList, brands } from '../data/servicesData';
 
 const ServiceFeature = ({ service, index }) => {
   const navigate = useNavigate();
@@ -22,7 +22,7 @@ const ServiceFeature = ({ service, index }) => {
       <div style={{ flex: 1, height: '80vh', position: 'relative' }}>
         <img
           src={service.image}
-          alt={service.title}
+          alt={service.alt || service.title}
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         />
         <div style={{
@@ -112,6 +112,30 @@ const Services = () => {
         <p style={{ fontSize: '3rem', fontWeight: '900', marginTop: '20px' }}>
           Engineering Excellence.
         </p>
+      </div>
+
+      {/* Brands Marquee */}
+      <div style={{ background: '#f8fafc', padding: '24px 0', borderBottom: '1px solid #e2e8f0', overflow: 'hidden', display: 'flex' }}>
+        <div style={{ display: 'flex', whiteSpace: 'nowrap', animation: 'marquee 60s linear infinite', gap: '48px', paddingLeft: '24px' }}>
+          {[...brands, ...brands].map((brand, i) => (
+            <span key={i} style={{
+              fontSize: '1.1rem',
+              fontWeight: '600',
+              color: '#64748b',
+              display: 'flex',
+              alignItems: 'center',
+              opacity: 0.8
+            }}>
+              {brand}
+            </span>
+          ))}
+        </div>
+        <style>{`
+          @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+          }
+        `}</style>
       </div>
 
       {/* Feature Blocks */}

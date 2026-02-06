@@ -191,7 +191,7 @@ const ServiceAreasPage = () => {
             </p>
           </div>
           <div className="sa-image">
-            <img src="/Washer%20Repair.jpg" alt="Professional Appliance Repair Service" />
+            <img src="/Washer%20Repair.jpg" alt="Nationwide Appliance Repair and Emergency Appliance Restoration" />
           </div>
         </div>
 

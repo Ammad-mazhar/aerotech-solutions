@@ -98,8 +98,9 @@ const PrivacyPolicyPage = () => {
           <h2>5. Contact Us</h2>
           <p>
             If you have any questions about this Privacy Policy, please contact us at:<br />
-            Email: aerotechsolitions@gmail.com<br />
-            Phone: 630 943 5120
+            Email: aerotechsolutions@gmail.com<br />
+            Phone: 630 943 5120<br />
+            Address: 206 Far Hills Dr, Bolingbrook, IL 60440
           </p>
         </div>
       </div>

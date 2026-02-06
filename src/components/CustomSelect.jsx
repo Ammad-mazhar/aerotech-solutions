@@ -1,21 +1,32 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { ChevronDown } from 'lucide-react';
 
-const CustomSelect = ({ options, value, onChange, placeholder, label, error }) => {
+const CustomSelect = ({ options, value, onChange, placeholder, error }) => {
     const [isOpen, setIsOpen] = useState(false);
+    const [searchTerm, setSearchTerm] = useState('');
     const containerRef = useRef(null);
+    const inputRef = useRef(null);
 
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (containerRef.current && !containerRef.current.contains(event.target)) {
                 setIsOpen(false);
+                setSearchTerm('');
             }
         };
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
 
+    const filteredOptions = searchTerm
+        ? options.filter(option =>
+            option.label.toLowerCase().includes(searchTerm.toLowerCase())
+        )
+        : options;
+
     const selectedOption = options.find(opt => opt.value === value);
+
+    const displayValue = isOpen ? searchTerm : (selectedOption ? selectedOption.label : '');
 
     const containerStyle = {
         position: 'relative',
@@ -25,16 +36,13 @@ const CustomSelect = ({ options, value, onChange, placeholder, label, error }) =
 
     const selectBoxStyle = {
         width: '100%',
-        padding: '14px 18px',
+        padding: '0',
         backgroundColor: '#ffffff',
         border: `1px solid ${error ? '#ef4444' : isOpen ? '#2563eb' : '#cbd5e1'}`,
         borderRadius: '12px',
         fontSize: '1rem',
-        color: selectedOption ? '#0f172a' : '#94a3b8',
-        cursor: 'pointer',
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'between',
         transition: 'all 0.2s ease',
         boxShadow: isOpen ? '0 0 0 4px rgba(37, 99, 235, 0.1)' : 'none',
         outline: 'none'
@@ -65,18 +73,31 @@ const CustomSelect = ({ options, value, onChange, placeholder, label, error }) =
         transition: 'all 0.1s ease',
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'between'
+        justifyContent: 'space-between'
     });
 
     return (
         <div style={containerStyle} ref={containerRef}>
             <div
                 style={selectBoxStyle}
-                onClick={() => setIsOpen(!isOpen)}
-                tabIndex="0"
-                onKeyDown={(e) => e.key === 'Enter' && setIsOpen(!isOpen)}
             >
-                <span style={{ flex: 1 }}>{selectedOption ? selectedOption.label : placeholder}</span>
+                <input
+                    ref={inputRef}
+                    style={{
+                        width: '100%',
+                        padding: '14px 18px',
+                        border: 'none',
+                        backgroundColor: 'transparent',
+                        fontSize: '1rem',
+                        color: '#0f172a',
+                        outline: 'none',
+                        cursor: 'pointer'
+                    }}
+                    value={displayValue}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onFocus={() => setIsOpen(true)}
+                    placeholder={placeholder}
+                />
                 <ChevronDown
                     size={18}
                     style={{
@@ -84,34 +105,38 @@ const CustomSelect = ({ options, value, onChange, placeholder, label, error }) =
                         transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
                         color: isOpen ? '#2563eb' : '#64748b'
                     }}
+                    onClick={() => {
+                        setIsOpen(!isOpen);
+                        inputRef.current?.focus();
+                    }}
                 />
             </div>
 
             {isOpen && (
                 <div style={dropdownStyle}>
-                    {options.map((option) => (
-                        <div
-                            key={option.value}
-                            style={optionStyle(false, value === option.value)}
-                            onClick={() => {
-                                onChange(option.value);
-                                setIsOpen(false);
-                            }}
-                            onMouseEnter={(e) => {
-                                e.currentTarget.style.backgroundColor = value === option.value ? '#eff6ff' : '#f8fafc';
-                            }}
-                            onMouseLeave={(e) => {
-                                e.currentTarget.style.backgroundColor = value === option.value ? '#eff6ff' : 'transparent';
-                            }}
-                        >
-                            {option.label}
-                            {value === option.value && (
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                                    <polyline points="20 6 9 17 4 12"></polyline>
-                                </svg>
-                            )}
-                        </div>
-                    ))}
+                    {filteredOptions.length > 0 ? (
+                        filteredOptions.map((option) => (
+                            <div
+                                key={option.value}
+                                style={optionStyle(false, value === option.value)}
+                                onMouseDown={(e) => {
+                                    e.preventDefault();
+                                    onChange(option.value);
+                                    setIsOpen(false);
+                                    setSearchTerm('');
+                                }}
+                            >
+                                {option.label}
+                                {value === option.value && (
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                )}
+                            </div>
+                        ))
+                    ) : (
+                        <div style={{ padding: '12px 18px', color: '#64748b' }}>No results found</div>
+                    )}
                 </div>
             )}
 
