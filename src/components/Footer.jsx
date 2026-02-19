@@ -195,7 +195,7 @@ const Footer = () => {
                 <MapPin size={20} style={{ color: '#3b82f6' }} />
                 <div>
                   <span style={{ display: 'block', fontWeight: '700', color: '#ffffff' }}>Bolingbrook, IL</span>
-                  <span style={{ fontSize: '0.85rem' }}>Serving Greater Chicago La</span>
+                  <span style={{ fontSize: '0.85rem' }}>Serving Greater Chicago Land</span>
                 </div>
               </div>
             </div>
