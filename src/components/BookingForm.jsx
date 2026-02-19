@@ -41,14 +41,13 @@ const schema = yup.object({
 
 const applianceOptions = [
   { value: 'Refrigerator', label: 'Refrigerator' },
-  { value: 'Washer', label: 'Washer' },
+  { value: 'Oven, Stove & Cooktop', label: 'Oven, Stove & Cooktop' },
   { value: 'Dryer', label: 'Dryer' },
-  { value: 'Oven & Stove', label: 'Oven & Stove' },
+  { value: 'Washer', label: 'Washer' },
   { value: 'Microwave', label: 'Microwave' },
-  { value: 'Cooktop', label: 'Cooktop' },
+  { value: 'Dishwasher', label: 'Dishwasher' },
+  { value: 'HVAC & Furnace Repair', label: 'HVAC & Furnace Repair' },
   { value: 'Garbage Disposal', label: 'Garbage Disposal' },
-  { value: 'HVAC Repair', label: 'HVAC Repair' },
-  { value: 'Furnace Repair', label: 'Furnace Repair' },
   { value: 'Water Heater Repair', label: 'Water Heater Repair' },
   { value: 'Other', label: 'Other' }
 ];

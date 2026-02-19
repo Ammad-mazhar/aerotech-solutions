@@ -51,7 +51,7 @@ const ServiceDetail = () => {
         "Amana", "InSinkErator", "KitchenAid", "Moen", "Whirlpool", "Waste King", "GE", "Frigidaire", "Everbilt", "American Standard", "Waste Maid"
     ];
 
-    const brands = id === 'water-heater-repair' ? waterHeaterBrands : (id === 'hvac-repair' || id === 'furnace-repair' ? hvacFurnaceBrands : (id === 'garbage-disposal' ? garbageDisposalBrands : defaultBrands));
+    const brands = id === 'water-heater-repair' ? waterHeaterBrands : (id === 'hvac-furnace-repair' || id === 'hvac-repair' ? hvacFurnaceBrands : (id === 'garbage-disposal' ? garbageDisposalBrands : defaultBrands));
 
     const sectionStyle = {
         padding: '80px 20px',

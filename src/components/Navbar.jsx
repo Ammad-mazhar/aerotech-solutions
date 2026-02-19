@@ -11,14 +11,13 @@ const Navbar = () => {
 
   const serviceItems = [
     { name: 'Refrigerator', path: '/services/refrigerator-repair' },
-    { name: 'Washer', path: '/services/washer-repair' },
-    { name: 'Oven & Stove', path: '/services/oven-stove-repair' },
-    { name: 'Cooktop', path: '/services/cooktop-repair' },
-    { name: 'Microwave', path: '/services/microwave-repair' },
+    { name: 'Oven, Stove & Cooktop', path: '/services/oven-stove-cooktop-repair' },
     { name: 'Dryer', path: '/services/dryer-repair' },
+    { name: 'Washer', path: '/services/washer-repair' },
+    { name: 'Microwave', path: '/services/microwave-repair' },
+    { name: 'Dishwasher', path: '/services/dishwasher-repair' },
+    { name: 'HVAC & Furnace', path: '/services/hvac-furnace-repair' },
     { name: 'Garbage Disposal', path: '/services/garbage-disposal' },
-    { name: 'HVAC', path: '/services/hvac-repair' },
-    { name: 'Furnace', path: '/services/furnace-repair' },
     { name: 'Water Heater', path: '/services/water-heater-repair' },
   ];
 
