@@ -15,6 +15,8 @@ import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import NotFound from './components/NotFound';
 import ServiceDetail from './components/ServiceDetail';
+import Stats from './components/Stats';
+import Partners from './components/Partners';
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
           <Route path="/" element={
             <>
               <Hero />
+              <Stats />
+              <Partners />
               <Services />
               <Testimonials />
             </>

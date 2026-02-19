@@ -32,14 +32,14 @@ export default function Contact() {
   });
 
   const serviceOptions = [
-    { value: 'refrigerator', label: 'Refrigerator Repair' },
-    { value: 'washer', label: 'Washer/Dryer Repair' },
-    { value: 'oven', label: 'Oven & Stove Repair' },
-    { value: 'microwave', label: 'Microwave Repair' },
+    { value: 'refrigerator', label: 'Refrigerator' },
+    { value: 'washer', label: 'Washer & Dryer' },
+    { value: 'oven', label: 'Oven & Stove' },
+    { value: 'microwave', label: 'Microwave' },
     { value: 'disposal', label: 'Garbage Disposal' },
-    { value: 'hvac', label: 'HVAC Repair' },
-    { value: 'furnace', label: 'Furnace Repair' },
-    { value: 'water-heater', label: 'Water Heater Repair' },
+    { value: 'hvac', label: 'HVAC' },
+    { value: 'furnace', label: 'Furnace' },
+    { value: 'water-heater', label: 'Water Heater' },
     { value: 'emergency', label: 'Emergency Request' },
     { value: 'other', label: 'Other Inquiry' }
   ];

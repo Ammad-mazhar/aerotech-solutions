@@ -139,7 +139,7 @@ const Footer = () => {
           <div style={columnStyle}>
             <h4 style={headingStyle}>Solutions</h4>
             <ul style={linkListStyle}>
-              {['Refrigerator Repair', 'Washer & Dryer', 'Oven & Stove', 'Luxury Restoration', 'Quick Diagnostics'].map((item) => (
+              {['Refrigerator', 'Washer & Dryer', 'Oven & Stove', 'Luxury Restoration', 'Quick Diagnostics'].map((item) => (
                 <li key={item}>
                   <a
                     href="/#services"

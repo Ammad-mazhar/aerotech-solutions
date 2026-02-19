@@ -14,7 +14,7 @@ export const servicesData = {
     // ... existing services ...
     "refrigerator-repair": {
         id: "refrigerator-repair",
-        title: "Refrigerator Repair",
+        title: "Refrigerator",
         icon: Refrigerator,
         image: "/Refrigerator repair.jpg",
         alt: "Premium Kitchen Appliance Service - Refrigerator Repair",
@@ -26,7 +26,7 @@ export const servicesData = {
     },
     "oven-stove-cooktop-repair": {
         id: "oven-stove-cooktop-repair",
-        title: "Oven, Stove & Cooktop Repair",
+        title: "Oven, Stove & Cooktop",
         icon: Utensils,
         image: "/Oven & Stove Repair.avif",
         alt: "Premium Kitchen Appliance Service - Oven, Stove & Cooktop Repair",
@@ -37,7 +37,7 @@ export const servicesData = {
     },
     "dryer-repair": {
         id: "dryer-repair",
-        title: "Dryer Repair",
+        title: "Dryer",
         icon: Wind,
         image: "/Dryer Repair.webp",
         alt: "Emergency Appliance Restoration - Dryer Repair",
@@ -48,7 +48,7 @@ export const servicesData = {
     },
     "washer-repair": {
         id: "washer-repair",
-        title: "Washer Repair",
+        title: "Washer",
         icon: Waves,
         image: "/Washer Repair.jpg",
         alt: "24/7 Residential Appliance Repair USA - Washer Repair",
@@ -59,7 +59,7 @@ export const servicesData = {
     },
     "microwave-repair": {
         id: "microwave-repair",
-        title: "Microwave Repair",
+        title: "Microwave",
         icon: Microwave,
         image: "/Microwave image.jpg",
         alt: "Premium Kitchen Appliance Service - Microwave Repair",
@@ -70,7 +70,7 @@ export const servicesData = {
     },
     "dishwasher-repair": {
         id: "dishwasher-repair",
-        title: "Dishwasher Repair",
+        title: "Dishwasher",
         icon: Waves,
         image: "/dish2.png",
         alt: "Premium Kitchen Appliance Service - Dishwasher Repair",
@@ -81,7 +81,7 @@ export const servicesData = {
     },
     "hvac-furnace-repair": {
         id: "hvac-furnace-repair",
-        title: "HVAC & Furnace Repair",
+        title: "HVAC & Furnace",
         icon: Thermometer,
         image: "/HVAC.jpg",
         alt: "Certified HVAC Solutions - HVAC & Furnace Repair",
@@ -103,7 +103,7 @@ export const servicesData = {
     },
     "water-heater-repair": {
         id: "water-heater-repair",
-        title: "Water Heater Repair",
+        title: "Water Heater",
         icon: Droplets,
         image: "/water heater.jpg",
         alt: "Nationwide Appliance Repair - Water Heater Repair",

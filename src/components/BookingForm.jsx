@@ -46,9 +46,9 @@ const applianceOptions = [
   { value: 'Washer', label: 'Washer' },
   { value: 'Microwave', label: 'Microwave' },
   { value: 'Dishwasher', label: 'Dishwasher' },
-  { value: 'HVAC & Furnace Repair', label: 'HVAC & Furnace Repair' },
+  { value: 'HVAC & Furnace', label: 'HVAC & Furnace' },
   { value: 'Garbage Disposal', label: 'Garbage Disposal' },
-  { value: 'Water Heater Repair', label: 'Water Heater Repair' },
+  { value: 'Water Heater', label: 'Water Heater' },
   { value: 'Other', label: 'Other' }
 ];
 
