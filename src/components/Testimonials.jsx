@@ -4,23 +4,23 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Sarah Johnson",
-      role: "Homeowner",
-      content: "Aerotech Solution saved the day! My refrigerator stopped working right before a big family dinner. They came out the same day and fixed it quickly. Highly recommended!",
+      name: "Jennifer Wu",
+      role: "Naperville, IL",
+      content: "I thought my Sub-Zero fridge was done for. Another company told me to buy a new one, but the Aerotech tech identified a specific control board issue immediately. He had the part in his truck and fixed it in under an hour. Saved me thousands.",
       rating: 5
     },
     {
       id: 2,
-      name: "Michael Chen",
-      role: "Small Business Owner",
-      content: "Professional, punctual, and knowledgeable. The technician explained exactly what was wrong with our washer and fixed it for a fair price. Will definitely use them again.",
+      name: "David Miller",
+      role: "Bolingbrook, IL",
+      content: "Finally, a service that actually shows up when they say they will. My dryer was making a terrifying screeching noise. The technician was polite, wore shoe covers, and explained exactly why the bearing failed. Honest pricing and zero upsells.",
       rating: 5
     },
     {
       id: 3,
-      name: "Emily Davis",
-      role: "Resident",
-      content: "I was impressed by their transparency. No hidden fees, and they gave me a quote before starting the work. My oven works perfectly now.",
+      name: "The Hendersons",
+      role: "Downers Grove, IL",
+      content: "We've used Aerotech for our dishwasher and now our oven. It’s rare to find this level of craftsmanship anymore. They don't just swap parts; they actually troubleshoot the root cause. Professional, clean, and incredibly skilled.",
       rating: 5
     }
   ];

@@ -147,14 +147,14 @@ const AboutPage = () => {
               <div style={iconCircleStyle}><Target size={32} /></div>
               <h3 style={{ fontSize: '1.5rem', fontWeight: '800', color: colors.navy, marginBottom: '20px' }}>Our Mission</h3>
               <p style={{ color: colors.slate, lineHeight: '1.8', fontSize: '1.05rem' }}>
-                To set the industry benchmark for appliance repair by combining white-glove service with factory-grade technical precision. We believe every customer deserves a home that functions flawlessly, and we treat every repair as a commitment to that promise.
+                To raise the standard of appliance repair through exceptional service and expert-level precision. We treat every home with respect, every repair with care, and every customer like family — because when your appliances work, your home works.
               </p>
             </div>
             <div style={cardStyle}>
               <div style={iconCircleStyle}><Zap size={32} /></div>
               <h3 style={{ fontSize: '1.5rem', fontWeight: '800', color: colors.navy, marginBottom: '20px' }}>Our Vision</h3>
               <p style={{ color: colors.slate, lineHeight: '1.8', fontSize: '1.05rem' }}>
-                To become the premier concierge-level appliance service in the Midwest, known not just for "fixing things," but for providing a seamless, stress-free experience from the moment a problem arises until it is perfectly resolved.
+                To become the Midwest’s most trusted concierge-level appliance service, delivering a seamless, stress-free experience from first call to final fix..
               </p>
             </div>
           </div>
