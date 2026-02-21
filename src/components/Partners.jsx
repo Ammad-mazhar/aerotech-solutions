@@ -4,12 +4,8 @@ import { ShieldCheck, ArrowUpRight } from 'lucide-react';
 
 const Partners = () => {
     const partners = [
-        "Choice Home Craft",
         "Home Warranty of America",
-        "Choice Home Warranty",
-        "Metropolitan Property Management",
-        "Blue Sky Real Estate",
-        "Legacy Residential Group"
+        "Choice Home Warranty"
     ];
 
     return (
