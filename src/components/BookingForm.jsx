@@ -189,8 +189,8 @@ export default function BookingForm() {
         }
         .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
           outline: none;
-          border-color: #2563eb;
-          box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.1);
+          border-color: #f97316;
+          box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
         }
         .error {
           color: #ef4444;
@@ -211,7 +211,7 @@ export default function BookingForm() {
         .submit-btn {
           width: 100%;
           padding: 1rem;
-          background-color: #2563eb;
+          background-color: #f97316;
           color: white;
           border: none;
           border-radius: 0.375rem;
@@ -224,10 +224,10 @@ export default function BookingForm() {
           align-items: center;
         }
         .submit-btn:hover:not(:disabled) {
-          background-color: #1d4ed8;
+          background-color: #ea580c;
         }
         .submit-btn:disabled {
-          background-color: #93c5fd;
+          background-color: #fdba74;
           cursor: not-allowed;
         }
         .spinner {
@@ -502,7 +502,7 @@ export default function BookingForm() {
               className="submit-btn"
               disabled={isSubmitting || !isValid}
               style={{
-                backgroundColor: isSubmitting || !isValid ? '#94a3b8' : '#2563eb',
+                backgroundColor: isSubmitting || !isValid ? '#94a3b8' : '#f97316',
                 cursor: isSubmitting || !isValid ? 'not-allowed' : 'pointer'
               }}
             >

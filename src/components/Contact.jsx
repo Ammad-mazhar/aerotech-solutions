@@ -188,7 +188,7 @@ export default function Contact() {
             { icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z', title: 'Hours', detail: 'Mon - Fri: 9:00 AM - 6:00 PM' }
           ].map((item, idx) => (
             <div key={idx} style={{ display: 'flex', gap: '20px', marginBottom: '32px' }}>
-              <div style={{ width: '48px', height: '48px', backgroundColor: '#ffffff', color: '#2563eb', borderRadius: '14px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, boxShadow: '0 4px 10px rgba(0,0,0,0.03)' }}>
+              <div style={{ width: '48px', height: '48px', backgroundColor: '#ffffff', color: '#f97316', borderRadius: '14px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, boxShadow: '0 4px 10px rgba(0,0,0,0.03)' }}>
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ width: '24px', height: '24px' }}>
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={item.icon}></path>
                 </svg>
@@ -286,13 +286,13 @@ export default function Contact() {
               type="submit"
               style={{
                 ...buttonStyle,
-                backgroundColor: isSubmitting || !isValid ? '#94a3b8' : '#2563eb',
+                backgroundColor: isSubmitting || !isValid ? '#94a3b8' : '#f97316',
                 cursor: isSubmitting || !isValid ? 'not-allowed' : 'pointer',
                 color: '#ffffff'
               }}
               disabled={isSubmitting || !isValid}
-              onMouseEnter={(e) => !isSubmitting && isValid && (e.currentTarget.style.backgroundColor = '#1d4ed8')}
-              onMouseLeave={(e) => !isSubmitting && isValid && (e.currentTarget.style.backgroundColor = '#2563eb')}
+              onMouseEnter={(e) => !isSubmitting && isValid && (e.currentTarget.style.backgroundColor = '#ea580c')}
+              onMouseLeave={(e) => !isSubmitting && isValid && (e.currentTarget.style.backgroundColor = '#f97316')}
             >
               {isSubmitting ? (
                 <>
@@ -329,24 +329,24 @@ export default function Contact() {
             alignItems: 'center',
             gap: '10px',
             padding: '14px 28px',
-            backgroundColor: '#2563eb',
+            backgroundColor: '#f97316',
             color: '#ffffff',
             borderRadius: '100px',
             textDecoration: 'none',
             fontWeight: '700',
             fontSize: '1rem',
-            boxShadow: '0 10px 20px -5px rgba(37, 99, 235, 0.3)',
+            boxShadow: '0 10px 20px -5px rgba(249, 115, 22, 0.3)',
             transition: 'all 0.3s ease'
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = '#1d4ed8';
+            e.currentTarget.style.backgroundColor = '#ea580c';
             e.currentTarget.style.transform = 'translateY(-2px)';
-            e.currentTarget.style.boxShadow = '0 15px 25px -5px rgba(37, 99, 235, 0.4)';
+            e.currentTarget.style.boxShadow = '0 15px 25px -5px rgba(249, 115, 22, 0.4)';
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = '#2563eb';
+            e.currentTarget.style.backgroundColor = '#f97316';
             e.currentTarget.style.transform = 'translateY(0)';
-            e.currentTarget.style.boxShadow = '0 10px 20px -5px rgba(37, 99, 235, 0.3)';
+            e.currentTarget.style.boxShadow = '0 10px 20px -5px rgba(249, 115, 22, 0.3)';
           }}
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -371,7 +371,7 @@ export default function Contact() {
         #email:focus,
         #phone:focus,
         #message:focus {
-          border-color: #2563eb;
+          border-color: #f97316;
         }
         .map-frame {
           filter: grayscale(100%);

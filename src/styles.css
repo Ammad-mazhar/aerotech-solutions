@@ -2,8 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
 
 :root {
-  --brand-navy: #0f172a;
-  --brand-blue: #2563eb;
+  --brand-maroon: #7f1d1d;
+  --brand-orange: #f97316;
+  --brand-green: #22c55e;
   --background: #ffffff;
   --surface: #f8fafc;
   --text-slate: #334155;
@@ -69,8 +70,8 @@ body {
 .service-card i,
 .service-card .icon {
   font-size: 2rem;
-  color: #0044cc;
-  /* Use the client's brand color */
+  color: #f97316;
+  /* Use the client's brand color - Orange */
   flex-shrink: 0;
 }
 

@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const footerStyle = {
-    backgroundColor: '#0f172a', // Brand Dark Navy
+    backgroundColor: '#7f1d1d', // Brand Dark Maroon
     color: '#ffffff',
     padding: '100px 20px 40px',
     fontFamily: "'Inter', system-ui, -apple-system, sans-serif",
-    borderTop: '4px solid #3b82f6', // Blue Accent Bar
+    borderTop: '4px solid #f97316', // Orange Accent Bar
     position: 'relative',
     overflow: 'hidden'
   };
@@ -91,7 +91,7 @@ const Footer = () => {
   };
 
   const handleMouseEnter = (e) => {
-    e.currentTarget.style.color = '#3b82f6';
+    e.currentTarget.style.color = '#f97316';
     e.currentTarget.style.transform = 'translateX(5px)';
   };
 
@@ -103,14 +103,14 @@ const Footer = () => {
   return (
     <footer style={footerStyle}>
       {/* Subtle background decoration */}
-      <div style={{ position: 'absolute', top: '-10%', right: '-5%', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(59,130,246,0.1) 0%, transparent 70%)', zIndex: 0 }}></div>
+      <div style={{ position: 'absolute', top: '-10%', right: '-5%', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(249,115,22,0.1) 0%, transparent 70%)', zIndex: 0 }}></div>
 
       <div style={containerStyle}>
         <div style={gridStyle}>
           {/* Company Column */}
           <div style={columnStyle}>
             <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '12px' }}>
-              <div style={{ width: '45px', height: '45px', backgroundColor: '#0ea5e9', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: '45px', height: '45px', backgroundColor: '#f97316', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '30px' }}>
                   <path d="M32 12L14 52H24L28 42H36L40 52H50L32 12Z" fill="white" />
                   <path d="M48 12C52.4183 12 56 15.5817 56 20C56 24.4183 52.4183 28 48 28C43.5817 28 40 24.4183 40 20C40 15.5817 43.5817 12 48 12Z" fill="white" />
@@ -126,7 +126,7 @@ const Footer = () => {
                 <div
                   key={i}
                   style={socialIconStyle}
-                  onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#3b82f6'; e.currentTarget.style.transform = 'translateY(-3px)'; }}
+                  onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#f97316'; e.currentTarget.style.transform = 'translateY(-3px)'; }}
                   onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.color = '#ffffff'; }}
                 >
                   <Icon size={18} />
@@ -178,21 +178,21 @@ const Footer = () => {
             <h4 style={headingStyle}>Emergency Port</h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               <div style={contactItemStyle}>
-                <Phone size={20} style={{ color: '#3b82f6' }} />
+                <Phone size={20} style={{ color: '#f97316' }} />
                 <div>
                   <span style={{ display: 'block', fontWeight: '700', color: '#ffffff' }}>630 943 5120</span>
                   <span style={{ fontSize: '0.85rem' }}>24/7 Priority Support</span>
                 </div>
               </div>
               <div style={contactItemStyle}>
-                <Mail size={20} style={{ color: '#3b82f6' }} />
+                <Mail size={20} style={{ color: '#f97316' }} />
                 <div>
                   <span style={{ display: 'block', fontWeight: '700', color: '#ffffff' }}>aerotechsolutions@gmail.com</span>
                   <span style={{ fontSize: '0.85rem' }}>Official Correspondence</span>
                 </div>
               </div>
               <div style={contactItemStyle}>
-                <MapPin size={20} style={{ color: '#3b82f6' }} />
+                <MapPin size={20} style={{ color: '#f97316' }} />
                 <div>
                   <span style={{ display: 'block', fontWeight: '700', color: '#ffffff' }}>Bolingbrook, IL</span>
                   <span style={{ fontSize: '0.85rem' }}>Serving Greater Chicago land</span>

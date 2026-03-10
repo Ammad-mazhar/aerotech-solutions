@@ -20,7 +20,7 @@ const Partners = () => {
                         className="text-center mb-16"
                     >
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-slate-900 text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-6">
-                            <ShieldCheck size={12} className="text-blue-400" />
+                            <ShieldCheck size={12} className="text-orange-400" />
                             Trusted Ecosystem
                         </div>
                         <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tighter leading-tight">
@@ -40,14 +40,14 @@ const Partners = () => {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.05 }}
-                                whileHover={{ y: -5, borderColor: '#3b82f6' }}
+                                whileHover={{ y: -5, borderColor: '#f97316' }}
                                 className="group relative flex items-center gap-3 px-8 py-5 bg-white border border-slate-200 rounded-2xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07)] transition-all duration-300 cursor-default"
                             >
-                                <div className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-blue-500 transition-colors duration-300" />
+                                <div className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-orange-500 transition-colors duration-300" />
                                 <span className="text-sm md:text-base font-black text-slate-700 group-hover:text-slate-900 transition-colors duration-300">
                                     {partner}
                                 </span>
-                                <ArrowUpRight size={14} className="text-slate-300 group-hover:text-blue-500 transition-all duration-300 opacity-0 group-hover:opacity-100" />
+                                <ArrowUpRight size={14} className="text-slate-300 group-hover:text-orange-500 transition-all duration-300 opacity-0 group-hover:opacity-100" />
                             </motion.div>
                         ))}
                     </div>

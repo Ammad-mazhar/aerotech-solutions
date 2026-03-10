@@ -81,16 +81,16 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-[1000] border-b transition-all duration-300 font-['Inter'] ${isScrolled
-        ? 'py-4 bg-[#0f172a]/90 backdrop-blur-md border-white/10 shadow-lg'
-        : 'py-6 bg-[#0f172a]/95 backdrop-blur-md border-transparent'
+        ? 'py-4 bg-[#7f1d1d]/90 backdrop-blur-md border-white/10 shadow-lg'
+        : 'py-6 bg-[#7f1d1d]/95 backdrop-blur-md border-transparent'
         }`}
     >
       <div className="max-w-[1280px] mx-auto px-6 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-3 no-underline group" onClick={() => window.scrollTo(0, 0)}>
           <svg className="h-8 md:h-10 w-auto transition-transform group-hover:scale-105" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="64" height="64" rx="16" fill="#0ea5e9" />
+            <rect width="64" height="64" rx="16" fill="#f97316" />
             <path d="M32 12L14 52H24L28 42H36L40 52H50L32 12Z" fill="white" />
-            <path d="M32 24L29.5 34H34.5L32 24Z" fill="#0ea5e9" />
+            <path d="M32 24L29.5 34H34.5L32 24Z" fill="#f97316" />
             <path d="M48 12C52.4183 12 56 15.5817 56 20C56 24.4183 52.4183 28 48 28C43.5817 28 40 24.4183 40 20C40 15.5817 43.5817 12 48 12Z" fill="white" />
           </svg>
           <h1 className="text-lg md:text-2xl font-extrabold text-white m-0 tracking-tight">Aerotech Solution</h1>
@@ -102,14 +102,14 @@ const Navbar = () => {
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
-          <span className={`block w-6 h-0.5 transition-all ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''} bg-white group-hover:bg-blue-400`}></span>
-          <span className={`block w-6 h-0.5 transition-all ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'} bg-white group-hover:bg-blue-400`}></span>
-          <span className={`block w-6 h-0.5 transition-all ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''} bg-white group-hover:bg-blue-400`}></span>
+          <span className={`block w-6 h-0.5 transition-all ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''} bg-white group-hover:bg-orange-400`}></span>
+          <span className={`block w-6 h-0.5 transition-all ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'} bg-white group-hover:bg-orange-400`}></span>
+          <span className={`block w-6 h-0.5 transition-all ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''} bg-white group-hover:bg-orange-400`}></span>
         </button>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-10 list-none m-0 p-0">
-          <li><Link to="/" className="text-slate-200 font-medium no-underline transition-colors hover:text-blue-400">Home</Link></li>
+          <li><Link to="/" className="text-slate-200 font-medium no-underline transition-colors hover:text-orange-400">Home</Link></li>
 
           <li
             className="relative cursor-pointer group"
@@ -119,10 +119,10 @@ const Navbar = () => {
             <a
               href="#services"
               onClick={(e) => { e.preventDefault(); handleResultClick('/#services'); }}
-              className="text-slate-200 font-semibold no-underline hover:text-blue-400 flex items-center gap-1.5 transition-colors"
+              className="text-slate-200 font-semibold no-underline hover:text-orange-400 flex items-center gap-1.5 transition-colors"
             >
               Services
-              <span className={`text-[0.6em] transition-transform duration-300 ${isDropdownOpen ? 'rotate-180 text-blue-400' : 'opacity-50'}`}>▼</span>
+              <span className={`text-[0.6em] transition-transform duration-300 ${isDropdownOpen ? 'rotate-180 text-orange-400' : 'opacity-50'}`}>▼</span>
             </a>
 
             {isDropdownOpen && (
@@ -132,7 +132,7 @@ const Navbar = () => {
                     <div
                       key={item.name}
                       onClick={() => handleResultClick(item.path)}
-                      className={`px-5 py-2.5 text-slate-700 text-sm font-medium cursor-pointer transition-all hover:bg-slate-50 hover:text-blue-600 ${index !== serviceItems.length - 1 ? 'border-b border-slate-100' : ''}`}
+                      className={`px-5 py-2.5 text-slate-700 text-sm font-medium cursor-pointer transition-all hover:bg-slate-50 hover:text-orange-600 ${index !== serviceItems.length - 1 ? 'border-b border-slate-100' : ''}`}
                     >
                       {item.name}
                     </div>
@@ -142,23 +142,23 @@ const Navbar = () => {
             )}
           </li>
 
-          <li><Link to="/about" className="text-slate-200 font-medium no-underline transition-colors hover:text-blue-400">About</Link></li>
-          <li><Link to="/contact" className="text-slate-200 font-medium no-underline transition-colors hover:text-blue-400">Contact</Link></li>
+          <li><Link to="/about" className="text-slate-200 font-medium no-underline transition-colors hover:text-orange-400">About</Link></li>
+          <li><Link to="/contact" className="text-slate-200 font-medium no-underline transition-colors hover:text-orange-400">Contact</Link></li>
 
           <li className="relative flex items-center ms-4">
             <input
               type="text"
               placeholder="Search..."
-              className="px-4 py-2 border border-slate-700 rounded-full text-sm outline-none w-[160px] transition-all bg-slate-900/50 text-white focus:w-[220px] focus:border-blue-500 focus:bg-slate-900"
+              className="px-4 py-2 border border-slate-700 rounded-full text-sm outline-none w-[160px] transition-all bg-slate-900/50 text-white focus:w-[220px] focus:border-orange-500 focus:bg-slate-900"
               value={searchQuery}
               onChange={handleSearch}
             />
             {searchResults.length > 0 && (
-              <div className="absolute top-full right-0 w-full mt-2 bg-[#0f172a] border border-slate-700 rounded-xl shadow-2xl max-h-[300px] overflow-y-auto">
+              <div className="absolute top-full right-0 w-full mt-2 bg-[#7f1d1d] border border-slate-700 rounded-xl shadow-2xl max-h-[300px] overflow-y-auto">
                 {searchResults.map((item, index) => (
                   <div
                     key={index}
-                    className="px-4 py-3 cursor-pointer text-sm text-slate-300 transition-colors hover:bg-white/5 hover:text-blue-400"
+                    className="px-4 py-3 cursor-pointer text-sm text-slate-300 transition-colors hover:bg-white/5 hover:text-orange-400"
                     onClick={() => handleResultClick(item.path)}
                   >
                     {item.name}
@@ -171,7 +171,7 @@ const Navbar = () => {
 
         <Link
           to="/book-service"
-          className="hidden md:inline-block bg-blue-600 text-white px-6 py-2.5 rounded-full font-bold no-underline transition-all hover:-translate-y-0.5 hover:bg-blue-700 shadow-lg shadow-blue-900/20"
+          className="hidden md:inline-block bg-orange-500 text-white px-6 py-2.5 rounded-full font-bold no-underline transition-all hover:-translate-y-0.5 hover:bg-orange-600 shadow-lg shadow-orange-900/20"
         >
           Book Service
         </Link>
@@ -183,7 +183,7 @@ const Navbar = () => {
       )}
 
       {/* Mobile Menu */}
-      <div className={`fixed top-0 right-0 w-[85%] max-w-[350px] h-full bg-[#0f172a] text-white z-[1002] transition-transform duration-300 shadow-2xl p-6 flex flex-col md:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+      <div className={`fixed top-0 right-0 w-[85%] max-w-[350px] h-full bg-[#7f1d1d] text-white z-[1002] transition-transform duration-300 shadow-2xl p-6 flex flex-col md:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="flex justify-between items-center mb-6">
           <span className="text-lg font-bold text-slate-400">Menu</span>
           <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 text-slate-400 hover:text-white">
@@ -196,7 +196,7 @@ const Navbar = () => {
           <input
             type="text"
             placeholder="Search services..."
-            className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-xl text-sm text-white focus:border-blue-500 outline-none placeholder-slate-500"
+            className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-xl text-sm text-white focus:border-orange-500 outline-none placeholder-slate-500"
             value={searchQuery}
             onChange={handleSearch}
           />
@@ -205,7 +205,7 @@ const Navbar = () => {
               {searchResults.map((item, index) => (
                 <div
                   key={index}
-                  className="px-4 py-3 cursor-pointer text-sm text-slate-300 border-b border-slate-700/50 last:border-none hover:bg-slate-700 hover:text-blue-400"
+                  className="px-4 py-3 cursor-pointer text-sm text-slate-300 border-b border-slate-700/50 last:border-none hover:bg-slate-700 hover:text-orange-400"
                   onClick={() => handleResultClick(item.path)}
                 >
                   {item.name}
@@ -221,7 +221,7 @@ const Navbar = () => {
             <Link
               to="/"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-xl font-bold no-underline text-white block hover:text-blue-400 transition-colors"
+              className="text-xl font-bold no-underline text-white block hover:text-orange-400 transition-colors"
             >
               Home
             </Link>
@@ -230,7 +230,7 @@ const Navbar = () => {
             <Link
               to="/about"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-xl font-bold no-underline text-white block hover:text-blue-400 transition-colors"
+              className="text-xl font-bold no-underline text-white block hover:text-orange-400 transition-colors"
             >
               About
             </Link>
@@ -239,7 +239,7 @@ const Navbar = () => {
             <Link
               to="/#services"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-xl font-bold no-underline text-white block hover:text-blue-400 transition-colors"
+              className="text-xl font-bold no-underline text-white block hover:text-orange-400 transition-colors"
             >
               Services
             </Link>
@@ -248,7 +248,7 @@ const Navbar = () => {
                 <div
                   key={service.name}
                   onClick={() => handleResultClick(service.path)}
-                  className="text-base text-slate-400 block cursor-pointer hover:text-blue-400 py-1"
+                  className="text-base text-slate-400 block cursor-pointer hover:text-orange-400 py-1"
                 >
                   {service.name}
                 </div>
@@ -259,7 +259,7 @@ const Navbar = () => {
             <Link
               to="/contact"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-xl font-bold no-underline text-white block hover:text-blue-400 transition-colors"
+              className="text-xl font-bold no-underline text-white block hover:text-orange-400 transition-colors"
             >
               Contact
             </Link>
@@ -270,7 +270,7 @@ const Navbar = () => {
             <Link
               to="/service-areas"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-lg font-semibold no-underline text-slate-300 block hover:text-blue-400 transition-colors"
+              className="text-lg font-semibold no-underline text-slate-300 block hover:text-orange-400 transition-colors"
             >
               Service Areas
             </Link>
@@ -279,7 +279,7 @@ const Navbar = () => {
             <Link
               to="/faq"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-lg font-semibold no-underline text-slate-300 block hover:text-blue-400 transition-colors"
+              className="text-lg font-semibold no-underline text-slate-300 block hover:text-orange-400 transition-colors"
             >
               FAQ
             </Link>
@@ -290,7 +290,7 @@ const Navbar = () => {
           <Link
             to="/book-service"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="block w-full bg-blue-600 text-white text-center py-3 rounded-xl font-bold mb-6 hover:bg-blue-700 transition-colors shadow-lg shadow-blue-900/20"
+            className="block w-full bg-orange-500 text-white text-center py-3 rounded-xl font-bold mb-6 hover:bg-orange-600 transition-colors shadow-lg shadow-orange-900/20"
           >
             Book Service
           </Link>

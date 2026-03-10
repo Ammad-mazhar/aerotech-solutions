@@ -95,7 +95,7 @@ const Testimonials = () => {
         .author-avatar {
           width: 48px;
           height: 48px;
-          background-color: #2563eb;
+          background-color: #22c55e;
           color: white;
           border-radius: 50%;
           display: flex;
