@@ -55,7 +55,7 @@ const Hero = () => {
   };
 
   const primaryBtnStyle = {
-    backgroundColor: '#22c55e',
+    backgroundColor: '#052e16',
     color: 'white',
     padding: '18px 36px',
     borderRadius: '100px',
@@ -66,7 +66,7 @@ const Hero = () => {
     alignItems: 'center',
     gap: '10px',
     transition: 'all 0.3s ease',
-    boxShadow: '0 10px 25px rgba(34, 197, 94, 0.3)',
+    boxShadow: '0 10px 25px rgba(5, 46, 22, 0.3)',
     border: 'none',
     cursor: 'pointer'
   };
@@ -145,14 +145,14 @@ const Hero = () => {
               window.scrollTo(0, 0);
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = '#16a34a';
+              e.currentTarget.style.backgroundColor = '#064e3b';
               e.currentTarget.style.transform = 'translateY(-5px)';
-              e.currentTarget.style.boxShadow = '0 15px 30px rgba(34, 197, 94, 0.4)';
+              e.currentTarget.style.boxShadow = '0 15px 30px rgba(5, 46, 22, 0.4)';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = '#22c55e';
+              e.currentTarget.style.backgroundColor = '#052e16';
               e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 10px 25px rgba(34, 197, 94, 0.3)';
+              e.currentTarget.style.boxShadow = '0 10px 25px rgba(5, 46, 22, 0.3)';
             }}
           >
             Get Emergency Repair

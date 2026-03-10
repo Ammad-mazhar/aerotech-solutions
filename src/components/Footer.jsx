@@ -110,12 +110,11 @@ const Footer = () => {
           {/* Company Column */}
           <div style={columnStyle}>
             <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '12px' }}>
-              <div style={{ width: '45px', height: '45px', backgroundColor: '#22c55e', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '30px' }}>
-                  <path d="M32 12L14 52H24L28 42H36L40 52H50L32 12Z" fill="white" />
-                  <path d="M48 12C52.4183 12 56 15.5817 56 20C56 24.4183 52.4183 28 48 28C43.5817 28 40 24.4183 40 20C40 15.5817 43.5817 12 48 12Z" fill="white" />
-                </svg>
-              </div>
+              <img 
+                src="/logo/logo 2.jpg" 
+                alt="Aerotech Solution" 
+                style={{ width: '45px', height: 'auto', borderRadius: '12px' }}
+              />
               <span style={{ fontSize: '1.5rem', fontWeight: '900', color: '#ffffff', letterSpacing: '-1px' }}>AEROTECH SOLUTION</span>
             </Link>
             <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.8', margin: 0 }}>
