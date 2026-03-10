@@ -1,4 +1,4 @@
-import React from 'react';
+  import React from 'react';
 import {
   ShieldCheck,
   Settings,
@@ -15,13 +15,13 @@ import {
 const AboutPage = () => {
   // Design Tokens
   const colors = {
-    navy: '#7f1d1d',
+    navy: '#052e16',
     orange: '#f97316',
-    lightOrange: '#fff7ed',
-    slate: '#475569',
-    lightSlate: '#f8fafc',
+    lightOrange: '#052e16',
+    slate: '#a7f3d0',
+    lightSlate: '#064e3b',
     white: '#ffffff',
-    border: 'rgba(15, 23, 42, 0.08)'
+    border: 'rgba(34, 197, 94, 0.2)'
   };
 
   const containerStyle = {
@@ -39,7 +39,7 @@ const AboutPage = () => {
   const headlineStyle = {
     fontSize: 'clamp(2.5rem, 5vw, 3.75rem)',
     fontWeight: '900',
-    color: colors.navy,
+    color: '#ffffff',
     lineHeight: '1.1',
     letterSpacing: '-2px',
     marginBottom: '24px'
@@ -75,7 +75,7 @@ const AboutPage = () => {
   };
 
   return (
-    <div style={{ backgroundColor: colors.white, overflow: 'hidden' }}>
+    <div style={{ backgroundColor: colors.navy, overflow: 'hidden' }}>
       {/* 1. HERO SECTION */}
       <section style={{ ...sectionSpacing, position: 'relative' }}>
         <div style={{
@@ -133,10 +133,10 @@ const AboutPage = () => {
       </section>
 
       {/* 2. OUR MISSION & VISION */}
-      <section style={{ backgroundColor: colors.lightSlate, ...sectionSpacing }}>
+      <section style={{ backgroundColor: colors.navy, ...sectionSpacing }}>
         <div style={containerStyle}>
           <div style={{ textAlign: 'center', marginBottom: '80px' }}>
-            <h2 style={{ fontSize: '2.5rem', fontWeight: '800', color: '#000000', marginBottom: '20px' }}>Our Mission & DNA</h2>
+            <h2 style={{ fontSize: '2.5rem', fontWeight: '800', color: '#ffffff', marginBottom: '20px' }}>Our Mission & DNA</h2>
             <p style={{ ...sublineStyle, margin: '0 auto' }}>
               We exist to provide peace of mind through technical mastery and uncompromising transparency.
             </p>
@@ -146,14 +146,14 @@ const AboutPage = () => {
             <div style={cardStyle}>
               <div style={iconCircleStyle}><Target size={32} /></div>
               <h3 style={{ fontSize: '1.5rem', fontWeight: '800', color: colors.navy, marginBottom: '20px' }}>Our Mission</h3>
-              <p style={{ color: colors.slate, lineHeight: '1.8', fontSize: '1.05rem' }}>
+<p style={{ color: '#000000', lineHeight: '1.8', fontSize: '1.05rem' }}>
                 To raise the standard of appliance repair through exceptional service and expert-level precision. We treat every home with respect, every repair with care, and every customer like family — because when your appliances work, your home works.
               </p>
             </div>
             <div style={cardStyle}>
               <div style={iconCircleStyle}><Zap size={32} /></div>
-              <h3 style={{ fontSize: '1.5rem', fontWeight: '800', color: colors.navy, marginBottom: '20px' }}>Our Vision</h3>
-              <p style={{ color: colors.slate, lineHeight: '1.8', fontSize: '1.05rem' }}>
+<h3 style={{ fontSize: '1.5rem', fontWeight: '800', color: colors.navy, marginBottom: '20px' }}>Our Vision</h3>
+              <p style={{ color: '#000000', lineHeight: '1.8', fontSize: '1.05rem' }}>
                 To become the Midwest’s most trusted concierge-level appliance service, delivering a seamless, stress-free experience from first call to final fix..
               </p>
             </div>
@@ -189,7 +189,7 @@ const AboutPage = () => {
             </div>
 
             <div style={{ flex: '1', minWidth: '320px' }}>
-<h2 style={{ fontSize: '2.5rem', fontWeight: '800', color: '#000000', marginBottom: '24px' }}>Uncompromising <span style={{ color: colors.orange }}>Technical Standards.</span></h2>
+<h2 style={{ fontSize: '2.5rem', fontWeight: '800', color: '#ffffff', marginBottom: '24px' }}>Uncompromising <span style={{ color: colors.orange }}>Technical Standards.</span></h2>
               <p style={{ ...pStyle, color: colors.slate, marginBottom: '32px' }}>
                 At Aerotech Solution, we believe that appliance repair is a science, not a guessing game. Our technicians arrive in fully-stocked "mobile workshops" equipped with over 200 of the most common high-failure components.
               </p>
@@ -212,10 +212,10 @@ const AboutPage = () => {
       </section>
 
       {/* 4. CORE VALUES CAROUSEL STYLE SECTION */}
-<section style={{ backgroundColor: colors.lightOrange, color: '#000000', ...sectionSpacing }}>
+<section style={{ backgroundColor: colors.navy, color: '#ffffff', ...sectionSpacing }}>
         <div style={containerStyle}>
           <div style={{ textAlign: 'center', marginBottom: '80px' }}>
-            <h2 style={{ fontSize: '2.5rem', fontWeight: '800', color: '#000000', marginBottom: '20px' }}>Our Core Pillars</h2>
+            <h2 style={{ fontSize: '2.5rem', fontWeight: '800', color: '#ffffff', marginBottom: '20px' }}>Our Core Pillars</h2>
             <p style={{ fontSize: '1.125rem', color: colors.slate, maxWidth: '600px', margin: '0 auto' }}>
               The values that guide every single interaction we have with our clients.
             </p>
@@ -247,8 +247,8 @@ const AboutPage = () => {
                 transition: 'transform 0.3s'
               }}>
 <div style={{ color: colors.orange, marginBottom: '24px' }}>{value.icon}</div>
-                <h3 style={{ fontSize: '1.4rem', fontWeight: '800', marginBottom: '16px' }}>{value.title}</h3>
-                <p style={{ color: colors.slate, lineHeight: '1.6' }}>{value.desc}</p>
+                <h3 style={{ fontSize: '1.4rem', fontWeight: '800', marginBottom: '16px', color: '#000000' }}>{value.title}</h3>
+                <p style={{ color: '#000000', lineHeight: '1.6' }}>{value.desc}</p>
               </div>
             ))}
           </div>

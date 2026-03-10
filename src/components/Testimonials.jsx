@@ -20,7 +20,7 @@ const Testimonials = () => {
       id: 3,
       name: "The Hendersons",
       role: "Downers Grove, IL",
-      content: "We've used Aerotech for our dishwasher and now our oven. It’s rare to find this level of craftsmanship anymore. They don't just swap parts; they actually troubleshoot the root cause. Professional, clean, and incredibly skilled.",
+      content: "We've used Aerotech for our dishwasher and now our oven. It's rare to find this level of craftsmanship anymore. They don't just swap parts; they actually troubleshoot the root cause. Professional, clean, and incredibly skilled.",
       rating: 5
     }
   ];
@@ -30,7 +30,7 @@ const Testimonials = () => {
       <style>{`
         .testimonials-section {
           padding: 5rem 0;
-          background-color: #ffffff;
+          background-color: #052e16;
           font-family: 'Inter', system-ui, -apple-system, sans-serif;
         }
         .testimonials-container {
@@ -45,12 +45,12 @@ const Testimonials = () => {
         .testimonials-header h2 {
           font-size: 2.5rem;
           font-weight: 700;
-          color: #0f172a;
+          color: #ffffff;
           margin-bottom: 1rem;
         }
         .testimonials-header p {
           font-size: 1.125rem;
-          color: #6b7280;
+          color: #d1d5db;
           max-width: 48rem;
           margin: 0 auto;
           line-height: 1.75;
@@ -61,26 +61,26 @@ const Testimonials = () => {
           gap: 2.5rem;
         }
         .testimonial-card {
-          background-color: #f8fafc;
+          background-color: #052e16;
           padding: 2rem;
           border-radius: 0.75rem;
-          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-          border: 1px solid #e5e7eb;
+          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+          border: 1px solid #052e16;
           transition: transform 0.3s ease, box-shadow 0.3s ease;
           display: flex;
           flex-direction: column;
         }
         .testimonial-card:hover {
           transform: translateY(-5px);
-          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
         }
         .testimonial-rating {
-          color: #f59e0b; /* Amber/Gold */
+          color: #fbbf24;
           font-size: 1.25rem;
           margin-bottom: 1rem;
         }
         .testimonial-content {
-          color: #374151;
+          color: #d1d5db;
           font-style: italic;
           margin-bottom: 1.5rem;
           line-height: 1.6;
@@ -107,12 +107,12 @@ const Testimonials = () => {
         .author-info h4 {
           font-size: 1rem;
           font-weight: 600;
-          color: #0f172a;
+          color: #ffffff;
           margin: 0;
         }
         .author-info span {
           font-size: 0.875rem;
-          color: #6b7280;
+          color: #9ca3af;
         }
         @media (max-width: 768px) {
           .testimonials-header h2 {

@@ -14,7 +14,7 @@ const ServiceFeature = ({ service, index }) => {
       alignItems: 'center',
       minHeight: '80vh',
       width: '100%',
-      backgroundColor: isEven ? '#ffffff' : '#f8fafc',
+      backgroundColor: '#052e16',
       overflow: 'hidden'
     }} className="feature-section">
 
@@ -54,7 +54,7 @@ const ServiceFeature = ({ service, index }) => {
         <h2 style={{
           fontSize: '4rem',
           fontWeight: '900',
-          color: '#0f172a',
+          color: '#ffffff',
           lineHeight: '1',
           marginBottom: '30px',
           letterSpacing: '-2px'
@@ -63,7 +63,7 @@ const ServiceFeature = ({ service, index }) => {
         </h2>
         <p style={{
           fontSize: '1.2rem',
-          color: '#475569',
+          color: '#d1d5db',
           lineHeight: '1.8',
           maxWidth: '500px',
           marginBottom: '40px'
@@ -103,7 +103,7 @@ const Services = () => {
       <div style={{
         padding: '120px 40px',
         textAlign: 'center',
-        backgroundColor: '#7f1d1d',
+        backgroundColor: '#052e16',
         color: 'white'
       }}>
         <h1 style={{ fontSize: '1rem', letterSpacing: '8px', textTransform: 'uppercase', color: '#22c55e' }}>
@@ -115,13 +115,13 @@ const Services = () => {
       </div>
 
       {/* Brands Marquee */}
-      <div style={{ background: '#f8fafc', padding: '24px 0', borderBottom: '1px solid #e2e8f0', overflow: 'hidden', display: 'flex' }}>
+      <div style={{ background: '#052e16', padding: '24px 0', borderBottom: '1px solid #065f46', overflow: 'hidden', display: 'flex' }}>
         <div style={{ display: 'flex', whiteSpace: 'nowrap', animation: 'marquee 60s linear infinite', gap: '48px', paddingLeft: '24px' }}>
           {[...brands, ...brands].map((brand, i) => (
             <span key={i} style={{
               fontSize: '1.1rem',
               fontWeight: '600',
-              color: '#64748b',
+              color: '#ffffff',
               display: 'flex',
               alignItems: 'center',
               opacity: 0.8

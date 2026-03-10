@@ -62,7 +62,7 @@ const Stats = () => {
     ];
 
     return (
-        <section className="relative bg-[#7f1d1d] py-24 overflow-hidden">
+        <section className="relative bg-[#052e16] py-24 overflow-hidden">
             {/* Abstract Background Elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-20">
                 <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-orange-600/30 blur-[120px] rounded-full" />

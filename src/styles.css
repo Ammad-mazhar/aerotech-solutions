@@ -5,9 +5,9 @@
   --brand-maroon: #7f1d1d;
   --brand-orange: #f97316;
   --brand-green: #22c55e;
-  --background: #ffffff;
-  --surface: #f8fafc;
-  --text-slate: #334155;
+  --background: #052e16;
+  --surface: #064e3b;
+  --text-slate: #f0fdf4;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');

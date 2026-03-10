@@ -84,7 +84,7 @@ export default function Contact() {
 
   const sectionStyle = {
     padding: '100px 20px',
-    backgroundColor: '#ffffff',
+    backgroundColor: '#052e16',
     fontFamily: "'Inter', system-ui, -apple-system, sans-serif",
     minHeight: '100vh'
   };
@@ -93,17 +93,17 @@ export default function Contact() {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
     gap: '40px',
-    background: '#ffffff',
+    background: '#052e16',
     borderRadius: '30px',
     overflow: 'hidden',
-    boxShadow: '0 20px 40px -15px rgba(0, 0, 0, 0.05)',
-    border: '1px solid #e2e8f0',
+    boxShadow: '0 20px 40px -15px rgba(0, 0, 0, 0.3)',
+    border: '1px solid rgba(34, 197, 94, 0.2)',
     maxWidth: '1200px',
     margin: '60px auto 0'
   };
 
   const infoSideStyle = {
-    backgroundColor: '#f8fafc',
+    backgroundColor: '#052e16',
     padding: 'clamp(30px, 5vw, 60px)',
     display: 'flex',
     flexDirection: 'column'
@@ -171,15 +171,15 @@ export default function Contact() {
   return (
     <section id="contact" style={sectionStyle}>
       <div style={{ textAlign: 'center' }}>
-        <h1 style={{ fontSize: '3rem', fontWeight: '900', color: '#0f172a', marginBottom: '16px', letterSpacing: '-1px' }}>Get in Touch</h1>
-        <p style={{ fontSize: '1.125rem', color: '#64748b', maxWidth: '600px', margin: '0 auto' }}>
+        <h1 style={{ fontSize: '3rem', fontWeight: '900', color: '#ffffff', marginBottom: '16px', letterSpacing: '-1px' }}>Get in Touch</h1>
+        <p style={{ fontSize: '1.125rem', color: '#a7f3d0', maxWidth: '600px', margin: '0 auto' }}>
           Have a question or need an emergency repair? Our executive team is here to restore your comfort.
         </p>
       </div>
 
       <div style={wrapperStyle}>
         <div style={infoSideStyle}>
-          <h2 style={{ fontSize: '1.5rem', fontWeight: '800', color: '#0f172a', marginBottom: '40px' }}>Office Information</h2>
+          <h2 style={{ fontSize: '1.5rem', fontWeight: '800', color: '#ffffff', marginBottom: '40px' }}>Office Information</h2>
 
           {[
             { icon: 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z', title: 'Email', detail: 'aerotechsolutions@gmail.com' },
@@ -188,14 +188,14 @@ export default function Contact() {
             { icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z', title: 'Hours', detail: 'Mon - Fri: 9:00 AM - 6:00 PM' }
           ].map((item, idx) => (
             <div key={idx} style={{ display: 'flex', gap: '20px', marginBottom: '32px' }}>
-              <div style={{ width: '48px', height: '48px', backgroundColor: '#ffffff', color: '#f97316', borderRadius: '14px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, boxShadow: '0 4px 10px rgba(0,0,0,0.03)' }}>
+              <div style={{ width: '48px', height: '48px', backgroundColor: '#22c55e', color: '#ffffff', borderRadius: '14px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, boxShadow: '0 4px 10px rgba(0,0,0,0.1)' }}>
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ width: '24px', height: '24px' }}>
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={item.icon}></path>
                 </svg>
               </div>
               <div>
-                <h3 style={{ fontSize: '1rem', fontWeight: '700', color: '#0f172a', marginBottom: '4px' }}>{item.title}</h3>
-                <p style={{ color: '#64748b', fontSize: '0.95rem', lineHeight: '1.5' }}>{item.detail}</p>
+                <h3 style={{ fontSize: '1rem', fontWeight: '700', color: '#ffffff', marginBottom: '4px' }}>{item.title}</h3>
+                <p style={{ color: '#a7f3d0', fontSize: '0.95rem', lineHeight: '1.5' }}>{item.detail}</p>
               </div>
             </div>
           ))}
