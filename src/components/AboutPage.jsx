@@ -15,9 +15,9 @@ import {
 const AboutPage = () => {
   // Design Tokens
   const colors = {
-    navy: '#0f172a',
-    blue: '#3b82f6',
-    lightBlue: '#eff6ff',
+    navy: '#7f1d1d',
+    orange: '#f97316',
+    lightOrange: '#fff7ed',
     slate: '#475569',
     lightSlate: '#f8fafc',
     white: '#ffffff',
@@ -65,8 +65,8 @@ const AboutPage = () => {
   const iconCircleStyle = {
     width: '60px',
     height: '60px',
-    backgroundColor: colors.lightBlue,
-    color: colors.blue,
+    backgroundColor: colors.lightOrange,
+    color: colors.orange,
     borderRadius: '16px',
     display: 'flex',
     alignItems: 'center',
@@ -96,8 +96,8 @@ const AboutPage = () => {
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
-                backgroundColor: colors.lightBlue,
-                color: colors.blue,
+                backgroundColor: colors.lightOrange,
+                color: colors.orange,
                 padding: '8px 16px',
                 borderRadius: '100px',
                 fontSize: '14px',
@@ -108,7 +108,7 @@ const AboutPage = () => {
                 SINCE 2008
               </div>
               <h1 style={headlineStyle}>
-                The Gold Standard in <span style={{ color: colors.blue }}>Appliance Restoration.</span>
+                The Gold Standard in <span style={{ color: colors.orange }}>Appliance Restoration.</span>
               </h1>
               <p style={sublineStyle}>
                 Since 2008, Aerotech Solution has set the benchmark for elite appliance care. We combine factory-certified technical expertise with white-glove service to restore not just your appliances, but the rhythm of your home. Trusted by over 50,000 homeowners, we are the region's premier choice for protecting your valuable home investments. We understand that a broken appliance disrupts your life, which is why we offer flexible scheduling and rapid response times to get you back on track. Our technicians are not only skilled in the latest technologies but are also trained to provide a courteous and clean service experience. From the initial diagnostic to the final quality check, we ensure every step of the process meets our rigorous standards of excellence.
@@ -136,7 +136,7 @@ const AboutPage = () => {
       <section style={{ backgroundColor: colors.lightSlate, ...sectionSpacing }}>
         <div style={containerStyle}>
           <div style={{ textAlign: 'center', marginBottom: '80px' }}>
-            <h2 style={{ fontSize: '2.5rem', fontWeight: '800', color: colors.navy, marginBottom: '20px' }}>Our Mission & DNA</h2>
+            <h2 style={{ fontSize: '2.5rem', fontWeight: '800', color: '#000000', marginBottom: '20px' }}>Our Mission & DNA</h2>
             <p style={{ ...sublineStyle, margin: '0 auto' }}>
               We exist to provide peace of mind through technical mastery and uncompromising transparency.
             </p>
@@ -189,7 +189,7 @@ const AboutPage = () => {
             </div>
 
             <div style={{ flex: '1', minWidth: '320px' }}>
-              <h2 style={{ fontSize: '2.5rem', fontWeight: '800', color: colors.navy, marginBottom: '24px' }}>Uncompromising <span style={{ color: colors.blue }}>Technical Standards.</span></h2>
+<h2 style={{ fontSize: '2.5rem', fontWeight: '800', color: '#000000', marginBottom: '24px' }}>Uncompromising <span style={{ color: colors.orange }}>Technical Standards.</span></h2>
               <p style={{ ...pStyle, color: colors.slate, marginBottom: '32px' }}>
                 At Aerotech Solution, we believe that appliance repair is a science, not a guessing game. Our technicians arrive in fully-stocked "mobile workshops" equipped with over 200 of the most common high-failure components.
               </p>
@@ -201,7 +201,7 @@ const AboutPage = () => {
                   'Environmentally conscious disposal of old components.'
                 ].map((item, i) => (
                   <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '16px', fontWeight: '600', color: colors.navy }}>
-                    <ChevronRight size={18} color={colors.blue} />
+                    <ChevronRight size={18} color={colors.orange} />
                     {item}
                   </li>
                 ))}
@@ -212,10 +212,10 @@ const AboutPage = () => {
       </section>
 
       {/* 4. CORE VALUES CAROUSEL STYLE SECTION */}
-      <section style={{ backgroundColor: colors.lightBlue, color: colors.navy, ...sectionSpacing }}>
+<section style={{ backgroundColor: colors.lightOrange, color: '#000000', ...sectionSpacing }}>
         <div style={containerStyle}>
           <div style={{ textAlign: 'center', marginBottom: '80px' }}>
-            <h2 style={{ fontSize: '2.5rem', fontWeight: '800', marginBottom: '20px' }}>Our Core Pillars</h2>
+            <h2 style={{ fontSize: '2.5rem', fontWeight: '800', color: '#000000', marginBottom: '20px' }}>Our Core Pillars</h2>
             <p style={{ fontSize: '1.125rem', color: colors.slate, maxWidth: '600px', margin: '0 auto' }}>
               The values that guide every single interaction we have with our clients.
             </p>
@@ -246,7 +246,7 @@ const AboutPage = () => {
                 border: `1px solid ${colors.border}`,
                 transition: 'transform 0.3s'
               }}>
-                <div style={{ color: colors.blue, marginBottom: '24px' }}>{value.icon}</div>
+<div style={{ color: colors.orange, marginBottom: '24px' }}>{value.icon}</div>
                 <h3 style={{ fontSize: '1.4rem', fontWeight: '800', marginBottom: '16px' }}>{value.title}</h3>
                 <p style={{ color: colors.slate, lineHeight: '1.6' }}>{value.desc}</p>
               </div>
@@ -259,7 +259,7 @@ const AboutPage = () => {
       <section style={{ ...sectionSpacing }}>
         <div style={containerStyle}>
           <div style={{
-            background: `linear-gradient(135deg, ${colors.blue} 0%, #1d4ed8 100%)`,
+            background: `linear-gradient(135deg, ${colors.orange} 0%, #ea580c 100%)`,
             borderRadius: '40px',
             padding: '80px 40px',
             position: 'relative',
@@ -279,7 +279,7 @@ const AboutPage = () => {
               <button style={{
                 padding: '18px 40px',
                 backgroundColor: colors.white,
-                color: colors.blue,
+                color: colors.orange,
                 borderRadius: '16px',
                 fontWeight: '800',
                 border: 'none',

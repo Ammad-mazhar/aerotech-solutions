@@ -61,20 +61,20 @@ const NotFound = () => {
                     alignItems: 'center',
                     gap: '10px',
                     padding: '16px 32px',
-                    backgroundColor: '#2563eb',
+                    backgroundColor: '#f97316',
                     color: '#ffffff',
                     borderRadius: '14px',
                     fontWeight: '700',
                     textDecoration: 'none',
                     transition: 'all 0.3s ease',
-                    boxShadow: '0 10px 15px -3px rgba(37, 99, 235, 0.2)'
+                    boxShadow: '0 10px 15px -3px rgba(249, 115, 22, 0.2)'
                 }}
                 onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = '#1d4ed8';
+                    e.currentTarget.style.backgroundColor = '#ea580c';
                     e.currentTarget.style.transform = 'translateY(-2px)';
                 }}
                 onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = '#2563eb';
+                    e.currentTarget.style.backgroundColor = '#f97316';
                     e.currentTarget.style.transform = 'translateY(0)';
                 }}
             >

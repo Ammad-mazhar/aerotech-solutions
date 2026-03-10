@@ -67,7 +67,7 @@ const FAQPage = () => {
         }
         .cta-button {
           display: inline-block;
-          background-color: #2563eb;
+          background-color: #f97316;
           color: white;
           padding: 0.875rem 2rem;
           border-radius: 0.5rem;
@@ -76,7 +76,7 @@ const FAQPage = () => {
           transition: background-color 0.2s;
         }
         .cta-button:hover {
-          background-color: #1d4ed8;
+          background-color: #ea580c;
         }
       `}</style>
       <div className="faq-container">

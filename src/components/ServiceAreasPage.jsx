@@ -60,7 +60,7 @@ const ServiceAreasPage = () => {
         }
         .cta-button {
           display: inline-block;
-          background-color: #2563eb;
+          background-color: #f97316;
           color: white;
           padding: 0.875rem 2rem;
           border-radius: 0.5rem;
@@ -69,7 +69,7 @@ const ServiceAreasPage = () => {
           transition: background-color 0.2s;
         }
         .cta-button:hover {
-          background-color: #1d4ed8;
+          background-color: #ea580c;
         }
         .sa-content-grid {
           display: grid;
@@ -122,7 +122,7 @@ const ServiceAreasPage = () => {
           font-weight: 700;
           color: #0f172a;
           margin-bottom: 1rem;
-          border-bottom: 2px solid #2563eb;
+          border-bottom: 2px solid #f97316;
           padding-bottom: 0.5rem;
           display: inline-block;
         }
@@ -139,7 +139,7 @@ const ServiceAreasPage = () => {
         }
         .region-card li::before {
           content: "✓";
-          color: #2563eb;
+          color: #f97316;
           margin-right: 0.5rem;
           font-weight: bold;
         }

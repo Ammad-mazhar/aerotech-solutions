@@ -76,7 +76,7 @@ const ServiceFeature = ({ service, index }) => {
           style={{
             width: 'fit-content',
             padding: '20px 40px',
-            background: '#7f1d1d',
+            background: '#f97316',
             color: 'white',
             border: 'none',
             borderRadius: '0px', // Sharp corners look more "engineered"
@@ -89,7 +89,7 @@ const ServiceFeature = ({ service, index }) => {
           }}
           className="btn-impact"
         >
-          EXPLORE SPECS <ArrowRight size={20} />
+          Learn more <ArrowRight size={20} />
         </button>
       </div>
     </div>
@@ -145,7 +145,7 @@ const Services = () => {
 
       <style>{`
         .btn-impact:hover {
-          background: #f97316 !important;
+          background: #7f1d1d !important;
           transform: translateX(10px);
         }
         @media (max-width: 1024px) {

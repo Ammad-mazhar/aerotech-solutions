@@ -38,13 +38,13 @@ const CustomSelect = ({ options, value, onChange, placeholder, error }) => {
         width: '100%',
         padding: '0',
         backgroundColor: '#ffffff',
-        border: `1px solid ${error ? '#ef4444' : isOpen ? '#2563eb' : '#cbd5e1'}`,
+        border: `1px solid ${error ? '#ef4444' : isOpen ? '#f97316' : '#cbd5e1'}`,
         borderRadius: '12px',
         fontSize: '1rem',
         display: 'flex',
         alignItems: 'center',
         transition: 'all 0.2s ease',
-        boxShadow: isOpen ? '0 0 0 4px rgba(37, 99, 235, 0.1)' : 'none',
+        boxShadow: isOpen ? '0 0 0 4px rgba(249, 115, 22, 0.1)' : 'none',
         outline: 'none'
     };
 
@@ -65,8 +65,8 @@ const CustomSelect = ({ options, value, onChange, placeholder, error }) => {
 
     const optionStyle = (isHovered, isSelected) => ({
         padding: '12px 18px',
-        backgroundColor: isSelected ? '#eff6ff' : isHovered ? '#f8fafc' : 'transparent',
-        color: isSelected ? '#2563eb' : '#0f172a',
+        backgroundColor: isSelected ? '#fff7ed' : isHovered ? '#f8fafc' : 'transparent',
+        color: isSelected ? '#f97316' : '#0f172a',
         fontWeight: isSelected ? '600' : '500',
         fontSize: '0.95rem',
         cursor: 'pointer',
@@ -103,7 +103,7 @@ const CustomSelect = ({ options, value, onChange, placeholder, error }) => {
                     style={{
                         transition: 'transform 0.3s ease',
                         transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-                        color: isOpen ? '#2563eb' : '#64748b'
+                        color: isOpen ? '#f97316' : '#64748b'
                     }}
                     onClick={() => {
                         setIsOpen(!isOpen);
