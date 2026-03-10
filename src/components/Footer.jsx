@@ -8,7 +8,7 @@ const Footer = () => {
     color: '#ffffff',
     padding: '100px 20px 40px',
     fontFamily: "'Inter', system-ui, -apple-system, sans-serif",
-    borderTop: '4px solid #f97316', // Orange Accent Bar
+    borderTop: '4px solid #22c55e', // Green Accent Bar
     position: 'relative',
     overflow: 'hidden'
   };
@@ -91,7 +91,7 @@ const Footer = () => {
   };
 
   const handleMouseEnter = (e) => {
-    e.currentTarget.style.color = '#f97316';
+    e.currentTarget.style.color = '#22c55e';
     e.currentTarget.style.transform = 'translateX(5px)';
   };
 
@@ -110,7 +110,7 @@ const Footer = () => {
           {/* Company Column */}
           <div style={columnStyle}>
             <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '12px' }}>
-              <div style={{ width: '45px', height: '45px', backgroundColor: '#f97316', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: '45px', height: '45px', backgroundColor: '#22c55e', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '30px' }}>
                   <path d="M32 12L14 52H24L28 42H36L40 52H50L32 12Z" fill="white" />
                   <path d="M48 12C52.4183 12 56 15.5817 56 20C56 24.4183 52.4183 28 48 28C43.5817 28 40 24.4183 40 20C40 15.5817 43.5817 12 48 12Z" fill="white" />
@@ -126,7 +126,7 @@ const Footer = () => {
                 <div
                   key={i}
                   style={socialIconStyle}
-                  onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#f97316'; e.currentTarget.style.transform = 'translateY(-3px)'; }}
+                  onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#22c55e'; e.currentTarget.style.transform = 'translateY(-3px)'; }}
                   onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.color = '#ffffff'; }}
                 >
                   <Icon size={18} />
@@ -178,21 +178,21 @@ const Footer = () => {
             <h4 style={headingStyle}>Emergency Port</h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               <div style={contactItemStyle}>
-                <Phone size={20} style={{ color: '#f97316' }} />
+                <Phone size={20} style={{ color: '#22c55e' }} />
                 <div>
                   <span style={{ display: 'block', fontWeight: '700', color: '#ffffff' }}>630 943 5120</span>
                   <span style={{ fontSize: '0.85rem' }}>24/7 Priority Support</span>
                 </div>
               </div>
               <div style={contactItemStyle}>
-                <Mail size={20} style={{ color: '#f97316' }} />
+                <Mail size={20} style={{ color: '#22c55e' }} />
                 <div>
                   <span style={{ display: 'block', fontWeight: '700', color: '#ffffff' }}>aerotechsolutions@gmail.com</span>
                   <span style={{ fontSize: '0.85rem' }}>Official Correspondence</span>
                 </div>
               </div>
               <div style={contactItemStyle}>
-                <MapPin size={20} style={{ color: '#f97316' }} />
+                <MapPin size={20} style={{ color: '#22c55e' }} />
                 <div>
                   <span style={{ display: 'block', fontWeight: '700', color: '#ffffff' }}>Bolingbrook, IL</span>
                   <span style={{ fontSize: '0.85rem' }}>Serving Greater Chicago land</span>

@@ -88,9 +88,9 @@ const Navbar = () => {
       <div className="max-w-[1280px] mx-auto px-6 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-3 no-underline group" onClick={() => window.scrollTo(0, 0)}>
           <svg className="h-8 md:h-10 w-auto transition-transform group-hover:scale-105" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="64" height="64" rx="16" fill="#f97316" />
+            <rect width="64" height="64" rx="16" fill="#22c55e" />
             <path d="M32 12L14 52H24L28 42H36L40 52H50L32 12Z" fill="white" />
-            <path d="M32 24L29.5 34H34.5L32 24Z" fill="#f97316" />
+            <path d="M32 24L29.5 34H34.5L32 24Z" fill="#22c55e" />
             <path d="M48 12C52.4183 12 56 15.5817 56 20C56 24.4183 52.4183 28 48 28C43.5817 28 40 24.4183 40 20C40 15.5817 43.5817 12 48 12Z" fill="white" />
           </svg>
           <h1 className="text-lg md:text-2xl font-extrabold text-white m-0 tracking-tight">Aerotech Solution</h1>
@@ -171,7 +171,7 @@ const Navbar = () => {
 
         <Link
           to="/book-service"
-          className="hidden md:inline-block bg-orange-500 text-white px-6 py-2.5 rounded-full font-bold no-underline transition-all hover:-translate-y-0.5 hover:bg-orange-600 shadow-lg shadow-orange-900/20"
+          className="hidden md:inline-block bg-green-500 text-white px-6 py-2.5 rounded-full font-bold no-underline transition-all hover:-translate-y-0.5 hover:bg-green-600 shadow-lg shadow-green-900/20"
         >
           Book Service
         </Link>
@@ -290,7 +290,7 @@ const Navbar = () => {
           <Link
             to="/book-service"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="block w-full bg-orange-500 text-white text-center py-3 rounded-xl font-bold mb-6 hover:bg-orange-600 transition-colors shadow-lg shadow-orange-900/20"
+            className="block w-full bg-green-500 text-white text-center py-3 rounded-xl font-bold mb-6 hover:bg-green-600 transition-colors shadow-lg shadow-green-900/20"
           >
             Book Service
           </Link>

@@ -45,7 +45,7 @@ const ServiceFeature = ({ service, index }) => {
         <span style={{
           fontSize: '14px',
           fontWeight: '800',
-          color: '#f97316',
+          color: '#22c55e',
           textTransform: 'uppercase',
           letterSpacing: '4px',
           marginBottom: '20px'
@@ -76,7 +76,7 @@ const ServiceFeature = ({ service, index }) => {
           style={{
             width: 'fit-content',
             padding: '20px 40px',
-            background: '#f97316',
+            background: '#22c55e',
             color: 'white',
             border: 'none',
             borderRadius: '0px', // Sharp corners look more "engineered"
@@ -106,7 +106,7 @@ const Services = () => {
         backgroundColor: '#7f1d1d',
         color: 'white'
       }}>
-        <h1 style={{ fontSize: '1rem', letterSpacing: '8px', textTransform: 'uppercase', color: '#f97316' }}>
+        <h1 style={{ fontSize: '1rem', letterSpacing: '8px', textTransform: 'uppercase', color: '#22c55e' }}>
           Aerotech Solution
         </h1>
         <p style={{ fontSize: '3rem', fontWeight: '900', marginTop: '20px' }}>
@@ -145,7 +145,7 @@ const Services = () => {
 
       <style>{`
         .btn-impact:hover {
-          background: #7f1d1d !important;
+          background: #22c55e !important;
           transform: translateX(10px);
         }
         @media (max-width: 1024px) {

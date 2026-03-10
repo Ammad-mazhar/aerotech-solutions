@@ -55,7 +55,7 @@ const Hero = () => {
   };
 
   const primaryBtnStyle = {
-    backgroundColor: '#f97316',
+    backgroundColor: '#22c55e',
     color: 'white',
     padding: '18px 36px',
     borderRadius: '100px',
@@ -66,7 +66,7 @@ const Hero = () => {
     alignItems: 'center',
     gap: '10px',
     transition: 'all 0.3s ease',
-    boxShadow: '0 10px 25px rgba(249, 115, 22, 0.3)',
+    boxShadow: '0 10px 25px rgba(34, 197, 94, 0.3)',
     border: 'none',
     cursor: 'pointer'
   };
@@ -76,11 +76,11 @@ const Hero = () => {
     alignItems: 'center',
     gap: '8px',
     padding: '8px 24px',
-    backgroundColor: '#fff7ed',
+    backgroundColor: '#f0fdf4',
     backdropFilter: 'blur(12px)',
-    border: '1px solid #fed7aa',
+    border: '1px solid #bbf7d0',
     borderRadius: '100px',
-    color: '#f97316',
+    color: '#22c55e',
     fontSize: '0.875rem',
     fontWeight: '700',
     textTransform: 'uppercase',
@@ -125,7 +125,7 @@ const Hero = () => {
       />
       <div style={containerStyle}>
         <div style={badgeStyle}>
-          <span style={{ width: '8px', height: '8px', backgroundColor: '#f97316', borderRadius: '50%', boxShadow: '0 0 10px #f97316' }}></span>
+          <span style={{ width: '8px', height: '8px', backgroundColor: '#22c55e', borderRadius: '50%', boxShadow: '0 0 10px #22c55e' }}></span>
           Certified Master Technicians
         </div>
 
@@ -145,14 +145,14 @@ const Hero = () => {
               window.scrollTo(0, 0);
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = '#ea580c';
+              e.currentTarget.style.backgroundColor = '#16a34a';
               e.currentTarget.style.transform = 'translateY(-5px)';
-              e.currentTarget.style.boxShadow = '0 15px 30px rgba(249, 115, 22, 0.4)';
+              e.currentTarget.style.boxShadow = '0 15px 30px rgba(34, 197, 94, 0.4)';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = '#f97316';
+              e.currentTarget.style.backgroundColor = '#22c55e';
               e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 10px 25px rgba(249, 115, 22, 0.3)';
+              e.currentTarget.style.boxShadow = '0 10px 25px rgba(34, 197, 94, 0.3)';
             }}
           >
             Get Emergency Repair
@@ -172,7 +172,7 @@ const Hero = () => {
           </div>
           <div style={{ width: '1px', height: '20px', backgroundColor: '#cbd5e1' }}></div>
           <div style={trustItemStyle}>
-            <Clock size={18} color="#f97316" />
+            <Clock size={18} color="#22c55e" />
             Same-Day Availability
           </div>
         </div>
