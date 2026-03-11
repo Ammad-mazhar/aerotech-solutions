@@ -40,14 +40,13 @@ const Partners = () => {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.05 }}
-                                whileHover={{ y: -5, borderColor: '#22c55e' }}
-                                className="group relative flex items-center gap-3 px-8 py-5 bg-[#052e16] border border-green-800 rounded-2xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.3)] transition-all duration-300 cursor-default"
+                                whileHover={{ y: -5 }}
+                                className="group relative flex items-center gap-3 px-8 py-5 bg-[#f97316] border border-[#7f1d1d] rounded-2xl shadow-[0_4px_20px_rgba(249,115,22,0.3)] transition-all duration-300 cursor-pointer"
                             >
-                                <div className="w-1.5 h-1.5 rounded-full bg-green-600 group-hover:bg-green-400 transition-colors duration-300" />
-                                <span className="text-sm md:text-base font-black text-green-100 group-hover:text-white transition-colors duration-300">
+                                <span className="text-sm md:text-base font-black text-[#7f1d1d] group-hover:text-[#7f1d1d] transition-colors duration-300">
                                     {partner}
                                 </span>
-                                <ArrowUpRight size={14} className="text-green-500 group-hover:text-green-300 transition-all duration-300 opacity-0 group-hover:opacity-100" />
+                                <ArrowUpRight size={14} className="text-[#7f1d1d] transition-all duration-300 opacity-100" />
                             </motion.div>
                         ))}
                     </div>

@@ -81,8 +81,8 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-[1000] border-b transition-all duration-300 font-['Inter'] ${isScrolled
-        ? 'py-4 bg-[#f97316]/90 backdrop-blur-md border-white/10 shadow-lg'
-        : 'py-6 bg-[#f97316]/95 backdrop-blur-md border-transparent'
+        ? 'py-4 bg-[#052e16]/90 backdrop-blur-md border-white/10 shadow-lg'
+        : 'py-6 bg-[#052e16]/95 backdrop-blur-md border-transparent'
         }`}
     >
       <div className="max-w-[1280px] mx-auto px-6 flex justify-between items-center">
@@ -182,7 +182,7 @@ const Navbar = () => {
       )}
 
       {/* Mobile Menu */}
-      <div className={`fixed top-0 right-0 w-[85%] max-w-[350px] h-full bg-[#f97316] text-white z-[1002] transition-transform duration-300 shadow-2xl p-6 flex flex-col md:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+      <div className={`fixed top-0 right-0 w-[85%] max-w-[350px] h-full bg-[#052e16] text-white z-[1002] transition-transform duration-300 shadow-2xl p-6 flex flex-col md:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="flex justify-between items-center mb-6">
           <span className="text-lg font-bold text-slate-400">Menu</span>
           <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 text-slate-400 hover:text-white">
