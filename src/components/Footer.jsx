@@ -115,7 +115,7 @@ const Footer = () => {
                 alt="Aerotech Solution" 
                 style={{ width: '120px', height: 'auto', borderRadius: '12px' }}
               />
-              <span style={{ fontSize: '1.5rem', fontWeight: '900', color: '#ffffff', letterSpacing: '-1px' }}>AEROTECH SOLUTION</span>
+              <span style={{ fontSize: '1.5rem', fontWeight: '900', color: '#ffffff', letterSpacing: '-1px' }}>AEROTECH SOLUTIONS</span>
             </Link>
             <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.8', margin: 0 }}>
               Restoring comfort to your home through elite appliance craftsmanship. Factory-trained master technicians available 24/7 for essential and luxury brands.
