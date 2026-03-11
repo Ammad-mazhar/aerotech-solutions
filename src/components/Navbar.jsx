@@ -88,9 +88,9 @@ const Navbar = () => {
       <div className="max-w-[1280px] mx-auto px-6 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-3 no-underline group" onClick={() => window.scrollTo(0, 0)}>
           <img 
-            src="/logo/logo 2.jpg" 
+            src="/logo/logo.png" 
             alt="Aerotech Solution" 
-            style={{ height: '2.5rem', width: 'auto' }}
+            style={{ height: '4rem', width: 'auto' }}
           />
           <h1 className="text-lg md:text-2xl font-extrabold text-white m-0 tracking-tight">Aerotech Solution</h1>
         </Link>

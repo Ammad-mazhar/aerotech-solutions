@@ -133,7 +133,7 @@ const AboutPage = () => {
       </section>
 
       {/* 2. OUR MISSION & VISION */}
-      <section style={{ backgroundColor: colors.navy, ...sectionSpacing }}>
+      <section style={{ backgroundColor: '#000000', ...sectionSpacing }}>
         <div style={containerStyle}>
           <div style={{ textAlign: 'center', marginBottom: '80px' }}>
             <h2 style={{ fontSize: '2.5rem', fontWeight: '800', color: '#ffffff', marginBottom: '20px' }}>Our Mission & DNA</h2>
