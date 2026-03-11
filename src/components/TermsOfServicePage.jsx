@@ -6,7 +6,7 @@ const TermsOfServicePage = () => {
       <style>{`
         .terms-page {
           padding: 5rem 0;
-          background-color: #ffffff;
+          background-color: #052e16;
           font-family: 'Inter', system-ui, -apple-system, sans-serif;
           min-height: 60vh;
         }
@@ -22,23 +22,23 @@ const TermsOfServicePage = () => {
         .terms-header h1 {
           font-size: 3rem;
           font-weight: 800;
-          color: #0f172a;
+          color: #ffffff;
           margin-bottom: 1.5rem;
           letter-spacing: -0.025em;
         }
         .terms-header p {
           font-size: 1.25rem;
-          color: #475569;
+          color: #a7f3d0;
           line-height: 1.75;
         }
         .terms-content {
-          color: #334155;
+          color: #e2e8f0;
           line-height: 1.8;
         }
         .terms-content h2 {
           font-size: 1.8rem;
           font-weight: 700;
-          color: #0f172a;
+          color: #ffffff;
           margin-top: 3rem;
           margin-bottom: 1.5rem;
         }

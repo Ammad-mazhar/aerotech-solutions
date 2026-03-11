@@ -88,7 +88,7 @@ const Navbar = () => {
       <div className="max-w-[1280px] mx-auto px-6 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-3 no-underline group" onClick={() => window.scrollTo(0, 0)}>
           <img 
-            src="/logo/logo.png" 
+            src="/logo/logo 2.png" 
             alt="Aerotech Solution" 
             style={{ height: '4rem', width: 'auto' }}
           />
@@ -170,7 +170,7 @@ const Navbar = () => {
 
         <Link
           to="/book-service"
-          className="hidden md:inline-block bg-[#052e16] text-white px-6 py-2.5 rounded-full font-bold no-underline transition-all hover:-translate-y-0.5 hover:bg-[#064e3b] shadow-lg shadow-green-900/20"
+          className="hidden md:inline-block bg-[#f97316] text-[#7f1d1d] px-6 py-2.5 rounded-full font-bold no-underline transition-all hover:-translate-y-0.5 hover:bg-[#ea580c] shadow-lg shadow-orange-900/20"
         >
           Book Service
         </Link>
@@ -289,7 +289,7 @@ const Navbar = () => {
           <Link
             to="/book-service"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="block w-full bg-[#052e16] text-white text-center py-3 rounded-xl font-bold mb-6 hover:bg-[#064e3b] transition-colors shadow-lg shadow-green-900/20"
+            className="block w-full bg-[#f97316] text-[#7f1d1d] text-center py-3 rounded-xl font-bold mb-6 hover:bg-[#ea580c] transition-colors shadow-lg shadow-orange-900/20"
           >
             Book Service
           </Link>

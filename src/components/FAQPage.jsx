@@ -7,7 +7,7 @@ const FAQPage = () => {
       <style>{`
         .faq-page {
           padding: 5rem 0;
-          background-color: #f8fafc;
+          background-color: #052e16;
           font-family: 'Inter', system-ui, -apple-system, sans-serif;
           min-height: 60vh;
         }
@@ -23,13 +23,13 @@ const FAQPage = () => {
         .faq-header h1 {
           font-size: 3rem;
           font-weight: 800;
-          color: #0f172a;
+          color: #ffffff;
           margin-bottom: 1.5rem;
           letter-spacing: -0.025em;
         }
         .faq-header p {
           font-size: 1.25rem;
-          color: #475569;
+          color: #a7f3d0;
           max-width: 700px;
           margin: 0 auto;
         }
@@ -62,13 +62,13 @@ const FAQPage = () => {
         .faq-cta h3 {
           font-size: 1.5rem;
           font-weight: 700;
-          color: #0f172a;
+          color: #ffffff;
           margin-bottom: 1rem;
         }
         .cta-button {
           display: inline-block;
           background-color: #f97316;
-          color: white;
+          color: #7f1d1d;
           padding: 0.875rem 2rem;
           border-radius: 0.5rem;
           font-weight: 600;

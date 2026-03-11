@@ -76,10 +76,10 @@ const ServiceFeature = ({ service, index }) => {
           style={{
             width: 'fit-content',
             padding: '20px 40px',
-            background: '#22c55e',
-            color: 'white',
+            background: '#f97316',
+            color: '#7f1d1d',
             border: 'none',
-            borderRadius: '0px', // Sharp corners look more "engineered"
+            borderRadius: '0px',
             fontWeight: 'bold',
             display: 'flex',
             alignItems: 'center',
@@ -145,7 +145,7 @@ const Services = () => {
 
       <style>{`
         .btn-impact:hover {
-          background: #22c55e !important;
+          background: #ea580c !important;
           transform: translateX(10px);
         }
         @media (max-width: 1024px) {

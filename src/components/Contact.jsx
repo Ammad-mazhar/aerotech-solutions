@@ -288,7 +288,7 @@ export default function Contact() {
                 ...buttonStyle,
                 backgroundColor: isSubmitting || !isValid ? '#94a3b8' : '#f97316',
                 cursor: isSubmitting || !isValid ? 'not-allowed' : 'pointer',
-                color: '#ffffff'
+                color: '#7f1d1d'
               }}
               disabled={isSubmitting || !isValid}
               onMouseEnter={(e) => !isSubmitting && isValid && (e.currentTarget.style.backgroundColor = '#ea580c')}
@@ -330,7 +330,7 @@ export default function Contact() {
             gap: '10px',
             padding: '14px 28px',
             backgroundColor: '#f97316',
-            color: '#ffffff',
+            color: '#7f1d1d',
             borderRadius: '100px',
             textDecoration: 'none',
             fontWeight: '700',

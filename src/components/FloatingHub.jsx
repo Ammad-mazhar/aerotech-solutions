@@ -32,7 +32,7 @@ const FloatingHub = () => {
           width: 60px;
           height: 60px;
           border-radius: 50%;
-          background: rgba(37, 99, 235, 0.9);
+          background: rgba(249, 115, 22, 0.9);
           backdrop-filter: blur(10px);
           border: 1px solid rgba(255, 255, 255, 0.18);
           box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
@@ -41,14 +41,14 @@ const FloatingHub = () => {
           align-items: center;
           cursor: pointer;
           transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-          color: #ffffff;
+          color: #7f1d1d;
           position: relative;
           text-decoration: none;
         }
 
         .hub-main-btn:hover {
           transform: scale(1.05);
-          background: rgba(37, 99, 235, 1);
+          background: rgba(249, 115, 22, 1);
         }
 
         .hub-pulse {
@@ -56,20 +56,20 @@ const FloatingHub = () => {
         }
 
         @keyframes pulse-animation {
-          0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4); }
-          70% { box-shadow: 0 0 0 15px rgba(37, 99, 235, 0); }
-          100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+          0% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.4); }
+          70% { box-shadow: 0 0 0 15px rgba(249, 115, 22, 0); }
+          100% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0); }
         }
 
         .hub-get-in-touch {
-          background: rgba(37, 99, 235, 0.9);
+          background: rgba(249, 115, 22, 0.9);
           backdrop-filter: blur(8px);
           border: 1px solid rgba(255, 255, 255, 0.18);
           padding: 8px 16px;
           border-radius: 9999px;
           font-size: 14px;
           font-weight: 600;
-          color: #ffffff;
+          color: #7f1d1d;
           box-shadow: 0 4px 12px rgba(0,0,0,0.1);
           white-space: nowrap;
           margin-bottom: -0.5rem; /* Position it closer to the button */

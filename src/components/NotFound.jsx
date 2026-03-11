@@ -11,7 +11,7 @@ const NotFound = () => {
             alignItems: 'center',
             justifyContent: 'center',
             padding: '20px',
-            backgroundColor: '#ffffff',
+            backgroundColor: '#052e16',
             fontFamily: "'Inter', sans-serif",
             textAlign: 'center'
         }}>
@@ -32,7 +32,7 @@ const NotFound = () => {
             <h1 style={{
                 fontSize: '4rem',
                 fontWeight: '900',
-                color: '#0f172a',
+                color: '#ffffff',
                 marginBottom: '16px',
                 letterSpacing: '-2px'
             }}>404</h1>
@@ -40,13 +40,13 @@ const NotFound = () => {
             <h2 style={{
                 fontSize: '2rem',
                 fontWeight: '700',
-                color: '#1e293b',
+                color: '#ffffff',
                 marginBottom: '16px'
             }}>Oops! This page doesn't exist</h2>
 
             <p style={{
                 fontSize: '1.125rem',
-                color: '#64748b',
+                color: '#a7f3d0',
                 maxWidth: '500px',
                 marginBottom: '40px',
                 lineHeight: '1.6'
@@ -62,7 +62,7 @@ const NotFound = () => {
                     gap: '10px',
                     padding: '16px 32px',
                     backgroundColor: '#f97316',
-                    color: '#ffffff',
+                    color: '#7f1d1d',
                     borderRadius: '14px',
                     fontWeight: '700',
                     textDecoration: 'none',

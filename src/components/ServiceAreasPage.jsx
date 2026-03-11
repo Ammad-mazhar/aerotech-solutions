@@ -7,7 +7,7 @@ const ServiceAreasPage = () => {
       <style>{`
         .service-areas-page {
           padding: 5rem 0;
-          background-color: #ffffff;
+          background-color: #052e16;
           font-family: 'Inter', system-ui, -apple-system, sans-serif;
           min-height: 60vh;
         }
@@ -20,22 +20,22 @@ const ServiceAreasPage = () => {
         .sa-header h1 {
           font-size: 3rem;
           font-weight: 800;
-          color: #0f172a;
+          color: #ffffff;
           margin-bottom: 1.5rem;
           letter-spacing: -0.025em;
         }
         .sa-header p {
           font-size: 1.25rem;
-          color: #475569;
+          color: #a7f3d0;
           max-width: 700px;
           margin: 0 auto 4rem;
           line-height: 1.75;
         }
         .coverage-map {
-          background-color: #f8fafc;
+          background-color: #064e3b;
           border-radius: 1rem;
           padding: 4rem 2rem;
-          border: 1px solid #e2e8f0;
+          border: 1px solid rgba(34, 197, 94, 0.2);
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -49,19 +49,19 @@ const ServiceAreasPage = () => {
         .coverage-title {
           font-size: 1.75rem;
           font-weight: 700;
-          color: #0f172a;
+          color: #ffffff;
           margin-bottom: 1rem;
         }
         .coverage-desc {
           font-size: 1.1rem;
-          color: #64748b;
+          color: #a7f3d0;
           max-width: 500px;
           margin-bottom: 2rem;
         }
         .cta-button {
           display: inline-block;
           background-color: #f97316;
-          color: white;
+          color: #7f1d1d;
           padding: 0.875rem 2rem;
           border-radius: 0.5rem;
           font-weight: 600;
@@ -88,12 +88,12 @@ const ServiceAreasPage = () => {
         .sa-text h2 {
           font-size: 2rem;
           font-weight: 700;
-          color: #0f172a;
+          color: #ffffff;
           margin-bottom: 1rem;
         }
         .sa-text p {
           font-size: 1.1rem;
-          color: #475569;
+          color: #a7f3d0;
           line-height: 1.7;
           margin-bottom: 1.5rem;
         }
@@ -107,10 +107,10 @@ const ServiceAreasPage = () => {
           margin-top: 2rem;
         }
         .region-card {
-          background-color: #f8fafc;
+          background-color: #064e3b;
           padding: 2rem;
           border-radius: 0.75rem;
-          border: 1px solid #e2e8f0;
+          border: 1px solid rgba(34, 197, 94, 0.2);
           transition: transform 0.2s;
         }
         .region-card:hover {
@@ -120,7 +120,7 @@ const ServiceAreasPage = () => {
         .region-card h3 {
           font-size: 1.25rem;
           font-weight: 700;
-          color: #0f172a;
+          color: #ffffff;
           margin-bottom: 1rem;
           border-bottom: 2px solid #f97316;
           padding-bottom: 0.5rem;
@@ -132,7 +132,7 @@ const ServiceAreasPage = () => {
           margin: 0;
         }
         .region-card li {
-          color: #475569;
+          color: #a7f3d0;
           margin-bottom: 0.75rem;
           display: flex;
           align-items: center;
@@ -196,8 +196,8 @@ const ServiceAreasPage = () => {
         </div>
 
         <div className="regions-section">
-          <h2 style={{ textAlign: 'center', fontSize: '2.25rem', fontWeight: '700', color: '#0f172a', marginBottom: '1rem' }}>Serving Major Regions</h2>
-          <p style={{ textAlign: 'center', color: '#475569', maxWidth: '700px', margin: '0 auto 3rem' }}>
+          <h2 style={{ textAlign: 'center', fontSize: '2.25rem', fontWeight: '700', color: '#ffffff', marginBottom: '1rem' }}>Serving Major Regions</h2>
+          <p style={{ textAlign: 'center', color: '#a7f3d0', maxWidth: '700px', margin: '0 auto 3rem' }}>
             Our network covers metropolitan areas and surrounding suburbs across the country.
           </p>
           <div className="regions-grid">

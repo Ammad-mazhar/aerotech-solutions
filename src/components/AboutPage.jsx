@@ -278,8 +278,8 @@ const AboutPage = () => {
             <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap', position: 'relative' }}>
               <button style={{
                 padding: '18px 40px',
-                backgroundColor: colors.white,
-                color: colors.orange,
+                backgroundColor: '#f97316',
+                color: '#7f1d1d',
                 borderRadius: '16px',
                 fontWeight: '800',
                 border: 'none',
@@ -296,17 +296,17 @@ const AboutPage = () => {
               </button>
               <button style={{
                 padding: '18px 40px',
-                backgroundColor: 'transparent',
-                color: colors.white,
+                backgroundColor: '#f97316',
+                color: '#7f1d1d',
                 borderRadius: '16px',
                 fontWeight: '800',
-                border: `2px solid ${colors.white}`,
+                border: 'none',
                 cursor: 'pointer',
                 fontSize: '1.1rem',
                 transition: 'all 0.3s'
               }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.1)'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#ea580c'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#f97316'}
                 onClick={() => window.location.href = 'tel:6309435120'}
               >
                 Call (630) 943-5120
