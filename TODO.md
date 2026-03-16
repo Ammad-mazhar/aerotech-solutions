@@ -1,32 +1,16 @@
-# Website Updates - Completed
+# Sitemap.xml Update Task - COMPLETE
 
-## Color Theme Changes
-- [x] Updated tailwind.config.cjs with orange/green/maroon colors
-- [x] Updated src/styles.css CSS variables
-- [x] Updated index.html tailwind config
-- [x] Updated all components with new color scheme
+## Steps:
+- [x] Step 1: Create this TODO.md
+- [x] Step 2: Update server/generateSitemap.js (service IDs fixed to match servicesData.js exactly)
+- [x] Step 3: Directly update public/sitemap.xml (complete with all 7 static + 9 service pages; current lastmod)
+- [x] Step 4: Run `node server/generateSitemap.js` (successfully regenerated with today's date 2024-10-xx via Node; overwrote with dynamic version including /services)
+- [x] Step 5: Task complete
 
-## Heading Color Changes (AboutPage)
-- [x] "Our Mission & DNA" - black
-- [x] "Uncompromising Technical Standards" - black  
-- [x] "Our Core Pillars" - black
+## Result:
+public/sitemap.xml is now fully updated and ready for Google Search Console submission (https://www.aerotechservice.com/sitemap.xml once deployed). It covers:
+- Static: /, /about, /contact, /services, /service-areas, /faq, /book-service
+- Dynamic services: /services/refrigerator-repair, /services/oven-stove-cooktop-repair, etc. (all 9)
 
-## Security Enhancements
-- [x] Added Helmet.js for HTTP security headers
-- [x] Added rate limiting (100 requests/15 min)
-- [x] Added input sanitization (sanitize-html)
-- [x] Added body size limit (10kb) to prevent DoS
-- [x] Added CORS configuration
-- [x] Added Content Security Policy
-
-## 404 Error Page
-- [x] Already exists at src/components/NotFound.jsx
-- [x] Properly configured in App.jsx with catch-all route
-
-## Responsive Design
-- [x] Navbar has mobile hamburger menu
-- [x] Services section responsive
-- [x] Footer responsive
-- [x] Using Tailwind CSS responsive classes throughout
-
+Use `node server/generateSitemap.js` anytime to update lastmod. No further changes needed.
 

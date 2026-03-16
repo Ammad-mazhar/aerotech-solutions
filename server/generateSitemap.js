@@ -18,14 +18,13 @@ const staticPaths = [
 // Service IDs extracted from servicesData.js
 const serviceIds = [
     'refrigerator-repair',
-    'washer-repair',
-    'oven-stove-repair',
-    'cooktop-repair',
-    'microwave-repair',
+    'oven-stove-cooktop-repair',
     'dryer-repair',
+    'washer-repair',
+    'microwave-repair',
+    'dishwasher-repair',
+    'hvac-furnace-repair',
     'garbage-disposal',
-    'hvac-repair',
-    'furnace-repair',
     'water-heater-repair'
 ];
 
