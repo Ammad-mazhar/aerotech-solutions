@@ -1,7 +1,24 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const TermsOfServicePage = () => {
   return (
+    <>
+      <Helmet>
+        <title>Aerotech Solution | Terms of Service - Appliance Repair Service Terms</title>
+        <meta name="description" content="Aerotech Solution Terms of Service for appliance repair. Includes appointment policy, payments, warranty details, and cancellation terms for residential service." />
+        <meta name="keywords" content="Aerotech Solution terms of service, appliance repair terms, service warranty terms, repair cancellation policy" />
+        <link rel="canonical" href="https://www.aerotechservice.com/terms-of-service" />
+        <meta property="og:title" content="Terms of Service | Aerotech Solution" />
+        <meta property="og:description" content="Review our service terms including payments, appointments, warranty, and cancellation policy before booking repair service." />
+        <meta property="og:url" content="https://www.aerotechservice.com/terms-of-service" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.aerotechservice.com/banner-image.jpeg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Aerotech Solution Terms & Conditions" />
+        <meta name="twitter:description" content="Important service terms for appliance repair. Know our policies on appointments, payments, and warranties." />
+        <meta name="twitter:image" content="https://www.aerotechservice.com/banner-image.jpeg" />
+      </Helmet>
     <section className="terms-page">
       <style>{`
         .terms-page {

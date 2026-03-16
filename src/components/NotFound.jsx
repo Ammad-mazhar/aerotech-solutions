@@ -1,10 +1,27 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Home, AlertCircle } from 'lucide-react';
 
 const NotFound = () => {
     return (
-        <div style={{
+        <>
+          <Helmet>
+            <title>Page Not Found - 404 | Aerotech Solution</title>
+            <meta name="description" content="The page you are looking for cannot be found. Aerotech Solution professional appliance repair services. Return to home for repair scheduling." />
+            <meta name="keywords" content="404 error, page not found, appliance repair home" />
+            <link rel="canonical" href="https://www.aerotechservice.com/" />
+            <meta property="og:title" content="404 | Page Not Found | Aerotech Solution" />
+            <meta property="og:description" content="Page not found. Visit our home page for appliance repair services." />
+            <meta property="og:url" content="https://www.aerotechservice.com/" />
+            <meta property="og:type" content="website" />
+            <meta property="og:image" content="https://www.aerotechservice.com/banner-image.jpeg" />
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content="404 - Page Not Found" />
+            <meta name="twitter:description" content="Return to Aerotech Solution home for professional appliance repair services." />
+            <meta name="twitter:image" content="https://www.aerotechservice.com/banner-image.jpeg" />
+          </Helmet>
+          <div style={{
             minHeight: '100vh',
             display: 'flex',
             flexDirection: 'column',
@@ -14,7 +31,7 @@ const NotFound = () => {
             backgroundColor: '#052e16',
             fontFamily: "'Inter', sans-serif",
             textAlign: 'center'
-        }}>
+          }}>
             <div style={{
                 width: '120px',
                 height: '120px',
@@ -81,7 +98,8 @@ const NotFound = () => {
                 <Home size={20} />
                 Back to Home
             </Link>
-        </div>
+          </div>
+        </>
     );
 };
 
