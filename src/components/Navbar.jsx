@@ -6,11 +6,26 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
   const navigate = useNavigate();
 
   const handleSearch = (e) => {
     if (e.key === 'Enter' && searchQuery.trim()) {
       navigate(`/services?search=${searchQuery}`);
+      setSearchResults([]);
+    }
+  };
+
+  const handleSearchChange = (e) => {
+    const query = e.target.value;
+    setSearchQuery(query);
+    if (query.trim()) {
+      const results = servicesList.filter(service => 
+        service.title.toLowerCase().includes(query.toLowerCase())
+      );
+      setSearchResults(results);
+    } else {
+      setSearchResults([]);
     }
   };
 
@@ -194,23 +209,59 @@ const Navbar = () => {
             alignItems: 'center',
             gap: '12px',
           }}>
-            <input
-              type="text"
-              placeholder="Search..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              onKeyDown={handleSearch}
-              style={{
-                backgroundColor: '#1a3a2a',
-                border: '1px solid rgba(255,255,255,0.2)',
-                borderRadius: '8px',
-                padding: '8px 14px',
-                color: '#ffffff',
-                fontSize: '0.875rem',
-                width: '150px',
-                outline: 'none',
-              }}
-            />
+            <div style={{ position: 'relative' }}>
+              <input
+                type="text"
+                placeholder="Search..."
+                value={searchQuery}
+                onChange={handleSearchChange}
+                onKeyDown={handleSearch}
+                style={{
+                  backgroundColor: '#1a3a2a',
+                  border: '1px solid rgba(255,255,255,0.2)',
+                  borderRadius: '999px',
+                  padding: '8px 14px',
+                  color: '#ffffff',
+                  fontSize: '0.875rem',
+                  width: '150px',
+                  outline: 'none',
+                }}
+              />
+              {searchQuery && searchResults.length > 0 && (
+                <div style={{
+                  position: 'absolute',
+                  top: '100%',
+                  right: 0,
+                  marginTop: '8px',
+                  width: '260px',
+                  backgroundColor: '#ffffff',
+                  borderRadius: '8px',
+                  boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+                  zIndex: 10001,
+                  overflow: 'hidden',
+                }}>
+                  {searchResults.map((service) => (
+                    <Link
+                      key={service.id}
+                      to={`/services/${service.id}`}
+                      onClick={() => { setSearchQuery(''); setSearchResults([]); }}
+                      style={{
+                        display: 'block',
+                        padding: '10px 16px',
+                        color: '#1a1a1a',
+                        textDecoration: 'none',
+                        fontSize: '0.9rem',
+                        borderBottom: '1px solid #f3f4f6',
+                      }}
+                      onMouseEnter={(e) => e.target.style.backgroundColor = '#f973161a'}
+                      onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
+                    >
+                      {service.title}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
             <Link to="/book-service" style={{
               backgroundColor: '#f97316',
               color: '#800000',
