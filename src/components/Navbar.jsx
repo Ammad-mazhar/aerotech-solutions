@@ -29,7 +29,7 @@ const Navbar = () => {
           maxWidth: '1200px',
           margin: '0 auto',
           padding: '0 24px',
-          height: '64px',
+          height: '100px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
@@ -213,7 +213,7 @@ const Navbar = () => {
             />
             <Link to="/book-service" style={{
               backgroundColor: '#f97316',
-              color: '#ffffff',
+              color: '#800000',
               padding: '8px 20px',
               borderRadius: '999px',
               fontWeight: '700',
