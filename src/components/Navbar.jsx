@@ -41,9 +41,8 @@ const Navbar = () => {
         borderBottom: '1px solid rgba(255,255,255,0.1)',
       }}>
         <nav style={{
-          maxWidth: '1200px',
-          margin: '0 auto',
-          padding: '0 24px',
+          width: '100%',
+          padding: '0 40px',
           height: '100px',
           display: 'flex',
           alignItems: 'center',
@@ -62,8 +61,8 @@ const Navbar = () => {
               src="/logo/logo 2.png"
               alt="Aerotech Solution"
               style={{
-                height: '40px',
-                width: '40px',
+                height: '60px',
+                width: '60px',
                 objectFit: 'contain',
                 borderRadius: '50%',
               }}
@@ -71,7 +70,7 @@ const Navbar = () => {
             <span style={{
               color: '#ffffff',
               fontWeight: '700',
-              fontSize: '1.1rem',
+              fontSize: '1.5rem',
               whiteSpace: 'nowrap',
             }}>
               Aerotech Solution
@@ -93,7 +92,7 @@ const Navbar = () => {
                 color: '#ffffff',
                 textDecoration: 'none',
                 fontWeight: '600',
-                fontSize: '0.95rem',
+                fontSize: '1.1rem',
               }}
                 onMouseEnter={e => e.currentTarget.style.color = '#f97316'}
                 onMouseLeave={e => e.currentTarget.style.color = '#ffffff'}
@@ -113,7 +112,7 @@ const Navbar = () => {
                 border: 'none',
                 cursor: 'pointer',
                 fontWeight: '600',
-                fontSize: '0.95rem',
+                fontSize: '1.1rem',
                 display: 'flex',
                 alignItems: 'center',
                 gap: '4px',
@@ -151,7 +150,7 @@ const Navbar = () => {
                         padding: '10px 20px',
                         color: '#1a1a1a',
                         textDecoration: 'none',
-                        fontSize: '0.9rem',
+                        fontSize: '1rem',
                         fontWeight: '500',
                         transition: 'background-color 0.15s, color 0.15s',
                       }}
@@ -178,7 +177,7 @@ const Navbar = () => {
                 color: '#ffffff',
                 textDecoration: 'none',
                 fontWeight: '600',
-                fontSize: '0.95rem',
+                fontSize: '1.1rem',
               }}
                 onMouseEnter={e => e.currentTarget.style.color = '#f97316'}
                 onMouseLeave={e => e.currentTarget.style.color = '#ffffff'}
@@ -193,7 +192,7 @@ const Navbar = () => {
                 color: '#ffffff',
                 textDecoration: 'none',
                 fontWeight: '600',
-                fontSize: '0.95rem',
+                fontSize: '1.1rem',
               }}
                 onMouseEnter={e => e.currentTarget.style.color = '#f97316'}
                 onMouseLeave={e => e.currentTarget.style.color = '#ffffff'}
@@ -222,7 +221,7 @@ const Navbar = () => {
                   borderRadius: '999px',
                   padding: '8px 14px',
                   color: '#ffffff',
-                  fontSize: '0.875rem',
+                  fontSize: '1rem',
                   width: '150px',
                   outline: 'none',
                 }}
@@ -268,7 +267,7 @@ const Navbar = () => {
               padding: '8px 20px',
               borderRadius: '999px',
               fontWeight: '700',
-              fontSize: '0.875rem',
+              fontSize: '1rem',
               textDecoration: 'none',
               whiteSpace: 'nowrap',
             }}
