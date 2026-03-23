@@ -1,18 +1,10 @@
-# SEO Helmet Task
+# TODO: Adjust service images
 
-## Steps:
-- [x] Step 1: Create/update TODO.md
-- [ ] Step 2: Add Helmet to Hero.jsx (home)
-- [ ] Step 3: AboutPage.jsx
-- [ ] Step 4: Contact.jsx
-- [ ] Step 5: ServiceAreasPage.jsx
-- [ ] Step 6: PrivacyPolicyPage.jsx
-- [ ] Step 7: FAQPage.jsx
-- [ ] Step 8: TermsOfServicePage.jsx
-- [ ] Step 9: BookingForm.jsx
-- [ ] Step 10: ServiceDetail.jsx (dynamic)
-- [ ] Step 11: NotFound.jsx
-- [x] Step 12: Test with `npm run dev`
-
-Progress tracked here.
+- [x] Update src/data/servicesData.js image paths to match public/ filenames
+  * refrigerator-repair: "/Refrigerator repair.webp"
+  * microwave-repair: "/Microwave image (1).webp" 
+  * dishwasher-repair: "/dishwasher.jpg"
+  * water-heater-repair: "/water heater.webp"
+- [x] Verify images load in Services page
+- [x] Added banner image adjustments
 

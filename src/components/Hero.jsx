@@ -119,11 +119,11 @@ const Hero = () => {
         <meta property="og:description" content="Nationwide premium appliance restoration. From HVAC calibration to kitchen system solutions, we bring your home back to factory standards with certified technicians." />
         <meta property="og:url" content="https://www.aerotechservice.com/" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.aerotechservice.com/banner-image.jpeg" />
+        <meta property="og:image" content="https://www.aerotechservice.com/banner-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Aerotech Solution | Elite Appliance & HVAC Services" />
         <meta name="twitter:description" content="24/7 residential appliance repair across USA. Certified parts, professional dispatch, same-day availability for emergencies." />
-        <meta name="twitter:image" content="https://www.aerotechservice.com/banner-image.jpeg" />
+        <meta name="twitter:image" content="https://www.aerotechservice.com/banner-image.jpg" />
       </Helmet>
       <section id="home" style={sectionStyle}>
         <motion.div
@@ -133,7 +133,7 @@ const Hero = () => {
             left: 0,
             width: '100%',
             height: '100%',
-            backgroundImage: 'linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.4) 100%), url("/banner-image.jpeg")',
+            backgroundImage: 'linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.4) 100%), url("/banner-image.jpg")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             zIndex: 0,

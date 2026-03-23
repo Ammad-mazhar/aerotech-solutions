@@ -72,7 +72,7 @@ const ServiceDetail = () => {
     };
 
     // Use specific banner if available, otherwise default to home page banner
-    const bannerImage = service.bannerImage || "/banner-image.jpeg";
+    const bannerImage = service.bannerImage || "/banner-image.jpg";
 
     // Always use banner layout styles
     const heroSectionStyle = {
@@ -185,11 +185,11 @@ const ServiceDetail = () => {
                 <meta property="og:description" content={service.description && service.description.substring(0, 160)} />
                 <meta property="og:url" content={`https://www.aerotechservice.com/services/${id}`} />
                 <meta property="og:type" content="website" />
-                <meta property="og:image" content={`https://www.aerotechservice.com${service.image || '/banner-image.jpeg'}`} />
+                <meta property="og:image" content={`https://www.aerotechservice.com${service.image || '/banner-image.jpg'}`} />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={`${service.title} Repair Services`} />
                 <meta name="twitter:description" content={service.description && service.description.substring(0, 160)} />
-                <meta name="twitter:image" content={`https://www.aerotechservice.com${service.image || '/banner-image.jpeg'}`} />
+                <meta name="twitter:image" content={`https://www.aerotechservice.com${service.image || '/banner-image.jpg'}`} />
             </Helmet>
             <div style={{ backgroundColor: '#052e16', paddingBottom: '100px' }}>
                 {/* Hero Section */}
@@ -314,8 +314,6 @@ const ServiceDetail = () => {
                             </p>
                         </div>
                     </div>
-
-
 
                     {/* Pricing & CTA Section */}
                     <div style={{ padding: '80px 0', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>

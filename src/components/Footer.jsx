@@ -111,7 +111,7 @@ const Footer = () => {
           <div style={columnStyle}>
             <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '12px' }}>
               <img 
-                src="/logo/logo.png" 
+src="/logo/logo 2.png"
                 alt="Aerotech Solution" 
                 style={{ width: '120px', height: 'auto', borderRadius: '12px' }}
               />
