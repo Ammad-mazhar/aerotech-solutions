@@ -318,12 +318,15 @@ const Navbar = () => {
               type="text"
               placeholder="Search..."
               style={{
-                marginTop: '16px', width: '100%',
-                backgroundColor: '#1a3a2a',
-                border: '1px solid rgba(255,255,255,0.2)',
-                borderRadius: '8px', padding: '10px 14px',
-                color: '#ffffff', fontSize: '0.875rem',
-                outline: 'none', boxSizing: 'border-box',
+                backgroundColor: '#1a2e1e',
+                border: 'none',
+                borderRadius: '999px',
+                padding: '10px 20px',
+                color: '#ffffff',
+                fontSize: '0.875rem',
+                width: '160px',
+                outline: 'none',
+                boxShadow: 'inset 0 0 0 1px rgba(255,255,255,0.15)',
               }}
             />
             <Link
