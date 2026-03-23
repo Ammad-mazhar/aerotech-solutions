@@ -4,12 +4,11 @@ import './styles.css'
 import App from './App.jsx'
 import { HelmetProvider } from 'react-helmet-async'
 
-<HelmetProvider>
-  <App />
-</HelmetProvider>
-
 createRoot(document.getElementById('root')).render(
-	<React.StrictMode>
-		<App />
-	</React.StrictMode>
+  <React.StrictMode>
+    <HelmetProvider>
+      <App />
+    </HelmetProvider>
+  </React.StrictMode>
 )
+

@@ -1,5 +1,11 @@
-/* Modern Professional Theme - Global Variables and Resets */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+/* Modern Professional Theme - Global Variables and Resets */
+
 
 :root {
   --brand-maroon: #7f1d1d;
@@ -9,8 +15,6 @@
   --surface: #064e3b;
   --text-slate: #f0fdf4;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
 
 * {
   box-sizing: border-box;
@@ -63,7 +67,6 @@ body {
   text-align: left;
   padding: 40px 0;
   border-bottom: 1px solid #e0e0e0;
-  /* Clean divider line instead of a box */
 }
 
 /* Make the icons stand out without a box */
@@ -71,7 +74,6 @@ body {
 .service-card .icon {
   font-size: 2rem;
   color: #f97316;
-  /* Use the client's brand color - Orange */
   flex-shrink: 0;
 }
 
@@ -81,3 +83,4 @@ body {
   font-size: 1.5rem;
   letter-spacing: -0.5px;
 }
+
