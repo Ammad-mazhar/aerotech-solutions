@@ -4,7 +4,6 @@ import svgr from 'vite-plugin-svgr'
 import tailwindcss from '@tailwindcss/vite'
 import { execSync } from 'child_process'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
@@ -19,4 +18,16 @@ export default defineConfig({
       }
     }
   ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+          helmet: ['react-helmet-async'],
+        }
+      }
+    },
+    chunkSizeWarningLimit: 600,
+  }
 })

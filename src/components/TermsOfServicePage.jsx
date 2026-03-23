@@ -122,9 +122,10 @@ const TermsOfServicePage = () => {
             Phone: 630 943 5120<br />
             Address: 206 Far Hills Dr, Bolingbrook, IL 60440
           </p>
-        </div>
+      </div>
       </div>
     </section>
+    </>
   );
 };
 
