@@ -71,6 +71,23 @@
   </script>
 </head>
 <body>
+  <!-- Add this back inside <head> temporarily -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: {
+            maroon: '#7f1d1d',
+            orange: '#f97316',
+            green: '#22c55e',
+          }
+        }
+      }
+    }
+  }
+</script>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>

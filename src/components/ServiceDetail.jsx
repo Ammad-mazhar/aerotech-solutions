@@ -235,7 +235,7 @@ const ServiceDetail = () => {
                 </section>
 
                 {/* Brands Section */}
-                <div style={{ background: '#064e3b', padding: '60px 20px', borderBottom: '1px solid rgba(34, 197, 94, 0.2)' }}>
+                <div style={{ background: '#052e16', padding: '60px 20px', borderBottom: '1px solid rgba(34, 197, 94, 0.2)' }}>
                     <div style={{ maxWidth: '1000px', margin: '0 auto', textAlign: 'center' }}>
                         <h3 style={{ fontSize: '0.875rem', fontWeight: '800', color: '#a7f3d0', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '32px' }}>
                             Supported Brands
