@@ -222,7 +222,7 @@ const Navbar = () => {
                   padding: '8px 14px',
                   color: '#ffffff',
                   fontSize: '1rem',
-                  width: '150px',
+                  width: '200px',
                   outline: 'none',
                 }}
               />
