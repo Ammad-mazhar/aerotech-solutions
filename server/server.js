@@ -304,14 +304,30 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
 
 // Booking Form
 app.post('/api/book', async (req, res) => {
+  // Basic validation to prevent silent failures
+  if (!req.body || typeof req.body !== 'object') {
+    return res.status(400).json({ success: false, message: 'Invalid request body.' });
+  }
+  // Explicit POST /api/book endpoint
   const {
-    applianceType, customApplianceType, brand, customBrand,
-    problemDescription, urgency, name, email, phone, address, zipCode, preferredDate
-  } = req.body;
+    applianceType,
+    customApplianceType,
+    brand,
+    customBrand,
+    problemDescription,
+    urgency,
+    name,
+    email,
+    phone,
+    address,
+    zipCode,
+    preferredDate,
+  } = req.body || {};
 
   const reference = 'BK' + Date.now().toString().slice(-6);
   const applianceName = `${brand === 'Other' ? (customBrand || 'Unknown Brand') : brand} ${applianceType === 'Other' ? (customApplianceType || 'Appliance') : applianceType}`.trim();
-  const companyEmail = process.env.COMPANY_EMAIL || process.env.EMAIL_USER;
+  // Must use these env vars for routing emails
+  const companyEmail = process.env.RECEIVER_EMAIL || process.env.COMPANY_EMAIL || process.env.EMAIL_USER;
 
   const adminData = { reference, urgency, name, email, phone, address, zipCode, applianceName, problemDescription, preferredDate };
 
@@ -384,7 +400,7 @@ app.post('/api/book', async (req, res) => {
       `),
     });
 
-    res.status(200).json({ success: true, reference });
+    res.status(200).json({ success: true });
   } catch (error) {
     console.error('❌ Booking email error:', error);
     res.status(500).json({ success: false, message: 'Failed to process booking. Please try again later.' });
