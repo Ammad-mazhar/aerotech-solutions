@@ -18,11 +18,16 @@ app.use(
 app.use(express.json({ limit: '10kb' }));
 
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true, // Use SSL
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
   },
+  // FORCES RAILWAY TO USE IPv4 AND PREVENTS TIMEOUTS
+  connectionTimeout: 10000, 
+  socketTimeout: 10000,
 });
 
 // POST /api/book
