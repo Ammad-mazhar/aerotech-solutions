@@ -10,8 +10,13 @@ const PORT = process.env.PORT || 5000;
 
 app.use(
   cors({
-    origin: process.env.ALLOWED_ORIGIN || '*',
+    origin: [
+      'https://aerotechsolutioninc.com', 
+      'https://www.aerotechsolutioninc.com',
+      'http://localhost:5173' // Keeps local testing working
+    ],
     methods: ['POST'],
+    credentials: true
   })
 );
 
