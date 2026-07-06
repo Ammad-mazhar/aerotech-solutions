@@ -119,7 +119,7 @@ export default function BookingForm() {
       <style>{`
         .booking-form-wrapper {
           padding: 4rem 1.5rem;
-          background-color: #f1f5f9;
+          background-color: #052e16;
           font-family: 'Inter', system-ui, -apple-system, sans-serif;
         }
         .booking-form-container {
