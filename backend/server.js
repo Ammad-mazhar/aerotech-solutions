@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import nodemailer from 'nodemailer';
+import { OAuth2Client } from 'google-auth-library';
 
 dotenv.config();
 
@@ -13,7 +13,7 @@ app.use(
         origin: [
             'https://aerotechsolutioninc.com',
             'https://www.aerotechsolutioninc.com',
-            'http://localhost:5173' // Keeps local testing working
+            'http://localhost:5173'
         ],
         methods: ['POST'],
         credentials: true
@@ -22,31 +22,17 @@ app.use(
 
 app.use(express.json({ limit: '10kb' }));
 
-// 🔧 CHANGED: Switched to Port 587 (TLS) with secure: false to bypass Railway timeouts
-// 🔧 CHANGED: Using HTTPS OAuth2 to bypass all cloud host SMTP port restrictions completely
-// 🔧 FORCED HTTPS OAUTH2: Bypasses standard SMTP infrastructure to avoid cloud firewall blocks
-const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
-    auth: {
-        type: 'OAuth2',
-        user: process.env.EMAIL_USER,
-        clientId: process.env.OAUTH_CLIENT_ID,
-        clientSecret: process.env.OAUTH_CLIENT_SECRET,
-        refreshToken: process.env.OAUTH_REFRESH_TOKEN,
-    },
+// Initialize the HTTPS Google OAuth2 Client
+const oauth2Client = new OAuth2Client(
+    process.env.OAUTH_CLIENT_ID,
+    process.env.OAUTH_CLIENT_SECRET
+);
+
+oauth2Client.setCredentials({
+    refresh_token: process.env.OAUTH_REFRESH_TOKEN
 });
 
-// Test the verified OAuth2 token exchange handshake at startup
-transporter.verify(function (error, success) {
-    if (error) {
-        console.error('❌ Gmail API Auth Error:', error);
-    } else {
-        console.log('🚀 Gmail HTTPS API Tunnel Active & Verified');
-    }
-});
-// Helper function to check multiple key variations sent by your frontend forms
+// Helper to check multiple frontend key variations
 const pickFirstNonEmpty = (obj, keys) => {
     for (const key of keys) {
         const val = obj?.[key];
@@ -56,11 +42,10 @@ const pickFirstNonEmpty = (obj, keys) => {
     return '';
 };
 
-// Reusable central handler logic for both forms
+// Reusable handler that sends email via HTTPS POST API calls instead of SMTP ports
 const handleIncomingRequest = async (req, res, sourceEndpoint) => {
     const body = req.body || {};
-
-    console.log(`📥 Incoming request data to [${sourceEndpoint}]:`, JSON.stringify(body, null, 2));
+    console.log(`📥 Incoming data to [${sourceEndpoint}]:`, JSON.stringify(body, null, 2));
 
     const name = pickFirstNonEmpty(body, ['name', 'fullName', 'fullname']);
     const email = pickFirstNonEmpty(body, ['email', 'emailAddress', 'emailaddress']);
@@ -77,48 +62,69 @@ const handleIncomingRequest = async (req, res, sourceEndpoint) => {
     const preferredDate = body?.preferredDate || '';
 
     try {
-        const { EMAIL_USER, EMAIL_PASS, RECEIVER_EMAIL } = process.env;
-        if (!EMAIL_USER || !EMAIL_PASS || !RECEIVER_EMAIL) {
-            console.error("❌ Configuration Error: Missing environment variables inside your host settings.");
-            return res.status(500).json({ success: false, message: 'Server email configuration missing.' });
+        const { EMAIL_USER, RECEIVER_EMAIL } = process.env;
+        if (!EMAIL_USER || !RECEIVER_EMAIL) {
+            return res.status(500).json({ success: false, message: 'Server configuration missing.' });
         }
 
         if (!name || !email || !problemDescription) {
-            console.warn(`⚠️ Validation failed on ${sourceEndpoint}. Missing fields.`, { name, email, phone, problemDescription });
-            return res.status(400).json({ success: false, message: 'Required validation inputs are missing.' });
+            return res.status(400).json({ success: false, message: 'Required fields are missing.' });
         }
 
         const reference = 'BK' + Date.now().toString().slice(-6);
-        const applianceName = applianceType
+        const applianceName = applianceType 
             ? `${brand === 'Other' ? (customBrand || 'Unknown') : brand} ${applianceType === 'Other' ? customApplianceType || 'Appliance' : applianceType}`.trim()
             : 'General Service Inquiry';
 
-        await transporter.sendMail({
-            from: `"Aerotech Solution Inc" <${EMAIL_USER}>`,
-            to: RECEIVER_EMAIL,
-            replyTo: email,
-            subject: `[${sourceEndpoint === '/api/book' ? 'Booking' : 'Inquiry'} ${reference}] ${urgency.toUpperCase()} — ${applianceName} (${name})`,
-            text: [
-                `Reference: ${reference}`,
-                `Source Path: ${sourceEndpoint}`,
-                `Urgency: ${urgency}`,
-                '',
-                `Customer: ${name}`,
-                `Email: ${email}`,
-                `Phone: ${phone || 'Not provided'}`,
-                `Address: ${address || 'N/A'}, ${zipCode || 'N/A'}`,
-                '',
-                `Service Focus: ${applianceName}`,
-                `Details/Issue: ${problemDescription}`,
-                `Preferred Date: ${preferredDate ? new Date(preferredDate).toDateString() : 'Not provided'}`,
-            ].join('\n'),
+        // Construct standard raw email text string
+        const emailLines = [
+            `From: "Aerotech Solution Inc" <${EMAIL_USER}>`,
+            `To: ${RECEIVER_EMAIL}`,
+            `Reply-To: ${email}`,
+            `Subject: [${sourceEndpoint === '/api/book' ? 'Booking' : 'Inquiry'} ${reference}] ${urgency.toUpperCase()} — ${applianceName} (${name})`,
+            `Content-Type: text/plain; charset="utf-8"`,
+            '',
+            `Reference: ${reference}`,
+            `Source Path: ${sourceEndpoint}`,
+            `Urgency: ${urgency}`,
+            '',
+            `Customer: ${name}`,
+            `Email: ${email}`,
+            `Phone: ${phone || 'Not provided'}`,
+            `Address: ${address || 'N/A'}, ${zipCode || 'N/A'}`,
+            '',
+            `Service Focus: ${applianceName}`,
+            `Details/Issue: ${problemDescription}`,
+            `Preferred Date: ${preferredDate ? new Date(preferredDate).toDateString() : 'Not provided'}`,
+        ];
+
+        const rawMessage = Buffer.from(emailLines.join('\n'))
+            .toString('base64url'); // Base64URL encoding required by Gmail API
+
+        // Get an active access token using the refresh token securely
+        const { token } = await oauth2Client.getAccessToken();
+
+        // Direct HTTPS API Request to Google (Bypasses SMTP port restrictions entirely)
+        const response = await fetch(`https://gmail.googleapis.com/gmail/v1/users/me/messages/send`, {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ raw: rawMessage })
         });
 
-        console.log(`✅ Form processing succeeded for reference ${reference}`);
+        if (!response.ok) {
+            const errData = await response.json();
+            throw new Error(`Gmail API response error: ${JSON.stringify(errData)}`);
+        }
+
+        console.log(`✅ Email sent securely over HTTPS! Reference: ${reference}`);
         return res.status(200).json({ success: true });
+
     } catch (error) {
-        console.error(`❌ ${sourceEndpoint} execution track error:`, error);
-        return res.status(500).json({ success: false, message: 'Failed to process transmission pipelines.' });
+        console.error(`❌ ${sourceEndpoint} API error:`, error.message);
+        return res.status(500).json({ success: false, message: 'Failed to complete message delivery.' });
     }
 };
 
@@ -126,5 +132,5 @@ app.post('/api/book', (req, res) => handleIncomingRequest(req, res, '/api/book')
 app.post('/api/contact', (req, res) => handleIncomingRequest(req, res, '/api/contact'));
 
 app.listen(PORT, () => {
-    console.log(`🚀 Backend running on port ${PORT}`);
+    console.log(`🚀 API-Driven Backend running on port ${PORT}`);
 });
