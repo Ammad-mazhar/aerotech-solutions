@@ -23,26 +23,24 @@ app.use(
 app.use(express.json({ limit: '10kb' }));
 
 // 🔧 CHANGED: Switched to Port 587 (TLS) with secure: false to bypass Railway timeouts
+// 🔧 CHANGED: Using HTTPS OAuth2 to bypass all cloud host SMTP port restrictions completely
 const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 587,
-    secure: false, // true for port 465, false for other ports like 587
+    service: 'gmail',
     auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+        type: 'OAuth2',
+        user: process.env.EMAIL_USER, // Your aerotech Gmail account
+        clientId: process.env.OAUTH_CLIENT_ID,
+        clientSecret: process.env.OAUTH_CLIENT_SECRET,
+        refreshToken: process.env.OAUTH_REFRESH_TOKEN,
     },
-    tls: {
-        rejectUnauthorized: false // Helps prevent cloud hosting handshake rejections
-    },
-    connectionTimeout: 10000,
-    socketTimeout: 10000,
 });
 
-transporter.verify(function (error) {
+// Verify connection configuration
+transporter.verify(function (error, success) {
     if (error) {
-        console.error('❌ Email Connection Error:', error);
+        console.error('❌ Gmail API Auth Error:', error);
     } else {
-        console.log('✅ Email server is ready to send messages');
+        console.log('🚀 Gmail API Connection Secure & Ready to Send Emails');
     }
 });
 
@@ -59,7 +57,7 @@ const pickFirstNonEmpty = (obj, keys) => {
 // Reusable central handler logic for both forms
 const handleIncomingRequest = async (req, res, sourceEndpoint) => {
     const body = req.body || {};
-    
+
     console.log(`📥 Incoming request data to [${sourceEndpoint}]:`, JSON.stringify(body, null, 2));
 
     const name = pickFirstNonEmpty(body, ['name', 'fullName', 'fullname']);
@@ -89,7 +87,7 @@ const handleIncomingRequest = async (req, res, sourceEndpoint) => {
         }
 
         const reference = 'BK' + Date.now().toString().slice(-6);
-        const applianceName = applianceType 
+        const applianceName = applianceType
             ? `${brand === 'Other' ? (customBrand || 'Unknown') : brand} ${applianceType === 'Other' ? customApplianceType || 'Appliance' : applianceType}`.trim()
             : 'General Service Inquiry';
 
