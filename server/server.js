@@ -261,12 +261,29 @@ function bookingAdminHtml({ reference, urgency, name, email, phone, address, zip
 
 app.get('/health', (_req, res) => res.json({ status: 'ok' }));
 
+// Fallback mapper for variable names sent by the frontend
+function pickFirstNonEmpty(obj, keys) {
+  for (const key of keys) {
+    const val = obj?.[key];
+    if (typeof val === 'string' && val.trim() !== '') return val.trim();
+    if (val !== undefined && val !== null && typeof val !== 'string' && String(val).trim() !== '') return String(val).trim();
+  }
+  return '';
+}
+
 // Contact Form
 app.post('/api/contact', contactLimiter, async (req, res) => {
-  const { name, email, phone, subject, message } = req.body;
+  const body = req.body || {};
 
-  // Validate required fields
-  if (!name?.trim() || !email?.trim() || !subject?.trim() || !message?.trim()) {
+  const name = pickFirstNonEmpty(body, ['name', 'fullName']);
+  const email = pickFirstNonEmpty(body, ['email', 'emailAddress']);
+  const phone = pickFirstNonEmpty(body, ['phone', 'phoneNumber']);
+
+  const subject = pickFirstNonEmpty(body, ['subject']);
+  const message = pickFirstNonEmpty(body, ['message', 'problemDescription', 'details']);
+
+  // Validate required fields (using mapped fallback values)
+  if (!name || !email || !subject || !message) {
     return res.status(400).json({ success: false, message: 'Name, email, subject, and message are required.' });
   }
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -274,7 +291,7 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
   }
 
   const companyEmail = process.env.COMPANY_EMAIL || process.env.EMAIL_USER;
-  const data = { name: name.trim(), email: email.trim(), phone: phone?.trim() || '', subject: subject.trim(), message: message.trim() };
+  const data = { name, email, phone, subject, message };
 
   try {
     await transporter.sendMail({
@@ -308,24 +325,37 @@ app.post('/api/book', async (req, res) => {
   if (!req.body || typeof req.body !== 'object') {
     return res.status(400).json({ success: false, message: 'Invalid request body.' });
   }
-  // Explicit POST /api/book endpoint
-  const {
-    applianceType,
-    customApplianceType,
-    brand,
-    customBrand,
-    problemDescription,
-    urgency,
-    name,
-    email,
-    phone,
-    address,
-    zipCode,
-    preferredDate,
-  } = req.body || {};
+
+  const body = req.body || {};
+
+  const applianceType = body?.applianceType;
+  const customApplianceType = body?.customApplianceType;
+  const brand = body?.brand;
+  const customBrand = body?.customBrand;
+
+  const problemDescription = pickFirstNonEmpty(body, ['problemDescription', 'details', 'message']);
+  const urgency = body?.urgency;
+
+  const name = pickFirstNonEmpty(body, ['name', 'fullName']);
+  const email = pickFirstNonEmpty(body, ['email', 'emailAddress']);
+  const phone = pickFirstNonEmpty(body, ['phone', 'phoneNumber']);
+
+  const address = body?.address;
+  const zipCode = body?.zipCode;
+  const preferredDate = body?.preferredDate;
+
+
+  // Validate required fields (using mapped fallback values)
+  if (!name || !email || !phone || !problemDescription) {
+    return res.status(400).json({ success: false, message: 'Name, email, phone, and problem description are required.' });
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return res.status(400).json({ success: false, message: 'Invalid email address.' });
+  }
 
   const reference = 'BK' + Date.now().toString().slice(-6);
   const applianceName = `${brand === 'Other' ? (customBrand || 'Unknown Brand') : brand} ${applianceType === 'Other' ? (customApplianceType || 'Appliance') : applianceType}`.trim();
+
   // Must use these env vars for routing emails
   const companyEmail = process.env.RECEIVER_EMAIL || process.env.COMPANY_EMAIL || process.env.EMAIL_USER;
 
