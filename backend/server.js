@@ -22,17 +22,28 @@ app.use(
 
 app.use(express.json({ limit: '10kb' }));
 
+// 🔧 CHANGED: Switched to Port 587 (TLS) with secure: false to bypass Railway timeouts
 const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
-    port: 465,
-    secure: true, // Use SSL
+    port: 587,
+    secure: false, // true for port 465, false for other ports like 587
     auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
     },
-    // FORCES RAILWAY TO USE IPv4 AND PREVENTS TIMEOUTS
+    tls: {
+        rejectUnauthorized: false // Helps prevent cloud hosting handshake rejections
+    },
     connectionTimeout: 10000,
     socketTimeout: 10000,
+});
+
+transporter.verify(function (error) {
+    if (error) {
+        console.error('❌ Email Connection Error:', error);
+    } else {
+        console.log('✅ Email server is ready to send messages');
+    }
 });
 
 // Helper function to check multiple key variations sent by your frontend forms
@@ -49,10 +60,8 @@ const pickFirstNonEmpty = (obj, keys) => {
 const handleIncomingRequest = async (req, res, sourceEndpoint) => {
     const body = req.body || {};
     
-    // High visibility log in your Railway console to monitor exactly what keys come in
     console.log(`📥 Incoming request data to [${sourceEndpoint}]:`, JSON.stringify(body, null, 2));
 
-    // Dynamic field matching to handle variations across Booking & Contact components
     const name = pickFirstNonEmpty(body, ['name', 'fullName', 'fullname']);
     const email = pickFirstNonEmpty(body, ['email', 'emailAddress', 'emailaddress']);
     const phone = pickFirstNonEmpty(body, ['phone', 'phoneNumber', 'phonenumber']);
@@ -74,15 +83,12 @@ const handleIncomingRequest = async (req, res, sourceEndpoint) => {
             return res.status(500).json({ success: false, message: 'Server email configuration missing.' });
         }
 
-        // Validate mapped results
         if (!name || !email || !problemDescription) {
-            console.warn(`⚠️ Validation failed on ${sourceEndpoint}. Missing keys fields. Detected status:`, { name, email, phone, problemDescription });
-            return res.status(400).json({ success: false, message: 'Required validation inputs are missing or improperly mapped.' });
+            console.warn(`⚠️ Validation failed on ${sourceEndpoint}. Missing fields.`, { name, email, phone, problemDescription });
+            return res.status(400).json({ success: false, message: 'Required validation inputs are missing.' });
         }
 
         const reference = 'BK' + Date.now().toString().slice(-6);
-        
-        // Dynamically configure display tag if it's a structural contact form vs appliance booking
         const applianceName = applianceType 
             ? `${brand === 'Other' ? (customBrand || 'Unknown') : brand} ${applianceType === 'Other' ? customApplianceType || 'Appliance' : applianceType}`.trim()
             : 'General Service Inquiry';
@@ -116,7 +122,6 @@ const handleIncomingRequest = async (req, res, sourceEndpoint) => {
     }
 };
 
-// Bind our dynamic paths directly to the master form tracker
 app.post('/api/book', (req, res) => handleIncomingRequest(req, res, '/api/book'));
 app.post('/api/contact', (req, res) => handleIncomingRequest(req, res, '/api/contact'));
 
