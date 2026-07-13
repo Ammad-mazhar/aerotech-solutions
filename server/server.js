@@ -307,6 +307,7 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
   const data = { name, email, phone, subject, message };
 
   try {
+    console.log(`📤 [contact] sending admin notification to ${companyEmail} (from ${process.env.EMAIL_USER})`);
     await transporter.sendMail({
       from: `"Aerotech Solution Inc" <${process.env.EMAIL_USER}>`,
       to: companyEmail,
@@ -315,7 +316,9 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
       text: `Name: ${data.name}\nEmail: ${data.email}\nPhone: ${data.phone || 'N/A'}\nSubject: ${data.subject}\n\n${data.message}`,
       html: contactAdminHtml(data),
     });
+    console.log('✅ [contact] admin notification sent');
 
+    console.log(`📤 [contact] sending customer confirmation to ${data.email} (from ${process.env.EMAIL_USER})`);
     await transporter.sendMail({
       from: `"Aerotech Solution Inc" <${process.env.EMAIL_USER}>`,
       to: data.email,
@@ -324,10 +327,11 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
       text: `Hi ${data.name},\n\nThank you for reaching out. We received your message about "${data.subject}" and will respond within 1 business day.\n\nBest regards,\nAerotech Solution Inc Team`,
       html: contactCustomerHtml(data),
     });
+    console.log('✅ [contact] customer confirmation sent');
 
     res.status(200).json({ success: true, message: 'Message sent successfully.' });
   } catch (error) {
-    console.error('❌ Contact email error:', error);
+    console.error('❌ [contact] email send failed:', error.message, error);
     res.status(500).json({ success: false, message: 'Failed to send message. Please try again later.' });
   }
 });
