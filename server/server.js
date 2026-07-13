@@ -52,8 +52,20 @@ const sanitizeInput = (req, res, next) => {
   next();
 };
 
+// Comma-separated list, e.g. "https://aerotechsolutioninc.com,https://www.aerotechsolutioninc.com"
+const allowedOrigins = (
+  process.env.ALLOWED_ORIGIN ||
+  'https://aerotechsolutioninc.com,https://www.aerotechsolutioninc.com'
+).split(',').map((o) => o.trim());
+
 app.use(cors({
-  origin: process.env.ALLOWED_ORIGIN || '*',
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   methods: ['POST'],
 }));
 app.use(express.json({ limit: '10kb' }));
