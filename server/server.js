@@ -378,6 +378,9 @@ app.post('/api/book', async (req, res) => {
 
   const adminData = { reference, urgency, name, email, phone, address, zipCode, applianceName, problemDescription, preferredDate };
 
+  let adminEmailSent = false;
+  let customerEmailSent = false;
+
   try {
     await transporter.sendMail({
       from: `"Aerotech Solution Inc" <${process.env.EMAIL_USER}>`,
@@ -387,7 +390,13 @@ app.post('/api/book', async (req, res) => {
       text: `Reference: ${reference}\nUrgency: ${urgency}\n\nCustomer: ${name}\nEmail: ${email}\nPhone: ${phone}\nAddress: ${address}, ${zipCode}\n\nAppliance: ${applianceName}\nIssue: ${problemDescription}\nPreferred Date: ${new Date(preferredDate).toDateString()}`,
       html: bookingAdminHtml(adminData),
     });
+    adminEmailSent = true;
+    console.log(`✅ Admin notification email sent. Reference: ${reference}`);
+  } catch (error) {
+    console.error(`❌ Admin email failed:`, error);
+  }
 
+  try {
     await transporter.sendMail({
       from: `"Aerotech Solution Inc" <${process.env.EMAIL_USER}>`,
       to: email,
@@ -446,12 +455,21 @@ app.post('/api/book', async (req, res) => {
         </p>
       `),
     });
-
-    res.status(200).json({ success: true });
+    customerEmailSent = true;
+    console.log(`✅ Customer confirmation email sent to: ${email}`);
   } catch (error) {
-    console.error('❌ Booking email error:', error);
-    res.status(500).json({ success: false, message: 'Failed to process booking. Please try again later.' });
+    console.error(`❌ Customer email failed:`, error);
   }
+
+  // The admin email is the only record of this booking (no database) — if it
+  // never arrived, the business never learned about the request, so this must
+  // fail loudly rather than report success. A failed customer confirmation is
+  // not fatal: the booking is already in the business's inbox either way.
+  if (!adminEmailSent) {
+    return res.status(500).json({ success: false, message: 'Failed to process booking. Please try again later.' });
+  }
+
+  res.status(200).json({ success: true, emailWarning: !customerEmailSent });
 });
 
 app.listen(PORT, () => {
