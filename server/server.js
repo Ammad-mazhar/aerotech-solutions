@@ -9,6 +9,9 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// Health check — registered first so it's unaffected by CORS/rate-limit middleware below
+app.get('/health', (_req, res) => res.json({ status: 'ok' }));
+
 // Security Middleware
 app.use(helmet({
   contentSecurityPolicy: {
@@ -270,8 +273,6 @@ function bookingAdminHtml({ reference, urgency, name, email, phone, address, zip
 }
 
 // ─── Routes ───────────────────────────────────────────────────────────────────
-
-app.get('/health', (_req, res) => res.json({ status: 'ok' }));
 
 // Fallback mapper for variable names sent by the frontend
 function pickFirstNonEmpty(obj, keys) {
