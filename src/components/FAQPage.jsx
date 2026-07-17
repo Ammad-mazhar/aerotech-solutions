@@ -127,7 +127,7 @@ const FAQPage = () => {
             <div className="faq-item">
               <h3 className="faq-question">Is there a service call fee?</h3>
               <p className="faq-answer">
-                There is a diagnostic fee for the technician to come to your home and identify the issue. However, if you choose to proceed with the repair, this fee is typically waived or applied towards the total cost of the repair.
+                Diagnostic fee to the technician for a home visit to determine the problem. If you elect to make the repair this fee is usually waived or credited toward the repair price, however.
               </p>
             </div>
 

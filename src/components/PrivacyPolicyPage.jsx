@@ -104,12 +104,12 @@ const PrivacyPolicyPage = () => {
 
             <h2>3. Information Sharing</h2>
             <p>
-              We do not sell, trade, or otherwise transfer your personally identifiable information to outside parties. This does not include trusted third parties who assist us in operating our website, conducting our business, or servicing you, so long as those parties agree to keep this information confidential.
+              We do not sell, trade or otherwise disclose your personally identifiable information to third parties. This does not cover trusted third parties that help us run our website, our business, or provide services to you, when they agree to keep this information confidential.
             </p>
 
             <h2>4. Data Security</h2>
             <p>
-              We implement a variety of security measures to maintain the safety of your personal information. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems.
+              We take multiple security measures to ensure that your personal information is safe. Your personal information is stored on secure networks, and is accessible only to a small number of people with special access privileges on those networks.
             </p>
 
             <h2>5. Contact Us</h2>

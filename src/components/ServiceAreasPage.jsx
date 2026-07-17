@@ -183,7 +183,7 @@ const ServiceAreasPage = () => {
             <div className="coverage-icon">🇺🇸</div>
             <h2 className="coverage-title">Nationwide Coverage</h2>
             <p className="coverage-desc">
-              From the East Coast to the West Coast, our network of certified technicians ensures that quality repair service is always within reach. We provide our services all over the US.
+              We have a network of certified technicians across the East Coast to the West Coast, promising quality repair service available at all times. We provide our services all over the US.
             </p>
             <Link to="/book-service" className="cta-button">
               Find a Technician Near You
@@ -194,17 +194,17 @@ const ServiceAreasPage = () => {
             <div className="sa-text">
               <h2>Local Technicians, National Standards</h2>
               <p style={{ marginBottom: '2rem' }}>
-                While we operate nationwide, we believe in the power of local service.
-                Our technicians live and work in your communities, ensuring they understand
-                local needs while adhering to our rigorous national quality standards.
+               We provide service throughout the country but we know the value of local service.
+                Our techs live and work in your communities and know:
+                our local needs, whilst meeting national, strict quality standards..
               </p>
               <p>
-                This unique combination means you get the friendly, reliable service of a neighborhood expert backed by the resources, training, and warranty of a national company. We invest heavily in continuous training to keep our team at the forefront of appliance technology.
+                The unique combination provides the benefits of a friendly, reliable neighborhood guy and the resources, training and warranty of a national company. Our team always receives extensive training to ensure we are at the forefront of appliance technology.
               </p>
               <p>
-                From kitchen emergencies to laundry day disruptions, our team is equipped
-                to handle repairs for all major home appliances. We bring the workshop to you,
-                fully stocked with parts and tools to get the job done right the first time.
+               Our team is ready for any kitchen disaster, laundry day meltdown or other emergency.
+                to have all major home appliances repaired. We come to you with the workshop,
+                Completely stocked with parts and tools for the job, gets done first time.
               </p>
             </div>
             <div className="sa-image">

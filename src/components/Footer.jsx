@@ -157,10 +157,10 @@ src="/logo/logo 2.png"
           <div style={columnStyle}>
             <h4 style={headingStyle}>Company</h4>
             <ul style={linkListStyle}>
-              {['About Us', 'Contact Us', 'Service Areas', 'FAQ', 'Expert Team'].map((item) => (
+              {['About Us', 'Contact Us', 'Service Areas', 'FAQ', 'Blog', 'Expert Team'].map((item) => (
                 <li key={item}>
                   <Link
-                    to={item === 'About Us' ? '/about' : item === 'Service Areas' ? '/service-areas' : item === 'FAQ' ? '/faq' : '/contact'}
+                    to={item === 'About Us' ? '/about' : item === 'Service Areas' ? '/service-areas' : item === 'FAQ' ? '/faq' : item === 'Blog' ? '/blogs' : '/contact'}
                     style={linkStyle}
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}

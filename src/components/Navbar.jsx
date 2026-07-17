@@ -186,6 +186,21 @@ const Navbar = () => {
               </Link>
             </li>
 
+            {/* Blog */}
+            <li>
+              <Link to="/blogs" style={{
+                color: '#ffffff',
+                textDecoration: 'none',
+                fontWeight: '600',
+                fontSize: '1.1rem',
+              }}
+                onMouseEnter={e => e.currentTarget.style.color = '#f97316'}
+                onMouseLeave={e => e.currentTarget.style.color = '#ffffff'}
+              >
+                Blogs
+              </Link>
+            </li>
+
             {/* Contact */}
             <li>
               <Link to="/contact" style={{
@@ -355,6 +370,12 @@ const Navbar = () => {
                   display: 'block', color: '#ffffff', textDecoration: 'none',
                   padding: '14px 0', fontWeight: '600', fontSize: '1rem',
                 }}>About</Link>
+              </li>
+              <li style={{ borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
+                <Link to="/blogs" onClick={() => setIsMobileMenuOpen(false)} style={{
+                  display: 'block', color: '#ffffff', textDecoration: 'none',
+                  padding: '14px 0', fontWeight: '600', fontSize: '1rem',
+                }}>Blog</Link>
               </li>
               <li style={{ borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
                 <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)} style={{

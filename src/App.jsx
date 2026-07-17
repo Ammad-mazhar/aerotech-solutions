@@ -18,6 +18,8 @@ const Contact = lazy(() => import('./components/Contact'));
 const ServiceAreasPage = lazy(() => import('./components/ServiceAreasPage'));
 const PrivacyPolicyPage = lazy(() => import('./components/PrivacyPolicyPage'));
 const FAQPage = lazy(() => import('./components/FAQPage'));
+const BlogsPage = lazy(() => import('./components/BlogsPage'));
+const BlogDetail = lazy(() => import('./components/BlogDetail'));
 const TermsOfServicePage = lazy(() => import('./components/TermsOfServicePage'));
 const BookingForm = lazy(() => import('./components/BookingForm'));
 const ServiceDetail = lazy(() => import('./components/ServiceDetail'));
@@ -52,6 +54,8 @@ function App() {
             <Route path="/service-areas" element={<ServiceAreasPage />} />
             <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
             <Route path="/faq" element={<FAQPage />} />
+            <Route path="/blogs" element={<BlogsPage />} />
+            <Route path="/blogs/:id" element={<BlogDetail />} />
             <Route path="/terms-of-service" element={<TermsOfServicePage />} />
             <Route path="/book-service" element={<BookingForm />} />
             <Route path="/services/:id" element={<ServiceDetail />} />
