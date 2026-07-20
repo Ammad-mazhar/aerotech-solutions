@@ -3,11 +3,13 @@ import { Helmet } from 'react-helmet-async';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import { AlertCircle, ArrowLeft } from 'lucide-react';
 import { blogsData } from '../data/blogsData';
+import { blogSeoContent } from '../data/blogSeoContent';
 
 const BlogDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const post = blogsData.find((p) => p.id === id);
+  const extra = blogSeoContent[id];
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -31,21 +33,63 @@ const BlogDetail = () => {
     );
   }
 
+  // JSON-LD: Article + FAQPage + BreadcrumbList (only added when deep SEO content exists for this post)
+  const structuredData = extra ? {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": post.title,
+        "description": extra.metaDescription,
+        "image": `https://www.aerotechservice.com${post.image}`,
+        "datePublished": post.date,
+        "author": { "@type": "Organization", "name": "Aerotech Solution Inc" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Aerotech Solution Inc",
+          "logo": { "@type": "ImageObject", "url": "https://www.aerotechservice.com/logo/logo 2.png" }
+        },
+        "mainEntityOfPage": { "@type": "WebPage", "@id": `https://www.aerotechservice.com/blogs/${post.id}` }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": extra.faqs.map((f) => ({
+          "@type": "Question",
+          "name": f.q,
+          "acceptedAnswer": { "@type": "Answer", "text": f.a }
+        }))
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aerotechservice.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aerotechservice.com/blogs" },
+          { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://www.aerotechservice.com/blogs/${post.id}` }
+        ]
+      }
+    ]
+  } : null;
+
   return (
     <>
       <Helmet>
-        <title>{post.title} | Aerotech Solution Blog</title>
-        <meta name="description" content={post.paragraphs[0].slice(0, 160)} />
+        <title>{extra ? extra.metaTitle : `${post.title} | Aerotech Solution Blog`}</title>
+        <meta name="description" content={extra ? extra.metaDescription : post.paragraphs[0].slice(0, 160)} />
         <link rel="canonical" href={`https://www.aerotechservice.com/blogs/${post.id}`} />
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.paragraphs[0].slice(0, 160)} />
+        <meta property="og:title" content={extra ? extra.metaTitle : post.title} />
+        <meta property="og:description" content={extra ? extra.metaDescription : post.paragraphs[0].slice(0, 160)} />
         <meta property="og:url" content={`https://www.aerotechservice.com/blogs/${post.id}`} />
         <meta property="og:type" content="article" />
         <meta property="og:image" content={`https://www.aerotechservice.com${post.image}`} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={post.title} />
-        <meta name="twitter:description" content={post.paragraphs[0].slice(0, 160)} />
+        <meta name="twitter:title" content={extra ? extra.metaTitle : post.title} />
+        <meta name="twitter:description" content={extra ? extra.metaDescription : post.paragraphs[0].slice(0, 160)} />
         <meta name="twitter:image" content={`https://www.aerotechservice.com${post.image}`} />
+        {structuredData && (
+          <script type="application/ld+json">
+            {JSON.stringify(structuredData)}
+          </script>
+        )}
       </Helmet>
       <section className="blog-detail-page">
         <style>{`
@@ -169,6 +213,47 @@ const BlogDetail = () => {
           .cta-secondary:hover {
             background-color: #064e3b;
           }
+          .blog-seo-section {
+            margin-top: 3rem;
+          }
+          .blog-seo-heading {
+            font-size: clamp(1.5rem, 3vw, 1.9rem);
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+          }
+          .blog-seo-intro {
+            color: #a7f3d0;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
+          }
+          .blog-seo-para {
+            color: #d1d5db;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.1rem;
+          }
+          .blog-seo-card {
+            background-color: #ffffff;
+            border-radius: 0.875rem;
+            padding: 1.5rem 1.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #e2e8f0;
+          }
+          .blog-seo-card-title {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 0.4rem;
+          }
+          .blog-seo-card-text {
+            font-size: 0.975rem;
+            color: #475569;
+            line-height: 1.65;
+            margin: 0;
+          }
         `}</style>
         <div className="blog-detail-container">
           <Link to="/blogs" className="blog-back-link">
@@ -191,6 +276,34 @@ const BlogDetail = () => {
               <p className="blog-detail-paragraph" key={idx}>{para}</p>
             ))}
           </div>
+
+          {extra && extra.sections.map((section, i) => (
+            <div className="blog-seo-section" key={i}>
+              <h2 className="blog-seo-heading">{section.heading}</h2>
+              {section.intro && <p className="blog-seo-intro">{section.intro}</p>}
+              {section.paragraphs && section.paragraphs.map((para, j) => (
+                <p className="blog-seo-para" key={j}>{para}</p>
+              ))}
+              {section.items && section.items.map((item, j) => (
+                <div className="blog-seo-card" key={j}>
+                  <h3 className="blog-seo-card-title">{item.title}</h3>
+                  <p className="blog-seo-card-text">{item.text}</p>
+                </div>
+              ))}
+            </div>
+          ))}
+
+          {extra && (
+            <div className="blog-seo-section">
+              <h2 className="blog-seo-heading">Frequently Asked Questions</h2>
+              {extra.faqs.map((faq, i) => (
+                <div className="blog-seo-card" key={i}>
+                  <h3 className="blog-seo-card-title">{faq.q}</h3>
+                  <p className="blog-seo-card-text">{faq.a}</p>
+                </div>
+              ))}
+            </div>
+          )}
 
           <div className="blog-detail-cta">
             <Link to={`/services/${post.id}`} className="cta-primary">
