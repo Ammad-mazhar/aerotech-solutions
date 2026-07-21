@@ -10,7 +10,10 @@ import {
     HelpCircle,
     Repeat,
     Sparkles,
-    MapPin
+    MapPin,
+    Flame,
+    Layers,
+    Building2
 } from 'lucide-react';
 import { servicesData, servicesList, brands as defaultBrands } from '../data/servicesData';
 import { serviceSeoContent } from '../data/serviceSeoContent';
@@ -168,7 +171,7 @@ const ServiceDetail = () => {
     const ctaButtonStyle = {
         padding: '24px 48px',
         background: '#f97316',
-        color: '#7f1d1d',
+        color: '#800000',
         fontSize: '1.25rem',
         fontWeight: '900',
         borderRadius: '20px',
@@ -293,7 +296,7 @@ const ServiceDetail = () => {
             <Helmet>
                 <title>{seo ? seo.metaTitle : `${service.title} Repair | Aerotech Solution - Professional Service`}</title>
                 <meta name="description" content={seo ? seo.metaDescription : `${service.title} repair services by Aerotech Solution. Expert diagnostics, OEM parts, 90-day warranty. Same-day service available nationwide USA.`} />
-                <meta name="keywords" content={`${service.title.toLowerCase()} repair, ${id.replace('-repair', '')} service, appliance repair ${service.title}`} />
+                <meta name="keywords" content={seo && seo.metaKeywords ? seo.metaKeywords : `${service.title.toLowerCase()} repair, ${id.replace('-repair', '')} service, appliance repair ${service.title}`} />
                 <link rel="canonical" href={`https://www.aerotechservice.com/services/${id}`} />
                 <meta property="og:title" content={seo ? seo.metaTitle : `${service.title} Repair | Aerotech Solution`} />
                 <meta property="og:description" content={seo ? seo.metaDescription : (service.description && service.description.substring(0, 160))} />
@@ -340,7 +343,7 @@ const ServiceDetail = () => {
 
                         <div>
                             <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: '900', color: '#ffffff', letterSpacing: '-0.04em', margin: '0 0 16px 0', lineHeight: 1 }}>
-                                {service.title}
+                                {(seo && seo.h1Override) || service.title}
                             </h1>
                             <p style={{ fontSize: '1.25rem', color: 'rgba(255, 255, 255, 0.9)', maxWidth: '800px', lineHeight: '1.6', margin: '0 auto 24px auto', fontWeight: '500' }}>
                                 {service.description}
@@ -489,6 +492,305 @@ const ServiceDetail = () => {
                         </div>
                     )}
 
+                    {/* Air Conditioning (optional per-service section — currently only present for hvac-furnace-repair) */}
+                    {seo && seo.acSection && (
+                        <div style={seoSectionStyle}>
+                            <h2 style={seoHeadingStyle}>
+                                <Sparkles color="#f97316" size={30} />
+                                Air Conditioning &amp; AC Repair
+                            </h2>
+                            {seo.acSection.map((para, i) => (
+                                <p key={i} style={seoParaStyle}>{para}</p>
+                            ))}
+                        </div>
+                    )}
+
+                    {/* Furnace & Heating (optional per-service section — currently only present for hvac-furnace-repair) */}
+                    {seo && seo.furnaceHeatingSection && (
+                        <div style={seoSectionStyle}>
+                            <h2 style={seoHeadingStyle}>
+                                <Flame color="#f97316" size={30} />
+                                Furnace &amp; Heating Repair
+                            </h2>
+                            {seo.furnaceHeatingSection.map((para, i) => (
+                                <p key={i} style={seoParaStyle}>{para}</p>
+                            ))}
+                        </div>
+                    )}
+
+                    {/* Tune-Ups (optional per-service section — currently only present for hvac-furnace-repair) */}
+                    {seo && seo.tuneUpSection && (
+                        <div style={seoSectionStyle}>
+                            <h2 style={seoHeadingStyle}>
+                                <ShieldCheck color="#f97316" size={30} />
+                                HVAC Tune-Ups &amp; Maintenance
+                            </h2>
+                            {seo.tuneUpSection.map((para, i) => (
+                                <p key={i} style={seoParaStyle}>{para}</p>
+                            ))}
+                        </div>
+                    )}
+
+                    {/* Ductwork (optional per-service section — currently only present for hvac-furnace-repair) */}
+                    {seo && seo.ductSection && (
+                        <div style={seoSectionStyle}>
+                            <h2 style={seoHeadingStyle}>
+                                <Layers color="#f97316" size={30} />
+                                HVAC Duct Repair
+                            </h2>
+                            {seo.ductSection.map((para, i) => (
+                                <p key={i} style={seoParaStyle}>{para}</p>
+                            ))}
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '8px' }}>
+                                <Link to="/services/water-heater-repair" style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
+                                    Visit our Water Heater Repair page
+                                </Link>
+                                <a href="/#services" style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
+                                    Browse all appliance repair services
+                                </a>
+                                <Link to={`/blogs/${id}`} style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
+                                    Read our HVAC repair guide
+                                </Link>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Cooling System (optional per-service section — currently only present for refrigerator-repair) */}
+                    {seo && seo.coolingSystemSection && (
+                        <div style={seoSectionStyle}>
+                            <h2 style={seoHeadingStyle}>
+                                <Sparkles color="#f97316" size={30} />
+                                Refrigerator Cooling-System Repair
+                            </h2>
+                            {seo.coolingSystemSection.map((para, i) => (
+                                <p key={i} style={seoParaStyle}>{para}</p>
+                            ))}
+                        </div>
+                    )}
+
+                    {/* Freezer & Frost (optional per-service section — currently only present for refrigerator-repair) */}
+                    {seo && seo.freezerFrostSection && (
+                        <div style={seoSectionStyle}>
+                            <h2 style={seoHeadingStyle}>
+                                <AlertCircle color="#f97316" size={30} />
+                                Freezer &amp; Frost Problems
+                            </h2>
+                            {seo.freezerFrostSection.map((para, i) => (
+                                <p key={i} style={seoParaStyle}>{para}</p>
+                            ))}
+                        </div>
+                    )}
+
+                    {/* Ice Maker & Water Dispenser (optional per-service section — currently only present for refrigerator-repair) */}
+                    {seo && seo.iceMakerSection && (
+                        <div style={seoSectionStyle}>
+                            <h2 style={seoHeadingStyle}>
+                                <Layers color="#f97316" size={30} />
+                                Ice Maker &amp; Water Dispenser Repair
+                            </h2>
+                            {seo.iceMakerSection.map((para, i) => (
+                                <p key={i} style={seoParaStyle}>{para}</p>
+                            ))}
+                        </div>
+                    )}
+
+                    {/* Built-In & Premium (optional per-service section — currently only present for refrigerator-repair) */}
+                    {seo && seo.builtInPremiumSection && (
+                        <div style={seoSectionStyle}>
+                            <h2 style={seoHeadingStyle}>
+                                <ShieldCheck color="#f97316" size={30} />
+                                Built-In &amp; Premium Refrigerator Repair
+                            </h2>
+                            {seo.builtInPremiumSection.map((para, i) => (
+                                <p key={i} style={seoParaStyle}>{para}</p>
+                            ))}
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '8px' }}>
+                                <a href="/#services" style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
+                                    Browse all appliance repair services
+                                </a>
+                                <Link to={`/blogs/${id}`} style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
+                                    Read our refrigerator repair guide
+                                </Link>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Residential (optional per-service section — currently only present for dishwasher-repair) */}
+                    {seo && seo.residentialSection && (
+                        <div style={seoSectionStyle}>
+                            <h2 style={seoHeadingStyle}>
+                                <ShieldCheck color="#f97316" size={30} />
+                                Residential {service.title} Repair
+                            </h2>
+                            {seo.residentialSection.map((para, i) => (
+                                <p key={i} style={seoParaStyle}>{para}</p>
+                            ))}
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '8px' }}>
+                                <Link to="/services/garbage-disposal" style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
+                                    Visit our Garbage Disposal Repair page
+                                </Link>
+                                <a href="/#services" style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
+                                    Browse all appliance repair services
+                                </a>
+                                <Link to={`/blogs/${id}`} style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
+                                    Read our dishwasher repair guide
+                                </Link>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Gas Oven (optional per-service section — currently only present for oven-stove-cooktop-repair) */}
+                    {seo && seo.gasOvenSection && (
+                        <div style={seoSectionStyle}>
+                            <h2 style={seoHeadingStyle}>
+                                <Flame color="#f97316" size={30} />
+                                Gas Oven Repair
+                            </h2>
+                            {seo.gasOvenSection.map((para, i) => (
+                                <p key={i} style={seoParaStyle}>{para}</p>
+                            ))}
+                        </div>
+                    )}
+
+                    {/* Electric Oven (optional per-service section — currently only present for oven-stove-cooktop-repair) */}
+                    {seo && seo.electricOvenSection && (
+                        <div style={seoSectionStyle}>
+                            <h2 style={seoHeadingStyle}>
+                                <Sparkles color="#f97316" size={30} />
+                                Electric Oven Repair
+                            </h2>
+                            {seo.electricOvenSection.map((para, i) => (
+                                <p key={i} style={seoParaStyle}>{para}</p>
+                            ))}
+                        </div>
+                    )}
+
+                    {/* Wall, Double & Convection Oven (optional per-service section — currently only present for oven-stove-cooktop-repair) */}
+                    {seo && seo.wallDoubleConvectionSection && (
+                        <div style={seoSectionStyle}>
+                            <h2 style={seoHeadingStyle}>
+                                <Layers color="#f97316" size={30} />
+                                Wall, Double &amp; Convection Oven Repair
+                            </h2>
+                            {seo.wallDoubleConvectionSection.map((para, i) => (
+                                <p key={i} style={seoParaStyle}>{para}</p>
+                            ))}
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '8px' }}>
+                                <Link to="/services/microwave-repair" style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
+                                    Visit our Microwave Repair page
+                                </Link>
+                                <a href="/#services" style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
+                                    Browse all appliance repair services
+                                </a>
+                                <Link to={`/blogs/${id}`} style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
+                                    Read our oven repair guide
+                                </Link>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Control Board, Panel, Door & Glass (optional per-service section — currently only present for oven-stove-cooktop-repair) */}
+                    {seo && seo.controlPanelSection && (
+                        <div style={seoSectionStyle}>
+                            <h2 style={seoHeadingStyle}>
+                                <HelpCircle color="#f97316" size={30} />
+                                Control Board, Panel, Door &amp; Glass Problems
+                            </h2>
+                            {seo.controlPanelSection.map((para, i) => (
+                                <p key={i} style={seoParaStyle}>{para}</p>
+                            ))}
+                        </div>
+                    )}
+
+                    {/* Gas & Electric (optional per-service section — currently present for dryer-repair and water-heater-repair) */}
+                    {seo && seo.gasElectricSection && (
+                        <div style={seoSectionStyle}>
+                            <h2 style={seoHeadingStyle}>
+                                <Flame color="#f97316" size={30} />
+                                Gas and Electric {service.title} Repair
+                            </h2>
+                            {seo.gasElectricSection.map((para, i) => (
+                                <p key={i} style={seoParaStyle}>{para}</p>
+                            ))}
+                        </div>
+                    )}
+
+                    {/* Tankless (optional per-service section — currently only present for water-heater-repair) */}
+                    {seo && seo.tanklessSection && (
+                        <div style={seoSectionStyle}>
+                            <h2 style={seoHeadingStyle}>
+                                <Sparkles color="#f97316" size={30} />
+                                Tankless {service.title} Repair &amp; Service
+                            </h2>
+                            {seo.tanklessSection.map((para, i) => (
+                                <p key={i} style={seoParaStyle}>{para}</p>
+                            ))}
+                        </div>
+                    )}
+
+                    {/* Emergency (optional per-service section — currently only present for water-heater-repair) */}
+                    {seo && seo.emergencySection && (
+                        <div style={seoSectionStyle}>
+                            <h2 style={seoHeadingStyle}>
+                                <AlertCircle color="#f97316" size={30} />
+                                Emergency {service.title} Repair
+                            </h2>
+                            {seo.emergencySection.map((para, i) => (
+                                <p key={i} style={seoParaStyle}>{para}</p>
+                            ))}
+                        </div>
+                    )}
+
+                    {/* Maintenance (optional per-service section — currently only present for water-heater-repair) */}
+                    {seo && seo.maintenanceSection && (
+                        <div style={seoSectionStyle}>
+                            <h2 style={seoHeadingStyle}>
+                                <Wrench color="#f97316" size={30} />
+                                {service.title} Maintenance Services
+                            </h2>
+                            {seo.maintenanceSection.map((para, i) => (
+                                <p key={i} style={seoParaStyle}>{para}</p>
+                            ))}
+                        </div>
+                    )}
+
+                    {/* Stackable & Washer-Dryer Combo (optional per-service section — currently only present for dryer-repair) */}
+                    {seo && seo.stackableComboSection && (
+                        <div style={seoSectionStyle}>
+                            <h2 style={seoHeadingStyle}>
+                                <Layers color="#f97316" size={30} />
+                                Stackable &amp; Washer-Dryer Combo Unit Repair
+                            </h2>
+                            {seo.stackableComboSection.map((para, i) => (
+                                <p key={i} style={seoParaStyle}>{para}</p>
+                            ))}
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '8px' }}>
+                                <Link to="/services/washer-repair" style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
+                                    Visit our Washer Repair page
+                                </Link>
+                                <a href="/#services" style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
+                                    Browse all appliance repair services
+                                </a>
+                                <Link to={`/blogs/${id}`} style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
+                                    Read our dryer repair guide
+                                </Link>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Commercial (optional per-service section — currently only present for dryer-repair) */}
+                    {seo && seo.commercialSection && (
+                        <div style={seoSectionStyle}>
+                            <h2 style={seoHeadingStyle}>
+                                <Building2 color="#f97316" size={30} />
+                                Commercial {service.title} Repair
+                            </h2>
+                            {seo.commercialSection.map((para, i) => (
+                                <p key={i} style={seoParaStyle}>{para}</p>
+                            ))}
+                        </div>
+                    )}
+
                     {/* Brands We Repair (new SEO section — spotlights brands already listed in Supported Brands above; adds no new brand names) */}
                     {seo && (
                         <div style={seoSectionStyle}>
@@ -506,6 +808,58 @@ const ServiceDetail = () => {
                                         <p style={infoCardTextStyle}>{b.text}</p>
                                     </div>
                                 ))}
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Diagnosis & Repair Process (optional per-service section — currently only present for dishwasher-repair) */}
+                    {seo && seo.diagnosisProcessSection && (
+                        <div style={seoSectionStyle}>
+                            <h2 style={seoHeadingStyle}>
+                                <Wrench color="#f97316" size={30} />
+                                Our {service.title} Diagnosis &amp; Repair Process
+                            </h2>
+                            {seo.diagnosisProcessSection.map((para, i) => (
+                                <p key={i} style={seoParaStyle}>{para}</p>
+                            ))}
+                        </div>
+                    )}
+
+                    {/* Installation (optional per-service section — currently present for microwave-repair and garbage-disposal) */}
+                    {seo && seo.installationSection && (
+                        <div style={seoSectionStyle}>
+                            <h2 style={seoHeadingStyle}>
+                                <Layers color="#f97316" size={30} />
+                                {service.title} Installation Services
+                            </h2>
+                            {seo.installationSection.map((para, i) => (
+                                <p key={i} style={seoParaStyle}>{para}</p>
+                            ))}
+                        </div>
+                    )}
+
+                    {/* Technician vs. Plumber (optional per-service section — currently present for garbage-disposal and water-heater-repair) */}
+                    {seo && seo.technicianVsPlumberSection && (
+                        <div style={seoSectionStyle}>
+                            <h2 style={seoHeadingStyle}>
+                                <HelpCircle color="#f97316" size={30} />
+                                When an Appliance Technician or Plumber May Be Needed
+                            </h2>
+                            {seo.technicianVsPlumberSection.map((para, i) => (
+                                <p key={i} style={seoParaStyle}>{para}</p>
+                            ))}
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '8px' }}>
+                                {seo.relatedServiceLink && (
+                                    <Link to={seo.relatedServiceLink.to} style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
+                                        {seo.relatedServiceLink.label}
+                                    </Link>
+                                )}
+                                <a href="/#services" style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
+                                    Browse all appliance repair services
+                                </a>
+                                <Link to={`/blogs/${id}`} style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
+                                    {seo.blogGuideLabel || `Read our ${service.title.toLowerCase()} repair guide`}
+                                </Link>
                             </div>
                         </div>
                     )}
@@ -616,11 +970,11 @@ const ServiceDetail = () => {
                     {/* Secondary CTA banner (new — supports, does not replace, the existing CTA section below) */}
                     {seo && (
                         <div style={{ ...seoSectionStyle, textAlign: 'center' }}>
-                            <div style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%)', borderRadius: '32px', padding: '56px 40px' }}>
-                                <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', fontWeight: '900', color: '#ffffff', marginBottom: '16px' }}>
+                            <div style={{ background: '#f97316', borderRadius: '32px', padding: '56px 40px' }}>
+                                <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', fontWeight: '900', color: '#7f1d1d', marginBottom: '16px' }}>
                                     Need {service.title} Repair Near Bolingbrook Today?
                                 </h2>
-                                <p style={{ color: '#a7f3d0', fontSize: '1.1rem', marginBottom: '28px', maxWidth: '600px', marginLeft: 'auto', marginRight: 'auto' }}>
+                                <p style={{ color: '#7f1d1d', fontSize: '1.1rem', marginBottom: '28px', maxWidth: '600px', marginLeft: 'auto', marginRight: 'auto' }}>
                                     Book online in minutes, or call our team directly for same-day availability.
                                 </p>
                                 <Link
@@ -630,13 +984,16 @@ const ServiceDetail = () => {
                                         alignItems: 'center',
                                         gap: '12px',
                                         padding: '18px 36px',
-                                        background: '#f97316',
-                                        color: '#7f1d1d',
+                                        background: '#ea580c',
+                                        color: '#800000',
                                         fontSize: '1.1rem',
                                         fontWeight: '900',
                                         borderRadius: '100px',
-                                        textDecoration: 'none'
+                                        textDecoration: 'none',
+                                        transition: 'background-color 0.2s'
                                     }}
+                                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#c2410c'}
+                                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#ea580c'}
                                 >
                                     Book Your Repair
                                     <ChevronRight size={22} />
@@ -655,20 +1012,20 @@ const ServiceDetail = () => {
                             }}
                             onMouseEnter={(e) => {
                                 e.currentTarget.style.transform = 'translateY(-8px) scale(1.02)';
-                                e.currentTarget.style.background = '#2563eb';
-                                e.currentTarget.style.boxShadow = '0 25px 50px -12px rgba(59, 130, 246, 0.5)';
+                                e.currentTarget.style.background = '#ea580c';
+                                e.currentTarget.style.boxShadow = '0 25px 50px -12px rgba(249, 115, 22, 0.5)';
                             }}
                             onMouseLeave={(e) => {
                                 e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                                e.currentTarget.style.background = '#3b82f6';
-                                e.currentTarget.style.boxShadow = '0 20px 40px -12px rgba(59, 130, 246, 0.4)';
+                                e.currentTarget.style.background = '#f97316';
+                                e.currentTarget.style.boxShadow = '0 20px 40px -12px rgba(249, 115, 22, 0.4)';
                             }}
                         >
                             Schedule This Service
                             <ChevronRight size={28} />
                         </button>
 
-                        <p style={{ marginTop: '32px', color: '#94a3b8', fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '10px', fontWeight: '600' }}>
+                        <p style={{ marginTop: '32px', color: 'f97316', fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '10px', fontWeight: '600' }}>
                             <ClipboardCheck size={20} /> Professional Dispatch • Licensed Technicians • Certified Parts
                         </p>
                     </div>
