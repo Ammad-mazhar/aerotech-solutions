@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Home, AlertCircle } from 'lucide-react';
+import { canonicalUrl, routePath } from '../utils/seo';
 
 const NotFound = () => {
     return (
@@ -10,10 +11,10 @@ const NotFound = () => {
             <title>Page Not Found - 404 | Aerotech Solution</title>
             <meta name="description" content="The page you are looking for cannot be found. Aerotech Solution professional appliance repair services. Return to home for repair scheduling." />
             <meta name="keywords" content="404 error, page not found, appliance repair home" />
-            <link rel="canonical" href="https://aerotechsolutioninc.com/" />
+            <link rel="canonical" href={canonicalUrl('/')} />
             <meta property="og:title" content="404 | Page Not Found | Aerotech Solution" />
             <meta property="og:description" content="Page not found. Visit our home page for appliance repair services." />
-            <meta property="og:url" content="https://aerotechsolutioninc.com/" />
+            <meta property="og:url" content={canonicalUrl('/')} />
             <meta property="og:type" content="website" />
             <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpeg" />
             <meta name="twitter:card" content="summary_large_image" />
@@ -72,7 +73,7 @@ const NotFound = () => {
             </p>
 
             <Link
-                to="/"
+                to={routePath('/')}
                 style={{
                     display: 'flex',
                     alignItems: 'center',

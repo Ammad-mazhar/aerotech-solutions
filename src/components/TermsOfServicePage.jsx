@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { canonicalUrl } from '../utils/seo';
 
 const TermsOfServicePage = () => {
   return (
@@ -8,10 +9,10 @@ const TermsOfServicePage = () => {
         <title>Aerotech Solution | Terms of Service - Appliance Repair Service Terms</title>
         <meta name="description" content="Aerotech Solution Terms of Service for appliance repair. Includes appointment policy, payments, warranty details, and cancellation terms for residential service." />
         <meta name="keywords" content="Aerotech Solution terms of service, appliance repair terms, service warranty terms, repair cancellation policy" />
-        <link rel="canonical" href="https://aerotechsolutioninc.com/terms-of-service" />
+        <link rel="canonical" href={canonicalUrl('/terms-of-service')} />
         <meta property="og:title" content="Terms of Service | Aerotech Solution" />
         <meta property="og:description" content="Review our service terms including payments, appointments, warranty, and cancellation policy before booking repair service." />
-        <meta property="og:url" content="https://aerotechsolutioninc.com/terms-of-service" />
+        <meta property="og:url" content={canonicalUrl('/terms-of-service')} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpeg" />
         <meta name="twitter:card" content="summary_large_image" />

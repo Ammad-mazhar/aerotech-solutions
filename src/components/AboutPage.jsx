@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
+import { canonicalUrl, routePath } from '../utils/seo';
 import {
   ShieldCheck,
   Settings,
@@ -88,10 +89,10 @@ const AboutPage = () => {
         <title>Aerotech Solution | About Us - Elite Appliance Repair Since 2008</title>
         <meta name="description" content="Learn about Aerotech Solution's 15+ years of excellence in premium appliance restoration. Factory-certified technicians, OEM parts, 90-day warranty, and nationwide service for refrigerators, HVAC, ovens and more." />
         <meta name="keywords" content="about Aerotech Solution, appliance repair company, factory certified technicians, OEM parts repair, nationwide appliance service, HVAC restoration" />
-        <link rel="canonical" href="https://aerotechsolutioninc.com/about" />
+        <link rel="canonical" href={canonicalUrl('/about')} />
         <meta property="og:title" content="Aerotech Solution | About - Midwest's Premier Appliance Service" />
         <meta property="og:description" content="Since 2008, trusted by 50,000+ homeowners for elite appliance restoration. Licensed, insured, OEM parts, 24/7 emergency response across USA." />
-        <meta property="og:url" content="https://aerotechsolutioninc.com/about" />
+        <meta property="og:url" content={canonicalUrl('/about')} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://aerotechsolutioninc.com/about-us.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -314,7 +315,7 @@ const AboutPage = () => {
                 }}
                   onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
                   onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
-                  onClick={() => navigate('/contact')}
+                  onClick={() => navigate(routePath('/contact'))}
                 >
                   Schedule Online
                 </button>

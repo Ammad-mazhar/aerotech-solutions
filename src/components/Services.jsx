@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { servicesList, brands } from '../data/servicesData';
+import { routePath } from '../utils/seo';
 
 const ServiceFeature = ({ service, index }) => {
   const navigate = useNavigate();
@@ -72,7 +73,7 @@ const ServiceFeature = ({ service, index }) => {
         </p>
 
         <button
-          onClick={() => navigate(`/services/${service.id}`)}
+          onClick={() => navigate(routePath(`/services/${service.id}`))}
           style={{
             width: 'fit-content',
             padding: '20px 40px',

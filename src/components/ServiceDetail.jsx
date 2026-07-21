@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import { servicesData, servicesList, brands as defaultBrands } from '../data/servicesData';
 import { serviceSeoContent } from '../data/serviceSeoContent';
+import { canonicalUrl, routePath } from '../utils/seo';
 
 const ServiceDetail = () => {
     const { id } = useParams();
@@ -36,7 +37,7 @@ const ServiceDetail = () => {
                     <title>Service Not Found | Aerotech Solution</title>
                     <meta name="description" content="The requested service page could not be found. Return to our main services page for available appliance repair options." />
                     <meta name="keywords" content="service not found, appliance repair 404" />
-                    <link rel="canonical" href="https://aerotechsolutioninc.com/" />
+                    <link rel="canonical" href={canonicalUrl('/')} />
                 </Helmet>
                 <div style={{ textAlign: 'center', padding: '150px 20px', minHeight: '80vh', fontFamily: "'Inter', sans-serif" }}>
                     <div style={{ background: '#fef2f2', border: '1px solid #fee2e2', color: '#991b1b', padding: '24px', borderRadius: '16px', maxWidth: '500px', margin: '0 auto' }}>
@@ -44,7 +45,7 @@ const ServiceDetail = () => {
                         <h2 style={{ fontSize: '1.5rem', fontWeight: '800', marginBottom: '8px' }}>Service Not Found</h2>
                         <p style={{ marginBottom: '24px' }}>We couldn't find the details for service: <strong>{id}</strong></p>
                         <button
-                            onClick={() => navigate('/')}
+                            onClick={() => navigate(routePath('/'))}
                             style={{ padding: '12px 24px', background: '#3b82f6', color: 'white', borderRadius: '12px', border: 'none', cursor: 'pointer', fontWeight: '700' }}
                         >
                             Back to Home
@@ -261,7 +262,7 @@ const ServiceDetail = () => {
                     "postalCode": businessNAP.postalCode,
                     "addressCountry": businessNAP.addressCountry
                 },
-                "url": `https://aerotechsolutioninc.com/services/${id}`
+                "url": canonicalUrl(`/services/${id}`)
             },
             {
                 "@type": "Service",
@@ -297,10 +298,10 @@ const ServiceDetail = () => {
                 <title>{seo ? seo.metaTitle : `${service.title} Repair | Aerotech Solution - Professional Service`}</title>
                 <meta name="description" content={seo ? seo.metaDescription : `${service.title} repair services by Aerotech Solution. Expert diagnostics, OEM parts, 90-day warranty. Same-day service available nationwide USA.`} />
                 <meta name="keywords" content={seo && seo.metaKeywords ? seo.metaKeywords : `${service.title.toLowerCase()} repair, ${id.replace('-repair', '')} service, appliance repair ${service.title}`} />
-                <link rel="canonical" href={`https://aerotechsolutioninc.com/services/${id}`} />
+                <link rel="canonical" href={canonicalUrl(`/services/${id}`)} />
                 <meta property="og:title" content={seo ? seo.metaTitle : `${service.title} Repair | Aerotech Solution`} />
                 <meta property="og:description" content={seo ? seo.metaDescription : (service.description && service.description.substring(0, 160))} />
-                <meta property="og:url" content={`https://aerotechsolutioninc.com/services/${id}`} />
+                <meta property="og:url" content={canonicalUrl(`/services/${id}`)} />
                 <meta property="og:type" content="website" />
                 <meta property="og:image" content={`https://aerotechsolutioninc.com${service.image || '/banner-image.jpg'}`} />
                 <meta name="twitter:card" content="summary_large_image" />
@@ -542,13 +543,13 @@ const ServiceDetail = () => {
                                 <p key={i} style={seoParaStyle}>{para}</p>
                             ))}
                             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '8px' }}>
-                                <Link to="/services/water-heater-repair" style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
+                                <Link to={routePath('/services/water-heater-repair')} style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
                                     Visit our Water Heater Repair page
                                 </Link>
                                 <a href="/#services" style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
                                     Browse all appliance repair services
                                 </a>
-                                <Link to={`/blogs/${id}`} style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
+                                <Link to={routePath(`/blogs/${id}`)} style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
                                     Read our HVAC repair guide
                                 </Link>
                             </div>
@@ -608,7 +609,7 @@ const ServiceDetail = () => {
                                 <a href="/#services" style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
                                     Browse all appliance repair services
                                 </a>
-                                <Link to={`/blogs/${id}`} style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
+                                <Link to={routePath(`/blogs/${id}`)} style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
                                     Read our refrigerator repair guide
                                 </Link>
                             </div>
@@ -626,13 +627,13 @@ const ServiceDetail = () => {
                                 <p key={i} style={seoParaStyle}>{para}</p>
                             ))}
                             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '8px' }}>
-                                <Link to="/services/garbage-disposal" style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
+                                <Link to={routePath('/services/garbage-disposal')} style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
                                     Visit our Garbage Disposal Repair page
                                 </Link>
                                 <a href="/#services" style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
                                     Browse all appliance repair services
                                 </a>
-                                <Link to={`/blogs/${id}`} style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
+                                <Link to={routePath(`/blogs/${id}`)} style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
                                     Read our dishwasher repair guide
                                 </Link>
                             </div>
@@ -676,13 +677,13 @@ const ServiceDetail = () => {
                                 <p key={i} style={seoParaStyle}>{para}</p>
                             ))}
                             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '8px' }}>
-                                <Link to="/services/microwave-repair" style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
+                                <Link to={routePath('/services/microwave-repair')} style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
                                     Visit our Microwave Repair page
                                 </Link>
                                 <a href="/#services" style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
                                     Browse all appliance repair services
                                 </a>
-                                <Link to={`/blogs/${id}`} style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
+                                <Link to={routePath(`/blogs/${id}`)} style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
                                     Read our oven repair guide
                                 </Link>
                             </div>
@@ -765,13 +766,13 @@ const ServiceDetail = () => {
                                 <p key={i} style={seoParaStyle}>{para}</p>
                             ))}
                             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '8px' }}>
-                                <Link to="/services/washer-repair" style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
+                                <Link to={routePath('/services/washer-repair')} style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
                                     Visit our Washer Repair page
                                 </Link>
                                 <a href="/#services" style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
                                     Browse all appliance repair services
                                 </a>
-                                <Link to={`/blogs/${id}`} style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
+                                <Link to={routePath(`/blogs/${id}`)} style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
                                     Read our dryer repair guide
                                 </Link>
                             </div>
@@ -857,7 +858,7 @@ const ServiceDetail = () => {
                                 <a href="/#services" style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
                                     Browse all appliance repair services
                                 </a>
-                                <Link to={`/blogs/${id}`} style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
+                                <Link to={routePath(`/blogs/${id}`)} style={{ color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}>
                                     {seo.blogGuideLabel || `Read our ${service.title.toLowerCase()} repair guide`}
                                 </Link>
                             </div>
@@ -945,7 +946,7 @@ const ServiceDetail = () => {
                                 {relatedServices.map((related) => (
                                     <Link
                                         key={related.id}
-                                        to={`/services/${related.id}`}
+                                        to={routePath(`/services/${related.id}`)}
                                         style={{
                                             padding: '12px 24px',
                                             backgroundColor: '#064e3b',
@@ -978,7 +979,7 @@ const ServiceDetail = () => {
                                     Book online in minutes, or call our team directly for same-day availability.
                                 </p>
                                 <Link
-                                    to="/book-service"
+                                    to={routePath('/book-service')}
                                     style={{
                                         display: 'inline-flex',
                                         alignItems: 'center',
@@ -1007,7 +1008,7 @@ const ServiceDetail = () => {
                         <button
                             style={ctaButtonStyle}
                             onClick={() => {
-                                navigate('/contact', { state: { applianceType: service.title } });
+                                navigate(routePath('/contact'), { state: { applianceType: service.title } });
                                 window.scrollTo(0, 0);
                             }}
                             onMouseEnter={(e) => {

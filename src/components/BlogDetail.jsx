@@ -4,6 +4,7 @@ import { Link, useParams, useNavigate } from 'react-router-dom';
 import { AlertCircle, ArrowLeft } from 'lucide-react';
 import { blogsData } from '../data/blogsData';
 import { blogSeoContent } from '../data/blogSeoContent';
+import { canonicalUrl, routePath } from '../utils/seo';
 
 const BlogDetail = () => {
   const { id } = useParams();
@@ -23,7 +24,7 @@ const BlogDetail = () => {
           <h2 style={{ fontSize: '1.5rem', fontWeight: '800', marginBottom: '8px' }}>Article Not Found</h2>
           <p style={{ marginBottom: '24px' }}>We couldn't find the blog post: <strong>{id}</strong></p>
           <button
-            onClick={() => navigate('/blogs')}
+            onClick={() => navigate(routePath('/blogs'))}
             style={{ padding: '12px 24px', background: '#3b82f6', color: 'white', borderRadius: '12px', border: 'none', cursor: 'pointer', fontWeight: '700' }}
           >
             Back to Blog
@@ -49,7 +50,7 @@ const BlogDetail = () => {
           "name": "Aerotech Solution Inc",
           "logo": { "@type": "ImageObject", "url": "https://aerotechsolutioninc.com/logo/logo 2.png" }
         },
-        "mainEntityOfPage": { "@type": "WebPage", "@id": `https://aerotechsolutioninc.com/blogs/${post.id}` }
+        "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl(`/blogs/${post.id}`) }
       },
       {
         "@type": "FAQPage",
@@ -62,9 +63,9 @@ const BlogDetail = () => {
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aerotechsolutioninc.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aerotechsolutioninc.com/blogs" },
-          { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://aerotechsolutioninc.com/blogs/${post.id}` }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": canonicalUrl('/') },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": canonicalUrl('/blogs') },
+          { "@type": "ListItem", "position": 3, "name": post.title, "item": canonicalUrl(`/blogs/${post.id}`) }
         ]
       }
     ]
@@ -75,10 +76,10 @@ const BlogDetail = () => {
       <Helmet>
         <title>{extra ? extra.metaTitle : `${post.title} | Aerotech Solution Blog`}</title>
         <meta name="description" content={extra ? extra.metaDescription : post.paragraphs[0].slice(0, 160)} />
-        <link rel="canonical" href={`https://aerotechsolutioninc.com/blogs/${post.id}`} />
+        <link rel="canonical" href={canonicalUrl(`/blogs/${post.id}`)} />
         <meta property="og:title" content={extra ? extra.metaTitle : post.title} />
         <meta property="og:description" content={extra ? extra.metaDescription : post.paragraphs[0].slice(0, 160)} />
-        <meta property="og:url" content={`https://aerotechsolutioninc.com/blogs/${post.id}`} />
+        <meta property="og:url" content={canonicalUrl(`/blogs/${post.id}`)} />
         <meta property="og:type" content="article" />
         <meta property="og:image" content={`https://aerotechsolutioninc.com${post.image}`} />
         <meta name="twitter:card" content="summary_large_image" />
@@ -256,7 +257,7 @@ const BlogDetail = () => {
           }
         `}</style>
         <div className="blog-detail-container">
-          <Link to="/blogs" className="blog-back-link">
+          <Link to={routePath('/blogs')} className="blog-back-link">
             <ArrowLeft size={16} /> Back to Blog
           </Link>
 
@@ -306,10 +307,10 @@ const BlogDetail = () => {
           )}
 
           <div className="blog-detail-cta">
-            <Link to={`/services/${post.id}`} className="cta-primary">
+            <Link to={routePath(`/services/${post.id}`)} className="cta-primary">
               View Service Details
             </Link>
-            <Link to="/book-service" className="cta-secondary">
+            <Link to={routePath('/book-service')} className="cta-secondary">
               Book Service
             </Link>
           </div>

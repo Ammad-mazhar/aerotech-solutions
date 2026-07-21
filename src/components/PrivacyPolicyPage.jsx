@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { canonicalUrl } from '../utils/seo';
 
 const PrivacyPolicyPage = () => {
   return (
@@ -8,10 +9,10 @@ const PrivacyPolicyPage = () => {
         <title>Aerotech Solution | Privacy Policy - Appliance Repair Data Protection</title>
         <meta name="description" content="Aerotech Solution Privacy Policy explains how we collect, use, and protect your personal information during appliance repair services. Your privacy is our priority." />
         <meta name="keywords" content="Aerotech Solution privacy policy, appliance repair privacy, data protection, service privacy terms" />
-        <link rel="canonical" href="https://aerotechsolutioninc.com/privacy-policy" />
+        <link rel="canonical" href={canonicalUrl('/privacy-policy')} />
         <meta property="og:title" content="Privacy Policy | Aerotech Solution" />
         <meta property="og:description" content="Read our privacy policy. We do not sell your data and use information only for service delivery and communication." />
-        <meta property="og:url" content="https://aerotechsolutioninc.com/privacy-policy" />
+        <meta property="og:url" content={canonicalUrl('/privacy-policy')} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpeg" />
         <meta name="twitter:card" content="summary_large_image" />

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { servicesList } from '../data/servicesData';
+import { routePath } from '../utils/seo';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -50,7 +51,7 @@ const Navbar = () => {
         }}>
 
           {/* LEFT: Logo + Brand */}
-          <Link to="/" onClick={() => window.scrollTo(0, 0)} style={{
+          <Link to={routePath('/')} onClick={() => window.scrollTo(0, 0)} style={{
             display: 'flex',
             alignItems: 'center',
             gap: '10px',
@@ -88,7 +89,7 @@ const Navbar = () => {
           }}>
             {/* Home */}
             <li>
-              <Link to="/" style={{
+              <Link to={routePath('/')} style={{
                 color: '#ffffff',
                 textDecoration: 'none',
                 fontWeight: '600',
@@ -144,7 +145,7 @@ const Navbar = () => {
                   {servicesList.map((service) => (
                     <Link
                       key={service.id}
-                      to={`/services/${service.id}`}
+                      to={routePath(`/services/${service.id}`)}
                       style={{
                         display: 'block',
                         padding: '10px 20px',
@@ -173,7 +174,7 @@ const Navbar = () => {
 
             {/* About */}
             <li>
-              <Link to="/about" style={{
+              <Link to={routePath('/about')} style={{
                 color: '#ffffff',
                 textDecoration: 'none',
                 fontWeight: '600',
@@ -188,7 +189,7 @@ const Navbar = () => {
 
             {/* Blog */}
             <li>
-              <Link to="/blogs" style={{
+              <Link to={routePath('/blogs')} style={{
                 color: '#ffffff',
                 textDecoration: 'none',
                 fontWeight: '600',
@@ -203,7 +204,7 @@ const Navbar = () => {
 
             {/* Contact */}
             <li>
-              <Link to="/contact" style={{
+              <Link to={routePath('/contact')} style={{
                 color: '#ffffff',
                 textDecoration: 'none',
                 fontWeight: '600',
@@ -257,7 +258,7 @@ const Navbar = () => {
                   {searchResults.map((service) => (
                     <Link
                       key={service.id}
-                      to={`/services/${service.id}`}
+                      to={routePath(`/services/${service.id}`)}
                       onClick={() => { setSearchQuery(''); setSearchResults([]); }}
                       style={{
                         display: 'block',
@@ -276,7 +277,7 @@ const Navbar = () => {
                 </div>
               )}
             </div>
-            <Link to="/book-service" style={{
+            <Link to={routePath('/book-service')} style={{
               backgroundColor: '#f97316',
               color: '#800000',
               padding: '8px 20px',
@@ -323,7 +324,7 @@ const Navbar = () => {
           }}>
             <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
               <li style={{ borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
-                <Link to="/" onClick={() => setIsMobileMenuOpen(false)} style={{
+                <Link to={routePath('/')} onClick={() => setIsMobileMenuOpen(false)} style={{
                   display: 'block', color: '#ffffff', textDecoration: 'none',
                   padding: '14px 0', fontWeight: '600', fontSize: '1rem',
                 }}>Home</Link>
@@ -351,7 +352,7 @@ const Navbar = () => {
                     {servicesList.map((service) => (
                       <Link
                         key={service.id}
-                        to={`/services/${service.id}`}
+                        to={routePath(`/services/${service.id}`)}
                         onClick={() => { setIsMobileMenuOpen(false); setIsServicesOpen(false); }}
                         style={{
                           display: 'block', color: '#a7f3d0', textDecoration: 'none',
@@ -366,19 +367,19 @@ const Navbar = () => {
               </li>
 
               <li style={{ borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
-                <Link to="/about" onClick={() => setIsMobileMenuOpen(false)} style={{
+                <Link to={routePath('/about')} onClick={() => setIsMobileMenuOpen(false)} style={{
                   display: 'block', color: '#ffffff', textDecoration: 'none',
                   padding: '14px 0', fontWeight: '600', fontSize: '1rem',
                 }}>About</Link>
               </li>
               <li style={{ borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
-                <Link to="/blogs" onClick={() => setIsMobileMenuOpen(false)} style={{
+                <Link to={routePath('/blogs')} onClick={() => setIsMobileMenuOpen(false)} style={{
                   display: 'block', color: '#ffffff', textDecoration: 'none',
                   padding: '14px 0', fontWeight: '600', fontSize: '1rem',
                 }}>Blog</Link>
               </li>
               <li style={{ borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
-                <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)} style={{
+                <Link to={routePath('/contact')} onClick={() => setIsMobileMenuOpen(false)} style={{
                   display: 'block', color: '#ffffff', textDecoration: 'none',
                   padding: '14px 0', fontWeight: '600', fontSize: '1rem',
                 }}>Contact</Link>
@@ -401,7 +402,7 @@ const Navbar = () => {
               }}
             />
             <Link
-              to="/book-service"
+              to={routePath('/book-service')}
               onClick={() => setIsMobileMenuOpen(false)}
               style={{
                 display: 'block', marginTop: '12px',

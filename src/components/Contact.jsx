@@ -5,6 +5,7 @@ import { useLocation } from 'react-router-dom';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import CustomSelect from './CustomSelect';
+import { canonicalUrl } from '../utils/seo';
 
 // Input sanitization helper
 const sanitizeInput = (value) => (value ? value.replace(/<[^>]*>?/gm, '') : '');
@@ -175,10 +176,10 @@ export default function Contact() {
         <title>Aerotech Solution | Contact Us - Appliance Repair Service Request</title>
         <meta name="description" content="Contact Aerotech Solution for emergency appliance repair. Schedule service online or call (630) 943-5120. Nationwide coverage with same-day availability for refrigerators, HVAC, washers and more." />
         <meta name="keywords" content="contact appliance repair, schedule repair service, emergency HVAC service, refrigerator repair contact, Aerotech Solution phone" />
-        <link rel="canonical" href="https://aerotechsolutioninc.com/contact" />
+        <link rel="canonical" href={canonicalUrl('/contact')} />
         <meta property="og:title" content="Contact Aerotech Solution | 24/7 Appliance Service" />
         <meta property="og:description" content="Get fast response from factory-certified technicians. Licensed & insured, OEM parts, 90-day warranty. Nationwide service areas." />
-        <meta property="og:url" content="https://aerotechsolutioninc.com/contact" />
+        <meta property="og:url" content={canonicalUrl('/contact')} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpeg" />
         <meta name="twitter:card" content="summary_large_image" />

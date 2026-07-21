@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { canonicalUrl, routePath } from '../utils/seo';
 
 const ServiceAreasPage = () => {
   return (
@@ -9,10 +10,10 @@ const ServiceAreasPage = () => {
         <title>Aerotech Solution | Service Areas - Nationwide Appliance Repair Coverage</title>
         <meta name="description" content="Aerotech Solution provides professional appliance repair services across USA. Chicago suburbs, Midwest, Northeast, South, West Coast coverage with local technicians." />
         <meta name="keywords" content="appliance repair service areas, Chicago appliance repair, nationwide HVAC service, Bolingbrook repair service, US appliance coverage" />
-        <link rel="canonical" href="https://aerotechsolutioninc.com/service-areas" />
+        <link rel="canonical" href={canonicalUrl('/service-areas')} />
         <meta property="og:title" content="Aerotech Solution Service Areas | Nationwide Coverage" />
         <meta property="og:description" content="From Chicago to nationwide, find certified local technicians for appliance repair. Major metro areas and suburbs served with OEM parts and warranty." />
-        <meta property="og:url" content="https://aerotechsolutioninc.com/service-areas" />
+        <meta property="og:url" content={canonicalUrl('/service-areas')} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://aerotechsolutioninc.com/Washer Repair.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -185,7 +186,7 @@ const ServiceAreasPage = () => {
             <p className="coverage-desc">
               We have a network of certified technicians across the East Coast to the West Coast, promising quality repair service available at all times. We provide our services all over the US.
             </p>
-            <Link to="/book-service" className="cta-button">
+            <Link to={routePath('/book-service')} className="cta-button">
               Find a Technician Near You
             </Link>
           </div>

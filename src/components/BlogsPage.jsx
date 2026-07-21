@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { blogsData } from '../data/blogsData';
+import { canonicalUrl, routePath } from '../utils/seo';
 
 const BlogsPage = () => {
   return (
@@ -10,10 +11,10 @@ const BlogsPage = () => {
         <title>Aerotech Solution | Blog - Appliance Repair Tips & Guides</title>
         <meta name="description" content="Expert appliance repair tips and guides from Aerotech Solution covering refrigerators, ovens, washers, dryers, HVAC, and more. Learn what to check before you call a technician." />
         <meta name="keywords" content="appliance repair blog, appliance repair tips, refrigerator troubleshooting, washer dryer repair guide, HVAC furnace tips" />
-        <link rel="canonical" href="https://aerotechsolutioninc.com/blogs" />
+        <link rel="canonical" href={canonicalUrl('/blogs')} />
         <meta property="og:title" content="Aerotech Solution Blog | Appliance Repair Tips & Guides" />
         <meta property="og:description" content="Expert tips and guides for every major home appliance, written by certified Aerotech Solution technicians." />
-        <meta property="og:url" content="https://aerotechsolutioninc.com/blogs" />
+        <meta property="og:url" content={canonicalUrl('/blogs')} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpeg" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -187,7 +188,7 @@ const BlogsPage = () => {
 
           <div className="blog-grid">
             {blogsData.map((post) => (
-              <Link className="blog-card" key={post.id} to={`/blogs/${post.id}`}>
+              <Link className="blog-card" key={post.id} to={routePath(`/blogs/${post.id}`)}>
                 <div className="blog-card-image">
                   <img src={post.image} alt={post.alt} loading="lazy" />
                   <span className="blog-card-badge">{post.category}</span>
@@ -209,7 +210,7 @@ const BlogsPage = () => {
           <div className="blogs-cta">
             <h3>Ready to get your appliance fixed?</h3>
             <p>Book a certified technician today and get back to normal fast.</p>
-            <Link to="/book-service" className="blogs-cta-button">
+            <Link to={routePath('/book-service')} className="blogs-cta-button">
               Book Service
             </Link>
           </div>

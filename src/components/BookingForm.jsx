@@ -7,6 +7,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import CustomSelect from './CustomSelect';
 import { brands } from '../data/servicesData';
+import { canonicalUrl } from '../utils/seo';
 
 // Input sanitization helper to prevent XSS
 const sanitizeInput = (value) => (value ? value.replace(/<[^>]*>?/gm, '') : '');
@@ -120,10 +121,10 @@ export default function BookingForm() {
         <title>Book Appliance Repair Service | Aerotech Solution</title>
         <meta name="description" content="Book professional appliance repair online. Schedule a certified technician for your refrigerator, washer, dryer, HVAC, or other home appliance." />
         <meta name="keywords" content="book appliance repair, schedule repair service, appliance repair appointment, Aerotech Solution booking" />
-        <link rel="canonical" href="https://aerotechsolutioninc.com/book-service" />
+        <link rel="canonical" href={canonicalUrl('/book-service')} />
         <meta property="og:title" content="Book Appliance Repair Service | Aerotech Solution" />
         <meta property="og:description" content="Schedule a certified technician online for fast, reliable appliance repair." />
-        <meta property="og:url" content="https://aerotechsolutioninc.com/book-service" />
+        <meta property="og:url" content={canonicalUrl('/book-service')} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpeg" />
         <meta name="twitter:card" content="summary_large_image" />

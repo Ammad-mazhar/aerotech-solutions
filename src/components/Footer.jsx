@@ -1,6 +1,7 @@
 import React from 'react';
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { routePath } from '../utils/seo';
 
 const Footer = () => {
   const footerStyle = {
@@ -109,7 +110,7 @@ const Footer = () => {
         <div style={gridStyle}>
           {/* Company Column */}
           <div style={columnStyle}>
-            <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <Link to={routePath('/')} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '12px' }}>
               <img 
 src="/logo/logo 2.png"
                 alt="Aerotech Solution" 
@@ -160,7 +161,7 @@ src="/logo/logo 2.png"
               {['About Us', 'Contact Us', 'Service Areas', 'FAQ', 'Blog', 'Expert Team'].map((item) => (
                 <li key={item}>
                   <Link
-                    to={item === 'About Us' ? '/about' : item === 'Service Areas' ? '/service-areas' : item === 'FAQ' ? '/faq' : item === 'Blog' ? '/blogs' : '/contact'}
+                    to={routePath(item === 'About Us' ? '/about' : item === 'Service Areas' ? '/service-areas' : item === 'FAQ' ? '/faq' : item === 'Blog' ? '/blogs' : '/contact')}
                     style={linkStyle}
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
@@ -207,9 +208,9 @@ src="/logo/logo 2.png"
             &copy; {new Date().getFullYear()} Aerotech Solution Inc. Engineering Excellence in Home Service.
           </p>
           <div style={{ display: 'flex', gap: '32px' }}>
-            <Link to="/privacy-policy" style={{ ...linkStyle, gap: '0' }} onMouseEnter={(e) => e.currentTarget.style.color = '#ffffff'} onMouseLeave={(e) => e.currentTarget.style.color = '#94a3b8'}>Privacy</Link>
-            <Link to="/terms-of-service" style={{ ...linkStyle, gap: '0' }} onMouseEnter={(e) => e.currentTarget.style.color = '#ffffff'} onMouseLeave={(e) => e.currentTarget.style.color = '#94a3b8'}>Terms</Link>
-            <Link to="/faq" style={{ ...linkStyle, gap: '0' }} onMouseEnter={(e) => e.currentTarget.style.color = '#ffffff'} onMouseLeave={(e) => e.currentTarget.style.color = '#94a3b8'}>FAQ</Link>
+            <Link to={routePath('/privacy-policy')} style={{ ...linkStyle, gap: '0' }} onMouseEnter={(e) => e.currentTarget.style.color = '#ffffff'} onMouseLeave={(e) => e.currentTarget.style.color = '#94a3b8'}>Privacy</Link>
+            <Link to={routePath('/terms-of-service')} style={{ ...linkStyle, gap: '0' }} onMouseEnter={(e) => e.currentTarget.style.color = '#ffffff'} onMouseLeave={(e) => e.currentTarget.style.color = '#94a3b8'}>Terms</Link>
+            <Link to={routePath('/faq')} style={{ ...linkStyle, gap: '0' }} onMouseEnter={(e) => e.currentTarget.style.color = '#ffffff'} onMouseLeave={(e) => e.currentTarget.style.color = '#94a3b8'}>FAQ</Link>
           </div>
         </div>
       </div>

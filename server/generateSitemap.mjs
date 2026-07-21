@@ -3,11 +3,9 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { servicesData } from '../src/data/servicesData.js';
 import { blogsData } from '../src/data/blogsData.js';
+import { canonicalUrl } from '../src/utils/seo.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
-// Canonical, non-www domain
-const BASE_URL = 'https://aerotechsolutioninc.com';
 
 // Static routes that actually exist in src/App.jsx (excludes the "*" 404 catch-all)
 const staticPaths = [
@@ -30,7 +28,7 @@ const generateSitemap = () => {
 
     const addUrl = (route, priority) => {
         xml += '  <url>\n';
-        xml += `    <loc>${BASE_URL}${route}</loc>\n`;
+        xml += `    <loc>${canonicalUrl(route)}</loc>\n`;
         xml += `    <lastmod>${date}</lastmod>\n`;
         xml += '    <changefreq>weekly</changefreq>\n';
         xml += `    <priority>${priority}</priority>\n`;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { canonicalUrl, routePath } from '../utils/seo';
 
 const FAQPage = () => {
   return (
@@ -9,10 +10,10 @@ const FAQPage = () => {
         <title>Aerotech Solution | FAQ - Appliance Repair Frequently Asked Questions</title>
         <meta name="description" content="Common questions about Aerotech Solution appliance repair services, warranty, service call fees, appointment scheduling, and commercial service answered." />
         <meta name="keywords" content="appliance repair FAQ, Aerotech Solution questions, repair warranty, service call fee, same day service" />
-        <link rel="canonical" href="https://aerotechsolutioninc.com/faq" />
+        <link rel="canonical" href={canonicalUrl('/faq')} />
         <meta property="og:title" content="FAQ | Aerotech Solution Appliance Repair" />
         <meta property="og:description" content="Find answers to frequently asked questions about our repair services, warranties, and scheduling. Have more questions? Contact us directly." />
-        <meta property="og:url" content="https://aerotechsolutioninc.com/faq" />
+        <meta property="og:url" content={canonicalUrl('/faq')} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpeg" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -142,7 +143,7 @@ const FAQPage = () => {
           <div className="faq-cta">
             <h3>Still have questions?</h3>
             <p style={{marginBottom: '2rem', color: '#475569'}}>Our team is happy to help.</p>
-            <Link to="/contact" className="cta-button">
+            <Link to={routePath('/contact')} className="cta-button">
               Contact Us
             </Link>
           </div>

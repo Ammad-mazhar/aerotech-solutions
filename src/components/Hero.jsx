@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { ChevronRight, Star, ShieldCheck, Clock } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { canonicalUrl, routePath } from '../utils/seo';
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -114,10 +115,10 @@ const Hero = () => {
         <title>Aerotech Solution | Professional Appliance Restoration & HVAC Services USA</title>
         <meta name="description" content="Aerotech Solution provides elite repair and restoration for premium appliances, HVAC, and laundry systems across the USA. Factory-certified technicians for all major brands. Same-day service available." />
         <meta name="keywords" content="appliance repair USA, HVAC solutions, furnace restoration, refrigerator repair, washer dryer service, oven stove repair, microwave repair, water heater service, Aerotech Solution" />
-        <link rel="canonical" href="https://aerotechsolutioninc.com/" />
+        <link rel="canonical" href={canonicalUrl('/')} />
         <meta property="og:title" content="Aerotech Solution | Professional Appliance Restoration & HVAC Services USA" />
         <meta property="og:description" content="Nationwide premium appliance restoration. From HVAC calibration to kitchen system solutions, we bring your home back to factory standards with certified technicians." />
-        <meta property="og:url" content="https://aerotechsolutioninc.com/" />
+        <meta property="og:url" content={canonicalUrl('/')} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -158,7 +159,7 @@ const Hero = () => {
             <button
               style={primaryBtnStyle}
               onClick={() => {
-                navigate('/contact');
+                navigate(routePath('/contact'));
                 window.scrollTo(0, 0);
               }}
               onMouseEnter={(e) => {

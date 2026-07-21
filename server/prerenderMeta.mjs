@@ -25,10 +25,11 @@ import { servicesData } from '../src/data/servicesData.js';
 import { serviceSeoContent } from '../src/data/serviceSeoContent.js';
 import { blogsData } from '../src/data/blogsData.js';
 import { blogSeoContent } from '../src/data/blogSeoContent.js';
+import { SITE_URL, canonicalUrl } from '../src/utils/seo.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DIST_DIR = path.join(__dirname, '../dist');
-const BASE_URL = 'https://aerotechsolutioninc.com';
+const BASE_URL = SITE_URL;
 
 const NAP = {
     name: 'Aerotech Solution Inc',
@@ -61,7 +62,7 @@ function serviceStructuredData(id, service, seo) {
                     "postalCode": NAP.postalCode,
                     "addressCountry": NAP.addressCountry
                 },
-                "url": `${BASE_URL}/services/${id}`
+                "url": canonicalUrl(`/services/${id}`)
             },
             {
                 "@type": "Service",
@@ -96,14 +97,14 @@ function blogStructuredData(post, extra) {
                 "name": NAP.name,
                 "logo": { "@type": "ImageObject", "url": `${BASE_URL}/logo/logo 2.png` }
             },
-            "mainEntityOfPage": { "@type": "WebPage", "@id": `${BASE_URL}/blogs/${post.id}` }
+            "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl(`/blogs/${post.id}`) }
         },
         {
             "@type": "BreadcrumbList",
             "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": `${BASE_URL}/` },
-                { "@type": "ListItem", "position": 2, "name": "Blog", "item": `${BASE_URL}/blogs` },
-                { "@type": "ListItem", "position": 3, "name": post.title, "item": `${BASE_URL}/blogs/${post.id}` }
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": canonicalUrl('/') },
+                { "@type": "ListItem", "position": 2, "name": "Blog", "item": canonicalUrl('/blogs') },
+                { "@type": "ListItem", "position": 3, "name": post.title, "item": canonicalUrl(`/blogs/${post.id}`) }
             ]
         }
     ];
@@ -121,7 +122,7 @@ function blogStructuredData(post, extra) {
 }
 
 function renderPage(template, { route, title, description, ogTitle, ogDescription, ogImage, structuredData }) {
-    const canonicalUrl = `${BASE_URL}${route}`;
+    const pageCanonicalUrl = canonicalUrl(route);
     const t = escapeAttr(title);
     const d = escapeAttr(description);
     const ot = escapeAttr(ogTitle || title);
@@ -131,15 +132,15 @@ function renderPage(template, { route, title, description, ogTitle, ogDescriptio
     html = html.replace(/<title>.*?<\/title>/s, `<title>${title}</title>`);
     html = html.replace(/<meta name="title" content=".*?">/, `<meta name="title" content="${t}">`);
     html = html.replace(/<meta name="description" content=".*?">/, `<meta name="description" content="${d}">`);
-    html = html.replace(/<meta property="og:url" content=".*?">/, `<meta property="og:url" content="${canonicalUrl}">`);
+    html = html.replace(/<meta property="og:url" content=".*?">/, `<meta property="og:url" content="${pageCanonicalUrl}">`);
     html = html.replace(/<meta property="og:title" content=".*?">/, `<meta property="og:title" content="${ot}">`);
     html = html.replace(/<meta property="og:description" content=".*?">/, `<meta property="og:description" content="${od}">`);
     html = html.replace(/<meta property="og:image" content=".*?">/, `<meta property="og:image" content="${ogImage}">`);
-    html = html.replace(/<meta property="twitter:url" content=".*?">/, `<meta property="twitter:url" content="${canonicalUrl}">`);
+    html = html.replace(/<meta property="twitter:url" content=".*?">/, `<meta property="twitter:url" content="${pageCanonicalUrl}">`);
     html = html.replace(/<meta property="twitter:title" content=".*?">/, `<meta property="twitter:title" content="${ot}">`);
     html = html.replace(/<meta property="twitter:description" content=".*?">/, `<meta property="twitter:description" content="${od}">`);
     html = html.replace(/<meta property="twitter:image" content=".*?">/, `<meta property="twitter:image" content="${ogImage}">`);
-    html = html.replace(/<link rel="canonical" href=".*?" \/>/, `<link rel="canonical" href="${canonicalUrl}" />`);
+    html = html.replace(/<link rel="canonical" href=".*?" \/>/, `<link rel="canonical" href="${pageCanonicalUrl}" />`);
 
     if (structuredData) {
         const scriptTag = `<script type="application/ld+json">${JSON.stringify(structuredData)}</script>\n</head>`;
