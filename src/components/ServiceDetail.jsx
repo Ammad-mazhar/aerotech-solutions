@@ -36,7 +36,7 @@ const ServiceDetail = () => {
                     <title>Service Not Found | Aerotech Solution</title>
                     <meta name="description" content="The requested service page could not be found. Return to our main services page for available appliance repair options." />
                     <meta name="keywords" content="service not found, appliance repair 404" />
-                    <link rel="canonical" href="https://www.aerotechservice.com/services" />
+                    <link rel="canonical" href="https://aerotechsolutioninc.com/" />
                 </Helmet>
                 <div style={{ textAlign: 'center', padding: '150px 20px', minHeight: '80vh', fontFamily: "'Inter', sans-serif" }}>
                     <div style={{ background: '#fef2f2', border: '1px solid #fee2e2', color: '#991b1b', padding: '24px', borderRadius: '16px', maxWidth: '500px', margin: '0 auto' }}>
@@ -250,7 +250,7 @@ const ServiceDetail = () => {
             {
                 "@type": "LocalBusiness",
                 "name": businessNAP.name,
-                "image": `https://www.aerotechservice.com${service.image || '/banner-image.jpg'}`,
+                "image": `https://aerotechsolutioninc.com${service.image || '/banner-image.jpg'}`,
                 "telephone": businessNAP.telephone,
                 "email": businessNAP.email,
                 "address": {
@@ -261,7 +261,7 @@ const ServiceDetail = () => {
                     "postalCode": businessNAP.postalCode,
                     "addressCountry": businessNAP.addressCountry
                 },
-                "url": `https://www.aerotechservice.com/services/${id}`
+                "url": `https://aerotechsolutioninc.com/services/${id}`
             },
             {
                 "@type": "Service",
@@ -297,16 +297,16 @@ const ServiceDetail = () => {
                 <title>{seo ? seo.metaTitle : `${service.title} Repair | Aerotech Solution - Professional Service`}</title>
                 <meta name="description" content={seo ? seo.metaDescription : `${service.title} repair services by Aerotech Solution. Expert diagnostics, OEM parts, 90-day warranty. Same-day service available nationwide USA.`} />
                 <meta name="keywords" content={seo && seo.metaKeywords ? seo.metaKeywords : `${service.title.toLowerCase()} repair, ${id.replace('-repair', '')} service, appliance repair ${service.title}`} />
-                <link rel="canonical" href={`https://www.aerotechservice.com/services/${id}`} />
+                <link rel="canonical" href={`https://aerotechsolutioninc.com/services/${id}`} />
                 <meta property="og:title" content={seo ? seo.metaTitle : `${service.title} Repair | Aerotech Solution`} />
                 <meta property="og:description" content={seo ? seo.metaDescription : (service.description && service.description.substring(0, 160))} />
-                <meta property="og:url" content={`https://www.aerotechservice.com/services/${id}`} />
+                <meta property="og:url" content={`https://aerotechsolutioninc.com/services/${id}`} />
                 <meta property="og:type" content="website" />
-                <meta property="og:image" content={`https://www.aerotechservice.com${service.image || '/banner-image.jpg'}`} />
+                <meta property="og:image" content={`https://aerotechsolutioninc.com${service.image || '/banner-image.jpg'}`} />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={seo ? seo.metaTitle : `${service.title} Repair Services`} />
                 <meta name="twitter:description" content={seo ? seo.metaDescription : (service.description && service.description.substring(0, 160))} />
-                <meta name="twitter:image" content={`https://www.aerotechservice.com${service.image || '/banner-image.jpg'}`} />
+                <meta name="twitter:image" content={`https://aerotechsolutioninc.com${service.image || '/banner-image.jpg'}`} />
                 {structuredData && (
                     <script type="application/ld+json">
                         {JSON.stringify(structuredData)}

@@ -10,16 +10,16 @@ const BlogsPage = () => {
         <title>Aerotech Solution | Blog - Appliance Repair Tips & Guides</title>
         <meta name="description" content="Expert appliance repair tips and guides from Aerotech Solution covering refrigerators, ovens, washers, dryers, HVAC, and more. Learn what to check before you call a technician." />
         <meta name="keywords" content="appliance repair blog, appliance repair tips, refrigerator troubleshooting, washer dryer repair guide, HVAC furnace tips" />
-        <link rel="canonical" href="https://www.aerotechservice.com/blogs" />
+        <link rel="canonical" href="https://aerotechsolutioninc.com/blogs" />
         <meta property="og:title" content="Aerotech Solution Blog | Appliance Repair Tips & Guides" />
         <meta property="og:description" content="Expert tips and guides for every major home appliance, written by certified Aerotech Solution technicians." />
-        <meta property="og:url" content="https://www.aerotechservice.com/blogs" />
+        <meta property="og:url" content="https://aerotechsolutioninc.com/blogs" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.aerotechservice.com/banner-image.jpeg" />
+        <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpeg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Aerotech Solution Blog | Appliance Repair Tips" />
         <meta name="twitter:description" content="Guides on refrigerators, ovens, washers, dryers, HVAC, and more from certified appliance repair technicians." />
-        <meta name="twitter:image" content="https://www.aerotechservice.com/banner-image.jpeg" />
+        <meta name="twitter:image" content="https://aerotechsolutioninc.com/banner-image.jpeg" />
       </Helmet>
       <section className="blogs-page">
         <style>{`

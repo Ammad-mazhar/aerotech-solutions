@@ -175,16 +175,16 @@ export default function Contact() {
         <title>Aerotech Solution | Contact Us - Appliance Repair Service Request</title>
         <meta name="description" content="Contact Aerotech Solution for emergency appliance repair. Schedule service online or call (630) 943-5120. Nationwide coverage with same-day availability for refrigerators, HVAC, washers and more." />
         <meta name="keywords" content="contact appliance repair, schedule repair service, emergency HVAC service, refrigerator repair contact, Aerotech Solution phone" />
-        <link rel="canonical" href="https://www.aerotechservice.com/contact" />
+        <link rel="canonical" href="https://aerotechsolutioninc.com/contact" />
         <meta property="og:title" content="Contact Aerotech Solution | 24/7 Appliance Service" />
         <meta property="og:description" content="Get fast response from factory-certified technicians. Licensed & insured, OEM parts, 90-day warranty. Nationwide service areas." />
-        <meta property="og:url" content="https://www.aerotechservice.com/contact" />
+        <meta property="og:url" content="https://aerotechsolutioninc.com/contact" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.aerotechservice.com/banner-image.jpeg" />
+        <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpeg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Aerotech Solution Contact | Book Appliance Repair" />
         <meta name="twitter:description" content="Send service request or call (630) 943-5120. Real technicians, not middlemen. Same-day emergency response available across USA." />
-        <meta name="twitter:image" content="https://www.aerotechservice.com/banner-image.jpeg" />
+        <meta name="twitter:image" content="https://aerotechsolutioninc.com/banner-image.jpeg" />
       </Helmet>
       <section id="contact" style={sectionStyle}>
         <div style={{ textAlign: 'center' }}>

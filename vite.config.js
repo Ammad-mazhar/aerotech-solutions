@@ -14,7 +14,7 @@ export default defineConfig({
       apply: 'build',
       buildStart() {
         console.log('Generating sitemap...')
-        execSync('node server/generateSitemap.js', { stdio: 'inherit' })
+        execSync('node server/generateSitemap.mjs', { stdio: 'inherit' })
       }
     }
   ],

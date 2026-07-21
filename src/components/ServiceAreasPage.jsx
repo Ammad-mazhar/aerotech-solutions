@@ -9,16 +9,16 @@ const ServiceAreasPage = () => {
         <title>Aerotech Solution | Service Areas - Nationwide Appliance Repair Coverage</title>
         <meta name="description" content="Aerotech Solution provides professional appliance repair services across USA. Chicago suburbs, Midwest, Northeast, South, West Coast coverage with local technicians." />
         <meta name="keywords" content="appliance repair service areas, Chicago appliance repair, nationwide HVAC service, Bolingbrook repair service, US appliance coverage" />
-        <link rel="canonical" href="https://www.aerotechservice.com/service-areas" />
+        <link rel="canonical" href="https://aerotechsolutioninc.com/service-areas" />
         <meta property="og:title" content="Aerotech Solution Service Areas | Nationwide Coverage" />
         <meta property="og:description" content="From Chicago to nationwide, find certified local technicians for appliance repair. Major metro areas and suburbs served with OEM parts and warranty." />
-        <meta property="og:url" content="https://www.aerotechservice.com/service-areas" />
+        <meta property="og:url" content="https://aerotechsolutioninc.com/service-areas" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.aerotechservice.com/Washer Repair.jpg" />
+        <meta property="og:image" content="https://aerotechsolutioninc.com/Washer Repair.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Service Areas | Aerotech Solution Appliance Repair" />
         <meta name="twitter:description" content="Nationwide coverage with local expert technicians. Chicago, Northeast, South, West Coast. Licensed & insured service you can trust." />
-        <meta name="twitter:image" content="https://www.aerotechservice.com/Washer Repair.jpg" />
+        <meta name="twitter:image" content="https://aerotechsolutioninc.com/Washer Repair.jpg" />
       </Helmet>
       <section className="service-areas-page">
         <style>{`

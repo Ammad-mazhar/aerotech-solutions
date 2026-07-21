@@ -41,15 +41,15 @@ const BlogDetail = () => {
         "@type": "Article",
         "headline": post.title,
         "description": extra.metaDescription,
-        "image": `https://www.aerotechservice.com${post.image}`,
+        "image": `https://aerotechsolutioninc.com${post.image}`,
         "datePublished": post.date,
         "author": { "@type": "Organization", "name": "Aerotech Solution Inc" },
         "publisher": {
           "@type": "Organization",
           "name": "Aerotech Solution Inc",
-          "logo": { "@type": "ImageObject", "url": "https://www.aerotechservice.com/logo/logo 2.png" }
+          "logo": { "@type": "ImageObject", "url": "https://aerotechsolutioninc.com/logo/logo 2.png" }
         },
-        "mainEntityOfPage": { "@type": "WebPage", "@id": `https://www.aerotechservice.com/blogs/${post.id}` }
+        "mainEntityOfPage": { "@type": "WebPage", "@id": `https://aerotechsolutioninc.com/blogs/${post.id}` }
       },
       {
         "@type": "FAQPage",
@@ -62,9 +62,9 @@ const BlogDetail = () => {
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aerotechservice.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aerotechservice.com/blogs" },
-          { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://www.aerotechservice.com/blogs/${post.id}` }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aerotechsolutioninc.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aerotechsolutioninc.com/blogs" },
+          { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://aerotechsolutioninc.com/blogs/${post.id}` }
         ]
       }
     ]
@@ -75,16 +75,16 @@ const BlogDetail = () => {
       <Helmet>
         <title>{extra ? extra.metaTitle : `${post.title} | Aerotech Solution Blog`}</title>
         <meta name="description" content={extra ? extra.metaDescription : post.paragraphs[0].slice(0, 160)} />
-        <link rel="canonical" href={`https://www.aerotechservice.com/blogs/${post.id}`} />
+        <link rel="canonical" href={`https://aerotechsolutioninc.com/blogs/${post.id}`} />
         <meta property="og:title" content={extra ? extra.metaTitle : post.title} />
         <meta property="og:description" content={extra ? extra.metaDescription : post.paragraphs[0].slice(0, 160)} />
-        <meta property="og:url" content={`https://www.aerotechservice.com/blogs/${post.id}`} />
+        <meta property="og:url" content={`https://aerotechsolutioninc.com/blogs/${post.id}`} />
         <meta property="og:type" content="article" />
-        <meta property="og:image" content={`https://www.aerotechservice.com${post.image}`} />
+        <meta property="og:image" content={`https://aerotechsolutioninc.com${post.image}`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={extra ? extra.metaTitle : post.title} />
         <meta name="twitter:description" content={extra ? extra.metaDescription : post.paragraphs[0].slice(0, 160)} />
-        <meta name="twitter:image" content={`https://www.aerotechservice.com${post.image}`} />
+        <meta name="twitter:image" content={`https://aerotechsolutioninc.com${post.image}`} />
         {structuredData && (
           <script type="application/ld+json">
             {JSON.stringify(structuredData)}

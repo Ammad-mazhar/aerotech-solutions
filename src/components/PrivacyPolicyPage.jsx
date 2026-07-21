@@ -8,16 +8,16 @@ const PrivacyPolicyPage = () => {
         <title>Aerotech Solution | Privacy Policy - Appliance Repair Data Protection</title>
         <meta name="description" content="Aerotech Solution Privacy Policy explains how we collect, use, and protect your personal information during appliance repair services. Your privacy is our priority." />
         <meta name="keywords" content="Aerotech Solution privacy policy, appliance repair privacy, data protection, service privacy terms" />
-        <link rel="canonical" href="https://www.aerotechservice.com/privacy-policy" />
+        <link rel="canonical" href="https://aerotechsolutioninc.com/privacy-policy" />
         <meta property="og:title" content="Privacy Policy | Aerotech Solution" />
         <meta property="og:description" content="Read our privacy policy. We do not sell your data and use information only for service delivery and communication." />
-        <meta property="og:url" content="https://www.aerotechservice.com/privacy-policy" />
+        <meta property="og:url" content="https://aerotechsolutioninc.com/privacy-policy" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.aerotechservice.com/banner-image.jpeg" />
+        <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpeg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Aerotech Solution Privacy Policy" />
         <meta name="twitter:description" content="Committed to protecting your privacy during appliance repair services. Secure data handling guaranteed." />
-        <meta name="twitter:image" content="https://www.aerotechservice.com/banner-image.jpeg" />
+        <meta name="twitter:image" content="https://aerotechsolutioninc.com/banner-image.jpeg" />
       </Helmet>
       <section className="policy-page">
         <style>{`
