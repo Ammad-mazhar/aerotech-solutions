@@ -115,7 +115,23 @@ export default function BookingForm() {
   };
 
   return (
-    <section className="booking-form-wrapper">
+    <>
+      <Helmet>
+        <title>Book Appliance Repair Service | Aerotech Solution</title>
+        <meta name="description" content="Book professional appliance repair online. Schedule a certified technician for your refrigerator, washer, dryer, HVAC, or other home appliance." />
+        <meta name="keywords" content="book appliance repair, schedule repair service, appliance repair appointment, Aerotech Solution booking" />
+        <link rel="canonical" href="https://aerotechsolutioninc.com/book-service" />
+        <meta property="og:title" content="Book Appliance Repair Service | Aerotech Solution" />
+        <meta property="og:description" content="Schedule a certified technician online for fast, reliable appliance repair." />
+        <meta property="og:url" content="https://aerotechsolutioninc.com/book-service" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpeg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Book Appliance Repair Service | Aerotech Solution" />
+        <meta name="twitter:description" content="Schedule a certified technician online for fast, reliable appliance repair." />
+        <meta name="twitter:image" content="https://aerotechsolutioninc.com/banner-image.jpeg" />
+      </Helmet>
+      <section className="booking-form-wrapper">
       <style>{`
         .booking-form-wrapper {
           padding: 4rem 1.5rem;
@@ -521,5 +537,6 @@ export default function BookingForm() {
         )}
       </div>
     </section>
+    </>
   );
 }
