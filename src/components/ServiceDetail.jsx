@@ -13,10 +13,12 @@ import {
     MapPin,
     Flame,
     Layers,
-    Building2
+    Building2,
+    BookOpen
 } from 'lucide-react';
 import { servicesData, servicesList, brands as defaultBrands } from '../data/servicesData';
 import { serviceSeoContent } from '../data/serviceSeoContent';
+import { blogsData } from '../data/blogsData';
 import { canonicalUrl, routePath } from '../utils/seo';
 
 const ServiceDetail = () => {
@@ -25,6 +27,7 @@ const ServiceDetail = () => {
     const service = servicesData[id];
     const seo = serviceSeoContent[id];
     const relatedServices = servicesList.filter((s) => s.id !== id).slice(0, 6);
+    const matchingBlogPost = blogsData.find((p) => p.id === id);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -964,6 +967,28 @@ const ServiceDetail = () => {
                                         {related.title} Repair
                                     </Link>
                                 ))}
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Helpful Resources (new — links to the matching blog guide for this service) */}
+                    {matchingBlogPost && (
+                        <div style={seoSectionStyle}>
+                            <h2 style={seoHeadingStyle}>
+                                <BookOpen color="#f97316" size={30} />
+                                Helpful {service.title} Resources
+                            </h2>
+                            <div style={whiteInfoCardStyle}>
+                                <h3 style={infoCardTitleStyle}>{matchingBlogPost.title}</h3>
+                                <p style={infoCardTextStyle}>
+                                    {matchingBlogPost.paragraphs[0].slice(0, 180)}...
+                                </p>
+                                <Link
+                                    to={routePath(`/blogs/${id}`)}
+                                    style={{ display: 'inline-block', marginTop: '14px', color: '#f97316', fontWeight: '700', textDecoration: 'underline' }}
+                                >
+                                    Read our full {service.title.toLowerCase()} repair guide
+                                </Link>
                             </div>
                         </div>
                     )}

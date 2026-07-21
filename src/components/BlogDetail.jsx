@@ -5,12 +5,14 @@ import { AlertCircle, ArrowLeft } from 'lucide-react';
 import { blogsData } from '../data/blogsData';
 import { blogSeoContent } from '../data/blogSeoContent';
 import { canonicalUrl, routePath } from '../utils/seo';
+import { serviceAnchorText, relatedBlogLinks } from '../data/internalLinks';
 
 const BlogDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const post = blogsData.find((p) => p.id === id);
   const extra = blogSeoContent[id];
+  const relatedReading = relatedBlogLinks[id] || [];
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -305,6 +307,29 @@ const BlogDetail = () => {
               ))}
             </div>
           )}
+
+          {relatedReading.length > 0 && (
+            <div className="blog-seo-section">
+              <h2 className="blog-seo-heading">Related Reading</h2>
+              {relatedReading.map((rel) => (
+                <p className="blog-seo-para" key={rel.id}>
+                  {rel.before}
+                  <Link to={routePath(`/blogs/${rel.id}`)} style={{ color: '#f97316', fontWeight: '700' }}>
+                    {rel.anchor}
+                  </Link>
+                  {rel.after}
+                </p>
+              ))}
+            </div>
+          )}
+
+          <p className="blog-seo-para" style={{ marginTop: '2rem' }}>
+            If this sounds like what you're dealing with, our certified technicians offer{' '}
+            <Link to={routePath(`/services/${post.id}`)} style={{ color: '#f97316', fontWeight: '700' }}>
+              {serviceAnchorText[post.id] || `${post.title.toLowerCase()} service`}
+            </Link>{' '}
+            with same-day availability and a workmanship warranty.
+          </p>
 
           <div className="blog-detail-cta">
             <Link to={routePath(`/services/${post.id}`)} className="cta-primary">
