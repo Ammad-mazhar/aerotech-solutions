@@ -11,7 +11,7 @@ const NotFound = () => {
             <title>Page Not Found - 404 | Aerotech Solution</title>
             <meta name="description" content="The page you are looking for cannot be found. Aerotech Solution professional appliance repair services. Return to home for repair scheduling." />
             <meta name="keywords" content="404 error, page not found, appliance repair home" />
-            <link rel="canonical" href={canonicalUrl('/')} />
+            <meta name="robots" content="noindex, follow" />
             <meta property="og:title" content="404 | Page Not Found | Aerotech Solution" />
             <meta property="og:description" content="Page not found. Visit our home page for appliance repair services." />
             <meta property="og:url" content={canonicalUrl('/')} />

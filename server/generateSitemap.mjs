@@ -7,51 +7,75 @@ import { canonicalUrl } from '../src/utils/seo.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-// Static routes that actually exist in src/App.jsx (excludes the "*" 404 catch-all).
-// Exported so server/prerenderApp.mjs can reuse this exact list instead of
-// maintaining a second, separately-hardcoded copy of the same route paths.
+// Indexable static routes that actually exist in src/App.jsx. This list is
+// deliberately separate from whatever server/prerenderApp.mjs writes to
+// dist/ — prerenderApp.mjs also generates dist/404.html (for Netlify's
+// custom error response), but 404 is a non-indexable, non-route page and
+// must never appear here. Nothing in this file scans dist/ and dumps every
+// generated *.html into the sitemap; only routes explicitly listed below (or
+// derived from servicesData.js / blogsData.js) are considered indexable.
 export const staticPaths = [
-    { path: '/', priority: '1.0' },
-    { path: '/about', priority: '0.8' },
-    { path: '/contact', priority: '0.8' },
-    { path: '/service-areas', priority: '0.8' },
-    { path: '/faq', priority: '0.8' },
-    { path: '/book-service', priority: '0.8' },
-    { path: '/services', priority: '0.9' },
-    { path: '/blogs', priority: '0.8' },
-    { path: '/privacy-policy', priority: '0.4' },
-    { path: '/terms-of-service', priority: '0.4' }
+    { path: '/' },
+    { path: '/about' },
+    { path: '/contact' },
+    { path: '/service-areas' },
+    { path: '/faq' },
+    { path: '/book-service' },
+    { path: '/services' },
+    { path: '/blogs' },
+    { path: '/privacy-policy' },
+    { path: '/terms-of-service' }
 ];
 
-export const generateSitemap = () => {
-    const date = new Date().toISOString().split('T')[0];
+// blogsData.js stores a real, source-controlled publish date per post
+// (the same date shown to visitors on the page itself), so it's used as
+// <lastmod> for blog posts. No other data file tracks any per-page
+// last-updated date, so <lastmod> is omitted for everything else rather
+// than being stamped with the current build/deploy time — Google expects
+// lastmod to reflect a meaningful content change, not when the site was
+// last built.
+function toIsoDate(dateStr) {
+    const parsed = new Date(dateStr);
+    if (Number.isNaN(parsed.getTime())) return null;
+    // Format from the LOCAL date components rather than .toISOString()
+    // (which converts to UTC first): a build machine ahead of UTC would
+    // otherwise shift e.g. "July 2, 2026" back to "2026-07-01".
+    const year = parsed.getFullYear();
+    const month = String(parsed.getMonth() + 1).padStart(2, '0');
+    const day = String(parsed.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+}
 
+export const generateSitemap = () => {
     let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
     xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
 
-    const addUrl = (route, priority) => {
+    const addUrl = (route, lastmod) => {
         xml += '  <url>\n';
         xml += `    <loc>${canonicalUrl(route)}</loc>\n`;
-        xml += `    <lastmod>${date}</lastmod>\n`;
-        xml += '    <changefreq>weekly</changefreq>\n';
-        xml += `    <priority>${priority}</priority>\n`;
+        if (lastmod) {
+            xml += `    <lastmod>${lastmod}</lastmod>\n`;
+        }
         xml += '  </url>\n';
     };
 
-    // Static pages
-    staticPaths.forEach(({ path: route, priority }) => addUrl(route, priority));
+    // Static pages — no tracked update date, so no <lastmod>.
+    staticPaths.forEach(({ path: route }) => addUrl(route));
 
-    // Service pages — derived from servicesData.js, so new services are picked up automatically
-    Object.keys(servicesData).forEach((id) => addUrl(`/services/${id}`, '0.9'));
+    // Service pages — derived from servicesData.js, so new services are
+    // picked up automatically. No tracked update date, so no <lastmod>.
+    Object.keys(servicesData).forEach((id) => addUrl(`/services/${id}`));
 
-    // Blog posts — derived from blogsData.js, so new posts are picked up automatically
-    blogsData.forEach((post) => addUrl(`/blogs/${post.id}`, '0.7'));
+    // Blog posts — derived from blogsData.js, so new posts are picked up
+    // automatically. Uses each post's own stored publish date as <lastmod>.
+    blogsData.forEach((post) => addUrl(`/blogs/${post.id}`, toIsoDate(post.date)));
 
     xml += '</urlset>';
 
     const outputPath = path.join(__dirname, '../public/sitemap.xml');
     fs.writeFileSync(outputPath, xml);
-    console.log(`Sitemap generated successfully at ${outputPath} (${staticPaths.length + Object.keys(servicesData).length + blogsData.length} URLs)`);
+    const total = staticPaths.length + Object.keys(servicesData).length + blogsData.length;
+    console.log(`Sitemap generated successfully at ${outputPath} (${total} URLs)`);
 };
 
 // Only run automatically when this file is executed directly (`node
