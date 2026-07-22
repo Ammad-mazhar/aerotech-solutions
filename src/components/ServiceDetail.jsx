@@ -284,10 +284,16 @@ const ServiceDetail = () => {
                     "name": businessNAP.name,
                     "telephone": businessNAP.telephone
                 },
-                "areaServed": {
-                    "@type": "City",
-                    "name": "Bolingbrook, IL"
-                },
+                // Omitted (not replaced with a broader claim like "United
+                // States") for pages flagged as nationwide/topical rather
+                // than location-specific — city-level service-area targeting
+                // for those is planned via separate future location pages.
+                ...(seo.omitAreaServed ? {} : {
+                    "areaServed": {
+                        "@type": "City",
+                        "name": "Bolingbrook, IL"
+                    }
+                }),
                 "description": seo.metaDescription
             },
             {
@@ -379,7 +385,7 @@ const ServiceDetail = () => {
                         <div style={seoSectionStyle}>
                             <h2 style={seoHeadingStyle}>
                                 <MapPin color="#f97316" size={30} />
-                                {service.title} Repair in Bolingbrook &amp; the Chicago Suburbs
+                                {seo.introHeadingOverride || <>{service.title} Repair in Bolingbrook &amp; the Chicago Suburbs</>}
                             </h2>
                             {seo.introExpanded.map((para, i) => (
                                 <p key={i} style={seoParaStyle}>{para}</p>
@@ -1011,7 +1017,7 @@ const ServiceDetail = () => {
                         <div style={{ ...seoSectionStyle, textAlign: 'center' }}>
                             <div style={{ background: '#f97316', borderRadius: '32px', padding: '56px 40px' }}>
                                 <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', fontWeight: '900', color: '#7f1d1d', marginBottom: '16px' }}>
-                                    Need {service.title} Repair Near Bolingbrook Today?
+                                    {seo.ctaHeadingOverride || <>Need {service.title} Repair Near Bolingbrook Today?</>}
                                 </h2>
                                 <p style={{ color: '#7f1d1d', fontSize: '1.1rem', marginBottom: '28px', maxWidth: '600px', marginLeft: 'auto', marginRight: 'auto' }}>
                                     Book online in minutes, or call our team directly for same-day availability.

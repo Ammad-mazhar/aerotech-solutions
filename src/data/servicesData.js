@@ -109,7 +109,7 @@ image: "/water heater.webp",
         alt: "Nationwide Appliance Repair - Water Heater Repair",
         features: ["Leak Detection", "Element Replacement", "Tank Flushing"],
         problems: ["No hot water", "Leaking tank", "Strange noises", "Water too hot/cold", "Discolored water"],
-        description: "Ensure you always have hot water with our Nationwide Appliance Repair services. We diagnose and fix issues with tank and tankless water heaters. Whether it's sediment buildup, heating element failure, or leaks, our technicians restore your hot water supply quickly.",
+        description: "Keep your hot water running with professional repair for gas, electric, tank and tankless water heaters. Whether it's sediment buildup, heating element failure, or leaks, our technicians restore your hot water supply quickly.",
         whyChooseUs: "We understand the inconvenience of cold showers. Our team offers rapid diagnostics and repairs for all major water heater brands, ensuring you have reliable hot water."
     }
 };

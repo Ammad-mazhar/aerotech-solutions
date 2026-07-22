@@ -98,10 +98,10 @@ export const serviceSeoContent = {
   },
 
   "oven-stove-cooktop-repair": {
-    metaTitle: "Oven Repair Service | Gas & Electric | Aerotech Solution",
-    metaDescription: "Professional oven repair for gas, electric, wall, double, and convection ovens. Experienced technicians and honest, upfront diagnosis. Book oven repair today.",
+    metaTitle: "Oven, Stove & Cooktop Repair | Aerotech Solution",
+    metaDescription: "Professional repair for gas and electric ovens, stoves, and cooktops, including wall, double, and convection models. Honest, upfront diagnosis.",
     metaKeywords: "oven repair, oven repair near me, electric oven repair, gas oven repair service, oven range repair, wall oven repair, convection oven repair, double oven repair, oven control board repair, oven control panel repair, commercial oven repair near me",
-    h1Override: "Oven Repair",
+    h1Override: "Oven, Stove & Cooktop Repair Services",
     introExpanded: [
       "Searching for oven repair near me because a stove or oven won't heat properly? That kind of issue can derail every meal in the household, and the cause can range from a simple igniter problem to a failing control board. Aerotech Solution repairs gas and electric ovens, wall ovens, double ovens, oven-range units, and glass or induction cooktops, with the same precision diagnostic approach whether you're cooking on a builder-grade electric range or a professional-style gas range.",
       "Modern cooking appliances combine mechanical heating elements with increasingly sophisticated electronic controls, which means two ovens with the same symptom can have entirely different root causes. Rather than swapping parts based on guesswork, our technicians run full diagnostics on the igniter, thermostat, heating elements, and control board before recommending a repair — so you're booking a diagnosis, not a guess."
@@ -333,10 +333,13 @@ export const serviceSeoContent = {
   },
 
   "microwave-repair": {
-    metaTitle: "Microwave Repair Bolingbrook IL | Aerotech Solution",
-    metaDescription: "Microwave not heating or sparking? Safe, certified microwave repair for countertop & built-in units in Bolingbrook & Chicagoland.",
+    metaTitle: "Microwave Repair Service | Aerotech Solution",
+    metaDescription: "Professional microwave repair for countertop, built-in, over-the-range and drawer microwaves. Get an honest diagnosis and schedule service with Aerotech Solution.",
+    introHeadingOverride: "Microwave Repair Services",
+    ctaHeadingOverride: "Need Microwave Repair Today?",
+    omitAreaServed: true,
     introExpanded: [
-      "A microwave that runs but doesn't heat is one of the most common — and most misdiagnosed — kitchen appliance complaints. Aerotech Solution repairs both countertop and built-in drawer microwaves for households throughout Bolingbrook and the surrounding Chicago suburbs, with technicians specifically trained in the high-voltage safety procedures these units require.",
+      "A microwave that runs but doesn't heat is one of the most common — and most misdiagnosed — kitchen appliance complaints. Aerotech Solution repairs countertop, built-in, over-the-range, and drawer microwaves, with technicians specifically trained in the high-voltage safety procedures these units require.",
       "Microwaves store dangerously high electrical charge in their capacitors even after being unplugged, which is exactly why this is one appliance category we strongly discourage attempting to diagnose yourself. Our technicians follow proper discharge procedures before ever opening the cabinet, whether the issue is a failed magnetron, a worn door switch, or an unresponsive control panel."
     ],
     signsOfRepair: [
