@@ -72,10 +72,19 @@ export const generateSitemap = () => {
 
     xml += '</urlset>';
 
-    const outputPath = path.join(__dirname, '../public/sitemap.xml');
+    // Written directly into dist/ (the actual Netlify publish directory) —
+    // never into public/. Writing to public/ first and copying it into dist/
+    // afterward left a window where Vite's own automatic public/-to-dist/
+    // copy (which runs as part of the main build, before this closeBundle
+    // step) could shadow the fresh file with whatever stale sitemap.xml
+    // happened to be tracked in public/. There is no longer a public/
+    // sitemap.xml at all, so that copy has nothing to shadow this with.
+    const distDir = path.join(__dirname, '../dist');
+    fs.mkdirSync(distDir, { recursive: true });
+    const outputPath = path.join(distDir, 'sitemap.xml');
     fs.writeFileSync(outputPath, xml);
     const total = staticPaths.length + Object.keys(servicesData).length + blogsData.length;
-    console.log(`Sitemap generated successfully at ${outputPath} (${total} URLs)`);
+    console.log(`Final sitemap generated at dist/sitemap.xml: ${total} URLs`);
 };
 
 // Only run automatically when this file is executed directly (`node

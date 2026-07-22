@@ -3,8 +3,6 @@ import react from '@vitejs/plugin-react'
 import svgr from 'vite-plugin-svgr'
 import tailwindcss from '@tailwindcss/vite'
 import { execSync } from 'child_process'
-import fs from 'fs'
-import path from 'path'
 
 export default defineConfig({
   plugins: [
@@ -15,27 +13,25 @@ export default defineConfig({
       name: 'generate-sitemap-and-prerender',
       apply: 'build',
       // closeBundle runs after Vite has finished writing every file to dist/,
-      // so this is guaranteed to be the last write — no race with Vite's own
-      // public-dir copy, and dist/index.html is guaranteed to exist already
-      // for the prerender step to use as its template.
+      // so this is guaranteed to run last — no race with Vite's own
+      // public-dir copy. Deterministic order:
+      //   (1) full-body + <head> prerender, since it needs dist/index.html
+      //       as a template (already written by Vite's main build phase by
+      //       the time closeBundle fires);
+      //   (2) sitemap generation, writing directly into dist/sitemap.xml —
+      //       there is no public/sitemap.xml for Vite's own public-dir copy
+      //       to ever shadow this with on a later build;
+      //   (3) sitemap validation — a failure here throws (execSync exits
+      //       non-zero), which fails this whole `vite build`.
       closeBundle() {
-        // Deterministic order: (1) client assets are already written by Vite
-        // at this point (closeBundle runs last), so dist/index.html exists as
-        // a template — (2) full-body + <head> prerender runs next, since it
-        // needs that template — (3) sitemap is generated/copied last so it
-        // can't be shadowed or clobbered by an earlier step.
         console.log('Prerendering full route HTML...')
         execSync('node server/prerenderApp.mjs', { stdio: 'inherit' })
 
         console.log('Generating sitemap...')
         execSync('node server/generateSitemap.mjs', { stdio: 'inherit' })
 
-        // Copy the freshly generated sitemap directly into dist/ as the final
-        // step, so it can never be shadowed by a stale public/sitemap.xml copy.
-        fs.copyFileSync(
-          path.resolve(process.cwd(), 'public/sitemap.xml'),
-          path.resolve(process.cwd(), 'dist/sitemap.xml')
-        )
+        console.log('Validating sitemap...')
+        execSync('node server/validateSitemap.mjs', { stdio: 'inherit' })
       }
     }
   ],
