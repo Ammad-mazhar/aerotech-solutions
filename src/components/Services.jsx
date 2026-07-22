@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { servicesList, brands } from '../data/servicesData';
 import { routePath } from '../utils/seo';
@@ -107,12 +107,27 @@ const Services = () => {
         backgroundColor: '#052e16',
         color: 'white'
       }}>
-        <h1 style={{ fontSize: '1rem', letterSpacing: '8px', textTransform: 'uppercase', color: '#22c55e' }}>
+        <h2 style={{ fontSize: '1rem', letterSpacing: '8px', textTransform: 'uppercase', color: '#22c55e' }}>
           Aerotech Solution
-        </h1>
+        </h2>
         <p style={{ fontSize: '3rem', fontWeight: '900', marginTop: '20px' }}>
           Engineering Excellence.
         </p>
+        <Link
+          to={routePath('/services')}
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '10px',
+            marginTop: '28px',
+            color: '#f97316',
+            fontWeight: '700',
+            fontSize: '1.05rem',
+            textDecoration: 'none',
+          }}
+        >
+          View All Services <ArrowRight size={18} />
+        </Link>
       </div>
 
       {/* Brands Marquee */}

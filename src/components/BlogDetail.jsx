@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link, useParams, useNavigate } from 'react-router-dom';
-import { AlertCircle, ArrowLeft } from 'lucide-react';
+import { AlertCircle } from 'lucide-react';
 import { blogsData } from '../data/blogsData';
 import { blogSeoContent } from '../data/blogSeoContent';
-import { canonicalUrl, routePath } from '../utils/seo';
+import { canonicalUrl, routePath, breadcrumbSchema } from '../utils/seo';
 import { serviceAnchorText, relatedBlogLinks } from '../data/internalLinks';
+import Breadcrumb from './Breadcrumb';
 
 const BlogDetail = () => {
   const { id } = useParams();
@@ -13,6 +14,11 @@ const BlogDetail = () => {
   const post = blogsData.find((p) => p.id === id);
   const extra = blogSeoContent[id];
   const relatedReading = relatedBlogLinks[id] || [];
+  const breadcrumbTrail = post ? [
+    { label: 'Home', path: '/' },
+    { label: 'Blogs', path: '/blogs' },
+    { label: post.title, path: `/blogs/${post.id}` }
+  ] : [];
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -36,42 +42,38 @@ const BlogDetail = () => {
     );
   }
 
-  // JSON-LD: Article + FAQPage + BreadcrumbList (only added when deep SEO content exists for this post)
-  const structuredData = extra ? {
+  // JSON-LD: BreadcrumbList always present; Article + FAQPage only when deep
+  // SEO content exists for this post (unchanged from before).
+  const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "Article",
-        "headline": post.title,
-        "description": extra.metaDescription,
-        "image": `https://aerotechsolutioninc.com${post.image}`,
-        "datePublished": post.date,
-        "author": { "@type": "Organization", "name": "Aerotech Solution Inc" },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Aerotech Solution Inc",
-          "logo": { "@type": "ImageObject", "url": "https://aerotechsolutioninc.com/logo/logo 2.png" }
+      breadcrumbSchema(breadcrumbTrail),
+      ...(extra ? [
+        {
+          "@type": "Article",
+          "headline": post.title,
+          "description": extra.metaDescription,
+          "image": `https://aerotechsolutioninc.com${post.image}`,
+          "datePublished": post.date,
+          "author": { "@type": "Organization", "name": "Aerotech Solution Inc" },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Aerotech Solution Inc",
+            "logo": { "@type": "ImageObject", "url": "https://aerotechsolutioninc.com/logo/logo 2.png" }
+          },
+          "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl(`/blogs/${post.id}`) }
         },
-        "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl(`/blogs/${post.id}`) }
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": extra.faqs.map((f) => ({
-          "@type": "Question",
-          "name": f.q,
-          "acceptedAnswer": { "@type": "Answer", "text": f.a }
-        }))
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": canonicalUrl('/') },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": canonicalUrl('/blogs') },
-          { "@type": "ListItem", "position": 3, "name": post.title, "item": canonicalUrl(`/blogs/${post.id}`) }
-        ]
-      }
+        {
+          "@type": "FAQPage",
+          "mainEntity": extra.faqs.map((f) => ({
+            "@type": "Question",
+            "name": f.q,
+            "acceptedAnswer": { "@type": "Answer", "text": f.a }
+          }))
+        }
+      ] : [])
     ]
-  } : null;
+  };
 
   return (
     <>
@@ -106,20 +108,6 @@ const BlogDetail = () => {
             max-width: 820px;
             margin: 0 auto;
             padding: 0 1.5rem;
-          }
-          .blog-back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #a7f3d0;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            margin-bottom: 2rem;
-            transition: color 0.2s;
-          }
-          .blog-back-link:hover {
-            color: #f97316;
           }
           .blog-detail-meta {
             display: flex;
@@ -259,9 +247,7 @@ const BlogDetail = () => {
           }
         `}</style>
         <div className="blog-detail-container">
-          <Link to={routePath('/blogs')} className="blog-back-link">
-            <ArrowLeft size={16} /> Back to Blog
-          </Link>
+          <Breadcrumb items={breadcrumbTrail} />
 
           <div className="blog-detail-meta">
             <span>{post.date}</span>

@@ -1,6 +1,17 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { canonicalUrl } from '../utils/seo';
+import { canonicalUrl, breadcrumbSchema } from '../utils/seo';
+import Breadcrumb from './Breadcrumb';
+
+const breadcrumbTrail = [
+  { label: 'Home', path: '/' },
+  { label: 'Terms of Service', path: '/terms-of-service' }
+];
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [breadcrumbSchema(breadcrumbTrail)]
+};
 
 const TermsOfServicePage = () => {
   return (
@@ -14,11 +25,12 @@ const TermsOfServicePage = () => {
         <meta property="og:description" content="Review our service terms including payments, appointments, warranty, and cancellation policy before booking repair service." />
         <meta property="og:url" content={canonicalUrl('/terms-of-service')} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpeg" />
+        <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Aerotech Solution Terms & Conditions" />
         <meta name="twitter:description" content="Important service terms for appliance repair. Know our policies on appointments, payments, and warranties." />
-        <meta name="twitter:image" content="https://aerotechsolutioninc.com/banner-image.jpeg" />
+        <meta name="twitter:image" content="https://aerotechsolutioninc.com/banner-image.jpg" />
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
     <section className="terms-page">
       <style>{`
@@ -66,6 +78,8 @@ const TermsOfServicePage = () => {
         }
       `}</style>
       <div className="terms-container">
+        <Breadcrumb items={breadcrumbTrail} />
+
         <div className="terms-header">
           <h1>Terms of Service</h1>
           <p>Last updated: January 1, 2024</p>

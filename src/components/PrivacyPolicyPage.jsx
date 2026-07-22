@@ -1,6 +1,17 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { canonicalUrl } from '../utils/seo';
+import { canonicalUrl, breadcrumbSchema } from '../utils/seo';
+import Breadcrumb from './Breadcrumb';
+
+const breadcrumbTrail = [
+  { label: 'Home', path: '/' },
+  { label: 'Privacy Policy', path: '/privacy-policy' }
+];
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [breadcrumbSchema(breadcrumbTrail)]
+};
 
 const PrivacyPolicyPage = () => {
   return (
@@ -14,11 +25,12 @@ const PrivacyPolicyPage = () => {
         <meta property="og:description" content="Read our privacy policy. We do not sell your data and use information only for service delivery and communication." />
         <meta property="og:url" content={canonicalUrl('/privacy-policy')} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpeg" />
+        <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Aerotech Solution Privacy Policy" />
         <meta name="twitter:description" content="Committed to protecting your privacy during appliance repair services. Secure data handling guaranteed." />
-        <meta name="twitter:image" content="https://aerotechsolutioninc.com/banner-image.jpeg" />
+        <meta name="twitter:image" content="https://aerotechsolutioninc.com/banner-image.jpg" />
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
       <section className="policy-page">
         <style>{`
@@ -74,6 +86,8 @@ const PrivacyPolicyPage = () => {
           }
         `}</style>
         <div className="policy-container">
+          <Breadcrumb items={breadcrumbTrail} />
+
           <div className="policy-header">
             <h1>Privacy Policy</h1>
             <p>Last updated: January 1, 2024</p>

@@ -36,3 +36,25 @@ export function canonicalUrl(path) {
 export function routePath(path) {
     return withTrailingSlash(path);
 }
+
+/**
+ * Builds a schema.org BreadcrumbList object from an ordered list of
+ * { label, path } items (Home first, current page last) — the same shape
+ * <Breadcrumb> (src/components/Breadcrumb.jsx) takes, so a page defines its
+ * trail once and passes it to both, guaranteeing the visible breadcrumb and
+ * the structured data can never drift out of sync. Returns the bare
+ * "@type": "BreadcrumbList" object; wrap it in an "@graph" array alongside
+ * other schema types, or spread `{ "@context": "https://schema.org", ...breadcrumbSchema(items) }`
+ * for a standalone script tag on pages with no other structured data.
+ */
+export function breadcrumbSchema(items) {
+    return {
+        "@type": "BreadcrumbList",
+        itemListElement: items.map((item, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            name: item.label,
+            item: canonicalUrl(item.path)
+        }))
+    };
+}

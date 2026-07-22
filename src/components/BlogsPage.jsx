@@ -2,7 +2,18 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { blogsData } from '../data/blogsData';
-import { canonicalUrl, routePath } from '../utils/seo';
+import { canonicalUrl, routePath, breadcrumbSchema } from '../utils/seo';
+import Breadcrumb from './Breadcrumb';
+
+const breadcrumbTrail = [
+  { label: 'Home', path: '/' },
+  { label: 'Blogs', path: '/blogs' }
+];
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [breadcrumbSchema(breadcrumbTrail)]
+};
 
 const BlogsPage = () => {
   return (
@@ -16,11 +27,12 @@ const BlogsPage = () => {
         <meta property="og:description" content="Expert tips and guides for every major home appliance, written by certified Aerotech Solution technicians." />
         <meta property="og:url" content={canonicalUrl('/blogs')} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpeg" />
+        <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Aerotech Solution Blog | Appliance Repair Tips" />
         <meta name="twitter:description" content="Guides on refrigerators, ovens, washers, dryers, HVAC, and more from certified appliance repair technicians." />
-        <meta name="twitter:image" content="https://aerotechsolutioninc.com/banner-image.jpeg" />
+        <meta name="twitter:image" content="https://aerotechsolutioninc.com/banner-image.jpg" />
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
       <section className="blogs-page">
         <style>{`
@@ -181,6 +193,8 @@ const BlogsPage = () => {
           }
         `}</style>
         <div className="blogs-container">
+          <Breadcrumb items={breadcrumbTrail} />
+
           <div className="blogs-header">
             <h1>Appliance Repair Tips & Guides</h1>
             <p>Straightforward advice from our certified technicians on every appliance we service — what's normal, what's a warning sign, and when to call a professional.</p>

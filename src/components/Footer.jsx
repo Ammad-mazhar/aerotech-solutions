@@ -151,6 +151,16 @@ src="/logo/logo 2.png"
                   </a>
                 </li>
               ))}
+              <li>
+                <Link
+                  to={routePath('/services')}
+                  style={{ ...linkStyle, fontWeight: '700', color: '#f97316' }}
+                  onMouseEnter={(e) => { e.currentTarget.style.color = '#22c55e'; e.currentTarget.style.transform = 'translateX(5px)'; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.color = '#f97316'; e.currentTarget.style.transform = 'translateX(0)'; }}
+                >
+                  <ChevronRight size={14} /> View All Services
+                </Link>
+              </li>
             </ul>
           </div>
 

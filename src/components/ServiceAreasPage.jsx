@@ -1,7 +1,18 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { canonicalUrl, routePath } from '../utils/seo';
+import { canonicalUrl, routePath, breadcrumbSchema } from '../utils/seo';
+import Breadcrumb from './Breadcrumb';
+
+const breadcrumbTrail = [
+  { label: 'Home', path: '/' },
+  { label: 'Service Areas', path: '/service-areas' }
+];
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [breadcrumbSchema(breadcrumbTrail)]
+};
 
 const ServiceAreasPage = () => {
   return (
@@ -20,6 +31,7 @@ const ServiceAreasPage = () => {
         <meta name="twitter:title" content="Service Areas | Aerotech Solution Appliance Repair" />
         <meta name="twitter:description" content="Nationwide coverage with local expert technicians. Chicago, Northeast, South, West Coast. Licensed & insured service you can trust." />
         <meta name="twitter:image" content="https://aerotechsolutioninc.com/Washer Repair.jpg" />
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
       <section className="service-areas-page">
         <style>{`
@@ -172,6 +184,8 @@ const ServiceAreasPage = () => {
           }
         `}</style>
         <div className="sa-container">
+          <Breadcrumb items={breadcrumbTrail} />
+
           <div className="sa-header">
             <h1>Service Areas</h1>
             <p>

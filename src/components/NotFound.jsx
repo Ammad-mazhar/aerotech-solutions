@@ -16,11 +16,11 @@ const NotFound = () => {
             <meta property="og:description" content="Page not found. Visit our home page for appliance repair services." />
             <meta property="og:url" content={canonicalUrl('/')} />
             <meta property="og:type" content="website" />
-            <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpeg" />
+            <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpg" />
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:title" content="404 - Page Not Found" />
             <meta name="twitter:description" content="Return to Aerotech Solution home for professional appliance repair services." />
-            <meta name="twitter:image" content="https://aerotechsolutioninc.com/banner-image.jpeg" />
+            <meta name="twitter:image" content="https://aerotechsolutioninc.com/banner-image.jpg" />
           </Helmet>
           <div style={{
             minHeight: '100vh',

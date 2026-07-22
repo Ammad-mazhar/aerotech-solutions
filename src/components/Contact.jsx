@@ -5,7 +5,18 @@ import { useLocation } from 'react-router-dom';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import CustomSelect from './CustomSelect';
-import { canonicalUrl } from '../utils/seo';
+import { canonicalUrl, breadcrumbSchema } from '../utils/seo';
+import Breadcrumb from './Breadcrumb';
+
+const breadcrumbTrail = [
+  { label: 'Home', path: '/' },
+  { label: 'Contact', path: '/contact' }
+];
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [breadcrumbSchema(breadcrumbTrail)]
+};
 
 // Input sanitization helper
 const sanitizeInput = (value) => (value ? value.replace(/<[^>]*>?/gm, '') : '');
@@ -181,13 +192,17 @@ export default function Contact() {
         <meta property="og:description" content="Get fast response from factory-certified technicians. Licensed & insured, OEM parts, 90-day warranty. Nationwide service areas." />
         <meta property="og:url" content={canonicalUrl('/contact')} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpeg" />
+        <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Aerotech Solution Contact | Book Appliance Repair" />
         <meta name="twitter:description" content="Send service request or call (630) 943-5120. Real technicians, not middlemen. Same-day emergency response available across USA." />
-        <meta name="twitter:image" content="https://aerotechsolutioninc.com/banner-image.jpeg" />
+        <meta name="twitter:image" content="https://aerotechsolutioninc.com/banner-image.jpg" />
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
       <section id="contact" style={sectionStyle}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto 24px' }}>
+          <Breadcrumb items={breadcrumbTrail} />
+        </div>
         <div style={{ textAlign: 'center' }}>
           <h1 style={{ fontSize: '3rem', fontWeight: '900', color: '#ffffff', marginBottom: '16px', letterSpacing: '-1px' }}>Get in Touch</h1>
           <p style={{ fontSize: '1.125rem', color: '#a7f3d0', maxWidth: '600px', margin: '0 auto' }}>

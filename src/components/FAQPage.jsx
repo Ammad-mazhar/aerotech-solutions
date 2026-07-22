@@ -1,7 +1,18 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { canonicalUrl, routePath } from '../utils/seo';
+import { canonicalUrl, routePath, breadcrumbSchema } from '../utils/seo';
+import Breadcrumb from './Breadcrumb';
+
+const breadcrumbTrail = [
+  { label: 'Home', path: '/' },
+  { label: 'FAQ', path: '/faq' }
+];
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [breadcrumbSchema(breadcrumbTrail)]
+};
 
 const FAQPage = () => {
   return (
@@ -15,11 +26,12 @@ const FAQPage = () => {
         <meta property="og:description" content="Find answers to frequently asked questions about our repair services, warranties, and scheduling. Have more questions? Contact us directly." />
         <meta property="og:url" content={canonicalUrl('/faq')} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpeg" />
+        <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Aerotech Solution FAQ | Appliance Repair Questions" />
         <meta name="twitter:description" content="Appliance repair FAQs: warranty, service fees, scheduling, and more. Get answers before booking your service." />
-        <meta name="twitter:image" content="https://aerotechsolutioninc.com/banner-image.jpeg" />
+        <meta name="twitter:image" content="https://aerotechsolutioninc.com/banner-image.jpg" />
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
       <section className="faq-page">
         <style>{`
@@ -98,6 +110,8 @@ const FAQPage = () => {
           }
         `}</style>
         <div className="faq-container">
+          <Breadcrumb items={breadcrumbTrail} />
+
           <div className="faq-header">
             <h1>Frequently Asked Questions</h1>
             <p>Find answers to common questions about our appliance repair services.</p>

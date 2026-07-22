@@ -7,7 +7,18 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import CustomSelect from './CustomSelect';
 import { brands } from '../data/servicesData';
-import { canonicalUrl } from '../utils/seo';
+import { canonicalUrl, breadcrumbSchema } from '../utils/seo';
+import Breadcrumb from './Breadcrumb';
+
+const breadcrumbTrail = [
+  { label: 'Home', path: '/' },
+  { label: 'Book Service', path: '/book-service' }
+];
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [breadcrumbSchema(breadcrumbTrail)]
+};
 
 // Input sanitization helper to prevent XSS
 const sanitizeInput = (value) => (value ? value.replace(/<[^>]*>?/gm, '') : '');
@@ -126,13 +137,17 @@ export default function BookingForm() {
         <meta property="og:description" content="Schedule a certified technician online for fast, reliable appliance repair." />
         <meta property="og:url" content={canonicalUrl('/book-service')} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpeg" />
+        <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Book Appliance Repair Service | Aerotech Solution" />
         <meta name="twitter:description" content="Schedule a certified technician online for fast, reliable appliance repair." />
-        <meta name="twitter:image" content="https://aerotechsolutioninc.com/banner-image.jpeg" />
+        <meta name="twitter:image" content="https://aerotechsolutioninc.com/banner-image.jpg" />
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
       <section className="booking-form-wrapper">
+      <div style={{ maxWidth: '800px', margin: '0 auto 1.5rem' }}>
+        <Breadcrumb items={breadcrumbTrail} />
+      </div>
       <style>{`
         .booking-form-wrapper {
           padding: 4rem 1.5rem;

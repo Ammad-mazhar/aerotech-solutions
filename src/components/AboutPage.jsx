@@ -1,7 +1,18 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
-import { canonicalUrl, routePath } from '../utils/seo';
+import { canonicalUrl, routePath, breadcrumbSchema } from '../utils/seo';
+import Breadcrumb from './Breadcrumb';
+
+const breadcrumbTrail = [
+  { label: 'Home', path: '/' },
+  { label: 'About', path: '/about' }
+];
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [breadcrumbSchema(breadcrumbTrail)]
+};
 import {
   ShieldCheck,
   Settings,
@@ -99,8 +110,12 @@ const AboutPage = () => {
         <meta name="twitter:title" content="Aerotech Solution | Company Story & Technical Standards" />
         <meta name="twitter:description" content="Discover our mission, technical standards, and why we're the gold standard in appliance restoration. 90-day warranty, OEM parts guaranteed." />
         <meta name="twitter:image" content="https://aerotechsolutioninc.com/about-us.jpg" />
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
       <div style={{ backgroundColor: colors.navy, overflow: 'hidden' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '16px 24px 0' }}>
+          <Breadcrumb items={breadcrumbTrail} />
+        </div>
         {/* 1. HERO SECTION */}
         <section style={{ ...sectionSpacing, position: 'relative' }}>
           <div style={{

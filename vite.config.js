@@ -19,6 +19,14 @@ export default defineConfig({
       // public-dir copy, and dist/index.html is guaranteed to exist already
       // for the prerender step to use as its template.
       closeBundle() {
+        // Deterministic order: (1) client assets are already written by Vite
+        // at this point (closeBundle runs last), so dist/index.html exists as
+        // a template — (2) full-body + <head> prerender runs next, since it
+        // needs that template — (3) sitemap is generated/copied last so it
+        // can't be shadowed or clobbered by an earlier step.
+        console.log('Prerendering full route HTML...')
+        execSync('node server/prerenderApp.mjs', { stdio: 'inherit' })
+
         console.log('Generating sitemap...')
         execSync('node server/generateSitemap.mjs', { stdio: 'inherit' })
 
@@ -28,9 +36,6 @@ export default defineConfig({
           path.resolve(process.cwd(), 'public/sitemap.xml'),
           path.resolve(process.cwd(), 'dist/sitemap.xml')
         )
-
-        console.log('Prerendering per-route metadata...')
-        execSync('node server/prerenderMeta.mjs', { stdio: 'inherit' })
       }
     }
   ],

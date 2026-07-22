@@ -142,6 +142,24 @@ const Navbar = () => {
                   marginTop: '8px',
                   zIndex: 10000,
                 }}>
+                  <Link
+                    to={routePath('/services')}
+                    style={{
+                      display: 'block',
+                      padding: '10px 20px',
+                      color: '#f97316',
+                      textDecoration: 'none',
+                      fontSize: '1rem',
+                      fontWeight: '700',
+                      borderBottom: '1px solid #f3f4f6',
+                      transition: 'background-color 0.15s',
+                    }}
+                    onMouseEnter={e => e.currentTarget.style.backgroundColor = '#fff7ed'}
+                    onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}
+                    onClick={() => setIsServicesOpen(false)}
+                  >
+                    View All Services
+                  </Link>
                   {servicesList.map((service) => (
                     <Link
                       key={service.id}
@@ -349,6 +367,16 @@ const Navbar = () => {
                 </button>
                 {isServicesOpen && (
                   <div style={{ paddingBottom: '8px' }}>
+                    <Link
+                      to={routePath('/services')}
+                      onClick={() => { setIsMobileMenuOpen(false); setIsServicesOpen(false); }}
+                      style={{
+                        display: 'block', color: '#f97316', textDecoration: 'none',
+                        padding: '8px 16px', fontSize: '0.9rem', fontWeight: '700',
+                      }}
+                    >
+                      View All Services
+                    </Link>
                     {servicesList.map((service) => (
                       <Link
                         key={service.id}

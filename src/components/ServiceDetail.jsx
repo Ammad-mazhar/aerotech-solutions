@@ -19,7 +19,8 @@ import {
 import { servicesData, servicesList, brands as defaultBrands } from '../data/servicesData';
 import { serviceSeoContent } from '../data/serviceSeoContent';
 import { blogsData } from '../data/blogsData';
-import { canonicalUrl, routePath } from '../utils/seo';
+import { canonicalUrl, routePath, breadcrumbSchema } from '../utils/seo';
+import Breadcrumb from './Breadcrumb';
 
 const ServiceDetail = () => {
     const { id } = useParams();
@@ -60,6 +61,12 @@ const ServiceDetail = () => {
     }
 
     const Icon = service.icon || AlertCircle;
+
+    const breadcrumbTrail = [
+        { label: 'Home', path: '/' },
+        { label: 'Services', path: '/services' },
+        { label: `${service.title} Repair`, path: `/services/${id}` }
+    ];
 
     const waterHeaterBrands = [
         "A. O. Smith", "Bradford White", "Rheem", "Rinnai", "Bosch", "American Standard"
@@ -248,9 +255,11 @@ const ServiceDetail = () => {
         addressCountry: 'US'
     };
 
-    const structuredData = seo ? {
+    const structuredData = {
         "@context": "https://schema.org",
         "@graph": [
+            breadcrumbSchema(breadcrumbTrail),
+            ...(seo ? [
             {
                 "@type": "LocalBusiness",
                 "name": businessNAP.name,
@@ -292,8 +301,9 @@ const ServiceDetail = () => {
                     }
                 }))
             }
+            ] : [])
         ]
-    } : null;
+    };
 
     return (
         <>
@@ -318,6 +328,9 @@ const ServiceDetail = () => {
                 )}
             </Helmet>
             <div style={{ backgroundColor: '#052e16', paddingBottom: '100px' }}>
+                <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '16px 20px 0' }}>
+                    <Breadcrumb items={breadcrumbTrail} />
+                </div>
                 {/* Hero Section */}
                 <section style={{
                     ...heroSectionStyle,
