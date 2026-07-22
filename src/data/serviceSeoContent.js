@@ -393,7 +393,7 @@ export const serviceSeoContent = {
       { q: "Do you repair built-in drawer microwaves?", a: "Yes, we service built-in, drawer-style, over-the-range, and countertop microwaves across all major brands." },
       { q: "Is it worth repairing an older microwave?", a: "For door switches, turntable motors, and control panels, generally yes. Magnetron replacement on a unit older than 8 years is worth comparing against the cost of a new microwave." },
       { q: "Why won't my microwave start even though the display is lit?", a: "This is frequently a worn door interlock switch preventing operation as a safety measure, rather than an electronic failure." },
-      { q: "Do you offer same-day microwave repair near Bolingbrook?", a: "Yes, most switch, motor, and control panel repairs are completed same day using parts commonly stocked on our service vehicles." }
+      { q: "Do you offer same-day microwave repair?", a: "Same-day microwave repair appointments may be available depending on technician availability, the required parts, and your service location. Contact Aerotech Solution to confirm current scheduling." }
     ]
   },
 
