@@ -185,7 +185,7 @@ export default function Contact() {
     <>
       <Helmet>
         <title>Aerotech Solution | Contact Us - Appliance Repair Service Request</title>
-        <meta name="description" content="Contact Aerotech Solution for emergency appliance repair. Schedule service online or call (630) 943-5120. Serving selected ZIP codes across Chicagoland and surrounding Illinois communities, with same-day availability for refrigerators, HVAC, washers and more." />
+        <meta name="description" content="Contact Aerotech Solution for emergency appliance repair. Schedule service online or call (630) 943-5120. Serving selected ZIP codes across Chicagoland and surrounding Illinois communities. Same-day appointments may be available based on technician availability, service location and the time the request is received." />
         <meta name="keywords" content="contact appliance repair, schedule repair service, emergency HVAC service, refrigerator repair contact, Aerotech Solution phone" />
         <link rel="canonical" href={canonicalUrl('/contact')} />
         <meta property="og:title" content="Contact Aerotech Solution | Appliance Service" />
@@ -195,7 +195,7 @@ export default function Contact() {
         <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Aerotech Solution Contact | Book Appliance Repair" />
-        <meta name="twitter:description" content="Send service request or call (630) 943-5120. Real technicians, not middlemen. Same-day emergency response available across selected Chicagoland-area ZIP codes." />
+        <meta name="twitter:description" content="Send service request or call (630) 943-5120. Real technicians, not middlemen. Same-day appointments may be available based on technician availability across selected Chicagoland-area ZIP codes." />
         <meta name="twitter:image" content="https://aerotechsolutioninc.com/banner-image.jpg" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>

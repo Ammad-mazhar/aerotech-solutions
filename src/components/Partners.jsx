@@ -4,8 +4,8 @@ import { ShieldCheck, ArrowUpRight } from 'lucide-react';
 
 const Partners = () => {
     const partners = [
-        "Home Warranty of America",
-        "Choice Home Warranty"
+        "Home Warranty Coordination",
+        "Property Management Support"
     ];
 
     return (
@@ -21,14 +21,14 @@ const Partners = () => {
                     >
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-slate-900 text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-6">
                             <ShieldCheck size={12} className="text-orange-400" />
-                            Trusted Ecosystem
+                            Service Coordination
                         </div>
                         <h2 className="text-4xl md:text-5xl font-black text-white tracking-tighter leading-tight">
-                            Powering Operations for <br className="hidden md:block" /> Industry Leaders.
+                            Support for Property and <br className="hidden md:block" /> Warranty Service Work
                         </h2>
                         <p className="mt-6 text-green-200 text-lg max-w-2xl mx-auto font-medium leading-relaxed">
-                            We serve as the primary specialized technical force for top-tier home warranty
-                            and property asset management groups.
+                            We coordinate appliance, HVAC and water-heater service for homeowners, property
+                            managers and warranty-related service requests across approved ZIP codes.
                         </p>
                     </motion.div>
 
@@ -59,7 +59,7 @@ const Partners = () => {
                         className="mt-16 pt-8 border-t border-green-800 w-full flex justify-center"
                     >
                         <p className="text-green-300 text-xs font-bold uppercase tracking-widest">
-                            Authorized Service Network • 2024-2025 Partner Program
+                            Chicagoland Service Network • Selected ZIP Coverage
                         </p>
                     </motion.div>
                 </div>

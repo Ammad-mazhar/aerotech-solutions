@@ -262,11 +262,12 @@ export const serviceSeoContent = {
   },
 
   "washer-repair": {
-    metaTitle: "Washer Repair Bolingbrook IL | Washing Machine Repair",
-    metaDescription: "Washer repair & washing machine repair near you in Bolingbrook & Chicagoland. Front-load, top-load, same-day service. GE, LG, Samsung, Whirlpool & more.",
-    metaKeywords: "washer repair, washer repair near me, washing machine repair, washing machine repair near me, washer repair service, front load washer repair, top load washer repair, emergency washer repair, same day washer repair, residential washer repair, washer technician, washer diagnostics, washer troubleshooting",
+    metaTitle: "Washer Repair Service | Aerotech Solution",
+    h1Override: "Washer Repair",
+    metaDescription: "Washer repair and washing machine repair across selected Chicagoland-area ZIP codes. Front-load, top-load, same-day appointments may be available. GE, LG, Samsung, Whirlpool & more.",
+    metaKeywords: "washer repair, washer repair near me, washing machine repair, washing machine repair near me, washer repair service, front load washer repair, top load washer repair, emergency washer repair, residential washer repair, washer technician, washer diagnostics, washer troubleshooting",
     introExpanded: [
-      "Searching for washer repair near me or washing machine repair near me in Bolingbrook? A washing machine that won't drain, spin, or fill properly can bring laundry day to a complete stop, and the cause often involves more than one component working together. Aerotech Solution provides washer repair service for both front load washer repair and top load washer repair, with same-day washer repair available for most common failures throughout Bolingbrook and the greater Chicago suburbs.",
+      "Searching for washer repair near me or washing machine repair near me? A washing machine that won't drain, spin, or fill properly can bring laundry day to a complete stop, and the cause often involves more than one component working together. Aerotech Solution provides washer repair service for both front load washer repair and top load washer repair across our approved Illinois service ZIP codes. Same-day appointments may be available based on technician availability, service location and the time the request is received.",
       "Washing machines combine water-level sensors, a drain pump, a motor and belt or direct-drive system, and — on many modern units — a digital control board that reads dozens of internal fault codes. Our washer technicians perform full washer diagnostics and troubleshooting on every visit to find the actual root cause, rather than a quick fix aimed only at the symptom reported, so the same issue doesn't resurface a few months later.",
       "Our primary focus is residential washer repair, though we're also equipped to assist with light commercial washer repair for smaller multi-family properties. Whatever the brand, configuration, or how urgent the situation, our team brings the same diagnostic-first approach to every emergency washer repair call."
     ],
@@ -313,7 +314,7 @@ export const serviceSeoContent = {
       "Use the correct detergent type and amount for your machine — excess suds can interfere with sensors and drainage.",
       "Check supply hoses annually for cracking or bulging, and replace them proactively before they fail and cause water damage."
     ],
-    whyChooseUsExpanded: "As a washer repair company trusted throughout Bolingbrook and the Chicago suburbs, Aerotech Solution's washer technicians perform a complete multi-point inspection on every washing machine repair service call — checking the pump, belt, suspension, door seal, and control board — instead of stopping at the first likely cause. Common replacement parts are carried, model-specific parts are sourced after diagnosis, and every repair comes with an upfront fixed quote and is backed by our workmanship warranty.",
+    whyChooseUsExpanded: "As a washer repair company trusted throughout our approved Chicagoland-area ZIP codes, Aerotech Solution's washer technicians perform a complete multi-point inspection on every washing machine repair service call — checking the pump, belt, suspension, door seal, and control board — instead of stopping at the first likely cause. Common replacement parts are carried, model-specific parts are sourced after diagnosis, and every repair comes with an upfront fixed quote and is backed by our workmanship warranty.",
     faqs: [
       { q: "Why won't my washer drain?", a: "A clogged drain pump, kinked hose, or debris caught in the pump filter is the most common cause. Front-load washers often have an accessible filter that can trap coins and small items." },
       { q: "Why is my washer not spinning?", a: "A failed lid switch, worn drive belt, or failing motor coupling are the most frequent causes, depending on your washer's design." },
@@ -328,12 +329,13 @@ export const serviceSeoContent = {
       { q: "Do you repair both front load and top load washing machines?", a: "Yes, our washer technicians service both front load washer repair and top load washer repair across all major brands." },
       { q: "What brands of washing machines do you repair?", a: "We service all major washer brands, including GE, LG, Samsung, Whirlpool, Maytag, Kenmore, Frigidaire, Electrolux, and Amana, among others." },
       { q: "Do you repair commercial washing machines?", a: "Our primary focus is residential washer repair, though we're able to assist with light commercial washer repair for smaller multi-family properties. Contact us to discuss your specific setup." },
-      { q: "Do you offer same-day washer repair near Bolingbrook?", a: "Yes, most pump, belt, and seal repairs are completed the same day using parts commonly stocked on our service vehicles." }
+      { q: "Do you offer same-day washer repair?", a: "Same-day appointments may be available based on technician availability, service location and the time the request is received. Repair timing depends on the diagnosis and required-part availability." }
     ]
   },
 
   "microwave-repair": {
     metaTitle: "Microwave Repair Service | Aerotech Solution",
+    h1Override: "Microwave Repair",
     metaDescription: "Professional microwave repair for countertop, built-in, over-the-range and drawer microwaves. Get an honest diagnosis and schedule service with Aerotech Solution.",
     introHeadingOverride: "Microwave Repair Services",
     ctaHeadingOverride: "Need Microwave Repair Today?",
@@ -393,7 +395,7 @@ export const serviceSeoContent = {
       { q: "Do you repair built-in drawer microwaves?", a: "Yes, we service built-in, drawer-style, over-the-range, and countertop microwaves across all major brands." },
       { q: "Is it worth repairing an older microwave?", a: "For door switches, turntable motors, and control panels, generally yes. Magnetron replacement on a unit older than 8 years is worth comparing against the cost of a new microwave." },
       { q: "Why won't my microwave start even though the display is lit?", a: "This is frequently a worn door interlock switch preventing operation as a safety measure, rather than an electronic failure." },
-      { q: "Do you offer same-day microwave repair?", a: "Same-day microwave repair appointments may be available depending on technician availability, the required parts, and your service location. Contact Aerotech Solution to confirm current scheduling." }
+      { q: "Do you offer same-day microwave repair?", a: "Same-day appointments may be available based on technician availability, service location and the time the request is received. Support hours are Monday–Saturday, 9:00 AM–5:00 PM Central Time." }
     ]
   },
 

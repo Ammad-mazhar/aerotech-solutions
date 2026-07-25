@@ -1023,7 +1023,7 @@ const ServiceDetail = () => {
                                     {seo.ctaHeadingOverride || <>Need {service.title} Repair Near Bolingbrook Today?</>}
                                 </h2>
                                 <p style={{ color: '#7f1d1d', fontSize: '1.1rem', marginBottom: '28px', maxWidth: '600px', marginLeft: 'auto', marginRight: 'auto' }}>
-                                    Book online in minutes, or call our team directly for same-day availability.
+                                    Book online in minutes, or call our team directly. Same-day appointments may be available based on technician availability, service location and the time the request is received.
                                 </p>
                                 <Link
                                     to={routePath('/book-service')}

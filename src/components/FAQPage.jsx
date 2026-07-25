@@ -20,7 +20,7 @@ const FAQPage = () => {
       <Helmet>
         <title>Aerotech Solution | FAQ - Appliance Repair Frequently Asked Questions</title>
         <meta name="description" content="Common questions about Aerotech Solution appliance repair services, warranty, service call fees, appointment scheduling, and commercial service answered." />
-        <meta name="keywords" content="appliance repair FAQ, Aerotech Solution questions, repair warranty, service call fee, same day service" />
+        <meta name="keywords" content="appliance repair FAQ, Aerotech Solution questions, repair warranty, service call fee, appointment scheduling" />
         <link rel="canonical" href={canonicalUrl('/faq')} />
         <meta property="og:title" content="FAQ | Aerotech Solution Appliance Repair" />
         <meta property="og:description" content="Find answers to frequently asked questions about our repair services, warranties, and scheduling. Have more questions? Contact us directly." />
@@ -135,7 +135,7 @@ const FAQPage = () => {
             <div className="faq-item">
               <h3 className="faq-question">How quickly can you come out for a repair?</h3>
               <p className="faq-answer">
-                We understand the inconvenience of a broken appliance. We strive to offer same-day or next-day service whenever possible. You can check our availability and book an appointment online instantly.
+                Same-day appointments may be available based on technician availability, service location and the time the request is received. Support hours are Monday–Saturday, 9:00 AM–5:00 PM Central Time. You can check our availability and book an appointment online instantly.
               </p>
             </div>
 

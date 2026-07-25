@@ -35,18 +35,18 @@ const ServicesPage = () => {
   return (
     <>
       <Helmet>
-        <title>Appliance Repair &amp; HVAC Services | Aero Tech Solutions</title>
-        <meta name="description" content="Browse all appliance, HVAC, and water heater repair services from Aero Tech Solutions — refrigerators, washers, dryers, ovens, and more, by experienced technicians." />
+        <title>Appliance Repair &amp; HVAC Services | Aerotech Solution</title>
+        <meta name="description" content="Browse all appliance, HVAC, and water heater repair services from Aerotech Solution — refrigerators, washers, dryers, ovens, and more, by experienced technicians." />
         <meta name="keywords" content="appliance repair services, HVAC repair, water heater repair, refrigerator repair, washer dryer repair, oven stove repair, Aerotech Solution" />
         <link rel="canonical" href={canonicalUrl('/services')} />
-        <meta property="og:title" content="Appliance Repair & HVAC Services | Aero Tech Solutions" />
-        <meta property="og:description" content="Browse all appliance, HVAC, and water heater repair services from Aero Tech Solutions, performed by experienced technicians." />
+        <meta property="og:title" content="Appliance Repair & HVAC Services | Aerotech Solution" />
+        <meta property="og:description" content="Browse all appliance, HVAC, and water heater repair services from Aerotech Solution, performed by experienced technicians." />
         <meta property="og:url" content={canonicalUrl('/services')} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Appliance Repair & HVAC Services | Aero Tech Solutions" />
-        <meta name="twitter:description" content="Browse all appliance, HVAC, and water heater repair services from Aero Tech Solutions." />
+        <meta name="twitter:title" content="Appliance Repair & HVAC Services | Aerotech Solution" />
+        <meta name="twitter:description" content="Browse all appliance, HVAC, and water heater repair services from Aerotech Solution." />
         <meta name="twitter:image" content="https://aerotechsolutioninc.com/banner-image.jpg" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
@@ -221,7 +221,7 @@ const ServicesPage = () => {
           <div className="services-hub-header">
             <h1>Appliance Repair, HVAC &amp; Water Heater Services</h1>
             <p>
-              Aero Tech Solutions repairs the major appliances and systems that keep a home running — kitchen and
+              Aerotech Solution repairs the major appliances and systems that keep a home running — kitchen and
               laundry appliances, heating and cooling, and water heaters. Every service below is handled by
               trained and experienced technicians who carry common replacement parts, with model-specific parts sourced after diagnosis and a fixed quote provided before any repair begins.
             </p>

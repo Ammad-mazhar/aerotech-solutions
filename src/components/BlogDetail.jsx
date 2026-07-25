@@ -314,7 +314,7 @@ const BlogDetail = () => {
             <Link to={routePath(`/services/${post.id}`)} style={{ color: '#f97316', fontWeight: '700' }}>
               {serviceAnchorText[post.id] || `${post.title.toLowerCase()} service`}
             </Link>{' '}
-            with same-day availability and a workmanship warranty.
+            with same-day appointments available based on technician availability, service location and the time the request is received, backed by a workmanship warranty.
           </p>
 
           <div className="blog-detail-cta">

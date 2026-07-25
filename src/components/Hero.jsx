@@ -113,7 +113,7 @@ const Hero = () => {
     <>
       <Helmet>
         <title>Aerotech Solution | Professional Appliance Restoration & HVAC Services</title>
-        <meta name="description" content="Aerotech Solution provides elite repair and restoration for premium appliances, HVAC, and laundry systems across Chicagoland and surrounding Illinois communities. Experienced technicians for all major brands. Same-day service available." />
+        <meta name="description" content="Aerotech Solution provides elite repair and restoration for premium appliances, HVAC, and laundry systems across Chicagoland and surrounding Illinois communities. Experienced technicians for all major brands. Same-day appointments may be available based on technician availability." />
         <meta name="keywords" content="appliance repair Chicagoland, HVAC solutions, furnace restoration, refrigerator repair, washer dryer service, oven stove repair, microwave repair, water heater service, Aerotech Solution" />
         <link rel="canonical" href={canonicalUrl('/')} />
         <link rel="preload" as="image" href="/banner-image.jpg" fetchPriority="high" />
@@ -124,7 +124,7 @@ const Hero = () => {
         <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Aerotech Solution | Elite Appliance & HVAC Services" />
-        <meta name="twitter:description" content="Residential appliance repair across Chicagoland and surrounding Illinois communities. Common parts carried, professional dispatch, same-day availability for emergencies." />
+        <meta name="twitter:description" content="Residential appliance repair across Chicagoland and surrounding Illinois communities. Common parts carried, professional dispatch, same-day appointments may be available for emergencies." />
         <meta name="twitter:image" content="https://aerotechsolutioninc.com/banner-image.jpg" />
       </Helmet>
       <section id="home" style={sectionStyle}>
@@ -192,7 +192,7 @@ const Hero = () => {
             <div style={{ width: '1px', height: '20px', backgroundColor: '#cbd5e1' }}></div>
             <div style={trustItemStyle}>
               <Clock size={18} color="#22c55e" />
-              Same-Day Availability
+              Flexible Scheduling
             </div>
           </div>
         </div>

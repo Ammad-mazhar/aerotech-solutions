@@ -22,7 +22,7 @@ export const blogSeoContent = {
       },
       {
         heading: "Signs You Need Professional Repair",
-        intro: "Some symptoms are safe to monitor for a day or two; others should prompt a same-day call.",
+        intro: "Some symptoms are safe to monitor for a day or two; others should prompt you to contact a qualified technician promptly.",
         items: [
           { title: "The compressor runs constantly and never cycles off", text: "This usually means the system is struggling to reach temperature, often due to a leak or blocked airflow." },
           { title: "Food spoils noticeably faster than normal", text: "A sign that internal temperatures are running warmer than the display suggests." },
@@ -96,7 +96,7 @@ export const blogSeoContent = {
       {
         heading: "Why Choose Aerotech Solution Inc.",
         paragraphs: [
-          "We treat refrigerator repair as a food-safety issue first, which is why we prioritize same-day appointments for cooling failures rather than treating them like a routine maintenance queue.",
+          "We treat refrigerator repair as a food-safety issue first, and same-day appointments may be available for cooling failures based on technician availability, service location and the time the request is received.",
           "Our technicians are trained and experienced across major brands, carry common replacement parts, and source model-specific parts after diagnosis. Every completed repair is backed by a workmanship warranty, and every appointment follows the same diagnostic-first approach: confirm the actual cause, explain the repair options, and test the unit before considering the job done."
         ]
       },
@@ -114,13 +114,13 @@ export const blogSeoContent = {
       { q: "Why is my refrigerator making loud noises?", a: "Clicking often means a start relay struggling to kick-start the compressor. Buzzing or rattling frequently points to a fan blade obstructed by ice or a loose interior panel." },
       { q: "How much does refrigerator repair cost?", a: "Cost depends entirely on which component has failed — fan motors and door seals are relatively affordable, while sealed-system or compressor repairs cost more due to specialized labor. We provide a fixed quote after diagnosis." },
       { q: "Is it worth repairing an old refrigerator?", a: "For most component failures under about 10–12 years of age, yes. Compressor failure on a unit older than that is where comparing repair cost against a new model makes more sense." },
-      { q: "How long does refrigerator repair take?", a: "Most electrical, fan, and seal repairs are completed same-day using parts commonly stocked on our service vehicles. Sealed-system repairs occasionally take longer if a specific part needs to be sourced." },
+      { q: "How long does refrigerator repair take?", a: "Repair timing depends on the diagnosis and required-part availability. Electrical, fan, and seal repairs often use parts commonly stocked on our service vehicles, while sealed-system repairs occasionally take longer if a specific part needs to be sourced." },
       { q: "What brands do you repair?", a: "We service all major refrigerator brands, including Whirlpool, Samsung, LG, GE, KitchenAid, Frigidaire, and Liebherr, among others." },
       { q: "Can a refrigerator compressor be repaired?", a: "In most cases a failed compressor is replaced rather than repaired, since it's a sealed unit. This is one of the more involved refrigerator repairs and is a key factor in the repair-versus-replace decision on older units." },
       { q: "How long do refrigerators last?", a: "Most refrigerators last 12–15 years with reasonable maintenance, though this varies by brand, usage, and how consistently the condenser coils are kept clean." },
       { q: "Why won't my refrigerator turn on at all?", a: "Before assuming a major failure, we check the outlet, power cord, and any tripped internal breaker or failed start relay — these are more common causes than a fully dead unit." },
       { q: "Why is my ice maker not working?", a: "This is usually isolated to a faulty water inlet valve, a frozen supply line, or a jammed ejector arm, and typically doesn't affect the refrigerator's main cooling system." },
-      { q: "Do you offer same-day refrigerator repair?", a: "Cooling failures are treated as a priority given the food-safety risk, and same-day appointments may be available depending on technician availability, service location, and the parts required. Contact Aerotech Solution to confirm the earliest available appointment." },
+      { q: "Do you offer same-day refrigerator repair?", a: "Cooling failures are treated as a priority given the food-safety risk. Same-day appointments may be available based on technician availability, service location and the time the request is received. Support hours are Monday–Saturday, 9:00 AM–5:00 PM Central Time." },
       { q: "Is refrigerator repair covered under warranty?", a: "Repairs completed by Aerotech Solution include a workmanship warranty on both the parts installed and the labor performed. If your unit is still under manufacturer warranty, let us know and we can discuss how that applies." }
     ]
   },
@@ -241,7 +241,7 @@ export const blogSeoContent = {
       { q: "What brands of washers do you repair?", a: "We service all major washer brands, including Whirlpool, Maytag, LG, Samsung, Electrolux, and Kenmore, among others." },
       { q: "Do you repair both front-load and top-load washers?", a: "Yes, our technicians service both configurations across all major brands." },
       { q: "Can I fix a washing machine myself?", a: "Basic tasks like clearing the pump filter or checking hoses are reasonable to handle yourself. Belt, motor, suspension, and electrical repairs are best left to a technician given the complexity and safety considerations involved." },
-      { q: "Do you offer same-day washer repair?", a: "Same-day appointments may be available depending on technician availability, service location, and the parts required. Contact Aerotech Solution to confirm the earliest available appointment." }
+      { q: "Do you offer same-day washer repair?", a: "Same-day appointments may be available based on technician availability, service location and the time the request is received. Support hours are Monday–Saturday, 9:00 AM–5:00 PM Central Time." }
     ]
   },
 
@@ -360,7 +360,7 @@ export const blogSeoContent = {
       { q: "Is a burning smell from my dryer dangerous?", a: "Yes, it should be treated as urgent. The dryer shouldn't be used again until it's inspected, since it can indicate a genuine fire risk." },
       { q: "How long do dryers last?", a: "Most dryers last 10–13 years with reasonable maintenance, particularly consistent lint trap and vent cleaning." },
       { q: "Do you repair gas and electric dryers?", a: "Yes, our technicians are trained and equipped to diagnose and repair both gas and electric dryers across all major brands." },
-      { q: "Do you offer same-day dryer repair?", a: "Same-day appointments may be available depending on technician availability, service location, and the parts required. Contact Aerotech Solution to confirm the earliest available appointment." }
+      { q: "Do you offer same-day dryer repair?", a: "Same-day appointments may be available based on technician availability, service location and the time the request is received. Support hours are Monday–Saturday, 9:00 AM–5:00 PM Central Time." }
     ]
   },
 
@@ -479,7 +479,7 @@ export const blogSeoContent = {
       { q: "Can a garbage disposal cause dishwasher problems?", a: "Yes — if the dishwasher drains through the garbage disposal, a clog in the disposal or a leftover installation knockout plug will prevent the dishwasher from draining even though the dishwasher itself is fine." },
       { q: "How long do dishwashers last?", a: "Most dishwashers last 9–12 years with reasonable maintenance, particularly regular filter cleaning." },
       { q: "Do you repair all dishwasher brands?", a: "Yes, we service all major dishwasher brands, including Whirlpool, KitchenAid, GE, Samsung, LG, and Frigidaire, among others." },
-      { q: "Do you offer same-day dishwasher repair?", a: "Same-day appointments may be available depending on technician availability, service location, and the parts required. Contact Aerotech Solution to confirm the earliest available appointment." }
+      { q: "Do you offer same-day dishwasher repair?", a: "Same-day appointments may be available based on technician availability, service location and the time the request is received. Support hours are Monday–Saturday, 9:00 AM–5:00 PM Central Time." }
     ]
   },
 
@@ -596,7 +596,7 @@ export const blogSeoContent = {
       { q: "How much does microwave repair cost?", a: "It depends on the failed component — door switches and turntable motors are relatively affordable, while magnetron replacement costs more. We provide a fixed quote after diagnosis." },
       { q: "Do you repair built-in drawer microwaves?", a: "Yes, we service built-in, drawer-style, over-the-range, and countertop microwaves across all major brands." },
       { q: "Is it worth repairing an older microwave?", a: "For door switches, waveguide covers, and turntable motors, generally yes. Magnetron replacement on a unit older than 8 years is worth comparing against the cost of a new microwave." },
-      { q: "Do you offer same-day microwave repair?", a: "Same-day appointments may be available depending on technician availability, service location, and the parts required. Contact Aerotech Solution to confirm the earliest available appointment." },
+      { q: "Do you offer same-day microwave repair?", a: "Same-day appointments may be available based on technician availability, service location and the time the request is received. Support hours are Monday–Saturday, 9:00 AM–5:00 PM Central Time." },
       { q: "What brands of microwaves do you repair?", a: "We service all major microwave brands, including GE, Whirlpool, KitchenAid, Samsung, LG, and Frigidaire, among others." },
       { q: "Why does my microwave door not latch properly?", a: "A worn or misaligned door interlock switch is the usual cause, and it's treated as a priority repair since these switches are a core safety feature." },
       { q: "Why is my microwave making a buzzing noise?", a: "This can point to a failing high-voltage transformer or capacitor and is worth having inspected before continued use." }
@@ -716,7 +716,7 @@ export const blogSeoContent = {
       { q: "Do you repair both gas and electric ranges?", a: "Yes, our technicians are trained and equipped to diagnose and repair gas, electric, and dual-fuel ranges, ovens, and cooktops." },
       { q: "Why does my oven take so long to preheat?", a: "A weakening heating element or igniter is the most likely cause, especially if this has developed gradually rather than happening all at once." },
       { q: "Is it dangerous to keep using a cracked cooktop?", a: "Yes. A crack can allow spills to reach live wiring and heating components beneath the glass, creating a real shock and fire risk in addition to the visible damage." },
-      { q: "Do you offer same-day oven repair?", a: "Same-day appointments may be available depending on technician availability, service location, and the parts required. Contact Aerotech Solution to confirm the earliest available appointment." },
+      { q: "Do you offer same-day oven repair?", a: "Same-day appointments may be available based on technician availability, service location and the time the request is received. Support hours are Monday–Saturday, 9:00 AM–5:00 PM Central Time." },
       { q: "What brands of ranges do you repair?", a: "We service all major range and cooktop brands, including GE, Whirlpool, KitchenAid, Cafe, SMEG, Frigidaire, and Samsung, among others." },
       { q: "Why is only one burner on my electric cooktop not working?", a: "This points directly at that burner's individual heating element or its burner socket, since each electric burner operates independently of the others." }
     ]
@@ -960,7 +960,7 @@ export const blogSeoContent = {
       { q: "Do you repair tankless water heaters?", a: "Yes, we diagnose and repair tankless systems, including ignition, venting, and flow sensor issues shown through fault codes." },
       { q: "Why is my water discolored or rusty?", a: "Frequently linked to anode rod depletion or sediment buildup, both addressed through flushing and maintenance if caught early." },
       { q: "Is a leaking T&P valve dangerous to ignore?", a: "It shouldn't be ignored, since it's a critical safety component, but a leaking valve is a common and usually straightforward repair rather than a sign of tank failure." },
-      { q: "Do you offer same-day water heater repair?", a: "Same-day appointments may be available depending on technician availability, service location, and the parts required. Contact Aerotech Solution to confirm the earliest available appointment." },
+      { q: "Do you offer same-day water heater repair?", a: "Same-day appointments may be available based on technician availability, service location and the time the request is received. Support hours are Monday–Saturday, 9:00 AM–5:00 PM Central Time." },
       { q: "What brands of water heaters do you repair?", a: "We service all major brands, including A. O. Smith, Bradford White, Rheem, Rinnai, Bosch, and American Standard, among others." },
       { q: "How often should a water heater be flushed?", a: "At least once a year, more often in areas with hard water, to prevent sediment buildup and maintain efficiency." }
     ]
@@ -1080,7 +1080,7 @@ export const blogSeoContent = {
       { q: "Do you install new garbage disposals?", a: "Yes, we handle full disposal installation and replacement in addition to repairs, including upgrading to a more powerful unit if needed." },
       { q: "Why does my garbage disposal smell bad?", a: "Debris built up in hard-to-reach areas, or a partial drain blockage trapping food particles nearby, are the most common causes." },
       { q: "How long do garbage disposals last?", a: "Most garbage disposals last 8–12 years with reasonable care and avoiding fibrous foods that commonly cause jams." },
-      { q: "Do you offer same-day garbage disposal repair?", a: "Same-day appointments may be available depending on technician availability, service location, and the parts required. Contact Aerotech Solution to confirm the earliest available appointment." },
+      { q: "Do you offer same-day garbage disposal repair?", a: "Same-day appointments may be available based on technician availability, service location and the time the request is received. Support hours are Monday–Saturday, 9:00 AM–5:00 PM Central Time." },
       { q: "What brands of garbage disposals do you repair?", a: "We service all major brands, including InSinkErator, Waste King, KitchenAid, Moen, Whirlpool, and GE, among others." }
     ]
   }

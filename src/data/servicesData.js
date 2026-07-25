@@ -21,10 +21,10 @@ image: "/refrigerator-repair.webp",
         imageHeight: 1600,
         alt: "Premium Kitchen Appliance Service - Refrigerator Repair",
 
-        features: ["Same Day Service", "Common Parts Carried", "1-Year Warranty"],
+        features: ["Flexible Scheduling", "Common Parts Carried", "1-Year Warranty"],
         problems: ["Not cooling", "Leaking water", "Excessive noise", "Ice maker not working", "Constant running"],
         description: "Our experienced technicians specialize in high-end refrigeration systems, offering Premium Kitchen Appliance Service. We perform Electrical Diagnostics to resolve complex issues ranging from compressor failures and sealed system leaks to digital control board malfunctions.",
-        whyChooseUs: "Choosing Aerotech means engaging trained, experienced experts who understand the nuances of modern refrigeration. We prioritize your food safety and convenience with same-day appointments, carrying common replacement parts and sourcing model-specific parts after diagnosis."
+        whyChooseUs: "Choosing Aerotech means engaging trained, experienced experts who understand the nuances of modern refrigeration. Same-day appointments may be available based on technician availability, service location and the time the request is received, and we carry common replacement parts while sourcing model-specific parts after diagnosis."
     },
     "oven-stove-cooktop-repair": {
         id: "oven-stove-cooktop-repair",

@@ -1,30 +1,28 @@
 import React from 'react';
 
-const Testimonials = () => {
-  const testimonials = [
-    {
-      id: 1,
-      name: "Jennifer Wu",
-      role: "Naperville, IL",
-      content: "I thought my Sub-Zero fridge was done for. Another company told me to buy a new one, but the Aerotech tech identified a specific control board issue immediately. He had the part in his truck and fixed it in under an hour. Saved me thousands.",
-      rating: 5
-    },
-    {
-      id: 2,
-      name: "David Miller",
-      role: "Bolingbrook, IL",
-      content: "Finally, a service that actually shows up when they say they will. My dryer was making a terrifying screeching noise. The technician was polite, wore shoe covers, and explained exactly why the bearing failed. Honest pricing and zero upsells.",
-      rating: 5
-    },
-    {
-      id: 3,
-      name: "The Hendersons",
-      role: "Downers Grove, IL",
-      content: "We've used Aerotech for our dishwasher and now our oven. It's rare to find this level of craftsmanship anymore. They don't just swap parts; they actually troubleshoot the root cause. Professional, clean, and incredibly skilled.",
-      rating: 5
-    }
-  ];
+// Factual service-standards cards — replaces the previous testimonials
+// section, which used three customer names/quotes that were not genuine.
+// No invented reviews, anonymous quotes, or fabricated customer statements
+// are used here; every statement below is a verified operational fact.
+const serviceStandards = [
+  {
+    id: 1,
+    title: "Approved ZIP Coverage",
+    content: "All nine services are available across 379 approved ZIP codes in Chicagoland and surrounding Illinois communities."
+  },
+  {
+    id: 2,
+    title: "Service Hours",
+    content: "Support is available Monday through Saturday, 9:00 AM–5:00 PM Central Time. Closed Sunday."
+  },
+  {
+    id: 3,
+    title: "Parts Support",
+    content: "Technicians carry commonly used replacement parts. Model-specific or additional required parts can be sourced after diagnosis."
+  }
+];
 
+const Testimonials = () => {
   return (
     <section id="testimonials" className="testimonials-section">
       <style>{`
@@ -74,45 +72,16 @@ const Testimonials = () => {
           transform: translateY(-5px);
           box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
         }
-        .testimonial-rating {
-          color: #fbbf24;
-          font-size: 1.25rem;
-          margin-bottom: 1rem;
-        }
-        .testimonial-content {
-          color: #d1d5db;
-          font-style: italic;
-          margin-bottom: 1.5rem;
-          line-height: 1.6;
-          flex-grow: 1;
-        }
-        .testimonial-author {
-          display: flex;
-          align-items: center;
-          gap: 1rem;
-          margin-top: auto;
-        }
-        .author-avatar {
-          width: 48px;
-          height: 48px;
-          background-color: #22c55e;
-          color: white;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-weight: 600;
-          font-size: 1.25rem;
-        }
-        .author-info h4 {
-          font-size: 1rem;
-          font-weight: 600;
+        .standard-title {
+          font-size: 1.15rem;
+          font-weight: 700;
           color: #ffffff;
-          margin: 0;
+          margin: 0 0 0.75rem;
         }
-        .author-info span {
-          font-size: 0.875rem;
-          color: #9ca3af;
+        .standard-content {
+          color: #d1d5db;
+          margin: 0;
+          line-height: 1.6;
         }
         @media (max-width: 768px) {
           .testimonials-header h2 {
@@ -122,25 +91,14 @@ const Testimonials = () => {
       `}</style>
       <div className="testimonials-container">
         <div className="testimonials-header">
-          <h2>What Our Customers Say</h2>
-          <p>Don't just take our word for it. Here's what our satisfied customers have to say about our appliance repair services.</p>
+          <h2>Service Standards</h2>
+          <p>What you can expect when scheduling service with Aerotech Solution.</p>
         </div>
         <div className="testimonials-grid">
-          {testimonials.map((testimonial) => (
-            <div key={testimonial.id} className="testimonial-card">
-              <div className="testimonial-rating">
-                {'★'.repeat(testimonial.rating)}
-              </div>
-              <p className="testimonial-content">"{testimonial.content}"</p>
-              <div className="testimonial-author">
-                <div className="author-avatar">
-                  {testimonial.name.charAt(0)}
-                </div>
-                <div className="author-info">
-                  <h4>{testimonial.name}</h4>
-                  <span>{testimonial.role}</span>
-                </div>
-              </div>
+          {serviceStandards.map((item) => (
+            <div key={item.id} className="testimonial-card">
+              <h3 className="standard-title">{item.title}</h3>
+              <p className="standard-content">{item.content}</p>
             </div>
           ))}
         </div>
