@@ -32,8 +32,33 @@ const DIST_DIR = path.join(ROOT_DIR, 'dist');
 const HEAD_MARKER_RE = /<!-- HELMET_HEAD_START[\s\S]*?HELMET_HEAD_END -->/;
 const ROOT_DIV_RE = /<div id="root"><\/div>/;
 
+// Navbar and Footer both render an <img> for the site logo, but (per the big
+// comment on AppRoutes in src/App.jsx) they're rendered as two separate,
+// independent renderToPipeableStream calls rather than one tree — so React
+// 19's automatic image-preload hoisting fires once per render and emits two
+// byte-for-byte identical <link rel="preload" as="image"> tags for the same
+// logo href, which this function's caller then simply concatenates. Browsers
+// already de-duplicate the *network request* for identical preload hrefs, so
+// this was never a double-download; it's just redundant markup. This strips
+// exact-duplicate preload tags (keeping the first occurrence) purely as a
+// string operation on the already-assembled head — it does not touch, call,
+// or reorder the four separate render() invocations in src/entry-server.jsx,
+// so the documented Suspense-resolution workaround they exist for is
+// unaffected. Tags that differ in any way (e.g. the mobile/desktop hero
+// preloads, which have different hrefs and media attributes) are untouched.
+const PRELOAD_LINK_RE = /<link rel="preload"[^>]*>/g;
+function dedupeIdenticalPreloads(head) {
+    const seen = new Set();
+    return head.replace(PRELOAD_LINK_RE, (tag) => {
+        if (seen.has(tag)) return '';
+        seen.add(tag);
+        return tag;
+    });
+}
+
 function buildPage(template, { head, body }) {
-    let page = template.replace(HEAD_MARKER_RE, `<!-- HELMET_HEAD_START -->\n  ${head}\n  <!-- HELMET_HEAD_END -->`);
+    const dedupedHead = dedupeIdenticalPreloads(head);
+    let page = template.replace(HEAD_MARKER_RE, `<!-- HELMET_HEAD_START -->\n  ${dedupedHead}\n  <!-- HELMET_HEAD_END -->`);
     page = page.replace(ROOT_DIV_RE, `<div id="root">${body}</div>`);
     return page;
 }

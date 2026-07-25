@@ -116,7 +116,12 @@ const Hero = () => {
         <meta name="description" content="Aerotech Solution provides elite repair and restoration for premium appliances, HVAC, and laundry systems across Chicagoland and surrounding Illinois communities. Experienced technicians for all major brands. Same-day appointments may be available based on technician availability." />
         <meta name="keywords" content="appliance repair Chicagoland, HVAC solutions, furnace restoration, refrigerator repair, washer dryer service, oven stove repair, microwave repair, water heater service, Aerotech Solution" />
         <link rel="canonical" href={canonicalUrl('/')} />
-        <link rel="preload" as="image" href="/banner-image.jpg" fetchPriority="high" />
+        {/* Two mutually-exclusive media-gated preloads (not one) so the
+            browser only ever fetches the single image its own viewport will
+            actually use — matching the `.hero-bg` background-image rules
+            below exactly, breakpoint for breakpoint. */}
+        <link rel="preload" as="image" href="/banner-image-mobile.jpg" fetchPriority="high" media="(max-width: 767px)" />
+        <link rel="preload" as="image" href="/banner-image.jpg" fetchPriority="high" media="(min-width: 768px)" />
         <meta property="og:title" content="Aerotech Solution | Professional Appliance Restoration & HVAC Services" />
         <meta property="og:description" content="Premium appliance restoration across Chicagoland and surrounding Illinois communities. From HVAC calibration to kitchen system solutions, we bring your home back to factory standards with trained, experienced technicians." />
         <meta property="og:url" content={canonicalUrl('/')} />
@@ -128,14 +133,24 @@ const Hero = () => {
         <meta name="twitter:image" content="https://aerotechsolutioninc.com/banner-image.jpg" />
       </Helmet>
       <section id="home" style={sectionStyle}>
+        <style>{`
+          .hero-bg {
+            background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.4) 100%), url("/banner-image.jpg");
+          }
+          @media (max-width: 767px) {
+            .hero-bg {
+              background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.4) 100%), url("/banner-image-mobile.jpg");
+            }
+          }
+        `}</style>
         <motion.div
+          className="hero-bg"
           style={{
             position: 'absolute',
             top: 0,
             left: 0,
             width: '100%',
             height: '100%',
-            backgroundImage: 'linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.4) 100%), url("/banner-image.jpg")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             zIndex: 0,

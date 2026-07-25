@@ -59,7 +59,7 @@ const Navbar = () => {
             flexShrink: 0,
           }}>
             <img
-              src="/logo/logo 2.png"
+              src="/logo/logo-optimized.webp"
               alt="Aerotech Solution"
               style={{
                 height: '60px',
