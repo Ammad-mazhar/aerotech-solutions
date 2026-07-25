@@ -1,0 +1,380 @@
+zip,state,county,city,radius,distance
+60440,IL,Will,Bolingbrook,6,0.81
+60565,IL,Dupage,Naperville,6,4.50
+60517,IL,Dupage,Woodridge,6,4.55
+60490,IL,Will,Bolingbrook,6,6.82
+60516,IL,Dupage,Downers Grove,6,6.92
+60439,IL,Cook,Lemont,6,7.48
+60446,IL,Will,Romeoville,6,7.69
+60561,IL,Dupage,Darien,6,8.19
+60540,IL,Dupage,Naperville,6,9.20
+60532,IL,Dupage,Lisle,6,9.74
+60441,IL,Will,Lockport,6,9.95
+60564,IL,Will,Naperville,6,10.90
+60566,IL,Dupage,Naperville,6,11.28
+60567,IL,Dupage,Naperville,6,11.28
+60527,IL,Dupage,Willowbrook,6,12.06
+60515,IL,Dupage,Downers Grove,6,12.52
+60559,IL,Dupage,Westmont,6,13.04
+60563,IL,Dupage,Naperville,6,13.39
+60585,IL,Will,Plainfield,6,13.59
+60514,IL,Dupage,Clarendon Hills,6,13.88
+60598,IL,Dupage,Aurora,6,14.31
+60491,IL,Will,Homer Glen,6,14.38
+60403,IL,Will,Crest Hill,6,14.83
+60572,IL,Dupage,Aurora,6,15.44
+60189,IL,Dupage,Wheaton,6,15.49
+60504,IL,Dupage,Aurora,6,15.51
+60522,IL,Dupage,Hinsdale,6,15.53
+60544,IL,Will,Plainfield,6,15.74
+60480,IL,Cook,Willow Springs,6,15.78
+60503,IL,Will,Aurora,6,16.12
+60521,IL,Dupage,Hinsdale,6,16.17
+60519,IL,Dupage,Eola,6,16.64
+60569,IL,Dupage,Aurora,6,17.39
+60464,IL,Cook,Palos Park,6,17.62
+60555,IL,Dupage,Warrenville,6,17.73
+60523,IL,Dupage,Oak Brook,6,17.81
+60137,IL,Dupage,Glen Ellyn,6,17.87
+60435,IL,Will,Joliet,6,18.00
+60558,IL,Cook,Western Springs,6,18.12
+60432,IL,Will,Joliet,6,18.22
+60467,IL,Cook,Orland Park,6,18.59
+60502,IL,Dupage,Aurora,6,18.70
+60187,IL,Dupage,Wheaton,6,19.24
+60138,IL,Dupage,Glen Ellyn,6,19.51
+60525,IL,Cook,La Grange,6,19.69
+60434,IL,Will,Joliet,6,19.72
+60148,IL,Dupage,Lombard,6,19.92
+60458,IL,Cook,Justice,6,20.08
+60505,IL,Kane,Aurora,6,20.13
+60465,IL,Cook,Palos Hills,6,20.13
+60190,IL,Dupage,Winfield,6,20.23
+60457,IL,Cook,Hickory Hills,6,20.25
+60599,IL,Dupage,Fox Valley,6,20.30
+60586,IL,Will,Plainfield,6,20.49
+60181,IL,Dupage,Villa Park,6,21.16
+60462,IL,Cook,Orland Park,6,21.57
+60507,IL,Kane,Aurora,6,21.79
+60568,IL,Kane,Aurora,6,21.80
+60501,IL,Cook,Summit Argo,6,21.88
+60526,IL,Cook,La Grange Park,6,21.96
+60455,IL,Cook,Bridgeview,6,22.29
+60543,IL,Kendall,Oswego,6,22.40
+60154,IL,Cook,Westchester,6,22.40
+60433,IL,Will,Joliet,6,22.80
+60162,IL,Cook,Hillside,6,22.82
+60482,IL,Cook,Worth,6,22.87
+60513,IL,Cook,Brookfield,6,23.01
+60186,IL,Dupage,West Chicago,6,23.14
+60431,IL,Will,Joliet,6,23.28
+60451,IL,Will,New Lenox,6,23.30
+60126,IL,Dupage,Elmhurst,6,23.35
+60199,IL,Dupage,Carol Stream,6,23.78
+60436,IL,Will,Joliet,6,23.82
+60463,IL,Cook,Palos Heights,6,23.85
+60538,IL,Kendall,Montgomery,6,23.96
+60116,IL,Dupage,Carol Stream,6,23.99
+60128,IL,Dupage,Carol Stream,6,23.99
+60132,IL,Dupage,Carol Stream,6,23.99
+60534,IL,Cook,Lyons,6,24.01
+60197,IL,Dupage,Carol Stream,6,24.01
+60448,IL,Will,Mokena,6,24.07
+60415,IL,Cook,Chicago Ridge,6,24.13
+60139,IL,Dupage,Glendale Heights,6,24.15
+60188,IL,Dupage,Carol Stream,6,24.17
+60163,IL,Cook,Berkeley,6,24.47
+60185,IL,Dupage,West Chicago,6,24.59
+60155,IL,Cook,Broadview,6,24.68
+60404,IL,Will,Shorewood,6,24.71
+60546,IL,Cook,Riverside,6,24.94
+60487,IL,Cook,Tinley Park,6,25.01
+60459,IL,Cook,Burbank,6,25.28
+60104,IL,Cook,Bellwood,6,25.43
+60453,IL,Cook,Oak Lawn,6,25.74
+60101,IL,Dupage,Addison,6,25.83
+60542,IL,Kane,North Aurora,6,26.00
+60539,IL,Kane,Mooseheart,6,26.15
+60141,IL,Cook,Hines,6,26.18
+60454,IL,Cook,Oak Lawn,6,26.22
+60638,IL,Cook,Chicago,6,26.44
+60506,IL,Kane,Aurora,6,26.54
+60418,IL,Cook,Crestwood,6,26.88
+60117,IL,Dupage,Bloomingdale,6,26.98
+60510,IL,Kane,Batavia,6,27.08
+60402,IL,Cook,Berwyn,6,27.11
+60165,IL,Cook,Stone Park,6,27.27
+60153,IL,Cook,Maywood,6,27.32
+60108,IL,Dupage,Bloomingdale,6,27.61
+60682,IL,Cook,Chicago,6,27.75
+60130,IL,Cook,Forest Park,6,27.81
+60803,IL,Cook,Alsip,6,27.82
+60164,IL,Cook,Melrose Park,6,28.13
+60160,IL,Cook,Melrose Park,6,28.17
+60456,IL,Cook,Hometown,6,28.25
+60161,IL,Cook,Melrose Park,6,28.26
+60452,IL,Cook,Oak Forest,6,28.30
+60512,IL,Kendall,Bristol,6,28.49
+60499,IL,Cook,Bedford Park,6,28.65
+60477,IL,Cook,Tinley Park,6,28.67
+60445,IL,Cook,Midlothian,6,29.10
+60134,IL,Kane,Geneva,6,29.25
+60157,IL,Dupage,Medinah,6,29.63
+60305,IL,Cook,River Forest,6,29.70
+60655,IL,Cook,Chicago,6,29.84
+60304,IL,Cook,Oak Park,6,29.95
+60804,IL,Cook,Cicero,6,29.98
+60131,IL,Cook,Franklin Park,6,29.99
+60652,IL,Cook,Chicago,6,30.06
+60105,IL,Dupage,Bensenville,6,30.09
+60399,IL,Dupage,Wood Dale,6,30.09
+60143,IL,Dupage,Itasca,6,30.15
+60191,IL,Dupage,Wood Dale,6,30.27
+60172,IL,Dupage,Roselle,6,30.46
+60301,IL,Cook,Oak Park,6,30.57
+60805,IL,Cook,Evergreen Park,6,30.59
+60106,IL,Dupage,Bensenville,6,30.64
+60629,IL,Cook,Chicago,6,30.66
+60472,IL,Cook,Robbins,6,30.79
+60701,IL,Cook,Chicago,6,30.95
+60171,IL,Cook,River Grove,6,31.05
+60447,IL,Grundy,Minooka,6,31.07
+60421,IL,Will,Elwood,6,31.08
+60133,IL,Cook,Hanover Park,6,31.14
+60303,IL,Cook,Oak Park,6,31.15
+60688,IL,Cook,Chicago,6,31.27
+60302,IL,Cook,Oak Park,6,31.50
+60423,IL,Will,Frankfort,6,31.61
+60174,IL,Kane,Saint Charles,6,31.63
+60184,IL,Dupage,Wayne,6,31.87
+60632,IL,Cook,Chicago,6,31.91
+60410,IL,Will,Channahon,6,32.26
+60560,IL,Kendall,Yorkville,6,32.39
+60644,IL,Cook,Chicago,6,32.56
+60103,IL,Dupage,Bartlett,6,32.57
+60406,IL,Cook,Blue Island,6,32.65
+60478,IL,Cook,Country Club Hills,6,32.66
+60707,IL,Cook,Elmwood Park,6,32.69
+60469,IL,Cook,Posen,6,32.85
+60176,IL,Cook,Schiller Park,6,33.04
+60428,IL,Cook,Markham,6,33.28
+60623,IL,Cook,Chicago,6,33.38
+60666,IL,Cook,Chicago,6,33.53
+60554,IL,Kane,Sugar Grove,6,33.67
+60643,IL,Cook,Chicago,6,33.89
+60193,IL,Cook,Schaumburg,6,34.18
+60636,IL,Cook,Chicago,6,34.21
+60009,IL,Cook,Elk Grove Village,6,34.52
+60634,IL,Cook,Chicago,6,34.59
+60620,IL,Cook,Chicago,6,34.78
+60147,IL,Kane,Lafox,6,34.78
+60624,IL,Cook,Chicago,6,34.88
+60007,IL,Cook,Elk Grove Village,6,34.97
+60429,IL,Cook,Hazel Crest,6,35.10
+60651,IL,Cook,Chicago,6,35.15
+60443,IL,Cook,Matteson,6,35.22
+60639,IL,Cook,Chicago,6,35.54
+60426,IL,Cook,Harvey,6,35.71
+60706,IL,Cook,Harwood Heights,6,35.83
+60442,IL,Will,Manhattan,6,36.05
+60609,IL,Cook,Chicago,6,36.46
+60194,IL,Cook,Schaumburg,6,36.57
+60621,IL,Cook,Chicago,6,36.58
+60107,IL,Cook,Streamwood,6,36.60
+60656,IL,Cook,Chicago,6,36.77
+60608,IL,Cook,Chicago,6,36.82
+60159,IL,Cook,Schaumburg,6,36.83
+60168,IL,Cook,Schaumburg,6,36.83
+60422,IL,Cook,Flossmoor,6,36.87
+60018,IL,Cook,Des Plaines,6,37.17
+60430,IL,Cook,Homewood,6,37.23
+60827,IL,Cook,Riverdale,6,37.28
+60612,IL,Cook,Chicago,6,37.46
+60120,IL,Kane,Elgin,6,37.50
+60461,IL,Cook,Olympia Fields,6,37.74
+60628,IL,Cook,Chicago,6,37.84
+60175,IL,Kane,Saint Charles,6,37.96
+60641,IL,Cook,Chicago,6,38.07
+60471,IL,Cook,Richton Park,6,38.07
+60545,IL,Kendall,Plano,6,38.07
+60177,IL,Kane,South Elgin,6,38.11
+60183,IL,Kane,Wasco,6,38.21
+60019,IL,Cook,Des Plaines,6,38.31
+60695,IL,Cook,Chicago,6,38.46
+60664,IL,Cook,Chicago,6,38.47
+60668,IL,Cook,Chicago,6,38.47
+60670,IL,Cook,Chicago,6,38.47
+60673,IL,Cook,Chicago,6,38.47
+60675,IL,Cook,Chicago,6,38.47
+60677,IL,Cook,Chicago,6,38.47
+60678,IL,Cook,Chicago,6,38.47
+60680,IL,Cook,Chicago,6,38.47
+60681,IL,Cook,Chicago,6,38.47
+60684,IL,Cook,Chicago,6,38.47
+60685,IL,Cook,Chicago,6,38.47
+60686,IL,Cook,Chicago,6,38.47
+60687,IL,Cook,Chicago,6,38.47
+60690,IL,Cook,Chicago,6,38.47
+60691,IL,Cook,Chicago,6,38.47
+60693,IL,Cook,Chicago,6,38.47
+60694,IL,Cook,Chicago,6,38.47
+60696,IL,Cook,Chicago,6,38.47
+60697,IL,Cook,Chicago,6,38.47
+60699,IL,Cook,Chicago,6,38.47
+60169,IL,Cook,Hoffman Estates,6,38.56
+60619,IL,Cook,Chicago,6,38.80
+60631,IL,Cook,Chicago,6,38.82
+60449,IL,Will,Monee,6,38.82
+60173,IL,Cook,Schaumburg,6,38.93
+60647,IL,Cook,Chicago,6,38.95
+60195,IL,Cook,Schaumburg,6,39.35
+60119,IL,Kane,Elburn,6,39.54
+60622,IL,Cook,Chicago,6,39.56
+60068,IL,Cook,Park Ridge,6,39.59
+60419,IL,Cook,Dolton,6,39.62
+60607,IL,Cook,Chicago,6,39.69
+60630,IL,Cook,Chicago,6,39.75
+60017,IL,Cook,Des Plaines,6,39.91
+60637,IL,Cook,Chicago,6,40.15
+60616,IL,Cook,Chicago,6,40.18
+60005,IL,Cook,Arlington Heights,6,40.23
+60466,IL,Cook,Park Forest,6,40.27
+60144,IL,Kane,Kaneville,6,40.34
+60196,IL,Cook,Schaumburg,6,40.36
+60615,IL,Cook,Chicago,6,40.45
+60511,IL,Kane,Big Rock,6,40.51
+60669,IL,Cook,Chicago,6,40.53
+60653,IL,Cook,Chicago,6,40.56
+60642,IL,Cook,Chicago,6,40.59
+60661,IL,Cook,Chicago,6,40.61
+60473,IL,Cook,South Holland,6,40.66
+60618,IL,Cook,Chicago,6,40.74
+60484,IL,Will,University Park,6,40.76
+60689,IL,Cook,Chicago,6,40.93
+60606,IL,Cook,Chicago,6,41.10
+60121,IL,Kane,Elgin,6,41.16
+60122,IL,Dupage,Carol Stream,6,41.16
+60674,IL,Cook,Chicago,6,41.31
+60605,IL,Cook,Chicago,6,41.41
+60192,IL,Cook,Hoffman Estates,6,41.44
+60654,IL,Cook,Chicago,6,41.48
+60476,IL,Cook,Thornton,6,41.62
+60016,IL,Cook,Des Plaines,6,41.67
+60604,IL,Cook,Chicago,6,41.68
+60541,IL,Kendall,Newark,6,41.68
+60008,IL,Cook,Rolling Meadows,6,41.71
+60056,IL,Cook,Mount Prospect,6,41.80
+60603,IL,Cook,Chicago,6,41.81
+60602,IL,Cook,Chicago,6,41.81
+60646,IL,Cook,Chicago,6,41.92
+60617,IL,Cook,Chicago,6,42.06
+60123,IL,Kane,Elgin,6,42.09
+60610,IL,Cook,Chicago,6,42.13
+60536,IL,Kendall,Millbrook,6,42.16
+60425,IL,Cook,Glenwood,6,42.16
+60714,IL,Cook,Niles,6,42.21
+60412,IL,Cook,Chicago Heights,6,42.25
+60601,IL,Cook,Chicago,6,42.26
+60633,IL,Cook,Chicago,6,42.33
+60614,IL,Cook,Chicago,6,42.53
+60649,IL,Cook,Chicago,6,42.58
+60625,IL,Cook,Chicago,6,42.63
+60611,IL,Cook,Chicago,6,43.05
+60179,IL,Cook,Hoffman Estates,6,43.35
+60657,IL,Cook,Chicago,6,43.47
+60006,IL,Cook,Arlington Heights,6,43.57
+60712,IL,Cook,Lincolnwood,6,43.62
+60053,IL,Cook,Morton Grove,6,43.85
+60659,IL,Cook,Chicago,6,44.05
+60613,IL,Cook,Chicago,6,44.10
+60409,IL,Cook,Calumet City,6,44.11
+60411,IL,Cook,Chicago Heights,6,44.32
+60067,IL,Cook,Palatine,6,44.36
+60475,IL,Cook,Steger,6,44.45
+60077,IL,Cook,Skokie,6,44.90
+60481,IL,Will,Wilmington,6,44.98
+60438,IL,Cook,Lansing,6,45.30
+60640,IL,Cook,Chicago,6,45.37
+60038,IL,Cook,Palatine,6,45.49
+60055,IL,Cook,Palatine,6,45.49
+60078,IL,Cook,Palatine,6,45.49
+60094,IL,Cook,Palatine,6,45.49
+60645,IL,Cook,Chicago,6,46.04
+60070,IL,Cook,Prospect Heights,6,46.07
+60029,IL,Cook,Golf,6,46.19
+60004,IL,Cook,Arlington Heights,6,46.24
+60660,IL,Cook,Chicago,6,46.38
+60468,IL,Will,Peotone,6,46.42
+60025,IL,Cook,Glenview,6,46.55
+60537,IL,Kendall,Millington,6,46.68
+60076,IL,Cook,Skokie,6,46.84
+60118,IL,Kane,Dundee,6,46.88
+60124,IL,Kane,Elgin,6,47.33
+60026,IL,Cook,Glenview,6,47.38
+60450,IL,Grundy,Morris,6,47.56
+60626,IL,Cook,Chicago,6,47.74
+60151,IL,Kane,Maple Park,6,47.79
+60074,IL,Cook,Palatine,6,47.98
+60548,IL,Dekalb,Sandwich,6,48.03
+60095,IL,Cook,Palatine,6,48.24
+60202,IL,Cook,Evanston,6,48.27
+60203,IL,Cook,Evanston,6,48.33
+60090,IL,Cook,Wheeling,6,48.44
+60416,IL,Grundy,Coal City,6,48.52
+60204,IL,Cook,Evanston,6,49.04
+60520,IL,Dekalb,Hinckley,6,49.35
+60417,IL,Will,Crete,6,49.53
+60201,IL,Cook,Evanston,6,49.76
+60062,IL,Cook,Northbrook,6,50.14
+60091,IL,Cook,Wilmette,6,50.30
+60011,IL,Lake,Barrington,6,50.36
+60110,IL,Kane,Carpentersville,6,50.74
+60082,IL,Cook,Techny,6,51.05
+60208,IL,Cook,Evanston,6,51.14
+60010,IL,Lake,Barrington,6,51.24
+60065,IL,Cook,Northbrook,6,51.32
+60093,IL,Cook,Winnetka,6,51.75
+60136,IL,Kane,Gilberts,6,52.06
+60043,IL,Cook,Kenilworth,6,52.08
+60408,IL,Will,Braidwood,6,52.26
+60950,IL,Kankakee,Manteno,6,52.50
+60552,IL,Dekalb,Somonauk,6,52.64
+60089,IL,Lake,Buffalo Grove,6,52.68
+60022,IL,Cook,Glencoe,6,54.34
+60401,IL,Will,Beecher,6,54.35
+60102,IL,Mchenry,Algonquin,6,54.51
+60407,IL,Grundy,Braceville,6,54.67
+60140,IL,Kane,Hampshire,6,54.69
+60015,IL,Lake,Deerfield,6,54.95
+60069,IL,Lake,Lincolnshire,6,55.36
+60109,IL,Kane,Burlington,6,55.68
+60021,IL,Mchenry,Fox River Grove,6,56.23
+60047,IL,Lake,Lake Zurich,6,56.48
+60551,IL,La Salle,Sheridan,6,57.03
+60112,IL,Dekalb,Cortland,6,57.18
+60156,IL,Mchenry,Lake In The Hills,6,57.87
+60035,IL,Lake,Highland Park,6,58.41
+60444,IL,Grundy,Mazon,6,58.77
+60556,IL,Dekalb,Waterman,6,59.15
+60115,IL,Dekalb,Dekalb,6,59.54
+60914,IL,Kankakee,Bourbonnais,6,59.60
+60531,IL,La Salle,Leland,6,59.64
+60013,IL,Mchenry,Cary,6,59.71
+60935,IL,Kankakee,Essex,6,59.75
+60040,IL,Lake,Highwood,6,59.88
+60061,IL,Lake,Vernon Hills,6,59.97
+60549,IL,La Salle,Serena,6,60.27
+61360,IL,La Salle,Seneca,6,60.54
+60037,IL,Lake,Fort Sheridan,6,61.23
+60142,IL,Mchenry,Huntley,6,61.29
+60474,IL,Grundy,South Wilmington,6,61.63
+60940,IL,Kankakee,Grant Park,6,61.77
+60045,IL,Lake,Lake Forest,6,61.99
+60424,IL,Grundy,Gardner,6,62.12
+60060,IL,Lake,Mundelein,6,62.35
+60014,IL,Mchenry,Crystal Lake,6,62.38
+60178,IL,Dekalb,Sycamore,6,62.45
+60913,IL,Kankakee,Bonfield,6,62.65
+60039,IL,Mchenry,Crystal Lake,6,63.28
+60915,IL,Kankakee,Bradley,6,63.84
+60084,IL,Lake,Wauconda,6,63.87

@@ -119,7 +119,7 @@ src="/logo/logo 2.png"
               <span style={{ fontSize: '1.5rem', fontWeight: '900', color: '#ffffff', letterSpacing: '-1px' }}>AEROTECH SOLUTIONS</span>
             </Link>
             <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.8', margin: 0 }}>
-              Restoring comfort to your home through elite appliance craftsmanship. Factory-trained master technicians available 24/7 for essential and luxury brands.
+              Restoring comfort to your home through elite appliance craftsmanship. Experienced technicians serving approved Chicagoland ZIP codes.
             </p>
             <div style={{ display: 'flex', gap: '12px' }}>
               {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
@@ -191,7 +191,7 @@ src="/logo/logo 2.png"
                 <Phone size={20} style={{ color: '#22c55e' }} />
                 <div>
                   <span style={{ display: 'block', fontWeight: '700', color: '#ffffff' }}>630 943 5120</span>
-                  <span style={{ fontSize: '0.85rem' }}>24/7 Priority Support</span>
+                  <span style={{ fontSize: '0.85rem' }}>Mon–Sat, 9 AM–5 PM CT</span>
                 </div>
               </div>
               <div style={contactItemStyle}>

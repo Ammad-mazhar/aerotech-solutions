@@ -3,6 +3,32 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { canonicalUrl, routePath, breadcrumbSchema } from '../utils/seo';
 import Breadcrumb from './Breadcrumb';
+import ServiceAreaZipChecker from './ServiceAreaZipChecker';
+import { locationsData, publishedLocationSlugs } from '../data/locationsData';
+
+// Not React.lazy()-wrapped: ServiceAreasPage.jsx is already its own
+// lazy-loaded route (see App.jsx), so a plain static import here still keeps
+// the ~379-entry ZIP dataset out of the homepage/global bundle — it only
+// loads with this page's own chunk. A *nested* React.lazy()+Suspense inside
+// an already-lazy route risks the exact "Loading..." fallback leaking into
+// the prerendered HTML that src/entry-server.jsx's comments document (only
+// the outermost Suspense of a render gets resolved cleanly); a static import
+// avoids that risk entirely since the checker has no SEO-relevant content of
+// its own to prerender in the first place.
+
+// Every county actually present in service-area-zips.csv (11 total) — do not
+// add a county here unless it appears in that file.
+const approvedCounties = ['Cook', 'DuPage', 'Will', 'Kane', 'Lake', 'Kendall', 'Grundy', 'DeKalb', 'McHenry', 'Kankakee', 'LaSalle'];
+
+// Short, complete-sentence descriptions for the Featured Service Areas cards
+// below — deliberately hardcoded here rather than truncating
+// location.introduction (which is written as full paragraphs, not
+// card-length blurbs) so no card description is ever cut off mid-sentence.
+const featuredAreaBlurbs = {
+  'bolingbrook-il': 'Aerotech Solution is headquartered in Bolingbrook and repairs appliances and HVAC systems in our approved 60440 and 60490 ZIP codes.',
+  'naperville-il': 'We repair furnaces, HVAC systems, dishwashers, ovens and refrigerators in our approved Naperville ZIP codes.',
+  'aurora-il': 'We repair furnaces, HVAC systems, refrigerators, dryers and microwaves in our approved Aurora ZIP codes.'
+};
 
 const breadcrumbTrail = [
   { label: 'Home', path: '/' },
@@ -18,19 +44,19 @@ const ServiceAreasPage = () => {
   return (
     <>
       <Helmet>
-        <title>Aerotech Solution | Service Areas - Nationwide Appliance Repair Coverage</title>
-        <meta name="description" content="Aerotech Solution provides professional appliance repair services across USA. Chicago suburbs, Midwest, Northeast, South, West Coast coverage with local technicians." />
-        <meta name="keywords" content="appliance repair service areas, Chicago appliance repair, nationwide HVAC service, Bolingbrook repair service, US appliance coverage" />
+        <title>Appliance Repair Service Areas in Illinois | Aerotech Solution</title>
+        <meta name="description" content="Check appliance, HVAC and water heater repair availability across selected ZIP codes in Chicagoland and surrounding Illinois communities." />
+        <meta name="keywords" content="appliance repair service areas, Chicagoland appliance repair, Illinois HVAC service, Bolingbrook repair service, approved ZIP code coverage" />
         <link rel="canonical" href={canonicalUrl('/service-areas')} />
-        <meta property="og:title" content="Aerotech Solution Service Areas | Nationwide Coverage" />
-        <meta property="og:description" content="From Chicago to nationwide, find certified local technicians for appliance repair. Major metro areas and suburbs served with OEM parts and warranty." />
+        <meta property="og:title" content="Appliance Repair Service Areas in Illinois | Aerotech Solution" />
+        <meta property="og:description" content="Check appliance, HVAC and water heater repair availability across selected ZIP codes in Chicagoland and surrounding Illinois communities." />
         <meta property="og:url" content={canonicalUrl('/service-areas')} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://aerotechsolutioninc.com/Washer Repair.jpg" />
+        <meta property="og:image" content="https://aerotechsolutioninc.com/washer-repair.webp" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Service Areas | Aerotech Solution Appliance Repair" />
-        <meta name="twitter:description" content="Nationwide coverage with local expert technicians. Chicago, Northeast, South, West Coast. Licensed & insured service you can trust." />
-        <meta name="twitter:image" content="https://aerotechsolutioninc.com/Washer Repair.jpg" />
+        <meta name="twitter:title" content="Appliance Repair Service Areas in Illinois | Aerotech Solution" />
+        <meta name="twitter:description" content="Check appliance, HVAC and water heater repair availability across selected ZIP codes in Chicagoland and surrounding Illinois communities." />
+        <meta name="twitter:image" content="https://aerotechsolutioninc.com/washer-repair.webp" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
       <section className="service-areas-page">
@@ -85,8 +111,8 @@ const ServiceAreasPage = () => {
           .coverage-desc {
             font-size: 1.1rem;
             color: #a7f3d0;
-            max-width: 500px;
-            margin-bottom: 2rem;
+            max-width: 560px;
+            margin: 0 auto 2rem;
           }
           .cta-button {
             display: inline-block;
@@ -127,51 +153,68 @@ const ServiceAreasPage = () => {
             line-height: 1.7;
             margin-bottom: 1.5rem;
           }
-          .regions-section {
+          .zip-section {
             margin-top: 5rem;
           }
-          .regions-grid {
+          .featured-areas-section {
+            margin-top: 5rem;
+          }
+          .featured-areas-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+            gap: 1.5rem;
             margin-top: 2rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
           }
-          .region-card {
+          .featured-area-card {
+            display: block;
             background-color: #064e3b;
-            padding: 2rem;
-            border-radius: 0.75rem;
+            padding: 1.75rem;
+            border-radius: 1rem;
             border: 1px solid rgba(34, 197, 94, 0.2);
-            transition: transform 0.2s;
+            text-decoration: none;
+            text-align: left;
+            transition: border-color 0.2s;
           }
-          .region-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+          .featured-area-card:hover {
+            border-color: #f97316;
           }
-          .region-card h3 {
+          .featured-area-card h3 {
+            color: #ffffff;
             font-size: 1.25rem;
             font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #f97316;
-            padding-bottom: 0.5rem;
-            display: inline-block;
+            margin: 0 0 0.5rem;
           }
-          .region-card ul {
-            list-style: none;
-            padding: 0;
+          .featured-area-card p {
+            color: #a7f3d0;
+            font-size: 0.95rem;
+            line-height: 1.6;
             margin: 0;
           }
-          .region-card li {
-            color: #a7f3d0;
-            margin-bottom: 0.75rem;
-            display: flex;
-            align-items: center;
+          .counties-section {
+            margin-top: 5rem;
           }
-          .region-card li::before {
-            content: "✓";
-            color: #f97316;
-            margin-right: 0.5rem;
-            font-weight: bold;
+          .counties-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          .county-pill {
+            background-color: #064e3b;
+            padding: 1rem 1.25rem;
+            border-radius: 0.75rem;
+            border: 1px solid rgba(34, 197, 94, 0.2);
+            color: #ffffff;
+            font-weight: 600;
+          }
+          .sa-final-cta {
+            margin-top: 4rem;
           }
           @media (max-width: 768px) {
             .sa-content-grid {
@@ -187,89 +230,90 @@ const ServiceAreasPage = () => {
           <Breadcrumb items={breadcrumbTrail} />
 
           <div className="sa-header">
-            <h1>Service Areas</h1>
+            <h1>Appliance Repair Service Areas</h1>
             <p>
-              We are proud to extend our professional appliance repair services across the entire United States.
-              Wherever you call home, Aerotech Solution is ready to serve you.
+              Aerotech Solution serves selected ZIP codes across Chicagoland and surrounding Illinois
+              communities. Service availability is based on ZIP code — use the checker below to confirm
+              coverage at your address.
             </p>
           </div>
 
           <div className="coverage-map">
-            <div className="coverage-icon">🇺🇸</div>
-            <h2 className="coverage-title">Nationwide Coverage</h2>
+            <h2 className="coverage-title">Serving Chicagoland and Surrounding Illinois Communities</h2>
             <p className="coverage-desc">
-              We have a network of certified technicians across the East Coast to the West Coast, promising quality repair service available at all times. We provide our services all over the US.
+              Our technicians cover a defined set of approved ZIP codes across the Chicago suburbs and
+              nearby Illinois communities, radiating out from our Bolingbrook base. If your ZIP code isn't
+              yet on the approved list, reach out — we can confirm whether special availability is possible.
             </p>
             <Link to={routePath('/book-service')} className="cta-button">
-              Find a Technician Near You
+              Book a Service
             </Link>
+          </div>
+
+          <div className="zip-section">
+            <ServiceAreaZipChecker />
           </div>
 
           <div className="sa-content-grid">
             <div className="sa-text">
-              <h2>Local Technicians, National Standards</h2>
+              <h2>Local Technicians Who Know Chicagoland</h2>
               <p style={{ marginBottom: '2rem' }}>
-               We provide service throughout the country but we know the value of local service.
-                Our techs live and work in your communities and know:
-                our local needs, whilst meeting national, strict quality standards..
+                We dispatch technicians directly to each of our approved ZIP codes across Chicagoland and
+                surrounding Illinois communities.
               </p>
               <p>
-                The unique combination provides the benefits of a friendly, reliable neighborhood guy and the resources, training and warranty of a national company. Our team always receives extensive training to ensure we are at the forefront of appliance technology.
-              </p>
-              <p>
-               Our team is ready for any kitchen disaster, laundry day meltdown or other emergency.
-                to have all major home appliances repaired. We come to you with the workshop,
-                Completely stocked with parts and tools for the job, gets done first time.
+                We repair refrigerators, washers, dryers, ovens, HVAC systems, water heaters and more — the
+                same services are available in every approved ZIP code, regardless of which one you're in.
               </p>
             </div>
             <div className="sa-image">
-              <img src="/Washer Repair.jpg" alt="Nationwide Appliance Repair and Emergency Appliance Restoration" />
+              <img src="/washer-repair.webp" alt="Technician repairing a washing machine" width={540} height={360} loading="lazy" />
             </div>
           </div>
 
-          <div className="regions-section">
-            <h2 style={{ textAlign: 'center', fontSize: '2.25rem', fontWeight: '700', color: '#ffffff', marginBottom: '1rem' }}>Serving Major Regions</h2>
-            <p style={{ textAlign: 'center', color: '#a7f3d0', maxWidth: '700px', margin: '0 auto 3rem' }}>
-              Our network covers metropolitan areas and surrounding suburbs across the country.
+          <div className="counties-section">
+            <h2 style={{ textAlign: 'center', fontSize: '2.25rem', fontWeight: '700', color: '#ffffff', marginBottom: '1rem' }}>
+              Counties Containing Our Approved ZIP Codes
+            </h2>
+            <p style={{ textAlign: 'center', color: '#a7f3d0', maxWidth: '700px', margin: '0 auto' }}>
+              Our approved service area spans {approvedCounties.length} Illinois counties. Coverage within
+              each county is limited to specific approved ZIP codes — check yours above.
             </p>
-            <div className="regions-grid">
-              <div className="region-card">
-                <h3>Northeast</h3>
-                <ul>
-                  <li>New York & Tri-State Area</li>
-                  <li>Boston & New England</li>
-                  <li>Philadelphia Metro</li>
-                  <li>Washington D.C.</li>
-                </ul>
-              </div>
-              <div className="region-card">
-                <h3>Midwest</h3>
-                <ul>
-                  <li>Chicago & Suburbs</li>
-                  <li>Detroit Metro</li>
-                  <li>Minneapolis-St. Paul</li>
-                  <li>Columbus & Cleveland</li>
-                </ul>
-              </div>
-              <div className="region-card">
-                <h3>South</h3>
-                <ul>
-                  <li>Dallas-Fort Worth</li>
-                  <li>Houston & Austin</li>
-                  <li>Atlanta Metro</li>
-                  <li>Miami & Orlando</li>
-                </ul>
-              </div>
-              <div className="region-card">
-                <h3>West</h3>
-                <ul>
-                  <li>Los Angeles & SoCal</li>
-                  <li>San Francisco Bay Area</li>
-                  <li>Seattle & Portland</li>
-                  <li>Phoenix Metro</li>
-                </ul>
-              </div>
+            <div className="counties-grid">
+              {approvedCounties.map((county) => (
+                <div className="county-pill" key={county}>{county} County</div>
+              ))}
             </div>
+          </div>
+
+          <div className="featured-areas-section">
+            <h2 style={{ textAlign: 'center', fontSize: '2.25rem', fontWeight: '700', color: '#ffffff', marginBottom: '1rem' }}>
+              Featured Service Areas
+            </h2>
+            <p style={{ textAlign: 'center', color: '#a7f3d0', maxWidth: '700px', margin: '0 auto' }}>
+              Dedicated coverage details, approved ZIP codes, and available services for a few of our
+              most-requested cities.
+            </p>
+            <div className="featured-areas-grid">
+              {publishedLocationSlugs.map((slug) => {
+                const location = locationsData[slug];
+                return (
+                  <Link key={slug} to={routePath(`/service-areas/${slug}`)} className="featured-area-card">
+                    <h3>{location.city}, IL</h3>
+                    <p>{featuredAreaBlurbs[slug] || location.metaDescription}</p>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="sa-final-cta">
+            <p style={{ color: '#a7f3d0', marginBottom: '1.5rem' }}>
+              Not sure if we cover your address, or have a question before booking?
+            </p>
+            <Link to={routePath('/contact')} className="cta-button">
+              Contact Us
+            </Link>
           </div>
         </div>
       </section>

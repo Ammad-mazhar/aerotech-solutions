@@ -2,7 +2,9 @@ export const blogsData = [
     {
         id: "refrigerator-repair",
         title: "Refrigerator Repair: When to Call a Professional (And When You Can Wait)",
-        image: "/Refrigerator repair.webp",
+        image: "/refrigerator-repair.webp",
+        imageWidth: 1067,
+        imageHeight: 1600,
         alt: "Technician repairing a refrigerator cooling system",
         category: "Kitchen",
         date: "July 2, 2026",
@@ -11,14 +13,16 @@ export const blogsData = [
             "Your refrigerator is the one appliance in your home that never gets a day off. It runs 24 hours a day, every day of the year, quietly keeping your food safe and your groceries fresh. So when it starts acting up, it's easy to panic — but not every symptom means disaster is imminent, and knowing the difference can save you time, money, and a fridge full of spoiled food.",
             "The most common complaint we hear is a refrigerator that isn't cooling properly. This can stem from a dozen different causes: a failing compressor, a refrigerant leak in the sealed system, a blocked condenser coil caked in dust, a faulty evaporator fan, or simply a door seal that no longer closes tight. A DIY approach — vacuuming the coils, checking the door gasket for gaps — can sometimes resolve minor cooling issues. But if the unit is warm throughout, making unusual noises, or cycling on and off constantly, that's a sign of an underlying electrical or sealed-system problem that requires a trained technician with proper diagnostic equipment.",
             "Leaking water underneath or inside the unit is another frequent issue, often traced to a clogged defrost drain or a cracked water line feeding an ice maker. Left unaddressed, this can damage flooring and encourage mold growth, so it's worth having it looked at sooner rather than later. Similarly, an ice maker that has stopped producing ice, or a unit making a persistent grinding or buzzing sound, usually points to a specific failed component rather than a total system failure — these are typically same-day fixes for an experienced technician.",
-            "At Aerotech Solution, our certified technicians arrive equipped to handle everything from compressor diagnostics to sealed-system leak repair, using OEM parts to make sure the fix lasts. We understand that a broken refrigerator isn't just inconvenient, it's a risk to the food your family depends on, which is why we prioritize same-day appointments for cooling failures. Every repair comes backed by our workmanship warranty, so you're covered if anything doesn't perform as expected.",
-            "If your refrigerator is showing any of these warning signs — inconsistent temperatures, water pooling, strange noises, or a broken ice maker — don't wait for a full breakdown. Reach out to our team and we'll get a certified technician to your door quickly, with the parts and expertise to fix it right the first time."
+            "At Aerotech Solution, our trained, experienced technicians arrive equipped to handle everything from compressor diagnostics to sealed-system leak repair, carrying common replacement parts and sourcing model-specific parts after diagnosis. We understand that a broken refrigerator isn't just inconvenient, it's a risk to the food your family depends on, which is why we prioritize same-day appointments for cooling failures. Every repair comes backed by our workmanship warranty, so you're covered if anything doesn't perform as expected.",
+            "If your refrigerator is showing any of these warning signs — inconsistent temperatures, water pooling, strange noises, or a broken ice maker — don't wait for a full breakdown. Reach out to our team and we'll get a trained technician to your door quickly, with the parts and expertise to fix it right the first time."
         ]
     },
     {
         id: "oven-stove-cooktop-repair",
         title: "5 Signs Your Oven, Stove, or Cooktop Needs Repair",
-        image: "/Oven & Stove Repair.avif",
+        image: "/oven-stove-cooktop-repair.webp",
+        imageWidth: 740,
+        imageHeight: 493,
         alt: "Technician inspecting an oven's heating element",
         category: "Kitchen",
         date: "June 18, 2026",
@@ -28,13 +32,15 @@ export const blogsData = [
             "The most obvious red flag is an oven that won't heat, or heats unevenly, leaving half your casserole burnt and the other half raw. This is often caused by a failing bake or broil element, a faulty temperature sensor, or a control board that's no longer regulating heat correctly. On gas models, a burner that won't ignite — or clicks endlessly without lighting — usually points to a dirty or damaged igniter, which is a quick fix once diagnosed correctly.",
             "Glass and ceramic cooktops bring their own set of concerns. Cracks in the glass surface are a safety hazard and should never be ignored, since they can expose wiring or cause the surface to fail entirely under heat. Discoloration, uneven heating zones, or a cooktop that won't power on at all typically point to damaged heating coils beneath the surface or a wiring issue in the control module — not something to troubleshoot with a screwdriver and a YouTube video.",
             "Temperature sensor issues are sneaky because they don't always announce themselves clearly. Your oven might seem to work fine, but your food consistently comes out undercooked or overcooked despite following the recipe exactly. A quick calibration check and sensor test from a technician can usually resolve this without needing a full part replacement.",
-            "Our technicians at Aerotech Solution work on both gas and electric models across all major brands, using precision diagnostics to pinpoint the actual point of failure rather than guessing and swapping parts. We carry OEM components for burners, igniters, sensors, and control boards, which means most repairs are completed in a single visit. Don't let a faulty stove derail your kitchen — if you're noticing any of these five signs, schedule a repair before a minor issue turns into a bigger, more expensive one."
+            "Our technicians at Aerotech Solution work on both gas and electric models across all major brands, using precision diagnostics to pinpoint the actual point of failure rather than guessing and swapping parts. We carry common replacement parts for burners, igniters, sensors, and control boards, and can source model-specific components after diagnosis. Don't let a faulty stove derail your kitchen — if you're noticing any of these five signs, schedule a repair before a minor issue turns into a bigger, more expensive one."
         ]
     },
     {
         id: "dryer-repair",
         title: "Why a Slow-Drying Dryer Is a Bigger Deal Than You Think",
-        image: "/Dryer Repair.webp",
+        image: "/dryer-repair.webp",
+        imageWidth: 960,
+        imageHeight: 640,
         alt: "Technician cleaning a dryer vent",
         category: "Laundry",
         date: "March 25, 2026",
@@ -50,7 +56,9 @@ export const blogsData = [
     {
         id: "washer-repair",
         title: "Washer Not Draining or Spinning? Here's What's Really Going On",
-        image: "/Washer Repair.jpg",
+        image: "/washer-repair.webp",
+        imageWidth: 540,
+        imageHeight: 360,
         alt: "Technician repairing a washing machine drum",
         category: "Laundry",
         date: "May 9, 2026",
@@ -66,7 +74,9 @@ export const blogsData = [
     {
         id: "microwave-repair",
         title: "Microwave Not Heating? What's Safe to Check and What Isn't",
-        image: "/Microwave image (1).webp",
+        image: "/microwave-repair.webp",
+        imageWidth: 540,
+        imageHeight: 360,
         alt: "Technician testing a microwave control panel",
         category: "Kitchen",
         date: "February 14, 2026",
@@ -76,13 +86,15 @@ export const blogsData = [
             "Microwaves store extremely high-voltage electrical charge in their capacitors, even after the unit is unplugged. This isn't like inspecting a toaster — an untrained attempt to diagnose a microwave's internals carries a real risk of serious injury. The most likely cause of a no-heat symptom is a failed magnetron, the component that actually generates the microwave energy, though it can also stem from a blown high-voltage diode, a failing capacitor, or a faulty door interlock switch refusing to let the magnetron fire for safety reasons.",
             "Speaking of door interlocks, a microwave that won't start at all, or that stops mid-cycle when the door is even slightly out of alignment, is almost always a switch problem rather than anything electrical. These switches wear out from years of daily door slams, and replacing them is usually a quick, affordable fix once properly diagnosed. Sparking inside the cavity is a different animal entirely — while occasionally caused by stray metal or a fork left in a dish, persistent arcing without an obvious cause often means the waveguide cover has worn through or there's a deeper issue with the magnetron itself.",
             "Touchpad and control panel failures round out the common complaints, particularly on higher-end built-in models with digital displays. A membrane that's become unresponsive after years of use can often be replaced without needing to touch the high-voltage components at all.",
-            "Our technicians are trained specifically in safe high-voltage discharge procedures before ever opening a microwave's cabinet, whether it's a simple countertop model or a built-in drawer unit. Given the safety risks involved, this is one appliance category where a quick internet fix genuinely isn't worth attempting. If your microwave has stopped heating, is sparking, or won't respond to the touchpad, let Aerotech Solution's certified team handle it safely."
+            "Our technicians are trained specifically in safe high-voltage discharge procedures before ever opening a microwave's cabinet, whether it's a simple countertop model or a built-in drawer unit. Given the safety risks involved, this is one appliance category where a quick internet fix genuinely isn't worth attempting. If your microwave has stopped heating, is sparking, or won't respond to the touchpad, let Aerotech Solution's trained team handle it safely."
         ]
     },
     {
         id: "dishwasher-repair",
         title: "Cloudy Dishes and Standing Water: Decoding Common Dishwasher Problems",
-        image: "/dishwasher.jpg",
+        image: "/dishwasher-repair.webp",
+        imageWidth: 640,
+        imageHeight: 427,
         alt: "Technician repairing a dishwasher drain pump",
         category: "Kitchen",
         date: "April 30, 2026",
@@ -98,7 +110,9 @@ export const blogsData = [
     {
         id: "hvac-furnace-repair",
         title: "Furnace Not Igniting or House Won't Heat Evenly? Here's Why",
-        image: "/HVAC.jpg",
+        image: "/hvac-furnace-repair.webp",
+        imageWidth: 1600,
+        imageHeight: 1066,
         alt: "Technician servicing a home furnace unit",
         category: "HVAC",
         date: "July 10, 2026",
@@ -108,13 +122,15 @@ export const blogsData = [
             "A furnace that won't blow heat at all often comes down to one of a few usual suspects: a failed ignitor or pilot light, a malfunctioning thermostat that isn't communicating properly with the unit, a tripped safety switch, or a clogged air filter restricting airflow enough to trigger a safety shutoff. That last one is worth mentioning specifically because it's the most preventable — a dirty filter is one of the leading causes of unnecessary furnace service calls, and a simple filter swap on a seasonal schedule prevents a surprising number of no-heat emergencies.",
             "Uneven temperatures throughout the house — a chilly upstairs and a warm downstairs, for example — point to a different category of problem, usually related to ductwork, blower motor speed settings, or a system that's undersized or oversized for the square footage it's serving. This is a case where a full diagnostic assessment matters more than a quick part swap, since fixing the wrong component won't resolve a distribution issue.",
             "On the cooling side, similar logic applies: a system blowing warm air, cycling on and off too frequently (known as short-cycling), or failing to keep up with outdoor temperatures often traces back to refrigerant levels, a failing compressor, or electrical control issues rather than anything obvious from the thermostat.",
-            "Our factory-certified technicians handle both heating and cooling systems, gas and electric, with the training to work safely around combustion components and refrigerant systems alike. We perform full diagnostic checks rather than guessing at parts, because a misdiagnosed HVAC repair doesn't just waste money — it leaves you exposed to the exact temperature extremes you were trying to avoid. If your furnace won't ignite, your AC isn't keeping up, or your home's temperature feels inconsistent room to room, reach out to Aerotech Solution for a full system evaluation."
+            "Our trained, experienced technicians handle both heating and cooling systems, gas and electric, with the training to work safely around combustion components and refrigerant systems alike. We perform full diagnostic checks rather than guessing at parts, because a misdiagnosed HVAC repair doesn't just waste money — it leaves you exposed to the exact temperature extremes you were trying to avoid. If your furnace won't ignite, your AC isn't keeping up, or your home's temperature feels inconsistent room to room, reach out to Aerotech Solution for a full system evaluation."
         ]
     },
     {
         id: "garbage-disposal",
         title: "Garbage Disposal Humming But Not Grinding? Don't Reach for a Wrench Yet",
-        image: "/Garbage-Disposal 2.jpg",
+        image: "/garbage-disposal-repair.webp",
+        imageWidth: 1000,
+        imageHeight: 667,
         alt: "Technician repairing a kitchen garbage disposal unit",
         category: "Kitchen",
         date: "January 22, 2026",
@@ -130,7 +146,9 @@ export const blogsData = [
     {
         id: "water-heater-repair",
         title: "No Hot Water? A Homeowner's Guide to Water Heater Troubleshooting",
-        image: "/water heater.webp",
+        image: "/water-heater-repair.webp",
+        imageWidth: 1600,
+        imageHeight: 1067,
         alt: "Technician inspecting a residential water heater tank",
         category: "Plumbing",
         date: "June 5, 2026",

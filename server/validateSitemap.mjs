@@ -9,10 +9,15 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { getExpectedSitemapUrlCount } from './generateSitemap.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const SITEMAP_PATH = path.join(__dirname, '../dist/sitemap.xml');
-const EXPECTED_URL_COUNT = 28;
+// Computed from static routes + service pages + blog pages + published
+// location pages (see generateSitemap.mjs) rather than hardcoded, so this
+// check can never silently drift out of sync with what generateSitemap.mjs
+// actually produces.
+const EXPECTED_URL_COUNT = getExpectedSitemapUrlCount();
 const SITE_ORIGIN = 'https://aerotechsolutioninc.com';
 
 const failures = [];

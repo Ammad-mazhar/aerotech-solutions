@@ -36,11 +36,11 @@ const ServicesPage = () => {
     <>
       <Helmet>
         <title>Appliance Repair &amp; HVAC Services | Aero Tech Solutions</title>
-        <meta name="description" content="Browse all appliance, HVAC, and water heater repair services from Aero Tech Solutions — refrigerators, washers, dryers, ovens, and more, by factory-certified technicians." />
+        <meta name="description" content="Browse all appliance, HVAC, and water heater repair services from Aero Tech Solutions — refrigerators, washers, dryers, ovens, and more, by experienced technicians." />
         <meta name="keywords" content="appliance repair services, HVAC repair, water heater repair, refrigerator repair, washer dryer repair, oven stove repair, Aerotech Solution" />
         <link rel="canonical" href={canonicalUrl('/services')} />
         <meta property="og:title" content="Appliance Repair & HVAC Services | Aero Tech Solutions" />
-        <meta property="og:description" content="Browse all appliance, HVAC, and water heater repair services from Aero Tech Solutions, performed by factory-certified technicians." />
+        <meta property="og:description" content="Browse all appliance, HVAC, and water heater repair services from Aero Tech Solutions, performed by experienced technicians." />
         <meta property="og:url" content={canonicalUrl('/services')} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpg" />
@@ -83,7 +83,7 @@ const ServicesPage = () => {
           }
           .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
             gap: 2rem;
             margin-bottom: 4rem;
           }
@@ -223,7 +223,7 @@ const ServicesPage = () => {
             <p>
               Aero Tech Solutions repairs the major appliances and systems that keep a home running — kitchen and
               laundry appliances, heating and cooling, and water heaters. Every service below is handled by
-              factory-certified technicians using OEM parts, with a fixed quote provided before any repair begins.
+              trained and experienced technicians who carry common replacement parts, with model-specific parts sourced after diagnosis and a fixed quote provided before any repair begins.
             </p>
           </div>
 
@@ -258,7 +258,7 @@ const ServicesPage = () => {
               <div className="services-hub-process-card">
                 <ClipboardCheck size={28} />
                 <h3>Multi-Point Inspection</h3>
-                <p>Factory-certified technicians perform a full diagnostic to pinpoint the actual cause, not just the symptom.</p>
+                <p>Trained, experienced technicians perform a full diagnostic to pinpoint the actual cause, not just the symptom.</p>
               </div>
               <div className="services-hub-process-card">
                 <Wrench size={28} />
@@ -268,7 +268,7 @@ const ServicesPage = () => {
               <div className="services-hub-process-card">
                 <ShieldCheck size={28} />
                 <h3>Precision Repair</h3>
-                <p>Repairs use OEM parts to restore factory performance, backed by a workmanship warranty.</p>
+                <p>Common replacement parts are carried; model-specific parts are sourced after diagnosis, backed by a workmanship warranty.</p>
               </div>
             </div>
           </div>

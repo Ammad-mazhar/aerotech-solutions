@@ -112,18 +112,19 @@ const Hero = () => {
   return (
     <>
       <Helmet>
-        <title>Aerotech Solution | Professional Appliance Restoration & HVAC Services USA</title>
-        <meta name="description" content="Aerotech Solution provides elite repair and restoration for premium appliances, HVAC, and laundry systems across the USA. Factory-certified technicians for all major brands. Same-day service available." />
-        <meta name="keywords" content="appliance repair USA, HVAC solutions, furnace restoration, refrigerator repair, washer dryer service, oven stove repair, microwave repair, water heater service, Aerotech Solution" />
+        <title>Aerotech Solution | Professional Appliance Restoration & HVAC Services</title>
+        <meta name="description" content="Aerotech Solution provides elite repair and restoration for premium appliances, HVAC, and laundry systems across Chicagoland and surrounding Illinois communities. Experienced technicians for all major brands. Same-day service available." />
+        <meta name="keywords" content="appliance repair Chicagoland, HVAC solutions, furnace restoration, refrigerator repair, washer dryer service, oven stove repair, microwave repair, water heater service, Aerotech Solution" />
         <link rel="canonical" href={canonicalUrl('/')} />
-        <meta property="og:title" content="Aerotech Solution | Professional Appliance Restoration & HVAC Services USA" />
-        <meta property="og:description" content="Nationwide premium appliance restoration. From HVAC calibration to kitchen system solutions, we bring your home back to factory standards with certified technicians." />
+        <link rel="preload" as="image" href="/banner-image.jpg" fetchPriority="high" />
+        <meta property="og:title" content="Aerotech Solution | Professional Appliance Restoration & HVAC Services" />
+        <meta property="og:description" content="Premium appliance restoration across Chicagoland and surrounding Illinois communities. From HVAC calibration to kitchen system solutions, we bring your home back to factory standards with trained, experienced technicians." />
         <meta property="og:url" content={canonicalUrl('/')} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Aerotech Solution | Elite Appliance & HVAC Services" />
-        <meta name="twitter:description" content="24/7 residential appliance repair across USA. Certified parts, professional dispatch, same-day availability for emergencies." />
+        <meta name="twitter:description" content="Residential appliance repair across Chicagoland and surrounding Illinois communities. Common parts carried, professional dispatch, same-day availability for emergencies." />
         <meta name="twitter:image" content="https://aerotechsolutioninc.com/banner-image.jpg" />
       </Helmet>
       <section id="home" style={sectionStyle}>
@@ -144,7 +145,7 @@ const Hero = () => {
         <div style={containerStyle}>
           <div style={badgeStyle}>
             <span style={{ width: '8px', height: '8px', backgroundColor: '#f97316', borderRadius: '50%', boxShadow: '0 0 10px #f97316' }}></span>
-            Certified Master Technicians
+            Trained & Experienced Technicians
           </div>
 
           <h1 style={headlineStyle}>
@@ -152,7 +153,7 @@ const Hero = () => {
           </h1>
 
           <p style={subheadlineStyle}>
-            We specialize in high-end restoration for refrigerators, washers, ovens, and luxury kitchen suites. 24/7 priority support with OEM parts and master craftsmanship.
+            We specialize in high-end restoration for refrigerators, washers, ovens, and luxury kitchen suites, backed by careful diagnostics and experienced workmanship.
           </p>
 
           <div style={btnContainerStyle}>

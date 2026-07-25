@@ -3,6 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { servicesData } from '../src/data/servicesData.js';
 import { blogsData } from '../src/data/blogsData.js';
+import { publishedLocationSlugs } from '../src/data/locationsData.js';
 import { canonicalUrl } from '../src/utils/seo.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -46,6 +47,13 @@ function toIsoDate(dateStr) {
     return `${year}-${month}-${day}`;
 }
 
+// Single source of truth for "how many URLs should the sitemap have" — used
+// by both the console.log below and server/validateSitemap.mjs's count
+// check, so a new service/blog post/published location is never a two-place
+// number to keep in sync by hand.
+export const getExpectedSitemapUrlCount = () =>
+    staticPaths.length + Object.keys(servicesData).length + blogsData.length + publishedLocationSlugs.length;
+
 export const generateSitemap = () => {
     let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
     xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
@@ -70,6 +78,11 @@ export const generateSitemap = () => {
     // automatically. Uses each post's own stored publish date as <lastmod>.
     blogsData.forEach((post) => addUrl(`/blogs/${post.id}`, toIsoDate(post.date)));
 
+    // Location pages — derived from locationsData.js's publishedLocationSlugs,
+    // so a location only ever appears here once its `published` flag is
+    // flipped to true. No tracked update date, so no <lastmod>.
+    publishedLocationSlugs.forEach((slug) => addUrl(`/service-areas/${slug}`));
+
     xml += '</urlset>';
 
     // Written directly into dist/ (the actual Netlify publish directory) —
@@ -83,8 +96,7 @@ export const generateSitemap = () => {
     fs.mkdirSync(distDir, { recursive: true });
     const outputPath = path.join(distDir, 'sitemap.xml');
     fs.writeFileSync(outputPath, xml);
-    const total = staticPaths.length + Object.keys(servicesData).length + blogsData.length;
-    console.log(`Final sitemap generated at dist/sitemap.xml: ${total} URLs`);
+    console.log(`Final sitemap generated at dist/sitemap.xml: ${getExpectedSitemapUrlCount()} URLs`);
 };
 
 // Only run automatically when this file is executed directly (`node

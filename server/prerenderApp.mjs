@@ -21,6 +21,7 @@ import { fileURLToPath } from 'url';
 import { createServer } from 'vite';
 import { servicesData } from '../src/data/servicesData.js';
 import { blogsData } from '../src/data/blogsData.js';
+import { publishedLocationSlugs } from '../src/data/locationsData.js';
 import { staticPaths } from './generateSitemap.mjs';
 import { routePath } from '../src/utils/seo.js';
 
@@ -82,6 +83,12 @@ async function prerender() {
             ...blogsData.map((post) => ({
                 location: `/blogs/${post.id}`,
                 outputRoute: routePath(`/blogs/${post.id}`)
+            })),
+            // Only published locations (see locationsData.js's `published`
+            // flag) ever get a prerendered dist/service-areas/<slug>/ route.
+            ...publishedLocationSlugs.map((slug) => ({
+                location: `/service-areas/${slug}`,
+                outputRoute: routePath(`/service-areas/${slug}`)
             })),
             // 404 probe: any nonexistent path, so React Router falls through
             // to the "*" NotFound route. Written to dist/404.html separately

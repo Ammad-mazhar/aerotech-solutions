@@ -98,17 +98,17 @@ const AboutPage = () => {
     <>
       <Helmet>
         <title>Aerotech Solution | About Us - Elite Appliance Repair Since 2008</title>
-        <meta name="description" content="Learn about Aerotech Solution's 15+ years of excellence in premium appliance restoration. Factory-certified technicians, OEM parts, 90-day warranty, and nationwide service for refrigerators, HVAC, ovens and more." />
-        <meta name="keywords" content="about Aerotech Solution, appliance repair company, factory certified technicians, OEM parts repair, nationwide appliance service, HVAC restoration" />
+        <meta name="description" content="Learn about Aerotech Solution's 15+ years of excellence in premium appliance restoration. Experienced technicians, common parts carried, 90-day warranty, serving selected ZIP codes across Chicagoland and surrounding Illinois communities." />
+        <meta name="keywords" content="about Aerotech Solution, appliance repair company, experienced appliance technicians, appliance parts repair, Chicagoland appliance service, HVAC restoration" />
         <link rel="canonical" href={canonicalUrl('/about')} />
-        <meta property="og:title" content="Aerotech Solution | About - Midwest's Premier Appliance Service" />
-        <meta property="og:description" content="Since 2008, trusted by 50,000+ homeowners for elite appliance restoration. Licensed, insured, OEM parts, 24/7 emergency response across USA." />
+        <meta property="og:title" content="Aerotech Solution | About - Chicagoland's Premier Appliance Service" />
+        <meta property="og:description" content="Since 2008, trusted by 50,000+ homeowners for elite appliance restoration. Licensed, insured, common parts carried, serving selected ZIP codes in Chicagoland and surrounding Illinois communities." />
         <meta property="og:url" content={canonicalUrl('/about')} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://aerotechsolutioninc.com/about-us.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Aerotech Solution | Company Story & Technical Standards" />
-        <meta name="twitter:description" content="Discover our mission, technical standards, and why we're the gold standard in appliance restoration. 90-day warranty, OEM parts guaranteed." />
+        <meta name="twitter:description" content="Discover our mission, technical standards, and why we're the gold standard in appliance restoration. 90-day warranty, common parts carried." />
         <meta name="twitter:image" content="https://aerotechsolutioninc.com/about-us.jpg" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
@@ -151,7 +151,7 @@ const AboutPage = () => {
                   The Gold Standard in <span style={{ color: colors.orange }}>Appliance Restoration.</span>
                 </h1>
                 <p style={sublineStyle}>
-                Aerotech Solution has established itself as the leader in the elite appliance care industry since 2008. Our factory certified technical know-how along with white glove service will help not only bring your appliances back to life, but help bring your home back to life. More than 50,000 homeowners trust us to be the best place for them to invest in their homes. We know that a broken appliance is a problem that's disrupting your life, which is why we are flexible with schedules and respond quickly to get you back on track. Our technicians are not only knowledgeable in the newest technology, but are also trained to make the experience of providing a service to the client courteous and clean. We are committed to delivering the highest standards of excellence from the initial diagnostic through to quality.
+                Aerotech Solution has established itself as the leader in the elite appliance care industry since 2008. Our trained, experienced technical know-how along with white glove service will help not only bring your appliances back to life, but help bring your home back to life. More than 50,000 homeowners trust us to be the best place for them to invest in their homes. We know that a broken appliance is a problem that's disrupting your life, which is why we are flexible with schedules and respond quickly to get you back on track. Our technicians are not only knowledgeable in the newest technology, but are also trained to make the experience of providing a service to the client courteous and clean. We are committed to delivering the highest standards of excellence from the initial diagnostic through to quality.
                 </p>
                 <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'center' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '12px', fontWeight: '600', color: colors.slate }}>
@@ -164,7 +164,7 @@ const AboutPage = () => {
                     <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: '#22c55e', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                       <ShieldCheck size={14} />
                     </div>
-                    Factory Certified
+                    Experienced Technicians
                   </div>
                 </div>
               </div>
@@ -194,7 +194,7 @@ const AboutPage = () => {
                 <div style={iconCircleStyle}><Zap size={32} /></div>
                 <h3 style={{ fontSize: '1.5rem', fontWeight: '800', color: colors.navy, marginBottom: '20px' }}>Our Vision</h3>
                 <p style={{ color: colors.navy, lineHeight: '1.8', fontSize: '1.05rem' }}>
-                  To become the Midwest's most trusted concierge-level appliance service, delivering a seamless, stress-free experience from first call to final fix.
+                  To become Chicagoland's most trusted concierge-level appliance service, delivering a seamless, stress-free experience from first call to final fix.
                 </p>
               </div>
             </div>
@@ -208,8 +208,8 @@ const AboutPage = () => {
               <div style={{ flex: '1', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px', minWidth: '320px' }}>
                 <div style={{ ...cardStyle, padding: '30px', background: colors.lightSlate }}>
                   <div style={{ ...iconCircleStyle, backgroundColor: colors.white }}><Settings size={26} /></div>
-                  <h4 style={{ fontWeight: '800', marginBottom: '12px', color: colors.white }}>OEM Parts Only</h4>
-                  <p style={{ fontSize: '14px', color: colors.slate }}>We never compromise. Every replacement uses original equipment manufacturer parts.</p>
+                  <h4 style={{ fontWeight: '800', marginBottom: '12px', color: colors.white }}>Common Parts Carried</h4>
+                  <p style={{ fontSize: '14px', color: colors.slate }}>Technicians carry commonly used replacement parts. Model-specific or additional parts are sourced after diagnosis.</p>
                 </div>
                 <div style={{ ...cardStyle, padding: '30px', background: colors.lightSlate }}>
                   <div style={{ ...iconCircleStyle, backgroundColor: colors.white }}><Wrench size={26} /></div>
@@ -219,12 +219,12 @@ const AboutPage = () => {
                 <div style={{ ...cardStyle, padding: '30px', background: colors.lightSlate }}>
                   <div style={{ ...iconCircleStyle, backgroundColor: colors.white }}><UserCheck size={26} /></div>
                   <h4 style={{ fontWeight: '800', marginBottom: '12px', color: colors.white }}>Expert Team</h4>
-                  <p style={{ fontSize: '14px', color: colors.slate }}>Technicians must pass rigorous background checks and certifications.</p>
+                  <p style={{ fontSize: '14px', color: colors.slate }}>Trained and experienced technicians focused on careful diagnostics and professional service.</p>
                 </div>
                 <div style={{ ...cardStyle, padding: '30px', background: colors.lightSlate }}>
                   <div style={{ ...iconCircleStyle, backgroundColor: colors.white }}><Clock size={26} /></div>
-                  <h4 style={{ fontWeight: '800', marginBottom: '12px', color: colors.white }}>24/7 Response</h4>
-                  <p style={{ fontSize: '14px', color: colors.slate }}>Emergency failures don't follow office hours—neither do we.</p>
+                  <h4 style={{ fontWeight: '800', marginBottom: '12px', color: colors.white }}>Responsive Scheduling</h4>
+                  <p style={{ fontSize: '14px', color: colors.slate }}>We prioritize fast scheduling within our service hours: Monday–Saturday, 9:00 AM–5:00 PM Central Time.</p>
                 </div>
               </div>
 

@@ -68,7 +68,7 @@ const Navbar = () => {
                 borderRadius: '50%',
               }}
             />
-            <span style={{
+            <span className="navbar-brand-text" style={{
               color: '#ffffff',
               fontWeight: '700',
               fontSize: '1.5rem',
@@ -316,6 +316,9 @@ const Navbar = () => {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="mobile-hamburger"
+            aria-label={isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-nav-menu"
             style={{
               background: 'none',
               border: 'none',
@@ -335,7 +338,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div style={{
+          <div id="mobile-nav-menu" style={{
             backgroundColor: '#052e16',
             borderTop: '1px solid rgba(255,255,255,0.1)',
             padding: '16px 24px 24px',
@@ -454,6 +457,14 @@ const Navbar = () => {
         }
         @media (min-width: 769px) {
           .mobile-hamburger { display: none !important; }
+        }
+        /* Below 400px, the logo icon + wordmark + hamburger button no longer
+           fit the viewport (280px logo block + 44px button > 320px itself,
+           before padding). The wordmark is redundant with the logo image's
+           alt text, so it's hidden here rather than shrinking the logo,
+           padding, or button below their usable/tappable sizes. */
+        @media (max-width: 400px) {
+          .navbar-brand-text { display: none !important; }
         }
       `}</style>
 

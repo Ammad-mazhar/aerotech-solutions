@@ -13,6 +13,9 @@ dist-ssr
 build
 *.local
 
+# Audit / regression screenshots
+.regression-screenshots*/
+
 # Environment variables
 .env
 .env.local

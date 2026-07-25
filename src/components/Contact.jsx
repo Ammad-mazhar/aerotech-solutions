@@ -185,17 +185,17 @@ export default function Contact() {
     <>
       <Helmet>
         <title>Aerotech Solution | Contact Us - Appliance Repair Service Request</title>
-        <meta name="description" content="Contact Aerotech Solution for emergency appliance repair. Schedule service online or call (630) 943-5120. Nationwide coverage with same-day availability for refrigerators, HVAC, washers and more." />
+        <meta name="description" content="Contact Aerotech Solution for emergency appliance repair. Schedule service online or call (630) 943-5120. Serving selected ZIP codes across Chicagoland and surrounding Illinois communities, with same-day availability for refrigerators, HVAC, washers and more." />
         <meta name="keywords" content="contact appliance repair, schedule repair service, emergency HVAC service, refrigerator repair contact, Aerotech Solution phone" />
         <link rel="canonical" href={canonicalUrl('/contact')} />
-        <meta property="og:title" content="Contact Aerotech Solution | 24/7 Appliance Service" />
-        <meta property="og:description" content="Get fast response from factory-certified technicians. Licensed & insured, OEM parts, 90-day warranty. Nationwide service areas." />
+        <meta property="og:title" content="Contact Aerotech Solution | Appliance Service" />
+        <meta property="og:description" content="Get fast response from experienced technicians. Licensed & insured, common parts carried, 90-day warranty. Serving selected ZIP codes across Chicagoland and surrounding Illinois communities." />
         <meta property="og:url" content={canonicalUrl('/contact')} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Aerotech Solution Contact | Book Appliance Repair" />
-        <meta name="twitter:description" content="Send service request or call (630) 943-5120. Real technicians, not middlemen. Same-day emergency response available across USA." />
+        <meta name="twitter:description" content="Send service request or call (630) 943-5120. Real technicians, not middlemen. Same-day emergency response available across selected Chicagoland-area ZIP codes." />
         <meta name="twitter:image" content="https://aerotechsolutioninc.com/banner-image.jpg" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
@@ -218,7 +218,7 @@ export default function Contact() {
               { icon: 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z', title: 'Email', detail: 'aerotechsolutions@gmail.com' },
               { icon: 'M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z', title: 'Phone', detail: '630 943 5120' },
               { icon: 'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z', title: 'Address', detail: '206 Far Hills Dr, Bolingbrook, IL 60440' },
-              { icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z', title: 'Hours', detail: 'Mon - Fri: 9:00 AM - 6:00 PM' }
+              { icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z', title: 'Hours', detail: 'Monday–Saturday, 9:00 AM–5:00 PM Central Time' }
             ].map((item, idx) => (
               <div key={idx} style={{ display: 'flex', gap: '20px', marginBottom: '32px' }}>
                 <div style={{ width: '48px', height: '48px', backgroundColor: '#22c55e', color: '#ffffff', borderRadius: '14px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, boxShadow: '0 4px 10px rgba(0,0,0,0.1)' }}>

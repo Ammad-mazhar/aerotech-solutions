@@ -256,7 +256,7 @@ const BlogDetail = () => {
           <h1 className="blog-detail-title">{post.title}</h1>
 
           <div className="blog-detail-image-wrap">
-            <img className="blog-detail-image" src={post.image} alt={post.alt} />
+            <img className="blog-detail-image" src={post.image} alt={post.alt} width={post.imageWidth} height={post.imageHeight} fetchPriority="high" />
             <span className="blog-detail-badge">{post.category}</span>
           </div>
 
@@ -310,7 +310,7 @@ const BlogDetail = () => {
           )}
 
           <p className="blog-seo-para" style={{ marginTop: '2rem' }}>
-            If this sounds like what you're dealing with, our certified technicians offer{' '}
+            If this sounds like what you're dealing with, our trained, experienced technicians offer{' '}
             <Link to={routePath(`/services/${post.id}`)} style={{ color: '#f97316', fontWeight: '700' }}>
               {serviceAnchorText[post.id] || `${post.title.toLowerCase()} service`}
             </Link>{' '}

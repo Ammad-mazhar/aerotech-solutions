@@ -10,7 +10,7 @@ export const serviceSeoContent = {
     metaKeywords: "refrigerator repair, refrigerator repair near me, refrigerator repair service, fridge repair, fridge repair near me, refrigerator ice maker repair, commercial refrigeration repair, Sub-Zero refrigerator repair, Viking refrigerator repair",
     h1Override: "Refrigerator Repair",
     introExpanded: [
-      "Searching for refrigerator repair near me because your fridge stopped cooling properly? That's not just inconvenient — it puts every perishable item at risk within hours. Aerotech Solution provides refrigerator repair service for standard top-freezer units, French door refrigerators, and built-in luxury models alike, with factory-certified technicians who diagnose the actual cause instead of guessing at parts.",
+      "Searching for refrigerator repair near me because your fridge stopped cooling properly? That's not just inconvenient — it puts every perishable item at risk within hours. Aerotech Solution provides refrigerator repair service for standard top-freezer units, French door refrigerators, and built-in luxury models alike, with trained, experienced technicians who diagnose the actual cause instead of guessing at parts.",
       "Refrigeration systems are more complex than most people realize — a single symptom like warm air inside the unit can trace back to a dozen different components, from the compressor and condenser coils to the evaporator fan and electronic control board. That's why refrigerator repair isn't a job for trial and error. Our refrigerator repair service near me combines electrical diagnostics with hands-on sealed-system expertise, so the fix addresses the root cause the first time, not just the symptom you called about."
     ],
     signsOfRepair: [
@@ -36,7 +36,7 @@ export const serviceSeoContent = {
       "Freezer and frost problems show up in a few recognizable patterns: a freezer not freezing while the fridge compartment seems fine, a fridge that's warm while the freezer stays cold (or the reverse), and frost building up inside the freezer walls. Most of these trace back to a blocked or failing evaporator fan, a stuck air damper between compartments, or a defrost system that isn't clearing itself properly."
     ],
     iceMakerSection: [
-      "Refrigerator ice maker repair covers units that have stopped producing ice, are producing small or hollow cubes, or are leaking around the dispenser — usually a faulty water inlet valve, a jammed ejector arm, or a frozen supply line. Water dispenser problems, including slow flow or no water at all, often share the same root cause and can typically be diagnosed and repaired in the same visit."
+      "Refrigerator ice maker repair covers units that have stopped producing ice, are producing small or hollow cubes, or are leaking around the dispenser — usually a faulty water inlet valve, a jammed ejector arm, or a frozen supply line. Water dispenser problems, including slow flow or no water at all, often share the same root cause and can typically be diagnosed in the same visit, with repair completed once the needed part is confirmed on hand or sourced."
     ],
     builtInPremiumSection: [
       "Built-in and premium refrigerators — including Sub-Zero, Viking, and Thermador units — combine tighter tolerances, custom panel-ready fronts, and dual-compressor designs that call for more specialized diagnostic experience than a standard freestanding fridge. We bring that same precision approach to counter-depth and built-in models across major brands."
@@ -47,13 +47,13 @@ export const serviceSeoContent = {
     ],
     diagnosisProcessSection: [
       "Every refrigerator repair service call starts with a full diagnostic check — power and control board, airflow, and where needed, sealed-system pressure — rather than replacing the first part that looks worn. We provide a fixed price after diagnosis and before any repair begins.",
-      "Most cooling, ice maker, control panel, and door seal repairs are completed in a single visit using commonly stocked parts."
+      "Cooling, ice maker, control panel, and door seal repairs use commonly stocked parts; model-specific parts are sourced after diagnosis."
     ],
     brandSpotlight: [
       { brand: "Whirlpool", text: "One of the most common refrigerator brands we service, particularly for compressor and ice maker repairs on both top-freezer and side-by-side models." },
       { brand: "Samsung", text: "We regularly repair Samsung's French door and multi-door refrigerators, including their digital inverter compressors and twin cooling systems." },
       { brand: "LG", text: "LG's linear compressor technology requires specialized diagnostic knowledge, which our technicians maintain through ongoing factory training." },
-      { brand: "GE", text: "From older GE Profile units to newer GE Appliances smart refrigerators, we carry OEM parts for most model years currently in service." },
+      { brand: "GE", text: "From older GE Profile units to newer GE Appliances smart refrigerators, we can source compatible model-specific components after diagnosis." },
       { brand: "KitchenAid", text: "KitchenAid's built-in and counter-depth refrigerators are common in remodeled kitchens, and we stock parts for their specific panel-ready hardware." },
       { brand: "Frigidaire", text: "Frigidaire units are dependable workhorses, and most issues we see involve defrost system components or door seal replacement." },
       { brand: "Liebherr", text: "For premium Liebherr refrigeration units, we bring the same precision diagnostic approach used on high-end European appliances, respecting their tighter tolerances and dual-compressor designs." },
@@ -77,7 +77,7 @@ export const serviceSeoContent = {
       "Avoid overpacking the fridge — restricted airflow around vents forces the compressor to work harder than necessary.",
       "Clear the drain hole in the back of the fridge periodically to prevent water pooling and ice buildup in the crisper area."
     ],
-    whyChooseUsExpanded: "Homeowners trust Aerotech Solution because we treat refrigerator repair as a food-safety issue, not just a maintenance task. Our factory-certified technicians arrive with diagnostic equipment capable of testing sealed-system pressure and electronic controls on-site, backed by an inventory of OEM parts for same-visit repairs whenever possible. Every repair includes transparent, upfront pricing before any work begins, and is covered by our workmanship warranty.",
+    whyChooseUsExpanded: "Homeowners trust Aerotech Solution because we treat refrigerator repair as a food-safety issue, not just a maintenance task. Our trained, experienced technicians arrive with diagnostic equipment capable of testing sealed-system pressure and electronic controls on-site, carrying common replacement parts and sourcing model-specific parts after diagnosis. Every repair includes transparent, upfront pricing before any work begins, and is covered by our workmanship warranty.",
     faqs: [
       { q: "Is it worth repairing a refrigerator?", a: "For most single-component failures on a unit under 8–10 years old, yes — repair is typically far more cost-effective than replacement. Compressor failure on a much older unit is where replacement starts to make more financial sense. Request a diagnosis and we'll give you an honest read on your specific unit." },
       { q: "Why is my refrigerator running but not cooling?", a: "This usually points to a refrigerant leak, a blocked condenser coil, a failed evaporator fan, or a malfunctioning thermostat. A technician needs to test each component to isolate the actual cause." },
@@ -146,7 +146,7 @@ export const serviceSeoContent = {
       { brand: "SMEG", text: "SMEG's retro-style ranges combine European engineering with unique part sourcing, which our technicians are equipped to source and install correctly." },
       { brand: "Frigidaire", text: "Frigidaire ranges are dependable and straightforward to service, with igniter and thermostat replacement covering the majority of repair calls." },
       { brand: "Samsung", text: "Samsung's flex duo and dual convection ranges bring added electronic complexity, which our diagnostic process is built to handle." },
-      { brand: "Kenmore", text: "Kenmore ranges are common and straightforward to diagnose using standard OEM replacement parts." },
+      { brand: "Kenmore", text: "Kenmore ranges are common and straightforward to diagnose, and we can source compatible model-specific components after diagnosis." },
       { brand: "Hotpoint", text: "Hotpoint's gas and electric ranges are dependable, budget-friendly units, typically needing igniter or element repairs." },
       { brand: "Magic Chef", text: "Magic Chef ranges are common in rentals and smaller kitchens, most often needing igniter or thermostat service." }
     ],
@@ -166,7 +166,7 @@ export const serviceSeoContent = {
       "Check that oven racks sit level and aren't warped, which can cause the appearance of uneven baking that isn't actually a heating problem.",
       "Have the door seal inspected periodically — a worn gasket lets heat escape, forcing the oven to run longer and hotter than the set temperature."
     ],
-    whyChooseUsExpanded: "Aerotech Solution's technicians are trained on both gas and electric platforms, so you don't need to search separately for a gas range specialist versus an electric cooktop repair company. We diagnose before we quote, carry OEM igniters, elements, and sensors for most major brands, and back every completed repair with a workmanship warranty — with transparent, fixed pricing agreed to before we start.",
+    whyChooseUsExpanded: "Aerotech Solution's technicians are trained on both gas and electric platforms, so you don't need to search separately for a gas range specialist versus an electric cooktop repair company. We diagnose before we quote, carry common igniters, elements, and sensors, source model-specific parts after diagnosis, and back every completed repair with a workmanship warranty — with transparent, fixed pricing agreed to before we start.",
     faqs: [
       { q: "Is it worth repairing an oven?", a: "In most cases, yes — igniter, element, sensor, and control panel repairs are a fraction of the cost of a new range and resolve the issue completely. Control board failure on a much older unit is the main exception. Request a diagnosis and we'll give you an honest read on your specific range." },
       { q: "How much does oven repair cost?", a: "Cost depends on the specific component — igniters and thermostats are generally the most affordable fixes, while control board replacement runs higher. We provide a fixed quote after diagnosis, before any work begins." },
@@ -242,7 +242,7 @@ export const serviceSeoContent = {
       "Check the exterior vent hood periodically to make sure it isn't blocked by debris, snow, or a nesting animal.",
       "Listen for new noises early — a squeal or thump caught early is a simple repair, while ignoring it can lead to belt or motor damage."
     ],
-    whyChooseUsExpanded: "We treat every dryer service call as a safety inspection first and a repair second. Aerotech Solution's technicians check the full vent path, drum assembly, belt, and heating components on every visit, using OEM parts and providing a fixed quote before any work begins — all backed by our workmanship warranty.",
+    whyChooseUsExpanded: "We treat every dryer service call as a safety inspection first and a repair second. Aerotech Solution's technicians check the full vent path, drum assembly, belt, and heating components on every visit, carrying common replacement parts and sourcing model-specific parts after diagnosis, and providing a fixed quote before any work begins — all backed by our workmanship warranty.",
     faqs: [
       { q: "Is it worth repairing a dryer?", a: "In most cases, yes — belt, roller, thermostat, and igniter repairs are a fraction of the cost of a new dryer and resolve the issue completely. The main exception is motor failure on a much older unit. Request a diagnosis and we'll give you an honest read on your specific situation." },
       { q: "Do you repair both gas and electric dryers?", a: "Yes, our technicians are trained and equipped to diagnose and repair both gas and electric dryers across all major brands." },
@@ -291,10 +291,10 @@ export const serviceSeoContent = {
       { brand: "Maytag", text: "Maytag's commercial-grade washer motors are known for durability, with most repairs involving suspension components rather than the motor itself." },
       { brand: "LG", text: "LG's direct-drive front-load washers require specific diagnostic steps for motor coupling and control board issues." },
       { brand: "Samsung", text: "We frequently service Samsung's VRT and steam-cycle washers for drain pump and sensor-related repairs." },
-      { brand: "GE", text: "GE top-load and front-load washers are straightforward to diagnose, and we carry OEM parts for their pump and control board assemblies." },
+      { brand: "GE", text: "GE top-load and front-load washers are straightforward to diagnose, and we can source compatible model-specific components for their pump and control board assemblies after diagnosis." },
       { brand: "Frigidaire", text: "Frigidaire washers are dependable units, with most service calls involving drain pump or door seal repairs." },
       { brand: "Electrolux", text: "Electrolux front-load washers are engineered with tighter tolerances, and our technicians are equipped for their specific door seal and pump service." },
-      { brand: "Kenmore", text: "Kenmore washers, often manufactured under Whirlpool platforms, are straightforward to diagnose using standard OEM replacement parts." },
+      { brand: "Kenmore", text: "Kenmore washers, often manufactured under Whirlpool platforms, are straightforward to diagnose, and compatible replacement parts can be sourced after diagnosis." },
       { brand: "Amana", text: "Amana washers are common entry-level and mid-range units, typically needing belt, pump, or switch repairs." }
     ],
     repairVsReplacement: {
@@ -313,7 +313,7 @@ export const serviceSeoContent = {
       "Use the correct detergent type and amount for your machine — excess suds can interfere with sensors and drainage.",
       "Check supply hoses annually for cracking or bulging, and replace them proactively before they fail and cause water damage."
     ],
-    whyChooseUsExpanded: "As a washer repair company trusted throughout Bolingbrook and the Chicago suburbs, Aerotech Solution's washer technicians perform a complete multi-point inspection on every washing machine repair service call — checking the pump, belt, suspension, door seal, and control board — instead of stopping at the first likely cause. Every repair uses OEM parts, comes with an upfront fixed quote, and is backed by our workmanship warranty.",
+    whyChooseUsExpanded: "As a washer repair company trusted throughout Bolingbrook and the Chicago suburbs, Aerotech Solution's washer technicians perform a complete multi-point inspection on every washing machine repair service call — checking the pump, belt, suspension, door seal, and control board — instead of stopping at the first likely cause. Common replacement parts are carried, model-specific parts are sourced after diagnosis, and every repair comes with an upfront fixed quote and is backed by our workmanship warranty.",
     faqs: [
       { q: "Why won't my washer drain?", a: "A clogged drain pump, kinked hose, or debris caught in the pump filter is the most common cause. Front-load washers often have an accessible filter that can trap coins and small items." },
       { q: "Why is my washer not spinning?", a: "A failed lid switch, worn drive belt, or failing motor coupling are the most frequent causes, depending on your washer's design." },
@@ -358,7 +358,7 @@ export const serviceSeoContent = {
     ],
     brandSpotlight: [
       { brand: "GE", text: "GE's over-the-range and countertop microwaves are common throughout the area, most often needing magnetron or door switch repairs." },
-      { brand: "Whirlpool", text: "Whirlpool microwaves are straightforward to diagnose, and our technicians carry OEM control boards and switches for most model years." },
+      { brand: "Whirlpool", text: "Whirlpool microwaves are straightforward to diagnose, and compatible control boards and switches can be sourced after diagnosis." },
       { brand: "KitchenAid", text: "KitchenAid's built-in drawer microwaves require careful cabinetry-safe removal and reinstallation, which our technicians are experienced with." },
       { brand: "Samsung", text: "We service Samsung's countertop and over-the-range microwaves, including their sensor cook and inverter technology models." },
       { brand: "LG", text: "LG microwave-hood combination units are common in kitchen remodels, and we carry parts for their integrated venting systems." },
@@ -431,12 +431,12 @@ export const serviceSeoContent = {
     ],
     diagnosisProcessSection: [
       "Every dishwasher repair service call starts the same way: we test the water inlet valve, spray arms, pump, and drain line as a system rather than replacing the first part that looks worn. Once we've confirmed the actual cause, we walk you through it in plain terms and provide a fixed price before any repair begins.",
-      "Most repairs — spray arms, pumps, latches, and seals — are completed in a single visit. If a part needs to be sourced for a less common model, we'll let you know upfront so there are no surprises."
+      "Most repairs — spray arms, pumps, latches, and seals — use parts commonly stocked on hand. If a part needs to be sourced for a less common model, we'll let you know upfront so there are no surprises."
     ],
     brandSpotlight: [
       { brand: "Whirlpool", text: "Whirlpool dishwashers are common throughout the area, with most repairs involving spray arm clogs or drain pump issues." },
       { brand: "KitchenAid", text: "KitchenAid's higher-end dishwashers often include enhanced filtration systems that require careful cleaning and inspection during repair." },
-      { brand: "GE", text: "We service GE dishwashers, including their premium GE Monogram line, and stock OEM parts for their pump and control board assemblies." },
+      { brand: "GE", text: "We service GE dishwashers, including their premium GE Monogram line, and can source compatible model-specific components for their pump and control board assemblies after diagnosis." },
       { brand: "Samsung", text: "We regularly service Samsung's StormWash and digital-control dishwashers for sensor and pump-related repairs." },
       { brand: "LG", text: "LG's QuadWash and TrueSteam dishwashers use multiple spray arms that require methodical inspection to isolate a clog or pump issue." },
       { brand: "Frigidaire", text: "Frigidaire dishwashers are dependable and typically need drain pump or door seal repairs rather than control board replacement." },
@@ -461,7 +461,7 @@ export const serviceSeoContent = {
       "Check the door gasket periodically for cracking or debris that could prevent a proper seal.",
       "Avoid overloading the racks, which blocks spray arm rotation and reduces overall cleaning performance."
     ],
-    whyChooseUsExpanded: "Aerotech Solution diagnoses the complete water path on every dishwasher service call — inlet valve, spray arms, pump, and drain line — rather than replacing the first component that looks likely. Every repair uses OEM parts, includes an upfront fixed quote, and is backed by our workmanship warranty.",
+    whyChooseUsExpanded: "Aerotech Solution diagnoses the complete water path on every dishwasher service call — inlet valve, spray arms, pump, and drain line — rather than replacing the first component that looks likely. Common replacement parts are carried, model-specific parts are sourced after diagnosis, and every repair includes an upfront fixed quote and is backed by our workmanship warranty.",
     faqs: [
       { q: "Is it worth repairing a dishwasher?", a: "In most cases, yes — spray arm, pump, and seal repairs are affordable relative to a new unit and fully resolve the issue. Control board failure on a dishwasher older than 10 years is worth comparing against replacement. Request a diagnosis and we'll give you an honest read on your specific unit." },
       { q: "How much does dishwasher repair cost?", a: "Spray arm and pump repairs are generally affordable; control board replacement costs more. We provide a fixed quote after diagnosis, before any work begins." },
@@ -480,11 +480,11 @@ export const serviceSeoContent = {
 
   "hvac-furnace-repair": {
     metaTitle: "HVAC Repair Service | AC, Furnace & Heating Repair",
-    metaDescription: "AC not cooling or furnace not heating? We provide 24/7 emergency HVAC repair for air conditioning, furnaces, and heating systems. Book service today.",
-    metaKeywords: "HVAC repair, HVAC repair near me, emergency HVAC repair, air conditioning repair, AC repair, AC repair near me, furnace repair, furnace repair near me, heating repair, commercial HVAC repair, 24/7 HVAC repair",
+    metaDescription: "AC not cooling or furnace not heating? We provide emergency HVAC repair for air conditioning, furnaces, and heating systems. Book service today.",
+    metaKeywords: "HVAC repair, HVAC repair near me, emergency HVAC repair, air conditioning repair, AC repair, AC repair near me, furnace repair, furnace repair near me, heating repair, commercial HVAC repair",
     h1Override: "HVAC Repair",
     introExpanded: [
-      "Searching for HVAC repair near me because your AC stopped cooling or your furnace won't heat? Few home systems get tested as hard as HVAC and furnace equipment during a Midwest winter or summer heat wave, and few failures are as stressful as losing heating or cooling at exactly the wrong moment. Aerotech Solution provides HVAC repair services with factory-certified technicians equipped to work safely around combustion components, electrical controls, and refrigerant systems alike.",
+      "Searching for HVAC repair near me because your AC stopped cooling or your furnace won't heat? Few home systems get tested as hard as HVAC and furnace equipment during a Midwest winter or summer heat wave, and few failures are as stressful as losing heating or cooling at exactly the wrong moment. Aerotech Solution provides HVAC repair services with trained, experienced technicians equipped to work safely around combustion components, electrical controls, and refrigerant systems alike.",
       "Because these systems combine mechanical, electrical, and combustion elements, the same symptom — a house that won't heat evenly, for example — can stem from a dozen different causes: a clogged filter, a failing blower motor, undersized ductwork, or a thermostat that isn't communicating properly with the unit. We run a full diagnostic assessment before recommending any repair, since fixing the wrong component won't resolve a distribution issue."
     ],
     signsOfRepair: [
@@ -509,7 +509,7 @@ export const serviceSeoContent = {
       "Air conditioning repair and AC repair cover everything from a unit that won't turn on to one that runs constantly without actually cooling the house. We test the thermostat, refrigerant level, compressor, and electrical components as a system, since more than one of these is often involved when an AC unit stops performing."
     ],
     emergencySection: [
-      "HVAC failures rarely happen at a convenient time, which is why we provide 24/7 emergency HVAC repair — including emergency AC repair and emergency furnace repair — for households and businesses facing a complete loss of heating or cooling."
+      "HVAC failures rarely happen at a convenient time. We prioritize emergency AC repair and emergency furnace repair requests for households and businesses facing a complete loss of heating or cooling — reach us Monday–Saturday, 9:00 AM–5:00 PM Central Time."
     ],
     furnaceHeatingSection: [
       "Furnace repair and heating repair cover gas and electric systems alike, from ignition and flame sensor issues to blower motor and control board failures. A furnace that won't heat, won't stay lit, or blows cold air are all treated as priority diagnostics given how quickly a home can become uncomfortable — or unsafe — without reliable heat."
@@ -528,9 +528,9 @@ export const serviceSeoContent = {
     ],
     brandSpotlight: [
       { brand: "Carrier", text: "Carrier systems are common throughout the Chicago suburbs, and we're equipped to service both their furnace ignition systems and central AC compressors." },
-      { brand: "Trane", text: "Trane's variable-speed blower systems require precise diagnostic work, which our factory-certified technicians are trained to perform." },
+      { brand: "Trane", text: "Trane's variable-speed blower systems require precise diagnostic work, which our trained, experienced technicians are equipped to perform." },
       { brand: "Rheem", text: "Rheem furnaces and AC units are dependable systems, with most repairs involving ignitor, sensor, or capacitor replacement." },
-      { brand: "Goodman", text: "Goodman systems are widely installed in the area, and we stock OEM parts for their furnace control boards and blower assemblies." },
+      { brand: "Goodman", text: "Goodman systems are widely installed in the area, and we can source compatible model-specific components for their furnace control boards and blower assemblies after diagnosis." },
       { brand: "Lennox", text: "Lennox's higher-efficiency furnaces use more sophisticated electronic controls, which our diagnostic process is built to handle." },
       { brand: "York", text: "York HVAC systems are common in both older and newer installations, and we service their furnace and central air components alike." }
     ],
@@ -552,12 +552,12 @@ export const serviceSeoContent = {
       "If you smell gas near your furnace, leave the area and contact your gas utility or emergency services before doing anything else.",
       "If you notice smoke, a burning odor, sparking, or exposed wiring, turn the system off at the thermostat or breaker if it's safe to do so, and don't use it again until it's inspected."
     ],
-    whyChooseUsExpanded: "Aerotech Solution's factory-certified technicians handle both heating and cooling systems, gas and electric, running full diagnostic checks rather than guessing at parts — because a misdiagnosed HVAC repair doesn't just waste money, it leaves you exposed to the exact temperature extremes you were trying to avoid. Every repair includes a transparent, upfront quote and is backed by our workmanship warranty.",
+    whyChooseUsExpanded: "Aerotech Solution's trained, experienced technicians handle both heating and cooling systems, gas and electric, running full diagnostic checks rather than guessing at parts — because a misdiagnosed HVAC repair doesn't just waste money, it leaves you exposed to the exact temperature extremes you were trying to avoid. Every repair includes a transparent, upfront quote and is backed by our workmanship warranty.",
     faqs: [
       { q: "What types of HVAC systems do you repair?", a: "We repair furnaces, central air conditioning systems, and ductwork, covering both gas and electric platforms across all major brands." },
-      { q: "Do you repair both air conditioners and furnaces?", a: "Yes, our factory-certified technicians handle both heating and cooling systems across all major brands." },
-      { q: "Do you provide emergency HVAC repair?", a: "Yes, we provide 24/7 emergency HVAC repair for a complete loss of heating or cooling." },
-      { q: "Is 24-hour HVAC service available?", a: "Yes, we dispatch technicians for HVAC emergencies 24 hours a day, 7 days a week." },
+      { q: "Do you repair both air conditioners and furnaces?", a: "Yes, our trained, experienced technicians handle both heating and cooling systems across all major brands." },
+      { q: "Do you provide emergency HVAC repair?", a: "Yes, we prioritize emergency HVAC repair requests for a complete loss of heating or cooling. Reach us Monday–Saturday, 9:00 AM–5:00 PM Central Time." },
+      { q: "What are your HVAC service hours?", a: "We're available Monday–Saturday, 9:00 AM–5:00 PM Central Time, and closed Sunday. Contact us to schedule HVAC service within those hours." },
       { q: "Why is my AC running but not cooling?", a: "Low refrigerant from a leak, a failing compressor, a frozen evaporator coil, or an electrical control issue are the most common causes." },
       { q: "Why is my furnace blowing cold air?", a: "This is different from a complete lack of heat — it usually points to an intermittent ignition issue, a failing flame sensor, or a thermostat set to fan-only mode." },
       { q: "Do you provide commercial HVAC repair?", a: "Our primary focus is residential HVAC repair, though we're able to assist with light commercial systems for smaller multi-family properties. Let us know your specific setup when you reach out." },
@@ -600,7 +600,7 @@ export const serviceSeoContent = {
     ],
     diagnosisProcessSection: [
       "Every garbage disposal repair service call starts with a straightforward diagnosis: is the unit receiving power, is the flywheel turning freely, and are the seals and drain connections intact. That sequence tells us quickly whether the fix is a jam clearance, a switch or wiring repair, or a sign that replacement is the more practical option.",
-      "We provide a fixed price before any repair begins, and most jam, switch, and wiring repairs are completed in a single visit."
+      "We provide a fixed price before any repair begins. Most jam, switch, and wiring repairs use parts commonly stocked on hand; model-specific parts are sourced after diagnosis."
     ],
     installationSection: [
       "Alongside repairs, we also provide garbage disposal installation for both replacement units and first-time installs, including upgrading to a more powerful or quieter model if your household needs it.",
@@ -609,7 +609,7 @@ export const serviceSeoContent = {
     technicianVsPlumberSection: [
       "Most garbage disposal problems — jams, switch failures, reset issues, wiring, mounting, and internal component wear — fall squarely within appliance repair, and that's the work our technicians handle every day. Leaking pipes, drain-line modifications, or plumbing work beyond the disposal itself are a different scope, and in those cases a licensed plumber may be the better call. If you're not sure which applies to your situation, describe the issue when you reach out and we can point you in the right direction."
     ],
-    relatedServiceLink: { to: "/services/dishwasher-repair", label: "Visit our Dishwasher Repair page" },
+    relatedServiceLink: { to: "/services/dishwasher-repair/", label: "Visit our Dishwasher Repair page" },
     blogGuideLabel: "Read our garbage disposal repair guide",
     repairVsReplacement: {
       intro: "Garbage disposals typically last 8–12 years. A jam, a tripped reset, or a failed switch are inexpensive, worthwhile repairs at any point in that range. A leaking unit — where the internal seals have failed — is the clearest sign that disposal replacement, not repair, is the right move.",
@@ -700,7 +700,7 @@ export const serviceSeoContent = {
     technicianVsPlumberSection: [
       "Water heater technicians diagnose and repair controls, heating elements, ignition systems, thermostats, and tankless electronics — the majority of water heater problems. Licensed plumbing or gas work may be needed separately for supply line and venting modifications, gas line work requiring a permit, or plumbing issues beyond the water heater itself. If you're not sure which applies, describe the issue when you reach out and we can point you in the right direction."
     ],
-    relatedServiceLink: { to: "/services/hvac-furnace-repair", label: "Visit our HVAC & Furnace Repair page" },
+    relatedServiceLink: { to: "/services/hvac-furnace-repair/", label: "Visit our HVAC & Furnace Repair page" },
     blogGuideLabel: "Read our water heater repair guide",
     brandSpotlight: [
       { brand: "A. O. Smith", text: "A. O. Smith tank water heaters are common in the area, and most repairs involve heating element or thermostat replacement." },

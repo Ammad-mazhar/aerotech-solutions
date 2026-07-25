@@ -24,6 +24,9 @@ const ServiceFeature = ({ service, index }) => {
         <img
           src={service.image}
           alt={service.alt || service.title}
+          width={service.imageWidth}
+          height={service.imageHeight}
+          loading="lazy"
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         />
         <div style={{
@@ -110,7 +113,7 @@ const Services = () => {
         <h2 style={{ fontSize: '1rem', letterSpacing: '8px', textTransform: 'uppercase', color: '#22c55e' }}>
           Aerotech Solution
         </h2>
-        <p style={{ fontSize: '3rem', fontWeight: '900', marginTop: '20px' }}>
+        <p style={{ fontSize: 'clamp(1.75rem, 7vw, 3rem)', fontWeight: '900', marginTop: '20px' }}>
           Engineering Excellence.
         </p>
         <Link

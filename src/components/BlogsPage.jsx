@@ -24,13 +24,13 @@ const BlogsPage = () => {
         <meta name="keywords" content="appliance repair blog, appliance repair tips, refrigerator troubleshooting, washer dryer repair guide, HVAC furnace tips" />
         <link rel="canonical" href={canonicalUrl('/blogs')} />
         <meta property="og:title" content="Aerotech Solution Blog | Appliance Repair Tips & Guides" />
-        <meta property="og:description" content="Expert tips and guides for every major home appliance, written by certified Aerotech Solution technicians." />
+        <meta property="og:description" content="Expert tips and guides for every major home appliance, written by trained, experienced Aerotech Solution technicians." />
         <meta property="og:url" content={canonicalUrl('/blogs')} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Aerotech Solution Blog | Appliance Repair Tips" />
-        <meta name="twitter:description" content="Guides on refrigerators, ovens, washers, dryers, HVAC, and more from certified appliance repair technicians." />
+        <meta name="twitter:description" content="Guides on refrigerators, ovens, washers, dryers, HVAC, and more from trained, experienced appliance repair technicians." />
         <meta name="twitter:image" content="https://aerotechsolutioninc.com/banner-image.jpg" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
@@ -66,7 +66,7 @@ const BlogsPage = () => {
           }
           .blog-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
             gap: 2rem;
           }
           .blog-card {
@@ -197,14 +197,18 @@ const BlogsPage = () => {
 
           <div className="blogs-header">
             <h1>Appliance Repair Tips & Guides</h1>
-            <p>Straightforward advice from our certified technicians on every appliance we service — what's normal, what's a warning sign, and when to call a professional.</p>
+            <p>Straightforward advice from our trained, experienced technicians on every appliance we service — what's normal, what's a warning sign, and when to call a professional.</p>
           </div>
 
           <div className="blog-grid">
-            {blogsData.map((post) => (
+            {blogsData.map((post, index) => (
               <Link className="blog-card" key={post.id} to={routePath(`/blogs/${post.id}`)}>
                 <div className="blog-card-image">
-                  <img src={post.image} alt={post.alt} loading="lazy" />
+                  {index === 0 ? (
+                    <img src={post.image} alt={post.alt} width={post.imageWidth} height={post.imageHeight} loading="eager" fetchPriority="high" />
+                  ) : (
+                    <img src={post.image} alt={post.alt} width={post.imageWidth} height={post.imageHeight} loading="lazy" />
+                  )}
                   <span className="blog-card-badge">{post.category}</span>
                   <span className="blog-card-type-badge">Blog</span>
                 </div>
@@ -223,7 +227,7 @@ const BlogsPage = () => {
 
           <div className="blogs-cta">
             <h3>Ready to get your appliance fixed?</h3>
-            <p>Book a certified technician today and get back to normal fast.</p>
+            <p>Book a trained, experienced technician today and get back to normal fast.</p>
             <Link to={routePath('/book-service')} className="blogs-cta-button">
               Book Service
             </Link>

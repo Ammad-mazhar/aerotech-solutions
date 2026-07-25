@@ -16,6 +16,7 @@ const Testimonials = lazy(() => import('./components/Testimonials'));
 const AboutPage = lazy(() => import('./components/AboutPage'));
 const Contact = lazy(() => import('./components/Contact'));
 const ServiceAreasPage = lazy(() => import('./components/ServiceAreasPage'));
+const LocationDetail = lazy(() => import('./components/LocationDetail'));
 const PrivacyPolicyPage = lazy(() => import('./components/PrivacyPolicyPage'));
 const FAQPage = lazy(() => import('./components/FAQPage'));
 const BlogsPage = lazy(() => import('./components/BlogsPage'));
@@ -62,6 +63,7 @@ export function AppRoutes() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/service-areas" element={<ServiceAreasPage />} />
+        <Route path="/service-areas/:citySlug" element={<LocationDetail />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/blogs" element={<BlogsPage />} />

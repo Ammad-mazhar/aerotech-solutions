@@ -6,8 +6,8 @@
 export const blogSeoContent = {
   "refrigerator-repair": {
     metaTitle: "Refrigerator Repair Guide: Causes, Costs & FAQs | Aerotech",
-    metaDescription: "Refrigerator not cooling or leaking? Complete guide to causes, diagnosis, repair cost factors, and when to call a professional. Serving Bolingbrook & Chicagoland.",
-    suggestedUrl: "/blogs/refrigerator-repair",
+    metaDescription: "Refrigerator not cooling or leaking? Learn common causes, repair cost factors, safe checks, and when to call a professional refrigerator technician.",
+    suggestedUrl: "/blogs/refrigerator-repair/",
     sections: [
       {
         heading: "Common Causes",
@@ -45,14 +45,14 @@ export const blogSeoContent = {
         paragraphs: [
           "A proper diagnosis starts before any panel comes off. Our technicians ask what changed recently — a power outage, a recent move, a full grocery haul — since that context often narrows down the cause quickly.",
           "From there, diagnosis follows the airflow and the electrical path: checking that the evaporator and condenser fans spin freely, confirming the compressor is receiving correct voltage, and using temperature probes to compare actual compartment temperatures against what the control board believes it's maintaining.",
-          "If those checks don't explain the symptom, we move to sealed-system diagnostics — testing refrigerant pressure and checking for leak points using electronic leak detectors, since this is the one area of a refrigerator that requires certified handling and can't be safely assessed by ear or eye alone."
+          "If those checks don't explain the symptom, we move to sealed-system diagnostics — testing refrigerant pressure and checking for leak points using electronic leak detectors. Refrigerant work is handled in accordance with applicable EPA requirements, and this is one area of a refrigerator that can't be safely assessed by ear or eye alone."
         ]
       },
       {
         heading: "Repair Process",
         paragraphs: [
           "Once the cause is confirmed, we walk through exactly what needs to happen and what it will cost before any work begins — no repair starts on a guess.",
-          "Most electrical, fan, and door seal repairs are completed in a single visit using OEM parts carried on the service vehicle. Sealed-system repairs, which are less common, may require additional time to source a specific compressor or complete a proper refrigerant recovery and recharge.",
+          "Electrical, fan, and door seal repairs use common replacement parts carried on the service vehicle. Sealed-system repairs, which are less common, may require additional time to source a specific compressor, a model-specific part, or complete a proper refrigerant recovery and recharge.",
           "Every repair ends with a running test period on-site, confirming the unit is actually reaching and holding temperature before we consider the job done — not just that it powers on."
         ]
       },
@@ -79,7 +79,7 @@ export const blogSeoContent = {
       {
         heading: "Safety Tips",
         items: [
-          { title: "Never attempt sealed-system repairs yourself", text: "Refrigerant handling requires EPA certification, and improperly handled refrigerant is both a safety and environmental hazard." },
+          { title: "Never attempt sealed-system repairs yourself", text: "Refrigerant work is handled in accordance with applicable EPA requirements, and improperly handled refrigerant is both a safety and environmental hazard." },
           { title: "Unplug the unit before checking anything behind or beneath it", text: "Refrigerators combine water lines, electrical components, and moving fan blades in close proximity." },
           { title: "Discard food after extended power loss or cooling failure", text: "If the fridge has been above 40°F for more than two hours, perishable food safety is a real concern, not just a taste issue." },
           { title: "Address water pooling near outlets promptly", text: "Water near electrical outlets or the compressor compartment is a shock hazard that shouldn't wait." }
@@ -97,7 +97,7 @@ export const blogSeoContent = {
         heading: "Why Choose Aerotech Solution Inc.",
         paragraphs: [
           "We treat refrigerator repair as a food-safety issue first, which is why we prioritize same-day appointments for cooling failures rather than treating them like a routine maintenance queue.",
-          "Our technicians are factory-certified across major brands, carry OEM parts for same-visit repairs whenever possible, and every completed repair is backed by a workmanship warranty. We're based in Bolingbrook and serve homeowners throughout the greater Chicago suburbs with the same diagnostic-first approach on every call."
+          "Our technicians are trained and experienced across major brands, carry common replacement parts, and source model-specific parts after diagnosis. Every completed repair is backed by a workmanship warranty, and every appointment follows the same diagnostic-first approach: confirm the actual cause, explain the repair options, and test the unit before considering the job done."
         ]
       },
       {
@@ -120,15 +120,15 @@ export const blogSeoContent = {
       { q: "How long do refrigerators last?", a: "Most refrigerators last 12–15 years with reasonable maintenance, though this varies by brand, usage, and how consistently the condenser coils are kept clean." },
       { q: "Why won't my refrigerator turn on at all?", a: "Before assuming a major failure, we check the outlet, power cord, and any tripped internal breaker or failed start relay — these are more common causes than a fully dead unit." },
       { q: "Why is my ice maker not working?", a: "This is usually isolated to a faulty water inlet valve, a frozen supply line, or a jammed ejector arm, and typically doesn't affect the refrigerator's main cooling system." },
-      { q: "Do you offer same-day refrigerator repair near Bolingbrook?", a: "Yes, we prioritize same-day appointments for cooling failures given the food-safety risk involved with a warm refrigerator." },
+      { q: "Do you offer same-day refrigerator repair?", a: "Cooling failures are treated as a priority given the food-safety risk, and same-day appointments may be available depending on technician availability, service location, and the parts required. Contact Aerotech Solution to confirm the earliest available appointment." },
       { q: "Is refrigerator repair covered under warranty?", a: "Repairs completed by Aerotech Solution include a workmanship warranty on both the parts installed and the labor performed. If your unit is still under manufacturer warranty, let us know and we can discuss how that applies." }
     ]
   },
 
   "washer-repair": {
     metaTitle: "Washer Repair Guide: Causes, Costs & FAQs | Aerotech",
-    metaDescription: "Washer not spinning, draining, or leaking? Full guide to causes, diagnosis, repair costs, and when to call a pro. Serving Bolingbrook & Chicagoland.",
-    suggestedUrl: "/blogs/washer-repair",
+    metaDescription: "Washer not spinning, draining, or leaking? Learn common causes, safe checks, repair cost factors, and when professional washer repair is needed.",
+    suggestedUrl: "/blogs/washer-repair/",
     sections: [
       {
         heading: "Common Causes",
@@ -172,7 +172,7 @@ export const blogSeoContent = {
         heading: "Repair Process",
         paragraphs: [
           "After diagnosis, we explain what's actually wrong in plain terms and provide a fixed price before starting any repair.",
-          "Pump, belt, switch, and seal repairs are typically completed in a single visit with OEM parts carried on the truck. More involved repairs, like a full suspension system replacement, may take a bit longer depending on parts availability for your specific model.",
+          "Pump, belt, switch, and seal repairs use common replacement parts carried on the truck. More involved repairs, like a full suspension system replacement, may take a bit longer if a model-specific part needs to be sourced after diagnosis.",
           "We run a complete test cycle after every repair — fill, agitate, drain, and spin — to confirm the fix holds under real operating conditions, not just that the machine powers back on."
         ]
       },
@@ -217,7 +217,7 @@ export const blogSeoContent = {
         heading: "Why Choose Aerotech Solution Inc.",
         paragraphs: [
           "We perform a full multi-point inspection on every washer service call rather than stopping at the first likely cause, which is why our repairs tend to actually resolve the issue rather than requiring a follow-up visit.",
-          "Every job uses OEM parts, comes with a fixed price agreed to before we start, and is backed by our workmanship warranty. We're a Bolingbrook-based team serving households throughout the greater Chicago suburbs."
+          "Jobs use common replacement parts, with model-specific parts sourced after diagnosis. Every job comes with a fixed price agreed to before we start, is backed by our workmanship warranty, and ends with a full test cycle to confirm the fix holds."
         ]
       },
       {
@@ -241,14 +241,14 @@ export const blogSeoContent = {
       { q: "What brands of washers do you repair?", a: "We service all major washer brands, including Whirlpool, Maytag, LG, Samsung, Electrolux, and Kenmore, among others." },
       { q: "Do you repair both front-load and top-load washers?", a: "Yes, our technicians service both configurations across all major brands." },
       { q: "Can I fix a washing machine myself?", a: "Basic tasks like clearing the pump filter or checking hoses are reasonable to handle yourself. Belt, motor, suspension, and electrical repairs are best left to a technician given the complexity and safety considerations involved." },
-      { q: "Do you offer same-day washer repair near Bolingbrook?", a: "Yes, most pump, belt, and seal repairs are completed the same day using parts commonly stocked on our service vehicles." }
+      { q: "Do you offer same-day washer repair?", a: "Same-day appointments may be available depending on technician availability, service location, and the parts required. Contact Aerotech Solution to confirm the earliest available appointment." }
     ]
   },
 
   "dryer-repair": {
     metaTitle: "Dryer Repair Guide: Causes, Costs & FAQs | Aerotech",
-    metaDescription: "Dryer not heating or taking too long? Full guide to causes, safety, diagnosis, and repair costs. Serving Bolingbrook & Chicagoland homeowners.",
-    suggestedUrl: "/blogs/dryer-repair",
+    metaDescription: "Dryer not heating or taking too long to dry? Learn common causes, fire-safety warnings, repair cost factors, and when professional repair is needed.",
+    suggestedUrl: "/blogs/dryer-repair/",
     sections: [
       {
         heading: "Common Causes",
@@ -292,7 +292,7 @@ export const blogSeoContent = {
         heading: "Repair Process",
         paragraphs: [
           "We explain the diagnosis in plain terms and provide a fixed price before any repair begins — including the vent cleaning that's part of nearly every service call, not an upsell.",
-          "Belt, thermostat, igniter, and roller repairs are typically completed in a single visit using parts commonly stocked on the service vehicle.",
+          "Belt, thermostat, igniter, and roller repairs use parts commonly stocked on the service vehicle; model-specific parts are sourced after diagnosis.",
           "Every repair concludes with a full test cycle, confirming the dryer reaches proper temperature and completes a cycle in a reasonable time — not just that it powers on and spins."
         ]
       },
@@ -337,7 +337,7 @@ export const blogSeoContent = {
         heading: "Why Choose Aerotech Solution Inc.",
         paragraphs: [
           "We treat every dryer service call as a safety inspection first and a repair second, checking the full vent path, drum assembly, belt, and heating components on every visit rather than only addressing the symptom reported.",
-          "Every repair uses OEM parts, comes with an upfront fixed quote, and is backed by our workmanship warranty. We're based in Bolingbrook and serve homeowners throughout the greater Chicago suburbs."
+          "Repairs use common replacement parts, with model-specific parts sourced after diagnosis. Every repair comes with an upfront fixed quote, is backed by our workmanship warranty, and every appointment starts with a full diagnosis and ends with a complete test cycle, so the fix is confirmed before we consider the job done."
         ]
       },
       {
@@ -360,14 +360,14 @@ export const blogSeoContent = {
       { q: "Is a burning smell from my dryer dangerous?", a: "Yes, it should be treated as urgent. The dryer shouldn't be used again until it's inspected, since it can indicate a genuine fire risk." },
       { q: "How long do dryers last?", a: "Most dryers last 10–13 years with reasonable maintenance, particularly consistent lint trap and vent cleaning." },
       { q: "Do you repair gas and electric dryers?", a: "Yes, our technicians are trained and equipped to diagnose and repair both gas and electric dryers across all major brands." },
-      { q: "Do you offer same-day dryer repair near Bolingbrook?", a: "Yes, most belt, thermostat, and vent-related repairs are completed the same day using parts commonly stocked on our service vehicles." }
+      { q: "Do you offer same-day dryer repair?", a: "Same-day appointments may be available depending on technician availability, service location, and the parts required. Contact Aerotech Solution to confirm the earliest available appointment." }
     ]
   },
 
   "dishwasher-repair": {
     metaTitle: "Dishwasher Repair Guide: Causes, Costs & FAQs | Aerotech",
-    metaDescription: "Dishwasher not draining, cleaning, or leaking? Full guide to causes, diagnosis, and repair costs. Serving Bolingbrook & Chicagoland homeowners.",
-    suggestedUrl: "/blogs/dishwasher-repair",
+    metaDescription: "Dishwasher not draining, cleaning, or leaking? Learn common causes, safe checks, repair cost factors, and when professional dishwasher repair is needed.",
+    suggestedUrl: "/blogs/dishwasher-repair/",
     sections: [
       {
         heading: "Common Causes",
@@ -412,7 +412,7 @@ export const blogSeoContent = {
         heading: "Repair Process",
         paragraphs: [
           "Once we've confirmed the cause, we explain it in plain terms and provide a fixed price before any repair begins.",
-          "Filter, spray arm, and drain pump repairs are typically completed in a single visit using parts commonly stocked on the service vehicle. Control board or wiring issues occasionally take a bit longer depending on parts availability for your specific model.",
+          "Filter, spray arm, and drain pump repairs use parts commonly stocked on the service vehicle. Control board or wiring issues occasionally take a bit longer if a model-specific part needs to be sourced after diagnosis.",
           "Every repair concludes with a full test cycle, confirming the dishwasher fills, washes, and drains correctly before we consider the job finished."
         ]
       },
@@ -457,7 +457,7 @@ export const blogSeoContent = {
         heading: "Why Choose Aerotech Solution Inc.",
         paragraphs: [
           "We diagnose the complete water path on every dishwasher call — inlet valve, spray arms, pump, drain line, and the disposal connection where applicable — rather than replacing the first component that looks likely.",
-          "Every repair uses OEM parts, comes with an upfront fixed quote, and is backed by our workmanship warranty. We're based in Bolingbrook and serve homeowners throughout the greater Chicago suburbs."
+          "Repairs use common replacement parts, with model-specific parts sourced after diagnosis. Every repair comes with an upfront fixed quote, is backed by our workmanship warranty, and every job is tested through a complete fill-wash-drain cycle before we consider it finished."
         ]
       },
       {
@@ -479,14 +479,14 @@ export const blogSeoContent = {
       { q: "Can a garbage disposal cause dishwasher problems?", a: "Yes — if the dishwasher drains through the garbage disposal, a clog in the disposal or a leftover installation knockout plug will prevent the dishwasher from draining even though the dishwasher itself is fine." },
       { q: "How long do dishwashers last?", a: "Most dishwashers last 9–12 years with reasonable maintenance, particularly regular filter cleaning." },
       { q: "Do you repair all dishwasher brands?", a: "Yes, we service all major dishwasher brands, including Whirlpool, KitchenAid, GE, Samsung, LG, and Frigidaire, among others." },
-      { q: "Do you offer same-day dishwasher repair near Bolingbrook?", a: "Yes, most filter, spray arm, and pump repairs are completed the same day using commonly stocked parts." }
+      { q: "Do you offer same-day dishwasher repair?", a: "Same-day appointments may be available depending on technician availability, service location, and the parts required. Contact Aerotech Solution to confirm the earliest available appointment." }
     ]
   },
 
   "microwave-repair": {
     metaTitle: "Microwave Repair Guide: Causes, Costs & FAQs | Aerotech",
-    metaDescription: "Microwave not heating, sparking, or turntable stuck? Full guide to safe diagnosis, causes, and repair costs. Serving Bolingbrook & Chicagoland.",
-    suggestedUrl: "/blogs/microwave-repair",
+    metaDescription: "Microwave not heating, sparking, or turning? Learn safe checks, common failure causes, repair cost factors, and when professional service is required.",
+    suggestedUrl: "/blogs/microwave-repair/",
     sections: [
       {
         heading: "Common Causes",
@@ -532,7 +532,7 @@ export const blogSeoContent = {
         heading: "Repair Process",
         paragraphs: [
           "We explain the diagnosis in plain terms and provide a fixed price before any repair begins.",
-          "Door switch, waveguide cover, and turntable motor repairs are typically completed in a single visit. Magnetron or high-voltage component replacement may take slightly longer depending on parts availability for your specific model.",
+          "Door switch, waveguide cover, and turntable motor repairs use parts commonly stocked on the service vehicle. Magnetron or high-voltage component replacement may take slightly longer if a model-specific part needs to be sourced after diagnosis.",
           "Every repair concludes with a full operational test, confirming the unit heats correctly and the turntable, door, and controls all function properly before we consider the job complete."
         ]
       },
@@ -577,7 +577,7 @@ export const blogSeoContent = {
         heading: "Why Choose Aerotech Solution Inc.",
         paragraphs: [
           "Because microwaves store dangerous voltage even when unplugged, our technicians are specifically trained in safe high-voltage discharge procedures before opening any unit's cabinet — and we diagnose the actual failed component rather than defaulting to a full unit swap.",
-          "Every repair is backed by a workmanship warranty with pricing agreed upfront. We're based in Bolingbrook and serve homeowners throughout the greater Chicago suburbs."
+          "Every repair is backed by a workmanship warranty with pricing agreed upfront. Every unit is fully tested for heating performance and safety before we consider the repair complete."
         ]
       },
       {
@@ -596,7 +596,7 @@ export const blogSeoContent = {
       { q: "How much does microwave repair cost?", a: "It depends on the failed component — door switches and turntable motors are relatively affordable, while magnetron replacement costs more. We provide a fixed quote after diagnosis." },
       { q: "Do you repair built-in drawer microwaves?", a: "Yes, we service built-in, drawer-style, over-the-range, and countertop microwaves across all major brands." },
       { q: "Is it worth repairing an older microwave?", a: "For door switches, waveguide covers, and turntable motors, generally yes. Magnetron replacement on a unit older than 8 years is worth comparing against the cost of a new microwave." },
-      { q: "Do you offer same-day microwave repair near Bolingbrook?", a: "Yes, most switch, motor, and waveguide cover repairs are completed the same day." },
+      { q: "Do you offer same-day microwave repair?", a: "Same-day appointments may be available depending on technician availability, service location, and the parts required. Contact Aerotech Solution to confirm the earliest available appointment." },
       { q: "What brands of microwaves do you repair?", a: "We service all major microwave brands, including GE, Whirlpool, KitchenAid, Samsung, LG, and Frigidaire, among others." },
       { q: "Why does my microwave door not latch properly?", a: "A worn or misaligned door interlock switch is the usual cause, and it's treated as a priority repair since these switches are a core safety feature." },
       { q: "Why is my microwave making a buzzing noise?", a: "This can point to a failing high-voltage transformer or capacitor and is worth having inspected before continued use." }
@@ -605,8 +605,8 @@ export const blogSeoContent = {
 
   "oven-stove-cooktop-repair": {
     metaTitle: "Oven, Stove & Cooktop Repair Guide | Aerotech Solution",
-    metaDescription: "Oven not heating, burner not igniting, or cooktop cracked? Full guide to causes, safety, and repair costs. Serving Bolingbrook & Chicagoland.",
-    suggestedUrl: "/blogs/oven-stove-cooktop-repair",
+    metaDescription: "Oven not heating, burner not igniting, or cooktop damaged? Learn common causes, safety risks, repair costs, and when to schedule professional repair.",
+    suggestedUrl: "/blogs/oven-stove-cooktop-repair/",
     sections: [
       {
         heading: "Common Causes",
@@ -651,7 +651,7 @@ export const blogSeoContent = {
         heading: "Repair Process",
         paragraphs: [
           "We explain the diagnosis in plain terms and provide a fixed price before any repair begins.",
-          "Igniter, element, socket, and sensor repairs are typically completed in a single visit using OEM parts carried on the service vehicle. A cracked cooktop surface replacement may take slightly longer depending on parts availability for your specific model.",
+          "Igniter, element, socket, and sensor repairs use common replacement parts carried on the service vehicle. A cracked cooktop surface replacement may take slightly longer if a model-specific part needs to be sourced after diagnosis.",
           "Every repair concludes with a full operational test — confirming burners ignite reliably and the oven reaches and holds its set temperature — before we consider the job finished."
         ]
       },
@@ -696,7 +696,7 @@ export const blogSeoContent = {
         heading: "Why Choose Aerotech Solution Inc.",
         paragraphs: [
           "Our technicians are trained on both gas and electric platforms, so you don't need a separate specialist for a gas range versus an electric cooktop repair.",
-          "We diagnose before we quote, carry OEM igniters, elements, sockets, and sensors for most major brands, and back every completed repair with a workmanship warranty. We're based in Bolingbrook and serve homeowners throughout the greater Chicago suburbs."
+          "We diagnose before we quote, carry common igniters, elements, sockets, and sensors, source model-specific parts after diagnosis, and back every completed repair with a workmanship warranty. Every repair is tested for reliable ignition and accurate temperature before we consider the job done."
         ]
       },
       {
@@ -716,7 +716,7 @@ export const blogSeoContent = {
       { q: "Do you repair both gas and electric ranges?", a: "Yes, our technicians are trained and equipped to diagnose and repair gas, electric, and dual-fuel ranges, ovens, and cooktops." },
       { q: "Why does my oven take so long to preheat?", a: "A weakening heating element or igniter is the most likely cause, especially if this has developed gradually rather than happening all at once." },
       { q: "Is it dangerous to keep using a cracked cooktop?", a: "Yes. A crack can allow spills to reach live wiring and heating components beneath the glass, creating a real shock and fire risk in addition to the visible damage." },
-      { q: "Do you offer same-day oven repair near Bolingbrook?", a: "Yes, most igniter, element, and sensor repairs are completed the same day since these parts are commonly stocked on our service vehicles." },
+      { q: "Do you offer same-day oven repair?", a: "Same-day appointments may be available depending on technician availability, service location, and the parts required. Contact Aerotech Solution to confirm the earliest available appointment." },
       { q: "What brands of ranges do you repair?", a: "We service all major range and cooktop brands, including GE, Whirlpool, KitchenAid, Cafe, SMEG, Frigidaire, and Samsung, among others." },
       { q: "Why is only one burner on my electric cooktop not working?", a: "This points directly at that burner's individual heating element or its burner socket, since each electric burner operates independently of the others." }
     ]
@@ -724,8 +724,8 @@ export const blogSeoContent = {
 
   "hvac-furnace-repair": {
     metaTitle: "HVAC & Furnace Repair Guide: Causes, Costs & FAQs",
-    metaDescription: "AC blowing warm air or furnace won't start? Full guide to causes, diagnosis, and repair costs for heating & cooling. Serving Bolingbrook & Chicagoland.",
-    suggestedUrl: "/blogs/hvac-furnace-repair",
+    metaDescription: "AC blowing warm air or furnace not starting? Learn common HVAC causes, safe checks, repair cost factors, and when emergency service may be needed.",
+    suggestedUrl: "/blogs/hvac-furnace-repair/",
     sections: [
       {
         heading: "Common Causes",
@@ -733,7 +733,7 @@ export const blogSeoContent = {
         items: [
           { title: "A thermostat set incorrectly", text: "One of the most overlooked causes of warm air from an AC system is a thermostat set to 'Fan' instead of 'Cool' or 'Auto' — the system runs and moves air, but never actually cools it." },
           { title: "A clogged air filter", text: "Restricts airflow enough to cause the system to overheat and, in cooling mode, can lead to frozen evaporator coils that block proper heat exchange." },
-          { title: "Low refrigerant from a leak", text: "Without the correct refrigerant charge, the system can't absorb heat properly — a repair that requires EPA-certified handling, not a DIY top-off." },
+          { title: "Low refrigerant from a leak", text: "Without the correct refrigerant charge, the system can't absorb heat properly. Refrigerant work is handled in accordance with applicable EPA requirements, not a DIY top-off." },
           { title: "A failed capacitor", text: "This small component powers the blower motor's start and run cycle; when it fails, the blower may struggle to start, run intermittently, or not turn on at all." },
           { title: "A failed ignitor, pilot light, or flame sensor", text: "The most common reasons a furnace won't produce heat even though the blower is running." },
           { title: "A cracked heat exchanger", text: "A serious safety issue on older furnaces that can allow combustion byproducts, including carbon monoxide, to enter the airflow — this always warrants professional inspection, not a DIY assessment." }
@@ -770,7 +770,7 @@ export const blogSeoContent = {
         heading: "Repair Process",
         paragraphs: [
           "We explain what's actually wrong in plain terms and provide a fixed price before any repair begins.",
-          "Capacitor, ignitor, thermostat, and filter-related repairs are typically completed in a single visit using parts commonly stocked on the service vehicle. Refrigerant leak repairs or heat exchanger replacement may take longer depending on parts availability and the scope of the repair.",
+          "Capacitor, ignitor, thermostat, and filter-related repairs use parts commonly stocked on the service vehicle. Refrigerant leak repairs or heat exchanger replacement may take longer if a model-specific part needs to be sourced after diagnosis, depending on the scope of the repair.",
           "Every repair concludes with a full system test — confirming the unit reaches and holds the set temperature — before we consider the job complete."
         ]
       },
@@ -799,8 +799,12 @@ export const blogSeoContent = {
         items: [
           { title: "Never ignore a suspected cracked heat exchanger", text: "This can allow carbon monoxide into your home's airflow and always requires professional inspection." },
           { title: "Install and test carbon monoxide detectors near sleeping areas", text: "A basic safeguard for any home with a gas furnace, regardless of the unit's condition." },
+          { title: "Leave the home and call your gas utility if you smell gas near the furnace", text: "Don't operate light switches or appliances on your way out, and don't attempt any repair yourself — treat a gas odor as an emergency, not a maintenance item." },
+          { title: "Stop the system and shut off power at the breaker if you notice a burning electrical smell", text: "Have the unit inspected before running it again rather than continuing to operate it." },
+          { title: "Don't keep resetting a breaker that trips repeatedly", text: "Repeated tripping points to an underlying electrical fault and needs professional diagnosis rather than continued resets." },
           { title: "Let a frozen coil thaw before restarting the system", text: "Running a frozen AC system can cause further damage to the compressor." },
-          { title: "Don't attempt refrigerant handling yourself", text: "It requires EPA certification and improper handling is both a safety and environmental hazard." }
+          { title: "Don't attempt refrigerant handling yourself", text: "This work is handled in accordance with applicable EPA requirements, and improper handling is both a safety and environmental hazard." },
+          { title: "Treat a total loss of heating or cooling during extreme outdoor temperatures as urgent", text: "Extended exposure to extreme indoor temperatures is a genuine health risk, particularly for young children, older adults, and anyone with a medical condition." }
         ]
       },
       {
@@ -814,8 +818,8 @@ export const blogSeoContent = {
       {
         heading: "Why Choose Aerotech Solution Inc.",
         paragraphs: [
-          "Our factory-certified technicians handle both heating and cooling systems, gas and electric, running full diagnostic checks rather than guessing at parts — a misdiagnosed HVAC repair doesn't just waste money, it leaves you exposed to whatever temperature extreme you were trying to fix.",
-          "Every repair includes a transparent, upfront quote and is backed by our workmanship warranty. We're based in Bolingbrook and serve homeowners throughout the greater Chicago suburbs."
+          "Our trained, experienced technicians handle both heating and cooling systems, gas and electric, running full diagnostic checks rather than guessing at parts — a misdiagnosed HVAC repair doesn't just waste money, it leaves you exposed to whatever temperature extreme you were trying to fix.",
+          "Every repair includes a transparent, upfront quote and is backed by our workmanship warranty. We prioritize no-heat and no-cooling emergencies, and can be reached Monday–Saturday, 9:00 AM–5:00 PM Central Time."
         ]
       },
       {
@@ -835,16 +839,16 @@ export const blogSeoContent = {
       { q: "Why is one room in my house always colder or warmer than the rest?", a: "Usually related to ductwork sizing, blower motor speed settings, or a system that's undersized or oversized for the square footage it serves." },
       { q: "Is a cracked heat exchanger dangerous?", a: "Yes, it can allow carbon monoxide into your home's airflow. This always requires professional inspection and, in most cases, furnace replacement rather than a component repair." },
       { q: "Why does my AC have ice on it?", a: "Restricted airflow from a clogged filter or low refrigerant are the most common causes. Turn the system off and let it thaw before restarting, then have it inspected." },
-      { q: "Do you offer emergency HVAC repair near Bolingbrook?", a: "Yes, we prioritize no-heat and no-cooling emergencies given how quickly extreme temperatures can become a safety concern." },
-      { q: "Do you service both furnaces and central air conditioning?", a: "Yes, our factory-certified technicians handle both heating and cooling systems across all major brands." },
+      { q: "Do you offer emergency HVAC repair?", a: "Yes, no-heat and no-cooling emergencies are prioritized given how quickly extreme temperatures can become a safety concern, and our technicians are available Monday–Saturday, 9:00 AM–5:00 PM Central Time to respond." },
+      { q: "Do you service both furnaces and central air conditioning?", a: "Yes, our trained, experienced technicians handle both heating and cooling systems across all major brands." },
       { q: "What brands of HVAC systems do you repair?", a: "We service all major brands, including Carrier, Trane, Rheem, Goodman, Lennox, and York, among others." }
     ]
   },
 
   "water-heater-repair": {
     metaTitle: "Water Heater Repair Guide: Causes, Costs & FAQs",
-    metaDescription: "No hot water or a leaking tank? Full guide to causes, repair-vs-replace, and costs for tank & tankless water heaters. Serving Bolingbrook & Chicagoland.",
-    suggestedUrl: "/blogs/water-heater-repair",
+    metaDescription: "No hot water or a leaking tank? Learn common causes, repair-versus-replace factors, costs, and when to call a professional for tank or tankless service.",
+    suggestedUrl: "/blogs/water-heater-repair/",
     sections: [
       {
         heading: "Common Causes",
@@ -889,7 +893,7 @@ export const blogSeoContent = {
         heading: "Repair Process",
         paragraphs: [
           "We explain the diagnosis in plain terms and provide a fixed price before any repair begins.",
-          "Heating element, thermostat, and valve repairs are typically completed in a single visit using parts commonly stocked on the service vehicle. A full tank flush to address sediment buildup is often completed the same visit as well.",
+          "Heating element, thermostat, and valve repairs use parts commonly stocked on the service vehicle; model-specific parts are sourced after diagnosis. A full tank flush to address sediment buildup can often be added to the same appointment.",
           "Every repair concludes with a test period confirming consistent hot water temperature and no further leaking before we consider the job complete."
         ]
       },
@@ -918,7 +922,9 @@ export const blogSeoContent = {
         items: [
           { title: "Never bypass or disable the T&P relief valve", text: "It exists specifically to prevent dangerous pressure buildup inside the tank." },
           { title: "Shut off power or gas before inspecting the unit", text: "Combines electrical or combustion components with water in close proximity." },
+          { title: "Leave the home and call your gas utility if you smell gas near a gas water heater", text: "Don't operate switches or appliances, and don't attempt any repair yourself — this applies to suspected carbon monoxide as well." },
           { title: "Address any leak near the base promptly", text: "Standing water near electrical or gas connections is a real hazard, not just a flooring concern." },
+          { title: "Watch for active leaking or visible corrosion at the tank itself", text: "Both are flooding risks that can escalate quickly and typically mean the tank needs replacement rather than repair." },
           { title: "Don't set the thermostat above 120°F", text: "Reduces scald risk in addition to slowing sediment buildup." }
         ]
       },
@@ -934,7 +940,7 @@ export const blogSeoContent = {
         heading: "Why Choose Aerotech Solution Inc.",
         paragraphs: [
           "We service both tank and tankless water heaters across all major brands, diagnosing the actual failure point — whether that's a valve, an element, or the tank itself — rather than defaulting to full replacement whenever it isn't necessary.",
-          "Every repair includes a transparent, upfront quote and is backed by our workmanship warranty. We're based in Bolingbrook and serve homeowners throughout the greater Chicago suburbs."
+          "Every repair includes a transparent, upfront quote and is backed by our workmanship warranty. Every job is tested for consistent temperature and confirmed leak-free before we consider it complete."
         ]
       },
       {
@@ -954,7 +960,7 @@ export const blogSeoContent = {
       { q: "Do you repair tankless water heaters?", a: "Yes, we diagnose and repair tankless systems, including ignition, venting, and flow sensor issues shown through fault codes." },
       { q: "Why is my water discolored or rusty?", a: "Frequently linked to anode rod depletion or sediment buildup, both addressed through flushing and maintenance if caught early." },
       { q: "Is a leaking T&P valve dangerous to ignore?", a: "It shouldn't be ignored, since it's a critical safety component, but a leaking valve is a common and usually straightforward repair rather than a sign of tank failure." },
-      { q: "Do you offer same-day water heater repair near Bolingbrook?", a: "Yes, most heating element, thermostat, and valve repairs are completed the same day." },
+      { q: "Do you offer same-day water heater repair?", a: "Same-day appointments may be available depending on technician availability, service location, and the parts required. Contact Aerotech Solution to confirm the earliest available appointment." },
       { q: "What brands of water heaters do you repair?", a: "We service all major brands, including A. O. Smith, Bradford White, Rheem, Rinnai, Bosch, and American Standard, among others." },
       { q: "How often should a water heater be flushed?", a: "At least once a year, more often in areas with hard water, to prevent sediment buildup and maintain efficiency." }
     ]
@@ -962,8 +968,8 @@ export const blogSeoContent = {
 
   "garbage-disposal": {
     metaTitle: "Garbage Disposal Repair Guide: Causes, Costs & FAQs",
-    metaDescription: "Disposal humming, leaking, or won't turn on? Full guide to causes, how to reset it, and repair-vs-replace. Serving Bolingbrook & Chicagoland.",
-    suggestedUrl: "/blogs/garbage-disposal",
+    metaDescription: "Garbage disposal humming, leaking, or not turning on? Learn common causes, safe reset steps, repair costs, and when replacement may make more sense.",
+    suggestedUrl: "/blogs/garbage-disposal/",
     sections: [
       {
         heading: "Common Causes",
@@ -1007,7 +1013,7 @@ export const blogSeoContent = {
         heading: "Repair Process",
         paragraphs: [
           "We explain what's wrong in plain terms and provide a fixed price before any repair begins.",
-          "Jam clearance, switch repairs, and connection tightening are typically completed in a single visit. If replacement is the right call — most often due to a leaking seal — we can also handle full disposal installation, including upgrading to a more powerful unit if your household needs it.",
+          "Jam clearance, switch repairs, and connection tightening use parts commonly stocked on the service vehicle. If replacement is the right call — most often due to a leaking seal — we can also handle full disposal installation, including upgrading to a more powerful unit if your household needs it.",
           "Every repair or installation concludes with a full running test under water flow to confirm the issue is fully resolved."
         ]
       },
@@ -1037,7 +1043,8 @@ export const blogSeoContent = {
           { title: "Always unplug or cut power at the breaker before clearing a jam", text: "Never reach into the disposal by hand, even when it's off." },
           { title: "Use a disposal wrench or the hex opening at the bottom", text: "The correct tool for manually freeing a jammed flywheel, rather than improvising with something that could slip." },
           { title: "Let the unit cool before pressing the reset button", text: "If it tripped from overheating, pressing reset too soon can trip it again." },
-          { title: "Keep hands and utensils out of the disposal entirely", text: "Use tongs or pliers to remove any visible object rather than reaching in." }
+          { title: "Keep hands and utensils out of the disposal entirely", text: "Use tongs or pliers to remove any visible object rather than reaching in." },
+          { title: "Don't attempt to repair a failed switch or internal wiring yourself", text: "This carries real shock risk and is best left to a professional, along with any leak or jam that keeps recurring after basic troubleshooting." }
         ]
       },
       {
@@ -1052,7 +1059,7 @@ export const blogSeoContent = {
         heading: "Why Choose Aerotech Solution Inc.",
         paragraphs: [
           "We handle everything from clearing stubborn jams and tightening connections to full disposal installation and replacement, always diagnosing the actual source of a problem — including leaks that turn out to be a plumbing connection rather than the disposal itself.",
-          "Every repair or installation includes a fixed price agreed to upfront and is backed by our workmanship warranty. We're based in Bolingbrook and serve homeowners throughout the greater Chicago suburbs."
+          "Every repair or installation includes a fixed price agreed to upfront and is backed by our workmanship warranty. Every job concludes with a full running test under water flow to confirm the fix holds."
         ]
       },
       {
@@ -1073,7 +1080,7 @@ export const blogSeoContent = {
       { q: "Do you install new garbage disposals?", a: "Yes, we handle full disposal installation and replacement in addition to repairs, including upgrading to a more powerful unit if needed." },
       { q: "Why does my garbage disposal smell bad?", a: "Debris built up in hard-to-reach areas, or a partial drain blockage trapping food particles nearby, are the most common causes." },
       { q: "How long do garbage disposals last?", a: "Most garbage disposals last 8–12 years with reasonable care and avoiding fibrous foods that commonly cause jams." },
-      { q: "Do you offer same-day garbage disposal repair near Bolingbrook?", a: "Yes, most jam clearances and switch repairs are completed the same day." },
+      { q: "Do you offer same-day garbage disposal repair?", a: "Same-day appointments may be available depending on technician availability, service location, and the parts required. Contact Aerotech Solution to confirm the earliest available appointment." },
       { q: "What brands of garbage disposals do you repair?", a: "We service all major brands, including InSinkErator, Waste King, KitchenAid, Moen, Whirlpool, and GE, among others." }
     ]
   }

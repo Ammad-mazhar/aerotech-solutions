@@ -286,13 +286,16 @@ const ServiceDetail = () => {
                 },
                 // Omitted (not replaced with a broader claim like "United
                 // States") for pages flagged as nationwide/topical rather
-                // than location-specific — city-level service-area targeting
-                // for those is planned via separate future location pages.
+                // than location-specific.
+                //
+                // Plain Text, not an AdministrativeArea/City entity: coverage
+                // is approved-ZIP-specific, not every ZIP within a given
+                // county or city, so a structured place entity here would
+                // overclaim complete coverage of whatever area it names.
+                // schema.org's areaServed explicitly accepts Text for exactly
+                // this kind of accurate-but-non-exhaustive description.
                 ...(seo.omitAreaServed ? {} : {
-                    "areaServed": {
-                        "@type": "City",
-                        "name": "Bolingbrook, IL"
-                    }
+                    "areaServed": "Selected ZIP codes across Chicagoland and surrounding Illinois communities"
                 }),
                 "description": seo.metaDescription
             },
@@ -315,7 +318,7 @@ const ServiceDetail = () => {
         <>
             <Helmet>
                 <title>{seo ? seo.metaTitle : `${service.title} Repair | Aerotech Solution - Professional Service`}</title>
-                <meta name="description" content={seo ? seo.metaDescription : `${service.title} repair services by Aerotech Solution. Expert diagnostics, OEM parts, 90-day warranty. Same-day service available nationwide USA.`} />
+                <meta name="description" content={seo ? seo.metaDescription : `${service.title} repair services by Aerotech Solution. Expert diagnostics, common parts carried, 90-day warranty. Serving selected ZIP codes across Chicagoland and surrounding Illinois communities.`} />
                 <meta name="keywords" content={seo && seo.metaKeywords ? seo.metaKeywords : `${service.title.toLowerCase()} repair, ${id.replace('-repair', '')} service, appliance repair ${service.title}`} />
                 <link rel="canonical" href={canonicalUrl(`/services/${id}`)} />
                 <meta property="og:title" content={seo ? seo.metaTitle : `${service.title} Repair | Aerotech Solution`} />
@@ -372,7 +375,7 @@ const ServiceDetail = () => {
                                 {service.description}
                             </p>
                             <div style={{ display: 'flex', gap: '12px', justifyContent: 'center' }}>
-                                <span style={{ padding: '6px 16px', background: 'rgba(255, 255, 255, 0.2)', color: '#ffffff', borderRadius: '100px', fontSize: '14px', fontWeight: '700', backdropFilter: 'blur(10px)' }}>Factory Certified</span>
+                                <span style={{ padding: '6px 16px', background: 'rgba(255, 255, 255, 0.2)', color: '#ffffff', borderRadius: '100px', fontSize: '14px', fontWeight: '700', backdropFilter: 'blur(10px)' }}>Experienced Technicians</span>
                                 <span style={{ padding: '6px 16px', background: 'rgba(255, 255, 255, 0.2)', color: '#ffffff', borderRadius: '100px', fontSize: '14px', fontWeight: '700', backdropFilter: 'blur(10px)' }}>90-Day Warranty</span>
                             </div>
                         </div>
@@ -460,7 +463,7 @@ const ServiceDetail = () => {
                                 <div style={stepNumberStyle}>01</div>
                                 <div>
                                     <h4 style={{ margin: '0 0 4px 0', fontWeight: '800', fontSize: '1.1rem', color: '#7f1d1d' }}>Multi-point Inspection</h4>
-                                    <p style={{ margin: 0, color: '#7f1d1d', lineHeight: '1.5' }}>Our Factory-certified Technicians perform comprehensive Electrical Diagnostics to pinpoint secondary failures.</p>
+                                    <p style={{ margin: 0, color: '#7f1d1d', lineHeight: '1.5' }}>Our trained, experienced technicians perform comprehensive Electrical Diagnostics to pinpoint secondary failures.</p>
                                 </div>
                             </div>
                             <div style={stepStyle}>
@@ -474,7 +477,7 @@ const ServiceDetail = () => {
                                 <div style={stepNumberStyle}>03</div>
                                 <div>
                                     <h4 style={{ margin: '0 0 4px 0', fontWeight: '800', fontSize: '1.1rem', color: '#7f1d1d' }}>Precision Repair</h4>
-                                    <p style={{ margin: 0, color: '#7f1d1d', lineHeight: '1.5' }}>Using only OEM Parts (Original Equipment Manufacturer) to restore factory performance.</p>
+                                    <p style={{ margin: 0, color: '#7f1d1d', lineHeight: '1.5' }}>Common replacement parts carried; model-specific parts sourced after diagnosis to restore factory performance.</p>
                                 </div>
                             </div>
                         </div>
@@ -491,7 +494,7 @@ const ServiceDetail = () => {
                                 Why Choose Us
                             </h3>
                             <p style={{ color: '#7f1d1d', fontSize: '1.1rem', lineHeight: '1.7', fontWeight: '500' }}>
-                                {service.whyChooseUs || "Experience the Aerotech difference with our factory-certified technicians and commitment to excellence."}
+                                {service.whyChooseUs || "Experience the Aerotech difference with our trained, experienced technicians and commitment to excellence."}
                             </p>
                         </div>
                     </div>
@@ -932,7 +935,7 @@ const ServiceDetail = () => {
                             </h2>
                             <p style={seoParaStyle}>{seo.whyChooseUsExpanded}</p>
                             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '8px' }}>
-                                {["Factory-Certified Technicians", "OEM Parts", "Workmanship Warranty", "Transparent Pricing", "Experienced Technicians"].map((trust, i) => (
+                                {["Trained Technicians", "Common Parts Carried", "Workmanship Warranty", "Transparent Pricing", "Experienced Technicians"].map((trust, i) => (
                                     <span key={i} style={{ padding: '10px 20px', backgroundColor: '#064e3b', border: '1px solid rgba(34, 197, 94, 0.2)', borderRadius: '100px', color: '#a7f3d0', fontWeight: '600', fontSize: '0.9rem' }}>
                                         {trust}
                                     </span>
@@ -1071,7 +1074,7 @@ const ServiceDetail = () => {
                         </button>
 
                         <p style={{ marginTop: '32px', color: 'f97316', fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '10px', fontWeight: '600' }}>
-                            <ClipboardCheck size={20} /> Professional Dispatch • Licensed Technicians • Certified Parts
+                            <ClipboardCheck size={20} /> Professional Dispatch • Licensed Technicians • Common Parts Carried
                         </p>
                     </div>
                 </div>

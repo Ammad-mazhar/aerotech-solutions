@@ -130,17 +130,17 @@ export default function BookingForm() {
     <>
       <Helmet>
         <title>Book Appliance Repair Service | Aerotech Solution</title>
-        <meta name="description" content="Book professional appliance repair online. Schedule a certified technician for your refrigerator, washer, dryer, HVAC, or other home appliance." />
+        <meta name="description" content="Book professional appliance repair online. Schedule a trained, experienced technician for your refrigerator, washer, dryer, HVAC, or other home appliance." />
         <meta name="keywords" content="book appliance repair, schedule repair service, appliance repair appointment, Aerotech Solution booking" />
         <link rel="canonical" href={canonicalUrl('/book-service')} />
         <meta property="og:title" content="Book Appliance Repair Service | Aerotech Solution" />
-        <meta property="og:description" content="Schedule a certified technician online for fast, reliable appliance repair." />
+        <meta property="og:description" content="Schedule a trained, experienced technician online for fast, reliable appliance repair." />
         <meta property="og:url" content={canonicalUrl('/book-service')} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://aerotechsolutioninc.com/banner-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Book Appliance Repair Service | Aerotech Solution" />
-        <meta name="twitter:description" content="Schedule a certified technician online for fast, reliable appliance repair." />
+        <meta name="twitter:description" content="Schedule a trained, experienced technician online for fast, reliable appliance repair." />
         <meta name="twitter:image" content="https://aerotechsolutioninc.com/banner-image.jpg" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
