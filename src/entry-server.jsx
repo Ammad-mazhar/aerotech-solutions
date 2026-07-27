@@ -107,6 +107,6 @@ export async function render(location) {
 
     return {
         head: navbar.head + routes.head + floatingHub.head + footer.head,
-        body: `<div class="App">${navbar.body}${routes.body}${floatingHub.body}${footer.body}</div>`
+        body: `<div class="App">${navbar.body}<main>${routes.body}</main>${floatingHub.body}${footer.body}</div>`
     };
 }

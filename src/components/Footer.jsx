@@ -111,9 +111,11 @@ const Footer = () => {
           {/* Company Column */}
           <div style={columnStyle}>
             <Link to={routePath('/')} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '12px' }}>
-              <img 
+              <img
 src="/logo/logo-optimized.webp"
-                alt="Aerotech Solution" 
+                alt="Aerotech Solution"
+                width="360"
+                height="360"
                 style={{ width: '120px', height: 'auto', borderRadius: '12px' }}
               />
               <span style={{ fontSize: '1.5rem', fontWeight: '900', color: '#ffffff', letterSpacing: '-1px' }}>AEROTECH SOLUTIONS</span>
@@ -137,7 +139,7 @@ src="/logo/logo-optimized.webp"
 
           {/* Solutions Column */}
           <div style={columnStyle}>
-            <h4 style={headingStyle}>Solutions</h4>
+            <h2 style={headingStyle}>Solutions</h2>
             <ul style={linkListStyle}>
               {['Refrigerator', 'Washer & Dryer', 'Oven & Stove', 'Luxury Restoration', 'Quick Diagnostics'].map((item) => (
                 <li key={item}>
@@ -166,7 +168,7 @@ src="/logo/logo-optimized.webp"
 
           {/* Company Column */}
           <div style={columnStyle}>
-            <h4 style={headingStyle}>Company</h4>
+            <h2 style={headingStyle}>Company</h2>
             <ul style={linkListStyle}>
               {['About Us', 'Contact Us', 'Service Areas', 'FAQ', 'Blog', 'Expert Team'].map((item) => (
                 <li key={item}>
@@ -185,7 +187,7 @@ src="/logo/logo-optimized.webp"
 
           {/* Contact Column */}
           <div style={columnStyle}>
-            <h4 style={headingStyle}>Emergency Port</h4>
+            <h2 style={headingStyle}>Emergency Port</h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               <div style={contactItemStyle}>
                 <Phone size={20} style={{ color: '#22c55e' }} />

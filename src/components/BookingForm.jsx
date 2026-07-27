@@ -189,7 +189,7 @@ export default function BookingForm() {
         .form-section:last-child {
           border-bottom: none;
         }
-        .form-section h3 {
+        .form-section h2 {
           font-size: 1.25rem;
           color: #0f172a;
           margin-bottom: 1.5rem;
@@ -330,7 +330,7 @@ export default function BookingForm() {
           <form onSubmit={handleSubmit(onSubmit, onError)} className="booking-form" noValidate>
             {/* Appliance Info Section */}
             <div className="form-section">
-              <h3>Appliance Information</h3>
+              <h2>Appliance Information</h2>
               <div className="form-row">
                 <div className="form-group">
                   <label htmlFor="applianceType">Appliance Type *</label>
@@ -390,7 +390,7 @@ export default function BookingForm() {
 
             {/* Issue Details Section */}
             <div className="form-section">
-              <h3>Issue Details</h3>
+              <h2>Issue Details</h2>
               <div className="form-group">
                 <label htmlFor="problemDescription">Describe the Problem *</label>
                 <textarea
@@ -429,7 +429,7 @@ export default function BookingForm() {
 
             {/* Contact Information Section */}
             <div className="form-section">
-              <h3>Contact Information</h3>
+              <h2>Contact Information</h2>
               <div className="form-row">
                 <div className="form-group">
                   <label htmlFor="name">Full Name *</label>
@@ -500,7 +500,7 @@ export default function BookingForm() {
 
             {/* Scheduling Section */}
             <div className="form-section">
-              <h3>Preferred Service Date</h3>
+              <h2>Preferred Service Date</h2>
               <div className="form-group">
                 <label htmlFor="preferredDate">Select Date *</label>
                 <DatePicker

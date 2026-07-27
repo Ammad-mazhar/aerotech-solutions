@@ -119,35 +119,35 @@ const FAQPage = () => {
 
           <div className="faq-grid">
             <div className="faq-item">
-              <h3 className="faq-question">What types of appliances do you repair?</h3>
+              <h2 className="faq-question">What types of appliances do you repair?</h2>
               <p className="faq-answer">
                 We repair all major household appliances including refrigerators, washers, dryers, ovens, stoves, dishwashers, microwaves, and cooktops. We service most major brands and models.
               </p>
             </div>
 
             <div className="faq-item">
-              <h3 className="faq-question">Do you offer a warranty on your repairs?</h3>
+              <h2 className="faq-question">Do you offer a warranty on your repairs?</h2>
               <p className="faq-answer">
                 Yes, we stand behind our work. We offer a comprehensive warranty on both parts and labor for all repairs. The specific terms may vary depending on the repair, but your satisfaction is our priority.
               </p>
             </div>
 
             <div className="faq-item">
-              <h3 className="faq-question">How quickly can you come out for a repair?</h3>
+              <h2 className="faq-question">How quickly can you come out for a repair?</h2>
               <p className="faq-answer">
                 Same-day appointments may be available based on technician availability, service location and the time the request is received. Support hours are Monday–Saturday, 9:00 AM–5:00 PM Central Time. You can check our availability and book an appointment online instantly.
               </p>
             </div>
 
             <div className="faq-item">
-              <h3 className="faq-question">Is there a service call fee?</h3>
+              <h2 className="faq-question">Is there a service call fee?</h2>
               <p className="faq-answer">
                 Diagnostic fee to the technician for a home visit to determine the problem. If you elect to make the repair this fee is usually waived or credited toward the repair price, however.
               </p>
             </div>
 
             <div className="faq-item">
-              <h3 className="faq-question">Do you service commercial appliances?</h3>
+              <h2 className="faq-question">Do you service commercial appliances?</h2>
               <p className="faq-answer">
                 Our primary focus is on residential appliance repair. However, we may be able to assist with certain light commercial units. Please contact us directly to discuss your specific needs.
               </p>

@@ -22,9 +22,9 @@ const StatItem = ({ icon: Icon, value, label, delay }) => (
         </div>
 
         <div className="text-center">
-            <h3 className="text-5xl font-black text-white mb-2 tracking-tighter tabular-nums bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70">
+            <p className="text-5xl font-black mb-2 tracking-tighter tabular-nums bg-clip-text text-transparent bg-linear-to-b from-white to-white/70">
                 {value}
-            </h3>
+            </p>
             <div className="h-1 w-8 bg-orange-500 mx-auto rounded-full mb-4 scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
             <p className="text-orange-100/50 font-bold uppercase tracking-[0.2em] text-[10px]">
                 {label}

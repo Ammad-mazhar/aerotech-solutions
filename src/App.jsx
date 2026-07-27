@@ -84,7 +84,9 @@ function App() {
       <ScrollToTop />
       <div className="App">
         <Navbar />
-        <AppRoutes />
+        <main>
+          <AppRoutes />
+        </main>
         <FloatingHub />
         <Footer />
       </div>

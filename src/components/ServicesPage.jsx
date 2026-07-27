@@ -236,7 +236,7 @@ const ServicesPage = () => {
               >
                 {service.image && (
                   <div className="service-hub-card-image">
-                    <img src={service.image} alt={service.alt || `${service.title} repair service`} loading="lazy" />
+                    <img src={service.image} alt={service.alt || `${service.title} repair service`} width={service.imageWidth} height={service.imageHeight} loading="lazy" />
                   </div>
                 )}
                 <div className="service-hub-card-body">

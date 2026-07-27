@@ -60,7 +60,9 @@ const Navbar = () => {
           }}>
             <img
               src="/logo/logo-optimized.webp"
-              alt="Aerotech Solution"
+              alt=""
+              width="360"
+              height="360"
               style={{
                 height: '60px',
                 width: '60px',
@@ -107,21 +109,24 @@ const Navbar = () => {
               onMouseEnter={() => setIsServicesOpen(true)}
               onMouseLeave={() => setIsServicesOpen(false)}
             >
-              <button style={{
-                color: isServicesOpen ? '#f97316' : '#ffffff',
-                background: 'none',
-                border: 'none',
-                cursor: 'pointer',
-                fontWeight: '600',
-                fontSize: '1.1rem',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '4px',
-                padding: 0,
-                transition: 'color 0.2s',
-              }}>
+              <button
+                aria-expanded={isServicesOpen}
+                aria-haspopup="true"
+                style={{
+                  color: isServicesOpen ? '#f97316' : '#ffffff',
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                  fontWeight: '600',
+                  fontSize: '1.1rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '4px',
+                  padding: 0,
+                  transition: 'color 0.2s',
+                }}>
                 Services
-                <span style={{
+                <span aria-hidden="true" style={{
                   fontSize: '0.7rem',
                   transition: 'transform 0.2s',
                   transform: isServicesOpen ? 'rotate(180deg)' : 'rotate(0deg)',
@@ -355,6 +360,8 @@ const Navbar = () => {
               <li style={{ borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
                 <button
                   onClick={() => setIsServicesOpen(!isServicesOpen)}
+                  aria-expanded={isServicesOpen}
+                  aria-haspopup="true"
                   style={{
                     display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                     width: '100%', color: '#ffffff', background: 'none', border: 'none',
@@ -362,7 +369,7 @@ const Navbar = () => {
                   }}
                 >
                   Services
-                  <span style={{
+                  <span aria-hidden="true" style={{
                     fontSize: '0.7rem',
                     transform: isServicesOpen ? 'rotate(180deg)' : 'rotate(0)',
                     transition: 'transform 0.2s',
